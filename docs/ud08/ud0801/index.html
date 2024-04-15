@@ -486,7 +486,7 @@
         <li class="md-nav__item">
   <a href="#composicion" class="md-nav__link">
     <span class="md-ellipsis">
-      composición
+      Composición
     </span>
   </a>
   
@@ -495,7 +495,7 @@
         <li class="md-nav__item">
   <a href="#herencia" class="md-nav__link">
     <span class="md-ellipsis">
-      herencia
+      Herencia
     </span>
   </a>
   
@@ -504,7 +504,7 @@
         <li class="md-nav__item">
   <a href="#herencia-o-composicion" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿herencia o composición?
+      ¿Herencia o composición?
     </span>
   </a>
   
@@ -1077,7 +1077,7 @@
         <li class="md-nav__item">
   <a href="#composicion" class="md-nav__link">
     <span class="md-ellipsis">
-      composición
+      Composición
     </span>
   </a>
   
@@ -1086,7 +1086,7 @@
         <li class="md-nav__item">
   <a href="#herencia" class="md-nav__link">
     <span class="md-ellipsis">
-      herencia
+      Herencia
     </span>
   </a>
   
@@ -1095,7 +1095,7 @@
         <li class="md-nav__item">
   <a href="#herencia-o-composicion" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿herencia o composición?
+      ¿Herencia o composición?
     </span>
   </a>
   
@@ -1134,7 +1134,7 @@
 <p>En el caso de la relación de <strong>herencia</strong> también la has visto ya, pues seguro que has utilizado unas clases que derivaban de otras, sobre todo, en el caso de los objetos que forman parte de las interfaces gráficas. Lo más probable es que hayas tenido que declarar clases que derivaban de algún componente gráfico (<code>JFrame</code>, <code>JDialog</code>, etc.).</p>
 <p>Podría decirse que tanto la composición como la anidación son casos particulares de clientela, pues en realidad en todos esos casos una clase está haciendo uso de otra (al contener atributos que son objetos de la otra clase, al definir clases dentro de otras clases, al utilizar objetos en el paso de parámetros, al declarar variables locales utilizando otras clases, etc.).</p>
 <p>A lo largo de la unidad, irás viendo distintas posibilidades de implementación de clases haciendo uso de todas estas relaciones, centrándonos especialmente en el caso de la herencia, que es la que permite establecer las relaciones más complejas.</p>
-<h2 id="composicion">composición</h2>
+<h2 id="composicion">Composición</h2>
 <p>Cuando en un sistema de información, una determinada <strong>entidad <code>A</code> contiene a otra <code>B</code></strong> como una de sus partes, se suele decir que se está produciendo una relación de composición. Es decir, el objeto de la clase <code>A</code> contiene a uno o varios objetos de la clase <code>B</code>.</p>
 <p>Por ejemplo, si describes una entidad <code>País</code> compuesta por una serie de atributos, entre los cuales se encuentra una lista de comunidades autónomas, podrías decir que los objetos de la clase <code>País</code> contienen varios objetos de la clase <code>ComunidadAutonoma</code>. Por otro lado, los objetos de la clase <code>ComunidadAutonoma</code> podrían contener como atributos objetos de la clase <code>Provincia</code>, la cual a su vez también podría contener objetos de la clase <code>Municipio</code>.</p>
 <p>Como puedes observar, la composición puede encadenarse todas las veces que sea necesario hasta llegar a objetos básicos del lenguaje o hasta tipos primitivos que ya no contendrán otros objetos en su interior. Ésta es la forma más habitual de definir clases: mediante otras clases ya definidas anteriormente. Es una manera eficiente y sencilla de gestionar la reutilización de todo el código ya escrito. Si se definen clases que describen entidades distinguibles y con funciones claramente definidas, podrán utilizarse cada vez que haya que representar objetos similares dentro de otras clases.</p>
@@ -1162,36 +1162,42 @@
 <p class="admonition-title">¿Podría decirse que la relación que existe entre la clase <code>Ave</code> y la clase <code>Loro</code> es una relación de composición?</p>
 <p>No. Aunque claramente existe algún tipo de relación entre ambas, no parece que sea la de composición. No parece que se cumpla la expresión "tiene un": "Un loro tiene un ave". Se cumpliría más bien una expresión del tipo "es un": "Un loro es un ave". Algunos objetos que cumplirían la relación de composición podrían ser <code>Pico</code> o <code>Alas</code>, pues "un loro tiene un pico y dos alas", del mismo modo que "un ave tiene pico y dos alas". Este tipo de relación parece más de herencia (un loro es un tipo de ave).</p>
 </div>
-<h2 id="herencia">herencia</h2>
+<h2 id="herencia">Herencia</h2>
 <p>El mecanismo que permite crear clases basándose en otras que ya existen es conocido como herencia. Como ya has visto en unidades anteriores, Java implementa la herencia mediante la utilización de la palabra reservada <code>extends</code>.</p>
 <p>El concepto de herencia es algo bastante simple y sin embargo muy potente: cuando se desea definir una nueva clase y ya existen clases que, de alguna manera, implementan parte de la funcionalidad que se necesita, es posible crear una nueva clase derivada de la que ya tienes. Al hacer esto se posibilita la reutilización de todos los atributos y métodos de la clase que se ha utilizado como base (clase madre o superclase), sin la necesidad de tener que escribirlos de nuevo.</p>
 <p>Una subclase hereda todos los miembros de su clase madre (atributos, métodos y clases internas). Los constructores no se heredan, aunque se pueden invocar desde la subclase.</p>
-<p>Algunos ejemplos de herencia podrían ser:</p>
+<details class="example" open="open">
+<summary>Algunos ejemplos ...</summary>
 <ul>
-<li>Un coche es un vehículo (heredará atributos como la <em>velocidad máxima</em> o métodos como <em>parar</em> y <em>arrancar</em>).</li>
-<li>Un empleado es una persona (heredará atributos como el nombre o la fecha de nacimiento).</li>
-<li>Un rectángulo es una figura geométrica en el plano (heredará métodos como el cálculo de la superficie o de su perímetro).</li>
-<li>Un cocodrilo es un reptil (heredará atributos como por ejemplo el número de dientes).</li>
+<li>Un <em>coche</em> es un <em>vehículo</em> (heredará atributos como la <em>velocidad máxima</em> o métodos como <em>parar</em> y <em>arrancar</em>).</li>
+<li>Un <em>empleado</em> es una <em>persona</em> (heredará atributos como el <em>nombre</em> o la <em>fecha de nacimiento</em>).</li>
+<li>Un <em>rectángulo</em> es una <em>figura geométrica</em> en el plano (heredará métodos como el <em>cálculo de la superficie</em> o de su <em>perímetro</em>).</li>
+<li>Un cocodrilo es un reptil (heredará atributos como por ejemplo el <em>número de dientes</em>).</li>
 </ul>
+</details>
 <p>En este caso la expresión idiomática que puedes usar para plantearte si el tipo de relación entre dos clases A y B es de herencia podría ser "<strong><em>es un</em></strong>": "<em>la clase B es un tipo específico de la clase A</em>" (especialización), o visto de otro modo: "<em>la clase A es un caso general de la clase B</em>" (generalización).</p>
-<p>Recuperando algunos ejemplos de clases que ya has utilizado en otras unidades:</p>
+<details class="example" open="open">
+<summary>Recuperando algunos ejemplos de clases que ya hemos utilizado anteriormente ...</summary>
 <ul>
-<li>Una ventana en una aplicación gráfica puede ser una clase que herede de <code>JFrame</code> (componente <code>Swing</code>: <code>javax.swing.JFrame</code>), de esta manera esa clase será un marco que dispondrá de todos los métodos y atributos de <code>JFrame</code> mas aquéllos que tú decidas incorporarle al rellenarlo de componentes gráficos.</li>
+<li>Una ventana en una aplicación gráfica puede ser una clase que herede de <code>JFrame</code> (componente <code>Swing</code>: <code>javax.swing.JFrame</code>), de esta manera esa clase será un marco que dispondrá de todos los métodos y atributos de <code>JFrame</code> más aquellos que tú decidas incorporarle al rellenarlo de componentes gráficos.</li>
 <li>Una caja de diálogo puede ser un tipo de <code>JDialog</code> (otro componente <code>Swing</code>: <code>javax.swing.JDialog</code>).</li>
 </ul>
+</details>
 <p>En Java, la clase <code>Object</code> (dentro del paquete <code>java.lang</code>) define e implementa el comportamiento común a todas las clases (incluidas aquellas que tú escribas). Como recordarás, ya se dijo que en Java cualquier clase deriva en última instancia de la clase <code>Object</code>.</p>
 <p>Todas las clases tienen una clase madre, que a su vez también posee una superclase, y así sucesivamente hasta llegar a la clase <code>Object</code> . De esta manera, se construye lo que habitualmente se conoce como una jerarquía de clases, que en el caso de Java tendría a la clase <code>Object</code> en la raíz.</p>
 <div class="admonition note">
 <p class="admonition-title">Anotación</p>
 <p>Cuando escribas una clase en Java, puedes hacer que herede de una determinada clase madre (mediante el uso de <code>extends</code>) o bien no indicar ninguna herencia. En tal caso, aunque no indiques explícitamente ningún tipo de herencia, el compilador asumirá entonces de manera implícita que tu clase hereda de la clase <code>Object</code>, que define e implementa el comportamiento común a todas las clases.</p>
 </div>
-<h2 id="herencia-o-composicion">¿herencia o composición?</h2>
+<h2 id="herencia-o-composicion">¿Herencia o composición?</h2>
 <p>Cuando escribas tus propias clases, debes intentar tener claro en qué casos utilizar la composición y cuándo la herencia:</p>
 <ul>
 <li><strong>Composición</strong>: cuando una clase está formada por objetos de otras clases. En estos casos se incluyen objetos de esas clases, pero no necesariamente se comparten características con ellos (no se heredan características de esos objetos, sino que directamente se utilizarán sus atributos y sus métodos). Esos objetos incluidos no son más que atributos miembros de la clase que se está definiendo.</li>
 <li><strong>Herencia</strong>: cuando una clase cumple todas las características de otra. En estos casos la clase derivada es una especialización (o particularización, extensión o restricción) de la clase base. Desde otro punto de vista se diría que la clase base es una generalización de las clases derivadas.</li>
 </ul>
-<p>Por ejemplo, imagina que dispones de una clase <em>Punto</em> (ya la has utilizado en otras ocasiones) y decides definir una nueva clase llamada <em>Círculo</em>. Dado que un punto tiene como atributos sus coordenadas en plano (x1, y1), decides que es buena idea aprovechar esa información e incorporarla en la clase Circulo que estás escribiendo. Para ello utilizas la herencia, de manera que al derivar la clase <em>Círculo</em> de la clase <em>Punto</em>, tendrás disponibles los atributos x1 e y1. Ahora solo faltaría añadirle algunos atributos y métodos más como por ejemplo el radio del círculo, el cálculo de su área y su perímetro, etc. </p>
+<details class="example" open="open">
+<summary>Ejemplo</summary>
+<p>Imagina que dispones de una clase <em>Punto</em> (ya la has utilizado en otras ocasiones) y decides definir una nueva clase llamada <em>Círculo</em>. Dado que un punto tiene como atributos sus coordenadas en plano (x1, y1), decides que es buena idea aprovechar esa información e incorporarla en la clase Circulo que estás escribiendo. Para ello utilizas la herencia, de manera que al derivar la clase <em>Círculo</em> de la clase <em>Punto</em>, tendrás disponibles los atributos x1 e y1. Ahora solo faltaría añadirle algunos atributos y métodos más como por ejemplo el radio del círculo, el cálculo de su área y su perímetro, etc. </p>
 <p>En principio parece que la idea pueda funcionar pero es posible que más adelante, si continúas construyendo una jerarquía de clases, observes que puedas llegar a conclusiones incongruentes al suponer que un círculo es una especialización de un punto (un tipo de punto). ¿Todas aquellas figuras que contengan uno o varios puntos deberían ser tipos de punto? ¿Y si tienes varios puntos? ¿Cómo accedes a ellos? ¿Un rectángulo también tiene sentido que herede de un punto? No parece muy buena idea.</p>
 <p>Parece que en este caso habría resultado mejor establecer una relación de <em>composición</em>. Analízalo detenidamente: ¿cuál de estas dos situaciones te suena mejor?</p>
 <ol>
@@ -1199,6 +1205,7 @@
 <li>"Un círculo tiene un punto (su centro)", junto con algunos atributos más como por ejemplo el radio. También tendrá métodos para el cálculo de su área o de la longitud de su perímetro.</li>
 </ol>
 <p>Parece que en este caso la composición refleja con mayor fidelidad la relación que existe entre ambas clases. Normalmente suele ser suficiente con plantearse las preguntas "¿B es un tipo de A?" o "¿B contiene elementos de tipo A?".</p>
+</details>
 
 
 
