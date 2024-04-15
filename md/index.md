@@ -18,3 +18,9 @@
 | UD 09  | Acceso a bases de datos                              |
 | UD 10  | Interfaz gráfica                                     |
 
+
+
+!!!note "Licencia"
+	<img src="../../img/cc.png" alt="portada" style="zoom:35%;"  style="float: left;" /><br />
+	Este material está bajo una Licencia Creative Commons Atribución-Compartir-Igual 4.0 Internacional.<br />
+	*Derivado a partir de material de David Martínez Peña (https://github.com/martinezpenya).*
