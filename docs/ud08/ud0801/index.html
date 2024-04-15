@@ -1143,17 +1143,21 @@
 <p>La composición se da cuando una clase contiene algún atributo que es una referencia a un objeto de otra clase.</p>
 </div>
 <p>Una forma sencilla de plantearte si la relación que existe entre dos clases A y B es de composición podría ser mediante la expresión idiomática "<strong><em>tiene un</em></strong>": "<em>la clase A tiene uno o varios objetos de la clase B</em>", o visto de otro modo: "<em>Objetos de la clase B pueden formar parte de la clase A</em>". </p>
-<p>Algunos ejemplos de composición podrían ser:</p>
+<details class="example" open="open">
+<summary>Algunos ejemplos ...</summary>
 <ul>
 <li>Un coche tiene un motor y tiene cuatro ruedas.</li>
 <li>Una persona tiene un nombre, una fecha de nacimiento, una cuenta bancaria asociada para ingresar la nómina, etc.</li>
 <li>Un cocodrilo bajo investigación científica que tiene un número de dientes determinado, una edad, unas coordenadas de ubicación geográfica (medidas con GPS), etc.</li>
 </ul>
-<p>Recuperando algunos de los ejemplos de clases que has utilizado en otras unidades:</p>
+</details>
+<details class="example" open="open">
+<summary>Recuperando algunos ejemplos de clases que ya hemos utilizado anteriormente ...</summary>
 <ul>
 <li>Una clase <code>Rectangulo</code> podría contener en su interior dos objetos de la clase <code>Punto</code> para almacenar los vértices inferior izquierdo y superior derecho.</li>
 <li>Una clase <code>Empleado</code> podría contener en su interior un objeto de la clase <code>DNI</code> para almacenar su DNI/NIF, y otro objeto de la clase <code>CuentaBancaria</code> para guardar la cuenta en la que se realizan los ingresos en nómina.</li>
 </ul>
+</details>
 <div class="admonition note">
 <p class="admonition-title">¿Podría decirse que la relación que existe entre la clase <code>Ave</code> y la clase <code>Loro</code> es una relación de composición?</p>
 <p>No. Aunque claramente existe algún tipo de relación entre ambas, no parece que sea la de composición. No parece que se cumpla la expresión "tiene un": "Un loro tiene un ave". Se cumpliría más bien una expresión del tipo "es un": "Un loro es un ave". Algunos objetos que cumplirían la relación de composición podrían ser <code>Pico</code> o <code>Alas</code>, pues "un loro tiene un pico y dos alas", del mismo modo que "un ave tiene pico y dos alas". Este tipo de relación parece más de herencia (un loro es un tipo de ave).</p>
