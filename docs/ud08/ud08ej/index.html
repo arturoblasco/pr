@@ -1,0 +1,2304 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud0808/">
+      
+      
+        <link rel="next" href="../../ud09/ud0901/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Ejercicios - mòdul Programació</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra-css.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-herencia" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="mòdul Programació" class="md-header__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+      
+  <img src="../../logo3.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mòdul Programació
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ejercicios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canvia a mode oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canvia a mode normal"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode normal" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="mòdul Programació" class="md-nav__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+      
+  <img src="../../logo3.png" alt="logo">
+
+    </a>
+    mòdul Programació
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 0 Conocimientos previos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 1 Elemenos de un programa informático
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 2 Utilización de objetos y clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 3 Estructuras de control y excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 4 Estructuras de datos Arrays y matrices. Recursividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 5 Desarrollo de clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 6 Lectura y escritura de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 7 Colecciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 8 Composición, Herencia y Polimorfismo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            UD 8 Composición, Herencia y Polimorfismo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0801/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1 Relaciones entre clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0802/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2 Composición
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0803/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3 Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0804/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.4 Clases abstractas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0805/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.5 Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0806/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.6 Polimorfismo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0807/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0808/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Herencia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Herencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio03" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio03
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio04" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio04
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio05" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio06" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio06
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-polimorfismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Polimorfismo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Polimorfismo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio07" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio07
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio08" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio08
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio09" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio09
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio13
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-lionel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Lionel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Lionel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio14-astros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio14 - Astros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio15-mascotas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio15 - Mascotas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio16-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio16 - Banco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio17-empresa-y-empleados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio17 - Empresa y empleados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio18-vehiculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio18 - Vehículos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio19-figuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio19 - Figuras
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 9 Acceso a bases de datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            UD 9 Acceso a bases de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0901/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0902/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2 JDBC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0903/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3 Acceso a BBDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0904/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4 Navegabilidad y concurrencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0905/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5 Consultas (Query)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0906/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.6 Modificación (update)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0907/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.7 Inserción (insert)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0908/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.8 Borrado (delete)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0909/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.9 Sentencias predefinidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0910/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.10 Trabajar con Sqlite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0911/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.11 Repository pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0912/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0913/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud09ej/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 10 Interfaz gráfica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Herencia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Herencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio03" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio03
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio04" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio04
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio05" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio06" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio06
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-polimorfismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Polimorfismo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Polimorfismo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio07" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio07
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio08" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio08
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio09" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio09
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio13
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-lionel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Lionel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Lionel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio14-astros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio14 - Astros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio15-mascotas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio15 - Mascotas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio16-banco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio16 - Banco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio17-empresa-y-empleados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio17 - Empresa y empleados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio18-vehiculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio18 - Vehículos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio19-figuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio19 - Figuras
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Ejercicios</h1>
+
+<h2 id="ejercicios-herencia">Ejercicios Herencia</h2>
+<h3 id="ejercicio01"><strong>Ejercicio01</strong></h3>
+<p>Diseñar una jerarquía de clases para modelizar las <strong>aulas de un centro de estudios</strong>.</p>
+<p>De un <code>Aula</code> se conoce el <code>código</code> (numérico), la <code>longitud</code> y la <code>anchura</code>. Se desea un método que devuelva la capacidad del aula sabiendo que esta se calcula a partir de la superficie a razón de 1 alumnos por cada 1.4 metros cuadrados de superficie.</p>
+<p>Además de las aulas, digamos normales, existen aulas de informática y aulas de música. En las aulas de música se necesita conocer si tienen o no piano. De las aulas de informática se conoce el número de ordenadores y su capacidad no se calcula en función de la superficie, sino a razón de dos alumnos por ordenador.</p>
+<p>Implementar el método <code>toString</code> de cada una de las clases diseñadas para que devuelva:</p>
+<ul>
+<li>
+<p>En las aulas normales, el <code>código</code> y la <code>superficie</code> y la <code>capacidad</code>.</p>
+</li>
+<li>
+<p>En las aulas de música e informática el texto irá precedido por "Aula de música" o "Aula de informática", según corresponda.</p>
+</li>
+</ul>
+<hr>
+
+<h3 id="ejercicio02"><strong>Ejercicio02</strong></h3>
+<p>Un salón de <strong>VideoJuegos</strong> dispone de ordenadores en los que los clientes pueden jugar. Además de jugar en el establecimiento, la empresa alquila y vende juegos.</p>
+<p>2.1. Diseñar la clase <code>Juego</code> siguiendo las siguientes especificaciones: </p>
+<ul>
+<li>Atributos protected: <code>titulo</code> (String), <code>fabricante</code> (String), <code>año</code> (int).</li>
+<li>Constructor <code>public Juego(String t, String f, int a)</code>.</li>
+<li>Consultores de todos los atributos.</li>
+<li><code>public String toString()</code>, que devuelve un String con los datos del Juego.</li>
+<li><code>public boolean equals(Object o)</code>: Dos juegos son iguales si tienen el mismo título, fabricante y año.</li>
+<li><code>public int compareTo(Object o)</code>: Un juego es menor que otro si su título es menor. A igual título, si su fabricante es menor. A igual título y fabricante, si su año es menor.</li>
+</ul>
+<p>2.2. Diseñar las clases <code>JuegoEnAlquiler</code> y <code>JuegoEnVenta</code> (y otras si se considera oportuno), sabiendo que, además de los atributos descritos anteriormente, tienen.</p>
+<ul>
+<li><code>precio</code>.</li>
+<li><code>nº de copias disponibles</code>.</li>
+<li><code>JuegoEnAlquiler</code>.</li>
+<li>tiene un atributo que indica el número de días que se alquila. (Por el precio indicado, hay juegos que se alquilan por un día, otros por 2, etc...).</li>
+<li>Constructor que recibe todos sus datos.</li>
+<li>tiene un método <code>alquilar</code> que decrementa el número de copias disponibles.</li>
+<li>tiene un método <code>devolver</code> que incrementa el número de copias disponibles.</li>
+<li>
+<p><code>toString()</code> devuelve todos los datos del <code>JuegoEnAlquiler</code>.</p>
+</li>
+<li>
+<p><code>JuegoEnVenta</code></p>
+</li>
+<li><code>Constructor</code> que recibe todos sus datos.</li>
+<li>tiene un método <code>vender</code>, que decrementa el número de copias disponibles.</li>
+<li><code>toString()</code> devuelve todos los datos del <code>JuegoEnVenta</code>.</li>
+</ul>
+<hr>
+<h3 id="ejercicio03"><strong>Ejercicio03</strong></h3>
+<p>La <strong>Fabrica Nacional de Moneda y Timbre</strong> quiere almacenar cierta información técnica del dinero (billetes y monedas) que emite. En concreto, le interesa:</p>
+<ul>
+<li><code>Valor</code>: Valor de la moneda o billete, en euros. (<code>double</code>).</li>
+<li><code>Año de emisión</code>: Año en que fue emitida la moneda o billete. (<code>int</code>).</li>
+<li>De las monedas, </li>
+<li><code>Diámetro</code>: Diámetro de la moneda, en milímetros. (<code>double</code>).</li>
+<li><code>Peso</code>: Peso de la moneda, en gramos (<code>double</code>).</li>
+<li>De los billetes.</li>
+<li><code>Altura del billete</code>, en mm (<code>double</code>).</li>
+<li><code>Anchura del billete</code>, en mm (<code>double</code>).</li>
+</ul>
+<p>a) Diseñar la clase abstracta <code>Dinero</code> y sus subclases <code>Moneda</code> y <code>Billete</code>, desarrollando:</p>
+<ul>
+<li>Constructores que reciban los datos necesarios para inicializar los atributos de la clase correspondiente.</li>
+<li><code>equals</code>: Dos monedas o billetes son iguales si tienen el mismo año de emisión y valor.</li>
+<li><code>compareTo</code>: Es menor (mayor) el de menor (mayor) año, a igual año es menor (mayor) el de menor (mayor) valor.</li>
+<li><code>toString</code>: Que muestre todos los datos del billete o moneda. Los billetes irán precedidos por el texto "BILLETE" y las monedas por el texto "MONEDA".</li>
+</ul>
+<p>b) Diseñar la clase <code>TestDinero</code> para probar las clases desarrolladas: Crear objetos de las clases <code>Moneda</code> y <code>Billete</code> y mostrarlos por pantalla.</p>
+<hr>
+<h3 id="ejercicio04"><strong>Ejercicio04</strong></h3>
+<p>Un <strong>centro comercial</strong> quiere mostrar cierta información sobre los televisores que vende. Los televisores pueden ser de dos tipos: de tubo o LCD. En concreto, de cada televisor le interesa mostrar:</p>
+<ul>
+<li>Marca (<code>String</code>).</li>
+<li>Modelo (<code>String</code>).</li>
+<li>Precio en euros.</li>
+<li>Pulgadas de la pantalla (<code>double</code>).</li>
+<li>Resolución: La resolución se mide de forma distinta en los televisores de tubo que en los televisores LCD.</li>
+<li>En los TV de tubo se mide en lineas.</li>
+<li>En los TV LCD se mide pixels horizontales x pixels verticales.</li>
+</ul>
+<p>a) Diseñar la clase <code>Televisor</code> con los atributos y métodos comunes a los dos tipos de televisores y sus subclases <code>TVTubo</code> y <code>TVLCD</code> con los atributos y métodos que sea necesario:</p>
+<ul>
+<li>Constructor de cada clase que permita inicializar todos los datos de la clase.</li>
+<li><code>equals</code>: Dos televisiones son iguales si son de la misma marca y modelo.</li>
+<li><code>compareTo</code>: Se considera menor (mayor) la de menor (mayor) marca. A igual marca, menor (mayor) la de menor (mayor) modelo.</li>
+<li><code>public String resulucion()</code>: Devuelve un texto con la resolución del televisor, como por ejemplo "420 lineas" o "800 x 600 pixels" dependiendo del tipo de televisor.</li>
+<li><code>public String toString()</code>: Devuelve un texto con la marca, modelo, precio, pulgadas y resolución.</li>
+</ul>
+<p>b) Diseñar la clase <code>TestTV</code> para probar las clases diseñadas. Crear algunos objetos de las clases <code>TVTubo</code> y <code>TVLCD</code> y mostrarlos por pantalla.</p>
+<hr>
+<h3 id="ejercicio05"><strong>Ejercicio05</strong></h3>
+<p>De cada pareja de afirmaciones <strong>indica cual es la verdaderas</strong>:</p>
+<p>​   a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.</p>
+<p>​   b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.</p>
+<p>​   c) Si una clase es abstracta no se puede instanciar.</p>
+<p>​   d) Si una clase es abstracta no se puede heredar de ella.</p>
+<p>​   e) Una clase abstracta tiene que tener métodos abstractos.</p>
+<p>​   f) Una clase puede ser abstracta y no tener métodos abstractos.</p>
+<p>​   g) Si una clase tiene métodos abstractos tiene que ser abstracta.</p>
+<p>​   h) Una clase puede tener métodos abstractos y no ser abstracta.</p>
+<p>​   i) Si una clase es abstracta sus subclases no pueden ser abstractas.</p>
+<p>​   j) Una clase abstracta puede tener subclases que también sean abstractas.</p>
+<p>​   k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.</p>
+<p>​   l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.</p>
+<p>​   m) Si un método se define final se tiene que reescribir en las subclases.</p>
+<p>​   n) Si un método se define final no se puede reescribir en las subclases.</p>
+<p>​   o) Una clase puede tener un método final y no ser una clase final.</p>
+<p>​   p) Si una clase tiene un método final tiene que ser una clase final.</p>
+<p>​   q) Si una clase se define final no se pueden definir subclases de ella.</p>
+<p>​   r) Si una clase se define final no se puede instanciar.</p>
+<p>​   s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.</p>
+<p>​   t) Un método definido final y abstract podría resultar útil.</p>
+<p>​   u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.</p>
+<p>​   v) Una clase definida final y abstract podría resultar útil.</p>
+<hr>
+<h3 id="ejercicio06"><strong>Ejercicio06</strong></h3>
+<p>Dada las siguientes <strong>definiciones de clases</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="w"> </span><span class="p">(){</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">){</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">(){</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Nombre: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;Edad &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="w"> </span><span class="p">(){</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getEdad</span><span class="p">(){</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">class</span> <span class="nc">Estudiante</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">creditos</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Estudiante</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="p">){</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">e</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">creditos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">(){</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\nCreditos: &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">creditos</span><span class="p">;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">class</span> <span class="nc">Empleado</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Empleado</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="p">){</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">e</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">(){</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Nombre: &quot;</span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="s">&quot;\nSalario: &quot;</span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">salario</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">class</span> <span class="nc">Test</span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="n">Estudiante</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Estudiante</span><span class="p">(</span><span class="s">&quot;pepe&quot;</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Responde</strong> a las siguientes cuestiones justificando las respuestas. </p>
+<p>​   a) ¿Es necesario el uso de <code>this</code> en el constructor de la clase <code>Estudiante</code>?</p>
+<p>​   b) ¿Es necesario el uso de <code>super</code> en el método <code>toString</code> de la clase <code>Estudiante</code>?</p>
+<p>​   c) Si quitásemos el constructor de la clase <code>Estudiante</code> ¿daría un error de compilación?</p>
+<p>​   d) En el método <code>toString</code> de la clase <code>Empleado</code> ¿por qué es incorrecto el acceso que se hace al atributo <code>nombre</code>? ¿Cómo se tendría que definir <code>nombre</code> en la clase <code>Persona</code> para evitar el error?</p>
+<p>​   e) ¿Qué consecuencia tiene que algunos métodos de la clase <code>Persona</code> se hayan definido <code>final</code>?</p>
+<p>​   f) Si el método <code>toString</code> no se hubiera definido en ninguna de las tres clases ¿daría error el <code>sout</code> del método <code>main</code>?</p>
+<h2 id="ejercicios-polimorfismo">Ejercicios Polimorfismo</h2>
+<h3 id="ejercicio07"><strong>Ejercicio07</strong></h3>
+<p>Dada la siguiente <strong>jerarquía de clases</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Montador</span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">montar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">desmontar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">}</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Obrero</span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Obrero</span><span class="p">(){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se crea Obrero&quot;</span><span class="p">);}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, soy Obrero&quot;</span><span class="p">);}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Carpintero</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Obrero</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Montador</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Carpintero</span><span class="p">(){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se crea Carpintero&quot;</span><span class="p">);}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">montar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Montando &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);}</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">desmontar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Desmontando &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">clavar</span><span class="p">()</span><span class="w"> </span><span class="p">{...}</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="p">}</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Albañil</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Obrero</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Albañil</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">        </span><span class="kd">super</span><span class="p">();</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se crea Albañil&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">levantarMuro</span><span class="p">(){</span><span class="w"> </span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Levantando muro …&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Indicar <strong>qué líneas</strong> del siguiente fragmento de programa <strong>producirán errores de compilación</strong>,</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">Montador</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Carpintero</span><span class="p">();</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">Montador</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Albañil</span><span class="p">();</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">Obrero</span><span class="w"> </span><span class="n">o1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Carpintero</span><span class="p">();</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="n">Obrero</span><span class="w"> </span><span class="n">o2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Albañil</span><span class="p">();</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="n">o1</span><span class="p">.</span><span class="na">montar</span><span class="p">(</span><span class="s">&quot;Mesa&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">o2</span><span class="p">.</span><span class="na">levantarMuro</span><span class="p">();</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="n">m1</span><span class="p">.</span><span class="na">saludar</span><span class="p">();</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="n">m1</span><span class="p">.</span><span class="na">montar</span><span class="p">(</span><span class="s">&quot;Silla&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="p">((</span><span class="n">Albañil</span><span class="p">)</span><span class="n">o2</span><span class="p">).</span><span class="na">levantarMuro</span><span class="p">();</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="p">((</span><span class="n">Albañil</span><span class="p">)</span><span class="n">o1</span><span class="p">).</span><span class="na">levantarMuro</span><span class="p">();</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Una vez eliminadas</strong> las líneas con error, indicar <strong>cuál sería la salida</strong> por pantalla del programa.</p>
+<div class="admonition question">
+<p class="admonition-title">¿<strong>Sería correcta</strong> la instrucción siguiente?</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w">    </span><span class="n">Albañil</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Albañil</span><span class="p">();</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr>
+<h3 id="ejercicio08"><strong>Ejercicio08</strong></h3>
+<p>Las clases siguientes implementan una <strong>jerarquía de herencia</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">class</span> <span class="nc">Base</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">metodo1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Base.metodo1()&quot;</span><span class="p">;}</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">metodo2</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Base.metodo1(&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">}</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">TipoI</span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">metodoIn2</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">metodoIn3</span><span class="p">();</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">}</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="kd">class</span> <span class="nc">Derivada</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">TipoI</span><span class="p">{</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">metodoIn2</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Derivada.metodoIn2()&quot;</span><span class="p">;}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">metodoIn3</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Derivada.metodoIn3()&quot;</span><span class="p">;}</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">metodo1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Derivada.metodo1()&quot;</span><span class="p">;}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="p">}</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="kd">class</span> <span class="nc">Derivada2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Derivada</span><span class="p">{</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">metodo2</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Derivada2.metodo2(&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;}</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">metodo4</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Derivada2.metodo4()&quot;</span><span class="p">;}</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Sea la clase <code>CuestionHerencia</code> que usa las anteriores:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CuestionHerencia</span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="o">[]</span><span class="p">){</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="n">Derivada</span><span class="w"> </span><span class="n">derivada</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="n">Derivada2</span><span class="w"> </span><span class="n">derivada2</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="n">Base</span><span class="w"> </span><span class="n">base</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="n">derivada2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derivada2</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">derivada2</span><span class="p">;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">derivada2</span><span class="p">.</span><span class="na">metodo1</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">derivada2</span><span class="p">.</span><span class="na">metodoIn2</span><span class="p">(</span><span class="s">&quot;EDA!!&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="p">.</span><span class="na">metodo1</span><span class="p">();</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="p">.</span><span class="na">metodo2</span><span class="p">(</span><span class="s">&quot;EDA!!&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">derivada2</span><span class="p">.</span><span class="na">metodoIn3</span><span class="p">();</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">derivada2</span><span class="p">.</span><span class="na">metodo4</span><span class="p">();</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;6) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="p">.</span><span class="na">metodo3</span><span class="p">();</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;7) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="n">derivada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derivada</span><span class="p">();</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">        </span><span class="n">derivada2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derivada2</span><span class="p">();</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Base</span><span class="p">();</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">        </span><span class="n">Distinta</span><span class="w"> </span><span class="n">ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Distinta</span><span class="p">();</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ref</span><span class="p">.</span><span class="na">prueba</span><span class="p">(</span><span class="n">derivada2</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;8) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ref</span><span class="p">.</span><span class="na">prueba</span><span class="p">(</span><span class="n">derivada</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;9) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">        </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ref</span><span class="p">.</span><span class="na">prueba</span><span class="p">(</span><span class="n">base</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;10) &quot;</span><span class="o">+</span><span class="n">tmp</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>​   a) <strong>Señalar los errores </strong>existentes.</p>
+<p>​   b) <strong>Una vez corregido</strong> el programa, <strong>escribir la salida</strong> por pantalla resultado de su ejecución.</p>
+<hr>
+<h3 id="ejercicio09"><strong>Ejercicio09</strong></h3>
+<p><em>Supermercado: Práctica con interfaces y polimorfismo.</em></p>
+<p><strong>Supermercado</strong>. Creación de Interfaces </p>
+<p>Supón que debe crear distintas clases Java para describir los productos que vende un supermercado. </p>
+<p>Para unificar el código de los distintos programadores del equipo debes crear las siguientes Interfaces Java para describir algunas características de los productos. </p>
+<p><strong>Interfaz EsLiquido</strong>. Esta interfaz indica que los objetos creados a partir de la clase serán líquidos, y tendrá los siguientes métodos: </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVolumen</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getVolumen</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setTipoEnvase</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">env</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getTipoEnvase</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Interfaz EsAlimento</strong>. Esta interfaz indica que los objetos creados a partir de la clase serán alimentos, y tendrá los siguientes métodos: </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setCaducidad</span><span class="p">(</span><span class="n">LocalDate</span><span class="w"> </span><span class="n">fc</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="nf">getCaducidad</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCalorias</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Interfaz ConDescuento</strong>. Esta interfaz indicará que el producto tiene descuento e incluirá los siguientes métodos: </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDescuento</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">des</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getDescuento</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getPrecioDescuento</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Creación de clases de productos</strong>. Se pide que programes las siguientes clases de productos, implementando las interfaces que sean necesarias.</p>
+<p><strong>Clase Detergente</strong>. Define una botella de detergente (debes tener en cuenta que este producto puede tener descuento).</p>
+<p>Sus propiedades principales serán: <code>marca</code> (String) y <code>precio</code> (double).</p>
+<p>Incluye otras propiedades según sea necesario a la hora de implementar las interfaces. </p>
+<ul>
+<li>Constructor: programa un constructor que reciba como parámetros una marca y un precio. </li>
+<li>Métodos <em>set</em> y <em>get</em>: programa métodos set y get para la marca y el precio.</li>
+<li>Métodos de las interfaces: programa los métodos de las interfaces. </li>
+<li>Método <code>toString</code>: programa el método toString con todas las características del producto. </li>
+</ul>
+<p><strong>Clase Cereales</strong>. Define el producto caja de cereales (este producto no tiene descuentos).</p>
+<p>Las propiedades del producto serán <code>marca</code>, <code>precio</code> y <code>tipo</code> de cereal (String).</p>
+<ul>
+<li>Programa un <em>constructor</em> que reciba como parámetros las tres propiedades anteriores. </li>
+<li>Programa los métodos <em>set</em> y <em>get</em> para dichas propiedades. </li>
+<li>Programa los métodos de las interfaces implementadas (si es necesario añade más propiedades a la clase).</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">A tener en cuenta!</p>
+<p>Las calorías serán las siguientes: 5 si el cereal es espelta, 8 si es maíz, 12 si es trigo, y 15 en los demás casos.</p>
+</div>
+<ul>
+<li>Programa el método <code>toString</code> para devolver una cadena con todas las características del producto.</li>
+</ul>
+<p><strong>Clase Vino</strong>. Esta clase describirá el producto botella de vino (este producto es susceptible de tener descuento).</p>
+<p>El producto tendrá como propiedades la marca, el tipo de vino, los grados de alcohol y el precio.</p>
+<ul>
+<li>Programa al igual que los productos anteriores un constructor con estas cuatro propiedades como parámetros.</li>
+<li>Programa también los métodos set, get, toString y los métodos de las interfaces. Añada nuevas propiedades si es necesario. </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">A tener en cuenta!</p>
+<p>Las calorías se calcularán multiplicando por 10 la graduación alcohólica.</p>
+</div>
+<p><strong>Programa de prueba</strong>. Realiza un programa de prueba dónde crees varios productos de cada clase. Haz un ejemplo de polimorfismo creando un ArrayList de productos alimenticios y calculando la suma de sus calorías.</p>
+<hr>
+
+<h3 id="ejercicio10"><strong>Ejercicio10</strong></h3>
+<p>Realizar una aplicación para la gestión de la información de las personas vinculadas a una <code>Facultad</code>, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio.
+A continuación, se detalla qué tipo de información debe gestionar esta aplicación:</p>
+<ul>
+<li>Por cada <code>Persona</code>, se debe conocer, al menos, su <code>nombre</code> y <code>apellidos</code>, su <code>número de identificación</code> y su <code>estado civil</code>.</li>
+<li>Con respecto a los <code>Empleados</code>, sean del tipo que sean, hay que saber su <code>año de incorporación</code> a la facultad y qué <code>número de despacho</code> tienen asignado.</li>
+<li>En cuanto a los <code>Estudiantes</code>, se requiere almacenar el <code>curso</code> en el que están matriculados.</li>
+<li>Por lo que se refiere a los <code>Profesores</code>, es necesario gestionar a qué <code>departamento</code> pertenecen (<code>lenguajes</code>, <code>matemáticas</code>, <code>arquitectura</code>, ...).</li>
+<li>Sobre el <code>Personal de servicio</code>, hay que conocer a qué <code>sección</code> están asignados (<code>biblioteca</code>, <code>decanato</code>, <code>secretaría</code>, ...).</li>
+</ul>
+<p>El ejercicio consiste, en primer lugar, en definir la jerarquía de clases de esta aplicación. A continuación, debe programar las clases definidas en las que, además de los constructores, hay que desarrollar los métodos correspondientes a las siguientes acciones:</p>
+<ul>
+<li>Cambio del estado civil de una persona.</li>
+<li>Reasignación de despacho a un empleado.</li>
+<li>Matriculación de un estudiante en un nuevo curso.</li>
+<li>Cambio de departamento de un profesor.</li>
+<li>Traslado de sección de un empleado del personal de servicio.</li>
+<li>Imprimir toda la información de cada tipo de individuo.</li>
+</ul>
+<p>En el método <code>main</code> crear un array de <code>personas</code>. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.</p>
+<hr>
+<h3 id="ejercicio11"><strong>Ejercicio11</strong></h3>
+<p>Crea una clase <code>Empleado</code> y una subclase <code>Encargado</code>. Los encargados reciben un 10% más de sueldo base que un empleado normal. Implementa dichas clases en el paquete objetos y sobrescribe el método <code>getSueldo()</code> para ambas clases.</p>
+<hr>
+<h3 id="ejercicio12"><strong>Ejercicio12</strong></h3>
+<p>Crear la clase <code>Dado</code>, la cual desciende de la clase <code>Sorteo</code>. La clase <code>Dado</code>, en la llamada <code>lanzar()</code> mostrará un número aleatorio del 1 al 6. Crear la clase <code>Moneda</code>, la cual desciende de la clase <code>Sorteo</code>. Esta clase en la llamada al método <code>lanzar()</code> mostrará las palabras cara o cruz. Realizar una clase con un método <code>main</code> que compruebe todo lo realizado.</p>
+<hr>
+<h3 id="ejercicio13"><strong>Ejercicio13</strong></h3>
+<p>Realiza una clase <code>Huevo</code> con un atributo <code>tamaño</code> (<code>S</code>, <code>M</code>, <code>L</code>, <code>XL</code>) con el método <code>toString</code>. La clase <code>Huevo</code> está compuesta por dos clases internas, una <code>Clara</code> y otra <code>Yema</code>. Ambas clases tienen un atributo <code>color</code> y el método <code>toString</code>. Realiza un método <code>main</code> en el que se cree un objeto de tipo <code>Huevo</code>, <code>Clara</code> y <code>Yema</code>, se le asigne valor a sus atributos y se muestren los valores.</p>
+<h2 id="ejercicios-lionel">Ejercicios Lionel</h2>
+<h3 id="ejercicio14-astros"><strong>Ejercicio14 - Astros</strong></h3>
+<p>Define una jerarquía de clases que permita almacenar datos sobre los planetas y satélites (lunas) que forman parte del sistema solar.</p>
+<p>Algunos atributos que necesitaremos almacenar son: </p>
+<ul>
+<li>Masa del cuerpo.</li>
+<li>Diámetro medio.</li>
+<li>Período de rotación sobre su propio eje.</li>
+<li>Período de traslación alrededor del cuerpo que orbitan.</li>
+<li>Distancia media a ese cuerpo.</li>
+<li>etc.</li>
+</ul>
+<p>Define las clases necesarias conteniendo: </p>
+<ul>
+<li>Constructores. </li>
+<li>Métodos para recuperar y almacenas atributos.</li>
+<li>Método para mostrar la información del objeto. </li>
+</ul>
+<p>Define un método, que dado un objeto del sistema solar (planeta o satélite), imprima toda la información que se dispone sobre el mismo (además de su lista de satélites si los tuviera).</p>
+<p>El diagrama UML sería:</p>
+<p><img src="../../img/ud08/ud08_ej14.png" alt="ud08_ej14" style="zoom:60%;" /></p>
+<p>Una posible solución sería crear una lista de objetos, insertar los planetas y satélites (directamente mediante código o solicitándolos por pantalla) y luego mostrar un pequeño menú que permita al usuario imprimir la información del astro que elija.</p>
+<hr>
+
+<h3 id="ejercicio15-mascotas"><strong>Ejercicio15 - Mascotas</strong></h3>
+<p>Implementa una clase llamada <strong>Inventario</strong> que utilizaremos para almacenar referencias a todos los animales existentes en una tienda de mascotas. </p>
+<p>Esta clase debe cumplir con los siguientes requisitos: </p>
+<ul>
+<li>En la tienda existirán 4 tipos de animales: perros, gatos, loros y canarios. </li>
+<li>Los animales deben almacenarse en un <code>ArrayList</code> privado dentro de la clase <strong>Inventario</strong>. </li>
+<li>La clase debe permitir realizar las siguientes acciones:<ul>
+<li>Mostrar la lista de animales (solo tipo y nombre, 1 línea por animal).</li>
+<li>Mostrar todos los datos de un animal concreto.</li>
+<li>Mostrar todos los datos de todos los animales.</li>
+<li>Insertar animales en el inventario. </li>
+<li>Eliminar animales del inventario. </li>
+<li>Vaciar el inventario. </li>
+</ul>
+</li>
+</ul>
+<p>Implementa las demás clases necesarias para usar la clase <code>Inventario</code>.</p>
+<p>El diagrama UML sería:</p>
+<p><img src="../../img/ud08/ud08_ej15.png" alt="ud08_ej15" style="zoom:60%;" /></p>
+<hr>
+
+<h3 id="ejercicio16-banco"><strong>Ejercicio16 - Banco</strong></h3>
+<p>Vamos a hacer una aplicación que simule el funcionamiento de un banco.</p>
+<p>Crea una clase <strong>CuentaBancaria</strong> con los atributos: <strong>iban</strong> y <strong>saldo</strong>. Implementa métodos para:</p>
+<ul>
+<li>Consultar los atributos. </li>
+<li>Ingresar dinero.</li>
+<li>Retirar dinero.</li>
+<li>Traspasar dinero de una cuenta a otra.</li>
+</ul>
+<p>Para los tres últimos métodos puede utilizarse internamente un método privado más general llamado <strong>añadir(...)</strong> que añada una cantidad (positiva o negativa) al saldo.</p>
+<p>También habrá un atributo común a todas las instancias llamado <strong>interesAnualBasico</strong>, que en principio puede ser constante.</p>
+<p>La clase tiene que ser <strong><em>abstracta</em></strong> y debe tener un método <strong>calcularIntereses()</strong> que se dejará sin implementar.</p>
+<p>También puede ser útil implementar un método para mostrar los datos de la cuenta.</p>
+<p>De esta clase heredarán dos subclases: <strong>CuentaCorriente</strong> y <strong>CuentaAhorro</strong>. La diferencia entre ambas será la manera de calcular los intereses:</p>
+<ul>
+<li>A la primera se le incrementará el saldo teniendo en cuenta el interés anual básico.</li>
+<li>La segunda tendrá una constante de clase llamada <strong>saldoMinimo</strong>. Si no se llega a este saldo el interés será la mitad del interés básico. Si se supera el saldo mínimo el interés aplicado será el doble del interés anual básico.</li>
+</ul>
+<p>Implementa una clase principal con función main para probar el funcionamiento de las tres clases: Crea varias cuentas bancarias de distintos tipos, pueden estar en un ArrayList si lo deseas; prueba a realizar ingresos, retiradas y transferencias; calcula los intereses y muéstralos por pantalla; etc.</p>
+<p>El diagrama UML sería:</p>
+<p><img src="../../img/ud08/ud08_ej16.png" alt="ud08_ej14" style="zoom:60%;" /></p>
+<hr>
+
+<h3 id="ejercicio17-empresa-y-empleados"><strong>Ejercicio17 - Empresa y empleados</strong></h3>
+<p>Vamos a implementar dos clases que permitan gestionar datos de empresas y sus empleados.</p>
+<p>Los <strong>empleados</strong> tienen las siguientes características:</p>
+<ul>
+<li>Un empleado tiene nombre, DNI, sueldo bruto (mensual), edad, teléfono y dirección.</li>
+<li>El nombre y DNI de un empleado no pueden variar.</li>
+<li>Es obligatorio que todos los empleados tengan al menos definido su nombre, DNI y el sueldo bruto. Los demás datos no son obligatorios.</li>
+<li>Será necesario un método para imprimir por pantalla la información de un empleado.</li>
+<li>Será necesario un método para calcular el sueldo neto de un empleado. El sueldo neto se calcula descontando del sueldo bruto un porcentaje que depende del IRPF. El porcentaje del IRPF depende del sueldo bruto anual del empleado (sueldo bruto x 12 pagas).<strong>(*)</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Sueldo bruto anual</strong></th>
+<th><strong>IRPF</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inferior a 12.000 €</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>De 12.000 a 25.000 €</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>Más de 25.000 €</td>
+<td>40%</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo, un empleado con un sueldo bruto anual de 17.000 € tendrá un 30% de IRPF. Para calcular su sueldo neto mensual se descontará un 30% a su sueldo bruto mensual.</p>
+<p>Las <strong>empresas</strong> tienen las siguientes características:</p>
+<ul>
+<li>Una empresa tiene nombre y CIF (datos que no pueden variar), además de teléfono, dirección y empleados. Cuando se crea una nueva empresa esta carece de empleados.</li>
+<li>Serán necesarios métodos para:</li>
+<li>Añadir y eliminar empleados a la empresa.</li>
+<li>Mostrar por pantalla la información de todos los empleados.</li>
+<li>Mostrar por pantalla el DNI, sueldo bruto y neto de todos los empleados.</li>
+<li>Calcular la suma total de sueldos brutos de todos los empleados.</li>
+<li>Calcular la suma total de sueldos netos de todos los empleados.</li>
+</ul>
+<p><strong>Implementa las clases</strong> <strong>Empleado</strong> <strong>y Empresa</strong> con los atributos oportunos, un constructor, los getters/setters oportunos y los métodos indicados. Puedes añadir más métodos si lo ves necesario. Estas clases no deben realizar ningún tipo de entrada por teclado.</p>
+<p><strong>Implementa también</strong> <strong>una clase Programa</strong> con una función main para realizar pruebas: Crear una o varias empresas, crear empleados, añadir y eliminar empleados a las empresas, listar todos los empleados, mostrar el total de sueldos brutos y netos, etc.</p>
+<div class="admonition note">
+<p class="admonition-title">(*)</p>
+<p>El IRPF realmente es más complejo pero se ha simplificado para no complicar demasiado este ejercicio.</p>
+</div>
+<hr>
+<h3 id="ejercicio18-vehiculos"><strong>Ejercicio18 - Vehículos</strong></h3>
+<div class="admonition note">
+<p class="admonition-title">Aconsejable</p>
+<p>Realizar el diseño UML antes de empezar a programar.</p>
+</div>
+<p>Debes crear varias clases para un software de una empresa de transporte. Implementa la jerarquía de clases necesaria para cumplir los siguientes criterios:</p>
+<ul>
+<li>Los vehículos de la empresa de transporte pueden ser terrestres, acuáticos y aéreos. Los vehículos terrestres pueden ser coches y motos. Los vehículos acuáticos pueden ser barcos y submarinos. Los vehículos aéreos pueden ser aviones y helicópteros.</li>
+<li>Todos los vehículos tienen matrícula y modelo (datos que no pueden cambiar). La matrícula de los coches terrestres deben estar formadas por 4 números y 3 letras. La de los vehículos acuáticos por entre 3 y 10 letras. La de los vehículos aéreos por 4 letras y 6 números.</li>
+<li>Los vehículos terrestres tienen un número de ruedas (dato que no puede cambiar).</li>
+<li>Los vehículos acuáticos tienen eslora (dato que no puede cambiar).</li>
+<li>Los vehículos aéreos tienen un número de asientos (dato que no puede cambiar).</li>
+<li>Los coches pueden tener aire acondicionado o no tenerlo.</li>
+<li>Las motos tienen un color.</li>
+<li>Los barcos pueden tener motor o no tenerlo.</li>
+<li>Los submarinos tienen una profundidad máxima.</li>
+<li>Los aviones tienen un tiempo máximo de vuelo.</li>
+<li>Los helicópteros tienen un número de hélices.</li>
+<li>No se permiten vehículos genéricos, es decir, no se deben poder instanciar objetos que sean vehículos sin más. Pero debe ser posible instanciar vehículos terrestres, acuáticos o aéreos genéricos (es decir, que no sean coches, motos, barcos, submarinos, aviones o helicópteros).</li>
+<li>El diseño debe obligar a que todas las clases de vehículos tengan un método imprimir() que imprima por pantalla la información del vehículo en una sola línea.</li>
+</ul>
+<p>Implementa todas las clases necesarias con: atributos, constructor con parámetros, getters/setters y el método imprimir. Utiliza <strong>abstracción</strong> y <strong>herencia</strong> de la forma más apropiada.</p>
+<p>Implementa también una clase Programa para hacer algunas pruebas: Instancia varios vehículos de todo tipo (coches, motos, barcos, submarinos, aviones y helicópteros) así como vehículos genericos (terrestres, acuáticos y aéreos). Crea un ArrayList y añade todos los vehículos. Recorre la lista y llama al método imprimir de todos los vehículos.</p>
+<hr>
+<h3 id="ejercicio19-figuras"><strong>Ejercicio19 - Figuras</strong></h3>
+<p>Implementa una <strong>interface</strong> llamada <strong>iFigura2D</strong> que declare los métodos:</p>
+<ul>
+<li><code>double perimetro()</code>: Para devolver el perímetro de la figura.</li>
+<li><code>double area()</code>: Para devolver el área de la figura.</li>
+<li><code>void escalar(double escala)</code>: Para escalar la figura (aumentar o disminuir su tamaño). Solo hay que multiplicar los atributos de la figura por la escala (&gt; 0).</li>
+<li><code>void imprimir()</code>: Para mostrar la información de la figura (atributos, perímetro y área) en una sola línea.</li>
+</ul>
+<p>Existen 4 tipos de figuras.</p>
+<ul>
+<li><strong>Cuadrado</strong>: Sus cuatro lados son iguales.</li>
+<li><strong>Rectángulo</strong>: Tiene ancho y alto.</li>
+<li><strong>Triángulo</strong>: Tiene ancho y alto.</li>
+<li><strong>Círculo</strong>: Tiene radio.</li>
+</ul>
+<p>Crea las 4 clases de figuras de modo que implementen la interface iFigura2D. Define sus métodos.</p>
+<p>Crea una clase ProgramaFiguras con un <em>main</em> en el que realizar las siguientes pruebas:</p>
+<p>​   a) Crea un ArrayList figuras.</p>
+<p>​   b) Añade figuras de varios tipos.</p>
+<p>​   c) Muestra la información de todas las figuras.</p>
+<p>​   d) Escala todas las figuras con escala = 2.</p>
+<p>​   e) Muestra de nuevo la información de todas las figuras.</p>
+<p>​   f) Escala todas las figuras con escala = 0.1.</p>
+<p>​   g) Muestra de nuevo la información de todas las figuras.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ud0808/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fuentes de información">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Fuentes de información
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../ud09/ud0901/" class="md-footer__link md-footer__link--next" aria-label="Next: 9.1 Introducción">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                9.1 Introducción
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "navigation.footer", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

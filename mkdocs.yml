@@ -1,0 +1,96 @@
+# Nom del lloc
+site_name: mòdul Programació
+
+# Carpeta amb el documents font
+docs_dir: 'md'
+
+# Carpeta on es generarà el lloc web (mkdocs build)
+site_dir: 'docs'
+
+# Adreça on s'executa el server local (mkdocs serve)
+dev_addr: localhost:4000
+
+# Navegació dels documents
+# nav:
+#   - Títol: Document.md
+nav:
+  - Inicio: index.md
+  - UD 0 Conocimientos previos: default.md
+  - UD 1 Elemenos de un programa informático: default.md
+  - UD 2 Utilización de objetos y clases: default.md
+  - UD 3 Estructuras de control y excepciones: default.md
+  - UD 4 Estructuras de datos Arrays y matrices. Recursividad: default.md
+  - UD 5 Desarrollo de clases: default.md
+  - UD 6 Lectura y escritura de información: default.md
+  - UD 7 Colecciones: default.md
+  - UD 8 Composición, Herencia y Polimorfismo:
+      - 8.1 Relaciones entre clases: ud08/ud0801.md
+      - 8.2 Composición: ud08/ud0802.md
+      - 8.3 Herencia: ud08/ud0803.md
+      - 8.4 Clases abstractas: ud08/ud0804.md
+      - 8.5 Interfaces: ud08/ud0805.md
+      - 8.6 Polimorfismo: ud08/ud0806.md
+      - Píldoras informáticas: ud08/ud0807.md
+      - Fuentes de información: ud08/ud0808.md
+      - Ejercicios: ud08/ud08ej.md
+  - UD 9 Acceso a bases de datos:
+      - 9.1 Introducción: ud09/ud0901.md
+      - 9.2 JDBC: ud09/ud0902.md
+      - 9.3 Acceso a BBDD: ud09/ud0903.md
+      - 9.4 Navegabilidad y concurrencia: ud09/ud0904.md
+      - 9.5 Consultas (Query): ud09/ud0905.md
+      - 9.6 Modificación (update): ud09/ud0906.md
+      - 9.7 Inserción (insert): ud09/ud0907.md
+      - 9.8 Borrado (delete): ud09/ud0908.md
+      - 9.9 Sentencias predefinidas: ud09/ud0909.md
+      - 9.10 Trabajar con Sqlite: ud09/ud0910.md
+      - 9.11 Repository pattern: ud09/ud0911.md
+      - Píldoras informáticas: ud09/ud0912.md
+      - Fuentes de información: ud09/ud0913.md
+      - Ejercicios: ud09/ud09ej.md
+  - UD 10 Interfaz gráfica: default.md
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list         # permet afegir atributs a les etiquetes html
+  # pymdownx és una col·leccio per escritura tècnica. S'instal·la per defecte
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
+
+# Tema a triar
+theme:
+  name: material  # selecció del tema
+  logo: logo3.png
+  palette:
+   # Boto que canvia a mode oscur
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Canvia a mode oscur
+    # Botó que canvia a mode clar
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Canvia a mode normal
+  features:
+    # utilitats de copia de codi
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer       # footer de la pagina, amb navegació
+    - navigation.top    # boto flotant de tornar a dalt
+
+# Altres afegits
+plugins:
+  - search      # plugin del quadre cerca
+  #- mkdocs-awesome-pages-plugin  # per a caixe awesomebox
+  #- pdf-export  # plugin per exportar a pdf
+  #- mkdocs-pdf-export-plugin
+
+extra:
+  favicon: favicon.ico
