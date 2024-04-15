@@ -549,7 +549,7 @@
         <li class="md-nav__item">
   <a href="#declaracion-de-una-clase-abstracta" class="md-nav__link">
     <span class="md-ellipsis">
-      declaración de una clase abstracta
+      Declaración de una clase abstracta
     </span>
   </a>
   
@@ -558,7 +558,7 @@
         <li class="md-nav__item">
   <a href="#metodos-abstractos" class="md-nav__link">
     <span class="md-ellipsis">
-      métodos abstractos
+      Métodos abstractos
     </span>
   </a>
   
@@ -567,7 +567,7 @@
         <li class="md-nav__item">
   <a href="#clases-y-metodos-finales" class="md-nav__link">
     <span class="md-ellipsis">
-      clases y métodos finales
+      Clases y métodos finales
     </span>
   </a>
   
@@ -631,6 +631,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../ud08ej/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ud0807/" class="md-nav__link">
         
   
@@ -657,27 +678,6 @@
   
   <span class="md-ellipsis">
     Fuentes de información
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ud08ej/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ejercicios
   </span>
   
 
@@ -967,6 +967,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ud09/ud09ej/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ud09/ud0912/" class="md-nav__link">
         
   
@@ -993,27 +1014,6 @@
   
   <span class="md-ellipsis">
     Fuentes de información
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ud09/ud09ej/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ejercicios
   </span>
   
 
@@ -1077,7 +1077,7 @@
         <li class="md-nav__item">
   <a href="#declaracion-de-una-clase-abstracta" class="md-nav__link">
     <span class="md-ellipsis">
-      declaración de una clase abstracta
+      Declaración de una clase abstracta
     </span>
   </a>
   
@@ -1086,7 +1086,7 @@
         <li class="md-nav__item">
   <a href="#metodos-abstractos" class="md-nav__link">
     <span class="md-ellipsis">
-      métodos abstractos
+      Métodos abstractos
     </span>
   </a>
   
@@ -1095,7 +1095,7 @@
         <li class="md-nav__item">
   <a href="#clases-y-metodos-finales" class="md-nav__link">
     <span class="md-ellipsis">
-      clases y métodos finales
+      Clases y métodos finales
     </span>
   </a>
   
@@ -1126,7 +1126,7 @@
 </div>
 <p>La posibilidad de declarar clases abstractas es una de las características más útiles de los lenguajes orientados a objetos, pues permiten dar unas líneas generales de cómo es una clase sin tener que implementar todos sus métodos o implementando solamente algunos de ellos. Esto resulta especialmente útil cuando las distintas clases derivadas deban proporcionar los mismos métodos indicados en la clase base abstracta, pero su implementación sea específica para cada subclase. </p>
 <p>Imagina que estás trabajando en un entorno de manipulación de objetos gráficos y necesitas trabajar con líneas, círculos, rectángulos, etc. Estos objetos tendrán en común algunos atributos que representen su estado (ubicación, color del contorno, color de relleno, etc.) y algunos métodos que modelen su comportamiento (dibujar, rellenar con un color, escalar, desplazar, rotar, etc.). Algunos de ellos serán comunes para todos ellos (por ejemplo la ubicación o el desplazamiento) y sin embargo otros (como por ejemplo dibujar) necesitarán una implementación específica dependiendo del tipo de objeto. Pero, en cualquier caso, todos ellos necesitan esos métodos (tanto un círculo como un rectángulo necesitan el método dibujar, aunque se lleven a cabo de manera diferente). En este caso resultaría muy útil disponer de una clase abstracta objeto gráfico donde se definirían las líneas generales (algunos atributos concretos comunes, algunos métodos concretos comunes implementados y algunos métodos genéricos comunes sin implementar) de un objeto gráfico y más adelante, según se vayan definiendo clases especializadas (líneas, círculos, rectángulos), se irán concretando en cada subclase aquellos métodos que se dejaron sin implementar en la clase abstracta.</p>
-<h2 id="declaracion-de-una-clase-abstracta">declaración de una clase abstracta</h2>
+<h2 id="declaracion-de-una-clase-abstracta">Declaración de una clase abstracta</h2>
 <p>Ya has visto que una clase abstracta es una clase que no se puede instanciar, es decir, que no se pueden crear objetos a partir de ella. La idea es permitir que otras clases deriven de ella, proporcionando un modelo genérico y algunos métodos de utilidad general. Las clases abstractas se declaran mediante el modificador <code>abstract</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1176,7 +1176,7 @@ En este caso lo único que habría que hacer es añadir el modificador <code>abs
 </code></pre></div></td></tr></table></div>
 <p>Que hereda de <code>AbstractList</code> y de la que hereda la clase <code>LinkedList</code>.    </p>
 </details>
-<h2 id="metodos-abstractos">métodos abstractos</h2>
+<h2 id="metodos-abstractos">Métodos abstractos</h2>
 <p>Un método abstracto es un método declarado en una clase para el cual esa clase no proporciona la implementación. Si una clase dispone de al menos un método abstracto se dice que es una clase abstracta. Toda clase que herede (sea subclase) de una clase abstracta debe implementar todos los métodos abstractos de su superclase o bien volverlos a declarar como abstractos (y por tanto también sería abstracta). Para declarar un método abstracto en Java se utiliza el modificador <code>abstract</code>) es un método cuya implementación no se define, sino que se declara únicamente su interfaz (cabecera) para que su cuerpo sea implementado más adelante en una clase derivada.</p>
 <p>Un método se declara como abstracto mediante el uso del modificador <code>abstract</code> (como en las clases abstractas):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="o">[</span><span class="n">modificador_acceso</span><span class="o">]</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tipo</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">nombreMetodo</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">parámetros</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">[</span><span class="n">excepciones</span><span class="o">]</span><span class="p">;</span>
@@ -1311,7 +1311,7 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <a id="__codelineno-10-10" name="__codelineno-10-10"></a>Salario:<span class="w">          </span><span class="m">1750</span>,00<span class="w"> </span>€
 </code></pre></div></td></tr></table></div>
 </details>
-<h2 id="clases-y-metodos-finales">clases y métodos finales</h2>
+<h2 id="clases-y-metodos-finales">Clases y métodos finales</h2>
 <p>En unidades anteriores has visto el modificador <strong>final</strong>, aunque sólo lo has utilizado por ahora para atributos y variables (por ejemplo para declarar atributos constantes, que una vez que toman un valor ya no pueden ser modificados). Pero este modificador también puede ser utilizado con clases y con métodos (con un comportamiento que no es exactamente igual, aunque puede encontrarse cierta analogía: <strong>no se permite heredar o no se permite redefinir</strong>).</p>
 <p>Una clase declarada como <code>final</code> no puede ser heredada, es decir, no puede tener clases derivadas. La jerarquía de clases a la que pertenece acaba en ella (no tendrá clases hijas):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">[</span><span class="n">modificador_acceso</span><span class="o">]</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">nombreClase</span><span class="w"> </span><span class="o">[</span><span class="n">herencia</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">interfaces</span><span class="o">]</span>
