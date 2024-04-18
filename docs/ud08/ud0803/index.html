@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sintaxis-de-la-herencia" class="md-skip">
+        <a href="#herencia" class="md-skip">
           Skip to content
         </a>
       
@@ -490,6 +490,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -517,6 +519,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1145,6 +1149,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1272,10 +1278,9 @@
                   
 
 
-  <h1>8.3 Herencia</h1>
-
+<h1 id="herencia">Herencia</h1>
 <p>Como ya has estudiado, la herencia es el mecanismo que permite definir una nueva clase a partir de otra, pudiendo añadir nuevas características, sin tener que volver a escribir todo el código de la clase base.</p>
-<p>La clase de la que se hereda suele ser llamada <em>clase base</em>, <em>clase madre</em> o <em>superclase</em> (de la que hereda otra clase. Se heredarán todas aquellas características que la clase madre permita). A la clase que hereda se le suele llamar <em>clase hija</em>, clase derivada o <em>subclase</em> (que hereda de otra clase. Se heredan todas aquellas características que la clase madre permita).</p>
+<p>La clase de la que se hereda suele ser llamada <em>clase base</em>, <em>clase madre</em> o <em>superclase</em> (de la que hereda otra clase, y se heredarán todas aquellas características que la clase madre permita). A la clase que hereda se le suele llamar <em>clase hija</em>, clase derivada o <em>subclase</em> (que hereda de otra clase, y se heredan todas aquellas características que la clase madre permita).</p>
 <p>Una clase derivada puede ser a su vez clase madre de otra que herede de ella y así sucesivamente dando lugar a una jerarquía de clases, excepto aquellas que estén en la parte de arriba de la jerarquía (sólo serán clases madre) o en la parte de abajo (sólo serán clases hijas). </p>
 <p>Una clase hija no tiene acceso a los miembros privados de su clase madre, tan solo a los públicos (como cualquier parte del código tendría) y a los protegidos (a los que sólo tienen acceso las clases derivadas y las del mismo paquete). Aquellos miembros que sean privados en la clase base también habrán sido heredados, pero el acceso a ellos estará restringido al propio funcionamiento de la superclase y sólo se podrá acceder a ellos si la superclase ha dejado algún medio indirecto para hacerlo (por ejemplo a través de algún método). </p>
 <p>Todos los miembros de la superclase, tanto atributos como métodos, son heredados por la subclase. Algunos de estos miembros heredados podrán ser redefinidos o sobrescritos (overriden) y también podrán añadirse nuevos miembros. De alguna manera podría decirse que estás "ampliando" la clase base con características adicionales o modificando algunas de ellas (proceso de especialización).</p>
@@ -1330,7 +1335,7 @@
 <p>A partir de ahora, un objeto de la clase <code>Alumno</code> contendrá los atributos <code>grupo</code> y <code>notaMedia</code> (propios de la clase <code>Alumno</code>), pero también <code>nombre</code>, <code>apellidos</code> y <code>fechaNacim</code> (propios de su clase base <code>Persona</code> y que por tanto ha heredado).</p>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
-<p>Imagina que también necesitas una clase Profesor, que contará con atributos como nombre, apellidos, fecha de nacimiento, salario y especialidad. ¿Cómo crearías esa nueva clase y qué atributos le añadirías?
+<p>Imagina que también necesitas una clase Profesor, que contará con atributos como nombre, apellidos, fecha de nacimiento, salario y especialidad. ¿Cómo crearías esa nueva clase y qué atributos le añadirías?<br />
 Está claro que un Profesor es otra especialización de Persona, al igual que lo era Alumno, así que podrías crear otra clase derivada de Persona y así aprovechar los atributos genéricos (nombre, apellidos, fecha de nacimiento) que posee todo objeto de tipo Persona. Tan solo faltaría añadirle sus atributos específicos (salario y especialidad):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
@@ -1415,7 +1420,7 @@ Está claro que un Profesor es otra especialización de Persona, al igual que lo
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition warning">
-<p class="admonition-title">privacidad de atributos</p>
+<p class="admonition-title">Privacidad de atributos</p>
 <p>Sólo en aquellos casos en los que se desea explícitamente que un miembro de una clase no pueda ser accesible desde una clase derivada debería utilizarse el modificador <em>private</em>. En el resto de casos es recomendable utilizar protected, o bien no indicar modificador (acceso a nivel de paquete).</p>
 </div>
 <details class="example" open="open">
@@ -1651,7 +1656,8 @@ Está claro que un Profesor es otra especialización de Persona, al igual que lo
 </code></pre></div></td></tr></table></div></p>
 <p>Una conclusión que puedes extraer de este código es que has tenido que escribir los métodos <code>get</code> y <code>set</code> para los tres atributos heredados, pero ¿no habría sido posible definir esos seis métodos en la clase base y así estas dos clases derivadas hubieran también heredado esos métodos? La respuesta es afirmativa y de hecho es como lo vas a hacer a partir de ahora. De esa manera te habrías evitado tener que escribir seis métodos en la clase <code>Alumno</code> y otros seis en la clase <code>Profesor</code>. </p>
 <blockquote>
-<p>Así que, <strong>recuerda!</strong> se pueden heredar tanto los atributos como los métodos.</p>
+<p>Así que, <strong>recuerda!</strong> <br /> 
+Se pueden heredar tanto los atributos como los métodos.</p>
 </blockquote>
 <p>Aquí tienes un ejemplo de cómo podrías haber definido la clase Persona para que luego se hubieran podido heredar de ella sus métodos (y no sólo sus atributos):</p>
 <p><strong>SOLUCIÓN IMPLEMENTADA CORRECTAMENTE (I)</strong>
@@ -1753,30 +1759,28 @@ Está claro que un Profesor es otra especialización de Persona, al igual que lo
 <span class="normal"><a href="#__codelineno-11-19">19</a></span>
 <span class="normal"><a href="#__codelineno-11-20">20</a></span>
 <span class="normal"><a href="#__codelineno-11-21">21</a></span>
-<span class="normal"><a href="#__codelineno-11-22">22</a></span>
-<span class="normal"><a href="#__codelineno-11-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Profesor</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">String</span><span class="w"> </span><span class="n">especialidad</span><span class="p">;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kt">double</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="c1">// Métodos getXXXXX</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getEspecialidad</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">especialidad</span><span class="p">;</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">}</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSalario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">}</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="c1">// Métodos setXXXXX</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSalario</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">salario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="p">}</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19"></a>
-<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setESpecialidad</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">especialidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">especialidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">especialidad</span><span class="p">;</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="p">}</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="p">}</span><span class="w">    </span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Profesor</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">especialidad</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="c1">// Métodos getXXXXX</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getEspecialidad</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">especialidad</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSalario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">    </span><span class="c1">// Métodos setXXXXX</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSalario</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">salario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salario</span><span class="p">;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setESpecialidad</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">especialidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">especialidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">especialidad</span><span class="p">;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="p">}</span><span class="w">    </span>
 </code></pre></div></td></tr></table></div>
 </details>
 <h2 id="redefinicion-de-metodos-heredados">Redefinición de métodos heredados</h2>
