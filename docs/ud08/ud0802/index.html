@@ -1180,7 +1180,7 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p">...</span><span class="w">    </span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>En unidades anteriores has trabajado con la clase <code>Punto</code>, que definía las coordenadas de un punto en el plano, y con la clase <code>Rectangulo</code>, que definía una figura de tipo rectángulo también en el plano a partir de dos de sus vértices (inferior izquierdo y superior derecho). Tal y como hemos formalizado ahora los tipos de relaciones entre clases, parece bastante claro que aquí tendrías un caso de composición: "un rectángulo contiene puntos". Por tanto, podrías ahora redefinir los atributos de la clase <code>Rectangulo</code> (cuatro números reales) como dos objetos de tipo Punto:</p>
+<p>En unidades anteriores has trabajado con la clase <code>Punto</code>, que definía las coordenadas de un punto en el plano, y con la clase <code>Rectangulo</code>, que definía una figura de tipo rectángulo también en el plano a partir de dos de sus vértices (inferior izquierdo y superior derecho). Tal y como hemos formalizado ahora los tipos de relaciones entre clases, parece bastante claro que aquí tendrías un caso de composición: "un rectángulo contiene puntos". Por tanto, podrías ahora redefinir los atributos de la clase <code>Rectangulo</code> (cuatro números reales) como dos objetos de tipo <code>Punto</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1228,85 +1228,31 @@
 <span class="normal"><a href="#__codelineno-2-22">22</a></span>
 <span class="normal"><a href="#__codelineno-2-23">23</a></span>
 <span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">UD08._01_Ejemplo_2_1</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Punto</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Punto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">}</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setX</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="p">}</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="p">}</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setY</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="p">}</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Punto</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Punto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setX</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setY</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Punto</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Punto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">}</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setX</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setY</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="p">}</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>En la siguiente presentación puedes observar detalladamente el proceso completo de elaboración de la clase <code>Rectangulo</code> haciendo uso de la clase <code>Punto</code>:</p>
 <p>1) Objetos de tipo <code>Rectangulo</code> compuesto por objetos de tipo <code>Punto</code>:</p>
@@ -1340,174 +1286,174 @@
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Dada la clase <code>Rectangulo</code>, escribe sus nuevos métodos <code>getVertice1</code> y <code>getVertice2</code> para que devuelvan los vértices inferior izquierdo y superior derecho del rectángulo (objetos de tipo <code>Punto</code>), teniendo en cuenta su nueva estructura de atributos (dos objetos de la clase <code>Punto</code>, en lugar de cuatro elementos de tipo <code>double</code>):</p>
 <p>Los métodos de obtención de vértices devolverán objetos de la clase Punto:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice1</span><span class="w"> </span><span class="p">(){</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice2</span><span class="w"> </span><span class="p">(){</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice1</span><span class="w"> </span><span class="p">(){</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">}</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice2</span><span class="w"> </span><span class="p">(){</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Esto funcionaría perfectamente, pero deberías tener cuidado con este tipo de métodos que devuelven directamente una referencia a un objeto atributo que probablemente has definido como privado. Estás de alguna manera haciendo público un atributo que fue declarado como privado.</p>
 <p>Para evitar que esto suceda bastaría con crear un nuevo objeto que fuera una copia del atributo que se desea devolver (en este caso un objeto de la clase <code>Punto</code>).</p>
 <p>Aquí tienes la solución para la nueva clase <code>Rectangulo</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span>
-<span class="normal"><a href="#__codelineno-5-28">28</a></span>
-<span class="normal"><a href="#__codelineno-5-29">29</a></span>
-<span class="normal"><a href="#__codelineno-5-30">30</a></span>
-<span class="normal"><a href="#__codelineno-5-31">31</a></span>
-<span class="normal"><a href="#__codelineno-5-32">32</a></span>
-<span class="normal"><a href="#__codelineno-5-33">33</a></span>
-<span class="normal"><a href="#__codelineno-5-34">34</a></span>
-<span class="normal"><a href="#__codelineno-5-35">35</a></span>
-<span class="normal"><a href="#__codelineno-5-36">36</a></span>
-<span class="normal"><a href="#__codelineno-5-37">37</a></span>
-<span class="normal"><a href="#__codelineno-5-38">38</a></span>
-<span class="normal"><a href="#__codelineno-5-39">39</a></span>
-<span class="normal"><a href="#__codelineno-5-40">40</a></span>
-<span class="normal"><a href="#__codelineno-5-41">41</a></span>
-<span class="normal"><a href="#__codelineno-5-42">42</a></span>
-<span class="normal"><a href="#__codelineno-5-43">43</a></span>
-<span class="normal"><a href="#__codelineno-5-44">44</a></span>
-<span class="normal"><a href="#__codelineno-5-45">45</a></span>
-<span class="normal"><a href="#__codelineno-5-46">46</a></span>
-<span class="normal"><a href="#__codelineno-5-47">47</a></span>
-<span class="normal"><a href="#__codelineno-5-48">48</a></span>
-<span class="normal"><a href="#__codelineno-5-49">49</a></span>
-<span class="normal"><a href="#__codelineno-5-50">50</a></span>
-<span class="normal"><a href="#__codelineno-5-51">51</a></span>
-<span class="normal"><a href="#__codelineno-5-52">52</a></span>
-<span class="normal"><a href="#__codelineno-5-53">53</a></span>
-<span class="normal"><a href="#__codelineno-5-54">54</a></span>
-<span class="normal"><a href="#__codelineno-5-55">55</a></span>
-<span class="normal"><a href="#__codelineno-5-56">56</a></span>
-<span class="normal"><a href="#__codelineno-5-57">57</a></span>
-<span class="normal"><a href="#__codelineno-5-58">58</a></span>
-<span class="normal"><a href="#__codelineno-5-59">59</a></span>
-<span class="normal"><a href="#__codelineno-5-60">60</a></span>
-<span class="normal"><a href="#__codelineno-5-61">61</a></span>
-<span class="normal"><a href="#__codelineno-5-62">62</a></span>
-<span class="normal"><a href="#__codelineno-5-63">63</a></span>
-<span class="normal"><a href="#__codelineno-5-64">64</a></span>
-<span class="normal"><a href="#__codelineno-5-65">65</a></span>
-<span class="normal"><a href="#__codelineno-5-66">66</a></span>
-<span class="normal"><a href="#__codelineno-5-67">67</a></span>
-<span class="normal"><a href="#__codelineno-5-68">68</a></span>
-<span class="normal"><a href="#__codelineno-5-69">69</a></span>
-<span class="normal"><a href="#__codelineno-5-70">70</a></span>
-<span class="normal"><a href="#__codelineno-5-71">71</a></span>
-<span class="normal"><a href="#__codelineno-5-72">72</a></span>
-<span class="normal"><a href="#__codelineno-5-73">73</a></span>
-<span class="normal"><a href="#__codelineno-5-74">74</a></span>
-<span class="normal"><a href="#__codelineno-5-75">75</a></span>
-<span class="normal"><a href="#__codelineno-5-76">76</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">class</span> <span class="nc">Rectangulo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularSuperficie</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">area</span><span class="p">,</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variables locales</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era x2 - x1</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era y2 - y1</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">area</span><span class="p">;</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalcularPerimetro</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">perimetro</span><span class="p">,</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variables locales</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era x2 - x1</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era y2 - y1</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="n">perimetro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">perimetro</span><span class="p">;</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="cm">/*</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="cm">    * Así no!</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="cm">    *</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="cm">    *public Punto getVertice1mal() {</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="cm">    *    return vertice1;</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="cm">    *}</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="cm">    *</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="cm">    *public Punto getVertice2mal() {</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="cm">    *    return vertice2;</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="cm">    *}  </span>
-<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="cm">    */</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32"></a>
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">    </span><span class="c1">//Mejor de este modo</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">        </span><span class="c1">// Creación de un nuevo punto extrayendo sus atributos</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="w">        </span><span class="n">Punto</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">();</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">();</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43"></a>
-<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="w">    </span><span class="c1">// O mejor así:</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="w">        </span><span class="c1">// Utilizando el constructor copia de Punto (si es que está definido)</span>
-<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="w">        </span><span class="c1">// Punto p;</span>
-<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="w">        </span><span class="c1">// p = new Punto(this.vertice2); </span>
-<a id="__codelineno-5-49" name="__codelineno-5-49"></a><span class="w">        </span><span class="c1">// return p;</span>
-<a id="__codelineno-5-50" name="__codelineno-5-50"></a>
-<a id="__codelineno-5-51" name="__codelineno-5-51"></a><span class="w">        </span><span class="c1">// o más corto:</span>
-<a id="__codelineno-5-52" name="__codelineno-5-52"></a><span class="w">        </span><span class="c1">// Uso del constructor copia</span>
-<a id="__codelineno-5-53" name="__codelineno-5-53"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="p">);</span>
-<a id="__codelineno-5-54" name="__codelineno-5-54"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-55" name="__codelineno-5-55"></a>
-<a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-57" name="__codelineno-5-57"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
-<a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
-<a id="__codelineno-5-59" name="__codelineno-5-59"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-60" name="__codelineno-5-60"></a>
-<a id="__codelineno-5-61" name="__codelineno-5-61"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-62" name="__codelineno-5-62"></a><span class="w">        </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-5-63" name="__codelineno-5-63"></a><span class="w">        </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-5-64" name="__codelineno-5-64"></a>
-<a id="__codelineno-5-65" name="__codelineno-5-65"></a><span class="w">        </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
-<a id="__codelineno-5-66" name="__codelineno-5-66"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
-<a id="__codelineno-5-67" name="__codelineno-5-67"></a>
-<a id="__codelineno-5-68" name="__codelineno-5-68"></a><span class="w">        </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setX</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-5-69" name="__codelineno-5-69"></a><span class="w">        </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setY</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-5-70" name="__codelineno-5-70"></a>
-<a id="__codelineno-5-71" name="__codelineno-5-71"></a><span class="w">        </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
-<a id="__codelineno-5-72" name="__codelineno-5-72"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creo un nuevo rectangulo, pero cambia el Perímetro del anterior&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-73" name="__codelineno-5-73"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
-<a id="__codelineno-5-74" name="__codelineno-5-74"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo B: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectB</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//4</span>
-<a id="__codelineno-5-75" name="__codelineno-5-75"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-76" name="__codelineno-5-76"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span>
+<span class="normal"><a href="#__codelineno-4-35">35</a></span>
+<span class="normal"><a href="#__codelineno-4-36">36</a></span>
+<span class="normal"><a href="#__codelineno-4-37">37</a></span>
+<span class="normal"><a href="#__codelineno-4-38">38</a></span>
+<span class="normal"><a href="#__codelineno-4-39">39</a></span>
+<span class="normal"><a href="#__codelineno-4-40">40</a></span>
+<span class="normal"><a href="#__codelineno-4-41">41</a></span>
+<span class="normal"><a href="#__codelineno-4-42">42</a></span>
+<span class="normal"><a href="#__codelineno-4-43">43</a></span>
+<span class="normal"><a href="#__codelineno-4-44">44</a></span>
+<span class="normal"><a href="#__codelineno-4-45">45</a></span>
+<span class="normal"><a href="#__codelineno-4-46">46</a></span>
+<span class="normal"><a href="#__codelineno-4-47">47</a></span>
+<span class="normal"><a href="#__codelineno-4-48">48</a></span>
+<span class="normal"><a href="#__codelineno-4-49">49</a></span>
+<span class="normal"><a href="#__codelineno-4-50">50</a></span>
+<span class="normal"><a href="#__codelineno-4-51">51</a></span>
+<span class="normal"><a href="#__codelineno-4-52">52</a></span>
+<span class="normal"><a href="#__codelineno-4-53">53</a></span>
+<span class="normal"><a href="#__codelineno-4-54">54</a></span>
+<span class="normal"><a href="#__codelineno-4-55">55</a></span>
+<span class="normal"><a href="#__codelineno-4-56">56</a></span>
+<span class="normal"><a href="#__codelineno-4-57">57</a></span>
+<span class="normal"><a href="#__codelineno-4-58">58</a></span>
+<span class="normal"><a href="#__codelineno-4-59">59</a></span>
+<span class="normal"><a href="#__codelineno-4-60">60</a></span>
+<span class="normal"><a href="#__codelineno-4-61">61</a></span>
+<span class="normal"><a href="#__codelineno-4-62">62</a></span>
+<span class="normal"><a href="#__codelineno-4-63">63</a></span>
+<span class="normal"><a href="#__codelineno-4-64">64</a></span>
+<span class="normal"><a href="#__codelineno-4-65">65</a></span>
+<span class="normal"><a href="#__codelineno-4-66">66</a></span>
+<span class="normal"><a href="#__codelineno-4-67">67</a></span>
+<span class="normal"><a href="#__codelineno-4-68">68</a></span>
+<span class="normal"><a href="#__codelineno-4-69">69</a></span>
+<span class="normal"><a href="#__codelineno-4-70">70</a></span>
+<span class="normal"><a href="#__codelineno-4-71">71</a></span>
+<span class="normal"><a href="#__codelineno-4-72">72</a></span>
+<span class="normal"><a href="#__codelineno-4-73">73</a></span>
+<span class="normal"><a href="#__codelineno-4-74">74</a></span>
+<span class="normal"><a href="#__codelineno-4-75">75</a></span>
+<span class="normal"><a href="#__codelineno-4-76">76</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">class</span> <span class="nc">Rectangulo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularSuperficie</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">area</span><span class="p">,</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variables locales</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era x2 - x1</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era y2 - y1</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">area</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalcularPerimetro</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">perimetro</span><span class="p">,</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variables locales</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getX</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era x2 - x1</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">        </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getY</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">();</span><span class="w"> </span><span class="c1">// Antes era y2 - y1</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">        </span><span class="n">perimetro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">altura</span><span class="p">;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">perimetro</span><span class="p">;</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="cm">    * Así no!</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="cm">    *</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="cm">    *public Punto getVertice1mal() {</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="cm">    *    return vertice1;</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="cm">    *}</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="cm">    *</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="cm">    *public Punto getVertice2mal() {</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="cm">    *    return vertice2;</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="cm">    *}  </span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="cm">    */</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">    </span><span class="c1">//Mejor de este modo</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">        </span><span class="c1">// Creación de un nuevo punto extrayendo sus atributos</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">        </span><span class="n">Punto</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">();</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">();</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43"></a>
+<a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">    </span><span class="c1">// O mejor así:</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="nf">getVertice2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">        </span><span class="c1">// Utilizando el constructor copia de Punto (si es que está definido)</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">        </span><span class="c1">// Punto p;</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">        </span><span class="c1">// p = new Punto(this.vertice2); </span>
+<a id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">        </span><span class="c1">// return p;</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50"></a>
+<a id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">        </span><span class="c1">// o más corto:</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">        </span><span class="c1">// Uso del constructor copia</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="p">);</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-55" name="__codelineno-4-55"></a>
+<a id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
+<a id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
+<a id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-60" name="__codelineno-4-60"></a>
+<a id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">        </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">        </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-4-64" name="__codelineno-4-64"></a>
+<a id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">        </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67"></a>
+<a id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">        </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setX</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">        </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setY</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-4-70" name="__codelineno-4-70"></a>
+<a id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">        </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
+<a id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creo un nuevo rectangulo, pero cambia el Perímetro del anterior&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-73" name="__codelineno-4-73"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo B: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectB</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//4</span>
+<a id="__codelineno-4-75" name="__codelineno-4-75"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-76" name="__codelineno-4-76"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>De esta manera, se devuelve un punto totalmente nuevo que podrá ser manipulado sin ningún temor por parte del código cliente de la clase pues es una copia para él.</p>
 </details>
@@ -1537,119 +1483,119 @@
 <p><strong>POSIBLE SOLUCIÓN</strong></p>
 <p>Durante el proceso de creación de un objeto (constructor) de la clase contenedora (en este caso <code>Rectangulo</code>) hay que tener en cuenta también la creación (llamada a constructores) de aquellos objetos que son contenidos (en este caso objetos de la clase Punto).
 1) En el caso del primer constructor, habrá que crear dos puntos con las coordenadas (0,0) y (1,1) y asignarlos a los atributos correspondientes (<code>vertice1</code> y <code>vertice2</code>):</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(){</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>2) Para el segundo constructor habrá que crear dos puntos con las coordenadas x1, y1, x2, y2 que han sido pasadas como parámetros:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(){</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y2</span><span class="p">){</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">);</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">);</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>2) Para el segundo constructor habrá que crear dos puntos con las coordenadas x1, y1, x2, y2 que han sido pasadas como parámetros:</p>
+<p>3) En el caso del tercer constructor puedes utilizar directamente los dos puntos que se pasan como parámetros para construir los vértices del rectángulo.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y2</span><span class="p">){</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">);</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>3) En el caso del tercer constructor puedes utilizar directamente los dos puntos que se pasan como parámetros para construir los vértices del rectángulo.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice1</span><span class="p">;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Ahora bien, esto podría ocasionar un efecto colateral no deseado si esos objetos de tipo Punto son modificados en el futuro desde el código cliente del constructor (no sabes si esos puntos fueron creados especialmente para ser usados por el rectángulo o si pertenecen a otro objeto que podría modificarlos más tarde).</p>
 <p>Por tanto, para este caso quizá fuera recomendable crear dos nuevos puntos a imagen y semejanza de los puntos que se han pasado como parámetros. Para ello tendrías dos opciones:</p>
 <p>a) Llamar al constructor de la clase Punto con los valores de los atributos (x, y).</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">());</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">vertice2</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getY</span><span class="p">());</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>b) Llamar al constructor copia de la clase Punto, si es que se dispone de él.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">vertice1</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">vertice1</span><span class="p">.</span><span class="na">getY</span><span class="p">());</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">vertice2</span><span class="p">.</span><span class="na">getX</span><span class="p">(),</span><span class="w"> </span><span class="n">vertice2</span><span class="p">.</span><span class="na">getY</span><span class="p">());</span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">vertice1</span><span class="p">);</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">vertice2</span><span class="p">);</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>b) Llamar al constructor copia de la clase Punto, si es que se dispone de él.</p>
+<p>4) Para el cuarto caso, el caso del constructor que recibe como parámetros la base y la altura, habrá que crear sendos vértices con valores (0,0) y (0 + base, 0 + altura), o lo que es lo mismo: (0,0) y (base, altura).</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice1</span><span class="p">,</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="n">vertice2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">vertice1</span><span class="p">);</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">vertice2</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">altura</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">altura</span><span class="p">);</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>4) Para el cuarto caso, el caso del constructor que recibe como parámetros la base y la altura, habrá que crear sendos vértices con valores (0,0) y (0 + base, 0 + altura), o lo que es lo mismo: (0,0) y (base, altura).</p>
+<p>5) Quedaría finalmente por implementar el constructor copia, quinto caso:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">altura</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">altura</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="na">getVertice1</span><span class="p">());</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="na">getVertice2</span><span class="p">());</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>5) Quedaría finalmente por implementar el constructor copia, quinto caso:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangulo</span><span class="w"> </span><span class="p">(</span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="na">getVertice1</span><span class="p">());</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="na">getVertice2</span><span class="p">());</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
 <p>En este caso nuevamente volvemos a clonar los atributos <code>vertice1</code> y <code>vertice2</code> del objeto <code>r</code> que se ha pasado como parámetro para evitar tener que compartir esos atributos en los dos rectángulos. Así ahora el método <em>main</em> que comprueba la clase <em>Rectangulo</em> funciona correctamente:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span>
-<span class="normal"><a href="#__codelineno-13-11">11</a></span>
-<span class="normal"><a href="#__codelineno-13-12">12</a></span>
-<span class="normal"><a href="#__codelineno-13-13">13</a></span>
-<span class="normal"><a href="#__codelineno-13-14">14</a></span>
-<span class="normal"><a href="#__codelineno-13-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setX</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setY</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a>
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creo un nuevo rectangulo, pero cambia el Perímetro del anterior&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo B: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectB</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//4</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="n">Punto</span><span class="w"> </span><span class="n">puntoB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setX</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="n">puntoA</span><span class="p">.</span><span class="na">setY</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">    </span><span class="n">Rectangulo</span><span class="w"> </span><span class="n">rectB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangulo</span><span class="p">(</span><span class="n">puntoA</span><span class="p">,</span><span class="w"> </span><span class="n">puntoB</span><span class="p">);</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creo un nuevo rectangulo, pero cambia el Perímetro del anterior&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo A: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectA</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//20</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Perímetro del rectanculo B: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rectB</span><span class="p">.</span><span class="na">CalcularPerimetro</span><span class="p">());</span><span class="c1">//4</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <h2 id="clases-anidadas-o-internas">Clases anidadas o internas</h2>
 <p>En algunos lenguajes, es posible definir una clase dentro de otra clase (clases internas):</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span>
-<span class="normal"><a href="#__codelineno-14-4">4</a></span>
-<span class="normal"><a href="#__codelineno-14-5">5</a></span>
-<span class="normal"><a href="#__codelineno-14-6">6</a></span>
-<span class="normal"><a href="#__codelineno-14-7">7</a></span>
-<span class="normal"><a href="#__codelineno-14-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">class</span> <span class="nc">ClaseContenedora</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="c1">// Cuerpo de la clase</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">  </span><span class="p">...</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">  </span><span class="kd">class</span> <span class="nc">ClaseInterna</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="c1">// Cuerpo de la clase interna</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">    </span><span class="p">...</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span>
+<span class="normal"><a href="#__codelineno-13-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">class</span> <span class="nc">ClaseContenedora</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="c1">// Cuerpo de la clase</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="kd">class</span> <span class="nc">ClaseInterna</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="c1">// Cuerpo de la clase interna</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Se pueden distinguir varios tipos de clases internas:</p>
 <ul>
@@ -1659,23 +1605,23 @@
 <li>Clases anónimas, similares a las internas locales, pero sin nombre (sólo existirá un objeto de ellas y, al no tener nombre, no tendrán constructores). Se suelen usar en la gestión de eventos en los interfaces gráficos.</li>
 <li>Aquí tienes algunos ejemplos:</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span>
-<span class="normal"><a href="#__codelineno-15-3">3</a></span>
-<span class="normal"><a href="#__codelineno-15-4">4</a></span>
-<span class="normal"><a href="#__codelineno-15-5">5</a></span>
-<span class="normal"><a href="#__codelineno-15-6">6</a></span>
-<span class="normal"><a href="#__codelineno-15-7">7</a></span>
-<span class="normal"><a href="#__codelineno-15-8">8</a></span>
-<span class="normal"><a href="#__codelineno-15-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">class</span> <span class="nc">ClaseContenedora</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">  </span><span class="p">...</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseAnidadaEstatica</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">     </span><span class="p">...</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">  </span><span class="kd">class</span> <span class="nc">ClaseInterna</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="p">...</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span>
+<span class="normal"><a href="#__codelineno-14-8">8</a></span>
+<span class="normal"><a href="#__codelineno-14-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">class</span> <span class="nc">ClaseContenedora</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseAnidadaEstatica</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">     </span><span class="p">...</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">  </span><span class="kd">class</span> <span class="nc">ClaseInterna</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Las clases anidadas, como miembros de una clase que son (miembros de <code>ClaseContenedora</code>), pueden ser declaradas con los modificadores <code>public</code>, <code>protected</code>, <code>private</code> o de <code>paquete</code>, como el resto de miembros.</p>
 <p>Las clases internas (no estáticas) tienen acceso a otros miembros de la clase dentro de la que está definida aunque sean privados (se trata en cierto modo de un miembro más de la clase), mientras que las anidadas (estáticas) no.</p>
