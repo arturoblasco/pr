@@ -1219,7 +1219,12 @@
 <p>Si llevamos al límite esta idea de interfaz, podrías llegar a tener una clase abstracta donde todos sus métodos fueran abstractos. De este modo estarías dando únicamente el marco de comportamiento, sin ningún método implementado, de las posibles subclases que heredarán de esa clase abstracta. La idea de una <em>interfaz</em> (o <em>interface</em>) es precisamente ésa: disponer de un mecanismo que permita especificar cuál debe ser el comportamiento que deben tener todos los objetos que formen parte de una determinada clasificación (no necesariamente jerárquica).</p>
 <p>Una <strong>interfaz</strong> consiste principalmente en una <strong>lista de declaraciones de métodos sin implementar, que caracterizan un determinado comportamiento</strong>. Si se desea que una clase tenga ese comportamiento, tendrá que implementar esos métodos establecidos en la interfaz. En este caso no se trata de una relación de herencia (la clase B es una especialización de la clase A, o la subclase B es del tipo de la superclase A), sino más bien una relación "<em>de implementación de comportamientos</em>" (la clase B implementa los métodos establecidos en la interfaz A, o los comportamientos indicados por A son llevados a cabo por B; pero no que B sea de clase A).</p>
 <p>Imagina que estás diseñando una aplicación que trabaja con clases que representan distintos tipos de animales. Algunas de las acciones que quieres que lleven a cabo están relacionadas con el hecho de que algunos animales sean depredadores (por ejemplo: observar una presa, perseguirla, comérsela, etc.) o sean presas (observar, huir, esconderse, etc.). Si creas la clase <code>León</code>, esta clase podría implementar una interfaz <code>Depredador</code>, mientras que otras clases como <code>Gacela</code> implementarían las acciones de la interfaz <code>Presa</code>. Por otro lado, podrías tener también el caso de la clase <code>Rana</code>, que implementaría las acciones de la interfaz <code>Depredador</code> (pues es cazador de pequeños insectos), pero también la de <code>Presa</code> (pues puede ser cazado y necesita las acciones necesarias para protegerse).</p>
-<p><img src="../../img/ud08/ud08_003.png" alt="ud08_003" style="zoom:80%;" /></p>
+<div style="text-align: center;">
+
+<img src="../../img/ud08/ud08_003.png" alt="ud08_003" style="max-width:80%;" />
+
+</div>
+
 <h2 id="concepto-de-interfaz">Concepto de interfaz</h2>
 <p>Una interfaz en Java consiste esencialmente en una lista de declaraciones de métodos sin implementar, junto con un conjunto de constantes.</p>
 <p>Estos métodos sin implementar indican un comportamiento, un tipo de conducta, aunque no especifican cómo será ese comportamiento (implementación), pues eso dependerá de las características específicas de cada clase que decida implementar esa interfaz. Podría decirse que una interfaz se encarga de establecer qué comportamientos hay que tener (qué métodos), pero no dice nada de cómo deben llevarse a cabo esos comportamientos (implementación). Se indica sólo la forma, no la implementación.</p>
@@ -1261,7 +1266,8 @@
 <li>Todos los atributos son de tipo <code>final</code> y <code>public</code> (tampoco es necesario especificarlo), es decir, constantes y públicos. Hay que darles un valor inicial.</li>
 <li>Todos los métodos son abstractos también de manera implícita (tampoco hay que indicarlo). No tienen cuerpo, tan solo la cabecera.</li>
 </ul>
-<p><img src="../../img/ud08/ud08_004.png" alt="ud08_004" style="zoom:70%;" /></p>
+<div style="text-align: center;"><img src="../../img/ud08/ud08_004.png" alt="ud08_004" style="zoom:70%;" /></div>
+
 <p>Como puedes observar, una interfaz consiste esencialmente en una lista de atributos finales (constantes) y métodos abstractos (sin implementar). Su sintaxis quedaría entonces:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1775,7 +1781,8 @@ En este caso habría que proceder exactamente de la misma manera que con la clas
 <li>Heredar de otra clase Y, que le proporcionaría determinadas características dentro de su taxonomía o jerarquía de objeto (atributos, métodos implementados y métodos abstractos).</li>
 </ol>
 <p>En el ejemplo que hemos visto de las interfaces <code>Depredador</code> y <code>Presa</code>, tendrías un ejemplo de esto: la clase <code>Rana</code>, que es subclase de <code>Anfibio</code>, implementa una serie de comportamientos propios de un <code>Depredador</code> y, a la vez, otros más propios de una <code>Presa</code>. Esos comportamientos (métodos) no forman parte de la superclase <code>Anfibio</code>, sino de las interfaces. Si se decide que la clase <code>Rana</code> debe de llevar a cabo algunos otros comportamientos adicionales, podrían añadirse a una nueva interfaz y la clase <code>Rana</code> implementaría una tercera interfaz.</p>
-<p><img src="../../img/ud08/ud08_005.png" alt="ud08_005" style="zoom:70%;" /></p>
+<div style="text-align: center;"><img src="../../img/ud08/ud08_005.png" alt="ud08_005" style="max-width:70%;" /></div>
+
 <p>De este modo, con el mecanismo "<strong>una herencia pero varias interfaces</strong>", podrían conseguirse resultados similares a los obtenidos con la herencia múltiple.</p>
 <p>Ahora bien, del mismo modo que sucedía con la herencia múltiple, puede darse el problema de la colisión de nombres al implementar dos interfaces que tengan un método con el mismo identificador. En tal caso puede suceder lo siguiente:</p>
 <ul>
@@ -1815,11 +1822,11 @@ devuelto).</p>
 <details class="question" open="open">
 <summary>¿Puede una clase implementar varias interfaces diferentes a la vez?</summary>
 <p>Observa el siguiente esquema UML:
-<img src="../../img/ud08/ud08_009.png" alt="ud08_009" style="zoom:70%;" />
-Las clases <code>Kangaroo</code> y <code>Lion</code> implementan varias clases:<br/>
-    - <code>Kangaroo</code> : <code>Herbivore</code>, <code>TwoLeggedMammal</code> y <code>Animal</code><br/>
-    - <code>Lion</code> : <code>Animal</code>, <code>FourLeggedMammal</code>, <code>Hunter</code> y <code>Carnivore</code></p>
+<div style="text-align: center;"><img src="../../img/ud08/ud08_009.png" alt="ud08_009" style="zoom:70%;" /></div></p>
 </details>
+<p>​    Las clases <code>Kangaroo</code> y <code>Lion</code> implementan varias clases:<br/>
+        - <code>Kangaroo</code> : <code>Herbivore</code>, <code>TwoLeggedMammal</code> y <code>Animal</code><br/>
+                - <code>Lion</code> : <code>Animal</code>, <code>FourLeggedMammal</code>, <code>Hunter</code> y <code>Carnivore</code></p>
 <details class="example" open="open">
 <summary>Ejemplo 5.5</summary>
 <p>¿Puede una interfaz heredar de varias interfaces diferentes a la vez?</p>
