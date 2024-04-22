@@ -65,7 +65,7 @@ markdown_extensions:
 # Tema a triar
 theme:
   name: material  # selecció del tema
-  logo: logo3.png
+  logo: logo.png
   palette:
    # Boto que canvia a mode oscur
     - scheme: default
