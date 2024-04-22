@@ -1,7 +1,7 @@
 # módulo de Programación (PR)
 
 <div style="text-align:center;">
-    <img src="../../img/cover_pr_main.png" alt="portada" style="max-width:100%;" />
+    <img src="./img/cover_pr_main.png" alt="portada" style="max-width:100%;" />
 </div>
 
 ## Índice de unidades
