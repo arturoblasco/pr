@@ -20,7 +20,7 @@
     
     
       
-        <title>8.5 Interfaces - mòdul Programació</title>
+        <title>8.5 Interfaces - Programació</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="mòdul Programació" class="md-header__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+    <a href="../.." title="Programació" class="md-header__button md-logo" aria-label="Programació" data-md-component="logo">
       
   <img src="../../logo3.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            mòdul Programació
+            Programació
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -208,12 +208,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="mòdul Programació" class="md-nav__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+    <a href="../.." title="Programació" class="md-nav__button md-logo" aria-label="Programació" data-md-component="logo">
       
   <img src="../../logo3.png" alt="logo">
 
     </a>
-    mòdul Programació
+    Programació
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud08ej/" class="md-nav__link">
+      <a href="../ud08ac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud0808/" class="md-nav__link">
+      <a href="../ud08re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud09/ud09ej/" class="md-nav__link">
+      <a href="../../ud09/ud09ac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud09/ud0913/" class="md-nav__link">
+      <a href="../../ud09/ud09re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,7 +1218,7 @@
 <p>También has estudiado cómo los métodos abstractos permiten establecer una interfaz para marcar las líneas generales de un comportamiento común de superclase que deberían compartir de todas las subclases.</p>
 <p>Si llevamos al límite esta idea de interfaz, podrías llegar a tener una clase abstracta donde todos sus métodos fueran abstractos. De este modo estarías dando únicamente el marco de comportamiento, sin ningún método implementado, de las posibles subclases que heredarán de esa clase abstracta. La idea de una <em>interfaz</em> (o <em>interface</em>) es precisamente ésa: disponer de un mecanismo que permita especificar cuál debe ser el comportamiento que deben tener todos los objetos que formen parte de una determinada clasificación (no necesariamente jerárquica).</p>
 <p>Una <strong>interfaz</strong> consiste principalmente en una <strong>lista de declaraciones de métodos sin implementar, que caracterizan un determinado comportamiento</strong>. Si se desea que una clase tenga ese comportamiento, tendrá que implementar esos métodos establecidos en la interfaz. En este caso no se trata de una relación de herencia (la clase B es una especialización de la clase A, o la subclase B es del tipo de la superclase A), sino más bien una relación "<em>de implementación de comportamientos</em>" (la clase B implementa los métodos establecidos en la interfaz A, o los comportamientos indicados por A son llevados a cabo por B; pero no que B sea de clase A).</p>
-<p>Imagina que estás diseñando una aplicación que trabaja con clases que representan distintos tipos de animales. Algunas de las acciones que quieres que lleven a cabo están relacionadas con el hecho de que algunos animales sean depredadores (por ejemplo: observar una presa, perseguirla, comérsela, etc.) o sean presas (observar, huir, esconderse, etc.). Si creas la clase <code>León</code>, esta clase podría implementar una interfaz <code>Depredador</code>, mientras que otras clases como <code>Gacela</code> implementarían las acciones de la interfaz <code>Presa</code>. Por otro lado, podrías tener también el caso de la clase <code>Rana</code>, que implementaría las acciones de la interfaz <code>Depredador</code> (pues es cazador de pequeños insectos), pero también la de <code>Presa</code> (pues puede ser cazado y necesita las acciones necesarias para protegerse).</p>
+<p>Imagina que estás diseñando una aplicación que trabaja con clases que representan distintos tipos de animales. Algunas de las acciones que quieres que lleven a cabo están relacionadas con el hecho de que algunos animales sean depredadores (por ejemplo: <em>observar una presa</em>, <em>perseguirla</em>, <em>comérsela</em>, etc.) o sean presas (<em>observar</em>, <em>huir</em>, <em>esconderse</em>, etc.). Si creas la clase <code>León</code>, esta clase podría implementar una interfaz <code>Depredador</code>, mientras que otras clases como <code>Gacela</code> implementarían las acciones de la interfaz <code>Presa</code>. Por otro lado, podrías tener también el caso de la clase <code>Rana</code>, que implementaría las acciones de la interfaz <code>Depredador</code> (pues es cazador de pequeños insectos), pero también la de <code>Presa</code> (pues puede ser cazado y necesita las acciones necesarias para protegerse).</p>
 <div style="text-align: center;">
 
 <img src="../../img/ud08/ud08_003.png" alt="ud08_003" style="max-width:80%;" />
@@ -1226,10 +1226,10 @@
 </div>
 
 <h2 id="concepto-de-interfaz">Concepto de interfaz</h2>
-<p>Una interfaz en Java consiste esencialmente en una lista de declaraciones de métodos sin implementar, junto con un conjunto de constantes.</p>
+<p><strong>Una interfaz en Java consiste esencialmente en una lista de declaraciones de métodos sin implementar, junto con un conjunto de constantes</strong>.</p>
 <p>Estos métodos sin implementar indican un comportamiento, un tipo de conducta, aunque no especifican cómo será ese comportamiento (implementación), pues eso dependerá de las características específicas de cada clase que decida implementar esa interfaz. Podría decirse que una interfaz se encarga de establecer qué comportamientos hay que tener (qué métodos), pero no dice nada de cómo deben llevarse a cabo esos comportamientos (implementación). Se indica sólo la forma, no la implementación.</p>
 <p>En cierto modo podrías imaginar el concepto de interfaz como un guión que dice: "éste es el protocolo de comunicación que deben presentar todas las clases que implementen esta interfaz". Se proporciona una lista de métodos públicos y, si quieres dotar a tu clase de esa interfaz, tendrás que definir todos y cada uno de esos métodos públicos.</p>
-<p>En conclusión: una interfaz se encarga de establecer unas líneas generales sobre los comportamientos (métodos) que deberían tener los objetos de toda clase que implemente esa interfaz, es decir, que no indican lo que el objeto es (de eso se encarga la clase y sus superclases), sino acciones (capacidades) que el objeto debería ser capaz de realizar. Es por esto que el nombre de muchas interfaces en Java termina con sufijos del tipo "<em>‐able</em>", "<em>‐or</em>", "<em>‐ente</em>" y cosas del estilo, que significan algo así como capacidad o habilidad para hacer o ser receptores de algo (configurable, serializable, modificable, clonable, ejecutable, administrador, servidor, buscador, etc.), dando así la idea de que se tiene la capacidad de llevar a cabo el conjunto de acciones especificadas en la interfaz.</p>
+<p>En conclusión: una interfaz se encarga de establecer unas líneas generales sobre los comportamientos (métodos) que deberían tener los objetos de toda clase que implemente esa interfaz, es decir, que no indican lo que el objeto es (de eso se encarga la clase y sus superclases), sino acciones (capacidades) que el objeto debería ser capaz de realizar. Es por esto que el nombre de muchas interfaces en Java termina con sufijos del tipo "<em>‐able</em>", "<em>‐or</em>", "<em>‐ente</em>" y cosas del estilo, que significan algo así como capacidad o habilidad para hacer o ser receptores de algo (<em>configurable</em>, <em>serializable</em>, <em>modificable</em>, clonable, <em>ejecutable</em>, <em>administrador</em>, <em>servidor</em>, <em>buscador</em>, etc.), dando así la idea de que se tiene la capacidad de llevar a cabo el conjunto de acciones especificadas en la interfaz.</p>
 <p>Imagínate por ejemplo la clase <code>Coche</code>, subclase de <code>Vehículo</code>. Los coches son vehículos a motor, lo cual implica una serie de acciones como, por ejemplo, arrancar el motor o detener el motor. Esa acción no la puedes heredar de <code>Vehículo</code>, pues no todos los vehículos tienen porqué ser a motor (piensa por ejemplo en una clase <code>Bicicleta</code>), y no puedes heredar de otra clase pues ya heredas de <code>Vehículo</code>. Una solución podría ser crear una interfaz <code>Arrancable</code>, que proporcione los métodos típicos de un objeto a motor (no necesariamente vehículos). De este modo la clase <code>Coche</code> sigue siendo subclase de <code>Vehículo</code>, pero también implementaría los comportamientos de la interfaz <code>Arrancable</code>, los cuales podrían ser también implementados por otras clases, hereden o no de <code>Vehículo</code> (por ejemplo una clase <code>Motocicleta</code> o bien una clase <code>Motosierra</code>). La clase <code>Coche</code> implementará su método arrancar de una manera, la clase <code>Motocicleta</code> lo hará de otra (aunque bastante parecida) y la clase <code>Motosierra</code> de otra forma probablemente muy diferente, pero todos tendrán su propia versión del método arrancar como parte de la interfaz <code>Arrancable</code>.</p>
 <p>Según esta concepción, podrías hacerte la siguiente pregunta: ¿podrá una clase implementar varias interfaces? La respuesta en este caso sí es afirmativa.</p>
 <div class="admonition note">

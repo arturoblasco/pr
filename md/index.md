@@ -1,6 +1,6 @@
 # módulo de Programación (PR)
 
-
+<img src="../../img/cover_pr_main.png" style="max-width:100%">
 
 ## Índice de unidades
 

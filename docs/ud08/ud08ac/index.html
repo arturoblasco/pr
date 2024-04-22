@@ -20,7 +20,7 @@
     
     
       
-        <title>Ejercicios - mòdul Programació</title>
+        <title>Ejercicios - Programació</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="mòdul Programació" class="md-header__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+    <a href="../.." title="Programació" class="md-header__button md-logo" aria-label="Programació" data-md-component="logo">
       
   <img src="../../logo3.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            mòdul Programació
+            Programació
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -208,12 +208,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="mòdul Programació" class="md-nav__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+    <a href="../.." title="Programació" class="md-nav__button md-logo" aria-label="Programació" data-md-component="logo">
       
   <img src="../../logo3.png" alt="logo">
 
     </a>
-    mòdul Programació
+    Programació
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -862,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud0808/" class="md-nav__link">
+      <a href="../ud08re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud09/ud09ej/" class="md-nav__link">
+      <a href="../../ud09/ud09ac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1198,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud09/ud0913/" class="md-nav__link">
+      <a href="../../ud09/ud09re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1497,7 +1497,7 @@
   <h1>Ejercicios</h1>
 
 <h2 id="ejercicios-herencia">Ejercicios Herencia</h2>
-<h3 id="ejercicio01"><strong>Ejercicio01</strong></h3>
+<h3 id="ejercicio01">Ejercicio01</h3>
 <p>Diseñar una jerarquía de clases para modelizar las <strong>aulas de un centro de estudios</strong>.</p>
 <p>De un <code>Aula</code> se conoce el <code>código</code> (numérico), la <code>longitud</code> y la <code>anchura</code>. Se desea un método que devuelva la capacidad del aula sabiendo que esta se calcula a partir de la superficie a razón de 1 alumnos por cada 1.4 metros cuadrados de superficie.</p>
 <p>Además de las aulas, digamos normales, existen aulas de informática y aulas de música. En las aulas de música se necesita conocer si tienen o no piano. De las aulas de informática se conoce el número de ordenadores y su capacidad no se calcula en función de la superficie, sino a razón de dos alumnos por ordenador.</p>
@@ -1507,12 +1507,12 @@
 <p>En las aulas normales, el <code>código</code> y la <code>superficie</code> y la <code>capacidad</code>.</p>
 </li>
 <li>
-<p>En las aulas de música e informática el texto irá precedido por "Aula de música" o "Aula de informática", según corresponda.</p>
+<p>En las aulas de música e informática el texto irá precedido por "<em>Aula de música</em>" o "<em>Aula de informática</em>", según corresponda.</p>
 </li>
 </ul>
 <hr>
 
-<h3 id="ejercicio02"><strong>Ejercicio02</strong></h3>
+<h3 id="ejercicio02">Ejercicio02</h3>
 <p>Un salón de <strong>VideoJuegos</strong> dispone de ordenadores en los que los clientes pueden jugar. Además de jugar en el establecimiento, la empresa alquila y vende juegos.</p>
 <p>2.1. Diseñar la clase <code>Juego</code> siguiendo las siguientes especificaciones: </p>
 <ul>
@@ -1527,33 +1527,41 @@
 <ul>
 <li><code>precio</code>.</li>
 <li><code>nº de copias disponibles</code>.</li>
-<li><code>JuegoEnAlquiler</code>.</li>
+<li>
+<p><code>JuegoEnAlquiler</code>.</p>
+<ul>
 <li>tiene un atributo que indica el número de días que se alquila. (Por el precio indicado, hay juegos que se alquilan por un día, otros por 2, etc...).</li>
 <li>Constructor que recibe todos sus datos.</li>
 <li>tiene un método <code>alquilar</code> que decrementa el número de copias disponibles.</li>
 <li>tiene un método <code>devolver</code> que incrementa el número de copias disponibles.</li>
-<li>
-<p><code>toString()</code> devuelve todos los datos del <code>JuegoEnAlquiler</code>.</p>
+<li><code>toString()</code> devuelve todos los datos del <code>JuegoEnAlquiler</code>.</li>
+</ul>
 </li>
 <li>
 <p><code>JuegoEnVenta</code></p>
-</li>
+<ul>
 <li><code>Constructor</code> que recibe todos sus datos.</li>
 <li>tiene un método <code>vender</code>, que decrementa el número de copias disponibles.</li>
 <li><code>toString()</code> devuelve todos los datos del <code>JuegoEnVenta</code>.</li>
 </ul>
+</li>
+</ul>
 <hr>
-<h3 id="ejercicio03"><strong>Ejercicio03</strong></h3>
+<h3 id="ejercicio03">Ejercicio03</h3>
 <p>La <strong>Fabrica Nacional de Moneda y Timbre</strong> quiere almacenar cierta información técnica del dinero (billetes y monedas) que emite. En concreto, le interesa:</p>
 <ul>
 <li><code>Valor</code>: Valor de la moneda o billete, en euros. (<code>double</code>).</li>
 <li><code>Año de emisión</code>: Año en que fue emitida la moneda o billete. (<code>int</code>).</li>
-<li>De las monedas, </li>
+<li>De las monedas, <ul>
 <li><code>Diámetro</code>: Diámetro de la moneda, en milímetros. (<code>double</code>).</li>
 <li><code>Peso</code>: Peso de la moneda, en gramos (<code>double</code>).</li>
-<li>De los billetes.</li>
+</ul>
+</li>
+<li>De los billetes.<ul>
 <li><code>Altura del billete</code>, en mm (<code>double</code>).</li>
 <li><code>Anchura del billete</code>, en mm (<code>double</code>).</li>
+</ul>
+</li>
 </ul>
 <p>a) Diseñar la clase abstracta <code>Dinero</code> y sus subclases <code>Moneda</code> y <code>Billete</code>, desarrollando:</p>
 <ul>
@@ -1564,7 +1572,7 @@
 </ul>
 <p>b) Diseñar la clase <code>TestDinero</code> para probar las clases desarrolladas: Crear objetos de las clases <code>Moneda</code> y <code>Billete</code> y mostrarlos por pantalla.</p>
 <hr>
-<h3 id="ejercicio04"><strong>Ejercicio04</strong></h3>
+<h3 id="ejercicio04">Ejercicio04</h3>
 <p>Un <strong>centro comercial</strong> quiere mostrar cierta información sobre los televisores que vende. Los televisores pueden ser de dos tipos: de tubo o LCD. En concreto, de cada televisor le interesa mostrar:</p>
 <ul>
 <li>Marca (<code>String</code>).</li>
@@ -1585,32 +1593,32 @@
 </ul>
 <p>b) Diseñar la clase <code>TestTV</code> para probar las clases diseñadas. Crear algunos objetos de las clases <code>TVTubo</code> y <code>TVLCD</code> y mostrarlos por pantalla.</p>
 <hr>
-<h3 id="ejercicio05"><strong>Ejercicio05</strong></h3>
-<p>De cada pareja de afirmaciones <strong>indica cual es la verdaderas</strong>:</p>
-<p>​   a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.</p>
-<p>​   b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.</p>
-<p>​   c) Si una clase es abstracta no se puede instanciar.</p>
-<p>​   d) Si una clase es abstracta no se puede heredar de ella.</p>
-<p>​   e) Una clase abstracta tiene que tener métodos abstractos.</p>
-<p>​   f) Una clase puede ser abstracta y no tener métodos abstractos.</p>
-<p>​   g) Si una clase tiene métodos abstractos tiene que ser abstracta.</p>
-<p>​   h) Una clase puede tener métodos abstractos y no ser abstracta.</p>
-<p>​   i) Si una clase es abstracta sus subclases no pueden ser abstractas.</p>
-<p>​   j) Una clase abstracta puede tener subclases que también sean abstractas.</p>
-<p>​   k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.</p>
-<p>​   l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.</p>
-<p>​   m) Si un método se define final se tiene que reescribir en las subclases.</p>
-<p>​   n) Si un método se define final no se puede reescribir en las subclases.</p>
-<p>​   o) Una clase puede tener un método final y no ser una clase final.</p>
-<p>​   p) Si una clase tiene un método final tiene que ser una clase final.</p>
-<p>​   q) Si una clase se define final no se pueden definir subclases de ella.</p>
-<p>​   r) Si una clase se define final no se puede instanciar.</p>
-<p>​   s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.</p>
-<p>​   t) Un método definido final y abstract podría resultar útil.</p>
-<p>​   u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.</p>
-<p>​   v) Una clase definida final y abstract podría resultar útil.</p>
+<h3 id="ejercicio05">Ejercicio05</h3>
+<p>De cada pareja de afirmaciones <strong>indica cuál es la verdaderas</strong>:<br />
+      a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.<br />
+    b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.<br />
+    c) Si una clase es abstracta no se puede instanciar.<br />
+    d) Si una clase es abstracta no se puede heredar de ella.<br />
+    e) Una clase abstracta tiene que tener métodos abstractos.<br />
+    f) Una clase puede ser abstracta y no tener métodos abstractos.<br />
+    g) Si una clase tiene métodos abstractos tiene que ser abstracta.<br />
+    h) Una clase puede tener métodos abstractos y no ser abstracta.<br />
+    i) Si una clase es abstracta sus subclases no pueden ser abstractas.<br />
+    j) Una clase abstracta puede tener subclases que también sean abstractas.<br />
+    k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.<br />
+    l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.<br />
+    m) Si un método se define final se tiene que reescribir en las subclases.<br />
+    n) Si un método se define final no se puede reescribir en las subclases.<br />
+    o) Una clase puede tener un método final y no ser una clase final.<br />
+    p) Si una clase tiene un método final tiene que ser una clase final.<br />
+    q) Si una clase se define final no se pueden definir subclases de ella.<br />
+    r) Si una clase se define final no se puede instanciar.<br />
+    s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.<br />
+    t) Un método definido final y abstract podría resultar útil.<br />
+    u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.<br />
+    v) Una clase definida final y abstract podría resultar útil.<br /></p>
 <hr>
-<h3 id="ejercicio06"><strong>Ejercicio06</strong></h3>
+<h3 id="ejercicio06">Ejercicio06</h3>
 <p>Dada las siguientes <strong>definiciones de clases</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1820,11 +1828,11 @@
 <p class="admonition-title">¿<strong>Sería correcta</strong> la instrucción siguiente?</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w">    </span><span class="n">Albañil</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Albañil</span><span class="p">();</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <hr>
-<h3 id="ejercicio08"><strong>Ejercicio08</strong></h3>
+<h3 id="ejercicio08">Ejercicio08</h3>
 <p>Las clases siguientes implementan una <strong>jerarquía de herencia</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
@@ -1940,7 +1948,7 @@
 <p>​   a) <strong>Señalar los errores </strong>existentes.</p>
 <p>​   b) <strong>Una vez corregido</strong> el programa, <strong>escribir la salida</strong> por pantalla resultado de su ejecución.</p>
 <hr>
-<h3 id="ejercicio09"><strong>Ejercicio09</strong></h3>
+<h3 id="ejercicio09">Ejercicio09</h3>
 <p><em>Supermercado: Práctica con interfaces y polimorfismo.</em></p>
 <p><strong>Supermercado</strong>. Creación de Interfaces </p>
 <p>Supón que debe crear distintas clases Java para describir los productos que vende un supermercado. </p>
@@ -2026,13 +2034,13 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 </ul>
 <p>En el método <code>main</code> crear un array de <code>personas</code>. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.</p>
 <hr>
-<h3 id="ejercicio11"><strong>Ejercicio11</strong></h3>
+<h3 id="ejercicio11">Ejercicio11</h3>
 <p>Crea una clase <code>Empleado</code> y una subclase <code>Encargado</code>. Los encargados reciben un 10% más de sueldo base que un empleado normal. Implementa dichas clases en el paquete objetos y sobrescribe el método <code>getSueldo()</code> para ambas clases.</p>
 <hr>
-<h3 id="ejercicio12"><strong>Ejercicio12</strong></h3>
+<h3 id="ejercicio12">Ejercicio12</h3>
 <p>Crear la clase <code>Dado</code>, la cual desciende de la clase <code>Sorteo</code>. La clase <code>Dado</code>, en la llamada <code>lanzar()</code> mostrará un número aleatorio del 1 al 6. Crear la clase <code>Moneda</code>, la cual desciende de la clase <code>Sorteo</code>. Esta clase en la llamada al método <code>lanzar()</code> mostrará las palabras cara o cruz. Realizar una clase con un método <code>main</code> que compruebe todo lo realizado.</p>
 <hr>
-<h3 id="ejercicio13"><strong>Ejercicio13</strong></h3>
+<h3 id="ejercicio13">Ejercicio13</h3>
 <p>Realiza una clase <code>Huevo</code> con un atributo <code>tamaño</code> (<code>S</code>, <code>M</code>, <code>L</code>, <code>XL</code>) con el método <code>toString</code>. La clase <code>Huevo</code> está compuesta por dos clases internas, una <code>Clara</code> y otra <code>Yema</code>. Ambas clases tienen un atributo <code>color</code> y el método <code>toString</code>. Realiza un método <code>main</code> en el que se cree un objeto de tipo <code>Huevo</code>, <code>Clara</code> y <code>Yema</code>, se le asigne valor a sus atributos y se muestren los valores.</p>
 <h2 id="ejercicios-lionel">Ejercicios Lionel</h2>
 <h3 id="ejercicio14-astros"><strong>Ejercicio14 - Astros</strong></h3>
@@ -2152,7 +2160,7 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <p>El IRPF realmente es más complejo pero se ha simplificado para no complicar demasiado este ejercicio.</p>
 </div>
 <hr>
-<h3 id="ejercicio18-vehiculos"><strong>Ejercicio18 - Vehículos</strong></h3>
+<h3 id="ejercicio18-vehiculos">Ejercicio18 - Vehículos</h3>
 <div class="admonition note">
 <p class="admonition-title">Aconsejable</p>
 <p>Realizar el diseño UML antes de empezar a programar.</p>
@@ -2176,7 +2184,7 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <p>Implementa todas las clases necesarias con: atributos, constructor con parámetros, getters/setters y el método imprimir. Utiliza <strong>abstracción</strong> y <strong>herencia</strong> de la forma más apropiada.</p>
 <p>Implementa también una clase Programa para hacer algunas pruebas: Instancia varios vehículos de todo tipo (coches, motos, barcos, submarinos, aviones y helicópteros) así como vehículos genericos (terrestres, acuáticos y aéreos). Crea un ArrayList y añade todos los vehículos. Recorre la lista y llama al método imprimir de todos los vehículos.</p>
 <hr>
-<h3 id="ejercicio19-figuras"><strong>Ejercicio19 - Figuras</strong></h3>
+<h3 id="ejercicio19-figuras">Ejercicio19 - Figuras</h3>
 <p>Implementa una <strong>interface</strong> llamada <strong>iFigura2D</strong> que declare los métodos:</p>
 <ul>
 <li><code>double perimetro()</code>: Para devolver el perímetro de la figura.</li>

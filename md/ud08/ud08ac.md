@@ -1,6 +1,6 @@
 ## Ejercicios Herencia
 
-### **Ejercicio01**
+### Ejercicio01
 
 Diseñar una jerarquía de clases para modelizar las **aulas de un centro de estudios**.
 
@@ -12,11 +12,11 @@ Implementar el método `toString` de cada una de las clases diseñadas para que 
 
 - En las aulas normales, el `código` y la `superficie` y la `capacidad`.
 
-- En las aulas de música e informática el texto irá precedido por "Aula de música" o "Aula de informática", según corresponda.
+- En las aulas de música e informática el texto irá precedido por "*Aula de música*" o "*Aula de informática*", según corresponda.
 
    <hr>
 
-### **Ejercicio02**
+### Ejercicio02
 
 Un salón de **VideoJuegos** dispone de ordenadores en los que los clientes pueden jugar. Además de jugar en el establecimiento, la empresa alquila y vende juegos.
 
@@ -34,30 +34,31 @@ Un salón de **VideoJuegos** dispone de ordenadores en los que los clientes pued
 - `precio`.
 - `nº de copias disponibles`.
 - `JuegoEnAlquiler`.
-   - tiene un atributo que indica el número de días que se alquila. (Por el precio indicado, hay juegos que se alquilan por un día, otros por 2, etc...).
-   - Constructor que recibe todos sus datos.
-   - tiene un método `alquilar` que decrementa el número de copias disponibles.
-   - tiene un método `devolver` que incrementa el número de copias disponibles.
-   - `toString()` devuelve todos los datos del `JuegoEnAlquiler`.
+      - tiene un atributo que indica el número de días que se alquila. (Por el precio indicado, hay juegos que se alquilan por un día, otros por 2, etc...).
+      - Constructor que recibe todos sus datos.
+      - tiene un método `alquilar` que decrementa el número de copias disponibles.
+      - tiene un método `devolver` que incrementa el número de copias disponibles.
+      - `toString()` devuelve todos los datos del `JuegoEnAlquiler`.
 
 - `JuegoEnVenta`
-   - `Constructor` que recibe todos sus datos.
-   - tiene un método `vender`, que decrementa el número de copias disponibles.
-   - `toString()` devuelve todos los datos del `JuegoEnVenta`.
+      - `Constructor` que recibe todos sus datos.
+      - tiene un método `vender`, que decrementa el número de copias disponibles.
+      - `toString()` devuelve todos los datos del `JuegoEnVenta`.
 
 <hr>
-### **Ejercicio03**
+### Ejercicio03
+
 
 La **Fabrica Nacional de Moneda y Timbre** quiere almacenar cierta información técnica del dinero (billetes y monedas) que emite. En concreto, le interesa:
 
 - `Valor`: Valor de la moneda o billete, en euros. (`double`).
 - `Año de emisión`: Año en que fue emitida la moneda o billete. (`int`).
 - De las monedas, 
-   - `Diámetro`: Diámetro de la moneda, en milímetros. (`double`).
-   - `Peso`: Peso de la moneda, en gramos (`double`).
+      - `Diámetro`: Diámetro de la moneda, en milímetros. (`double`).
+      - `Peso`: Peso de la moneda, en gramos (`double`).
 - De los billetes.
-   - `Altura del billete`, en mm (`double`).
-   - `Anchura del billete`, en mm (`double`).
+      - `Altura del billete`, en mm (`double`).
+      - `Anchura del billete`, en mm (`double`).
 
 a) Diseñar la clase abstracta `Dinero` y sus subclases `Moneda` y `Billete`, desarrollando:
 
@@ -69,7 +70,8 @@ a) Diseñar la clase abstracta `Dinero` y sus subclases `Moneda` y `Billete`, de
 b) Diseñar la clase `TestDinero` para probar las clases desarrolladas: Crear objetos de las clases `Moneda` y `Billete` y mostrarlos por pantalla.
 
 <hr>
-### **Ejercicio04**
+### Ejercicio04
+
 
 Un **centro comercial** quiere mostrar cierta información sobre los televisores que vende. Los televisores pueden ser de dos tipos: de tubo o LCD. En concreto, de cada televisor le interesa mostrar:
 
@@ -92,56 +94,36 @@ a) Diseñar la clase `Televisor` con los atributos y métodos comunes a los dos 
 b) Diseñar la clase `TestTV` para probar las clases diseñadas. Crear algunos objetos de las clases `TVTubo` y `TVLCD` y mostrarlos por pantalla.
 
 <hr>
-### **Ejercicio05**
+### Ejercicio05
 
-De cada pareja de afirmaciones **indica cual es la verdaderas**:
 
-​	a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.
-
-​	b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.
-
-​	c) Si una clase es abstracta no se puede instanciar.
-
-​	d) Si una clase es abstracta no se puede heredar de ella.
-
-​	e) Una clase abstracta tiene que tener métodos abstractos.
-
-​	f) Una clase puede ser abstracta y no tener métodos abstractos.
-
-​	g) Si una clase tiene métodos abstractos tiene que ser abstracta.
-
-​	h) Una clase puede tener métodos abstractos y no ser abstracta.
-
-​	i) Si una clase es abstracta sus subclases no pueden ser abstractas.
-
-​	j) Una clase abstracta puede tener subclases que también sean abstractas.
-
-​	k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.
-
-​	l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.
-
-​	m) Si un método se define final se tiene que reescribir en las subclases.
-
-​	n) Si un método se define final no se puede reescribir en las subclases.
-
-​	o) Una clase puede tener un método final y no ser una clase final.
-
-​	p) Si una clase tiene un método final tiene que ser una clase final.
-
-​	q) Si una clase se define final no se pueden definir subclases de ella.
-
-​	r) Si una clase se define final no se puede instanciar.
-
-​	s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.
-
-​	t) Un método definido final y abstract podría resultar útil.
-
-​	u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.
-
-​	v) Una clase definida final y abstract podría resultar útil.
+De cada pareja de afirmaciones **indica cuál es la verdaderas**:<br />
+      a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.<br />
+	b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.<br />
+	c) Si una clase es abstracta no se puede instanciar.<br />
+	d) Si una clase es abstracta no se puede heredar de ella.<br />
+	e) Una clase abstracta tiene que tener métodos abstractos.<br />
+	f) Una clase puede ser abstracta y no tener métodos abstractos.<br />
+	g) Si una clase tiene métodos abstractos tiene que ser abstracta.<br />
+	h) Una clase puede tener métodos abstractos y no ser abstracta.<br />
+	i) Si una clase es abstracta sus subclases no pueden ser abstractas.<br />
+	j) Una clase abstracta puede tener subclases que también sean abstractas.<br />
+	k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.<br />
+	l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.<br />
+	m) Si un método se define final se tiene que reescribir en las subclases.<br />
+	n) Si un método se define final no se puede reescribir en las subclases.<br />
+	o) Una clase puede tener un método final y no ser una clase final.<br />
+	p) Si una clase tiene un método final tiene que ser una clase final.<br />
+	q) Si una clase se define final no se pueden definir subclases de ella.<br />
+	r) Si una clase se define final no se puede instanciar.<br />
+	s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.<br />
+	t) Un método definido final y abstract podría resultar útil.<br />
+	u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.<br />
+	v) Una clase definida final y abstract podría resultar útil.<br />
 
 <hr>
-### **Ejercicio06**
+### Ejercicio06
+
 
 Dada las siguientes **definiciones de clases**:
 
@@ -287,11 +269,12 @@ public static void main(String[] args){
 
     ```java
         Albañil a = new Albañil();
-        System.out.println(a.toString());import os
+        System.out.println(a.toString());
     ```
 
 <hr>
-### **Ejercicio08**
+### Ejercicio08
+
 
 Las clases siguientes implementan una **jerarquía de herencia**
 
@@ -363,7 +346,8 @@ public class CuestionHerencia{
 ​	b) **Una vez corregido** el programa, **escribir la salida** por pantalla resultado de su ejecución.
 
 <hr>
-### **Ejercicio09**
+### Ejercicio09
+
 
 *Supermercado: Práctica con interfaces y polimorfismo.*
 
@@ -461,17 +445,20 @@ El ejercicio consiste, en primer lugar, en definir la jerarquía de clases de es
 En el método `main` crear un array de `personas`. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.
 
 <hr>
-### **Ejercicio11**
+### Ejercicio11
+
 
 Crea una clase `Empleado` y una subclase `Encargado`. Los encargados reciben un 10% más de sueldo base que un empleado normal. Implementa dichas clases en el paquete objetos y sobrescribe el método `getSueldo()` para ambas clases.
 
 <hr>
-### **Ejercicio12**
+### Ejercicio12
+
 
 Crear la clase `Dado`, la cual desciende de la clase `Sorteo`. La clase `Dado`, en la llamada `lanzar()` mostrará un número aleatorio del 1 al 6. Crear la clase `Moneda`, la cual desciende de la clase `Sorteo`. Esta clase en la llamada al método `lanzar()` mostrará las palabras cara o cruz. Realizar una clase con un método `main` que compruebe todo lo realizado.
 
 <hr>
-### **Ejercicio13**
+### Ejercicio13
+
 
 Realiza una clase `Huevo` con un atributo `tamaño` (`S`, `M`, `L`, `XL`) con el método `toString`. La clase `Huevo` está compuesta por dos clases internas, una `Clara` y otra `Yema`. Ambas clases tienen un atributo `color` y el método `toString`. Realiza un método `main` en el que se cree un objeto de tipo `Huevo`, `Clara` y `Yema`, se le asigne valor a sus atributos y se muestren los valores.
 
@@ -601,7 +588,8 @@ Las **empresas** tienen las siguientes características:
     El IRPF realmente es más complejo pero se ha simplificado para no complicar demasiado este ejercicio.
 
 <hr>
-### **Ejercicio18 - Vehículos**
+### Ejercicio18 - Vehículos
+
 
 !!!note "Aconsejable"
  	Realizar el diseño UML antes de empezar a programar.
@@ -627,7 +615,8 @@ Implementa todas las clases necesarias con: atributos, constructor con parámetr
 Implementa también una clase Programa para hacer algunas pruebas: Instancia varios vehículos de todo tipo (coches, motos, barcos, submarinos, aviones y helicópteros) así como vehículos genericos (terrestres, acuáticos y aéreos). Crea un ArrayList y añade todos los vehículos. Recorre la lista y llama al método imprimir de todos los vehículos.
 
 <hr>
-### **Ejercicio19 - Figuras**
+### Ejercicio19 - Figuras
+
 
 Implementa una **interface** llamada **iFigura2D** que declare los métodos:
 

@@ -20,7 +20,7 @@
     
     
       
-        <title>8.4 Clases abstractas - mòdul Programació</title>
+        <title>8.4 Clases abstractas - Programació</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="mòdul Programació" class="md-header__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+    <a href="../.." title="Programació" class="md-header__button md-logo" aria-label="Programació" data-md-component="logo">
       
   <img src="../../logo3.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            mòdul Programació
+            Programació
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -208,12 +208,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="mòdul Programació" class="md-nav__button md-logo" aria-label="mòdul Programació" data-md-component="logo">
+    <a href="../.." title="Programació" class="md-nav__button md-logo" aria-label="Programació" data-md-component="logo">
       
   <img src="../../logo3.png" alt="logo">
 
     </a>
-    mòdul Programació
+    Programació
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -571,6 +571,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Clases y métodos finales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clases-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clases final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -631,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud08ej/" class="md-nav__link">
+      <a href="../ud08ac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -673,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud0808/" class="md-nav__link">
+      <a href="../ud08re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud09/ud09ej/" class="md-nav__link">
+      <a href="../../ud09/ud09ac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud09/ud0913/" class="md-nav__link">
+      <a href="../../ud09/ud09re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,6 +1123,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Clases y métodos finales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clases-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clases final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1119,13 +1167,13 @@
   <h1>8.4 Clases abstractas</h1>
 
 <p>En determinadas ocasiones, es posible que necesites definir una clase que represente un concepto lo suficientemente abstracto como para que nunca vayan a existir instancias de ella (objetos). ¿Tendría eso sentido? ¿Qué utilidad podría tener?</p>
-<p>Imagina una aplicación para un centro educativo que utilice las clases de ejemplo Alumno y Profesor, ambas subclases de Persona. Es más que probable que esa aplicación nunca llegue a necesitar objetos de la clase Persona, pues serían demasiado genéricos como para poder ser utilizados (no contendrían suficiente información específica). Podrías llegar entonces a la conclusión de que la clase Persona ha resultado de utilidad como clase base para construir otras clases que hereden de ella, pero no como una clase instanciable de la cual vayan a existir objetos. A este tipo de clases se les llama clases abstractas.</p>
+<p>Imagina una aplicación para un centro educativo que utilice las clases de ejemplo <code>Alumno</code> y <code>Profesor</code>, ambas subclases de <code>Persona</code>. Es más que probable que esa aplicación nunca llegue a necesitar objetos de la clase <code>Persona</code>, pues serían demasiado genéricos como para poder ser utilizados (no contendrían suficiente información específica). Podrías llegar entonces a la conclusión de que la clase <code>Persona</code> ha resultado de utilidad como clase base para construir otras clases que hereden de ella, pero no como una clase instanciable de la cual vayan a existir objetos. A este tipo de clases se les llama clases abstractas.</p>
 <div class="admonition note">
 <p class="admonition-title">A tener en cuenta</p>
 <p>En algunos casos puede resultar útil disponer de clases que <strong>nunca serán instanciadas</strong>, sino que <strong>proporcionan un</strong> marco o <strong>modelo a seguir por sus clases derivadas</strong> dentro de una jerarquía de herencia. Son las clases abstractas.</p>
 </div>
 <p>La posibilidad de declarar clases abstractas es una de las características más útiles de los lenguajes orientados a objetos, pues permiten dar unas líneas generales de cómo es una clase sin tener que implementar todos sus métodos o implementando solamente algunos de ellos. Esto resulta especialmente útil cuando las distintas clases derivadas deban proporcionar los mismos métodos indicados en la clase base abstracta, pero su implementación sea específica para cada subclase. </p>
-<p>Imagina que estás trabajando en un entorno de manipulación de objetos gráficos y necesitas trabajar con líneas, círculos, rectángulos, etc. Estos objetos tendrán en común algunos atributos que representen su estado (ubicación, color del contorno, color de relleno, etc.) y algunos métodos que modelen su comportamiento (dibujar, rellenar con un color, escalar, desplazar, rotar, etc.). Algunos de ellos serán comunes para todos ellos (por ejemplo la ubicación o el desplazamiento) y sin embargo otros (como por ejemplo dibujar) necesitarán una implementación específica dependiendo del tipo de objeto. Pero, en cualquier caso, todos ellos necesitan esos métodos (tanto un círculo como un rectángulo necesitan el método dibujar, aunque se lleven a cabo de manera diferente). En este caso resultaría muy útil disponer de una clase abstracta objeto gráfico donde se definirían las líneas generales (algunos atributos concretos comunes, algunos métodos concretos comunes implementados y algunos métodos genéricos comunes sin implementar) de un objeto gráfico y más adelante, según se vayan definiendo clases especializadas (líneas, círculos, rectángulos), se irán concretando en cada subclase aquellos métodos que se dejaron sin implementar en la clase abstracta.</p>
+<p>Imagina que estás trabajando en un entorno de manipulación de objetos gráficos y necesitas trabajar con líneas, círculos, rectángulos, etc. Estos objetos tendrán en común algunos atributos que representen su estado (<em>ubicación</em>, <em>color del contorno</em>, <em>color de relleno</em>, etc.) y algunos métodos que modelen su comportamiento (<em>dibujar</em>, <em>rellenar con un color</em>, <em>escalar</em>, <em>desplazar</em>, <em>rotar</em>, etc.). Algunos de ellos serán comunes para todos ellos (por ejemplo la <em>ubicación</em> o el <em>desplazamiento</em>) y sin embargo otros (como por ejemplo <em>dibujar</em>) necesitarán una implementación específica dependiendo del tipo de objeto. Pero, en cualquier caso, todos ellos necesitan esos métodos (tanto un <em>círculo</em> como un <em>rectángulo</em> necesitan el método <em>dibujar</em>, aunque se lleven a cabo de manera diferente). En este caso resultaría muy útil disponer de una clase abstracta objeto gráfico donde se definirían las líneas generales (algunos atributos concretos comunes, algunos métodos concretos comunes implementados y algunos métodos genéricos comunes sin implementar) de un objeto gráfico y más adelante, según se vayan definiendo clases especializadas (<em>líneas</em>, <em>círculos</em>, <em>rectángulos</em>), se irán concretando en cada subclase aquellos métodos que se dejaron sin implementar en la clase abstracta.</p>
 <h2 id="declaracion-de-una-clase-abstracta">Declaración de una clase abstracta</h2>
 <p>Ya has visto que una clase abstracta es una clase que no se puede instanciar, es decir, que no se pueden crear objetos a partir de ella. La idea es permitir que otras clases deriven de ella, proporcionando un modelo genérico y algunos métodos de utilidad general. Las clases abstractas se declaran mediante el modificador <code>abstract</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1141,13 +1189,13 @@
 <p>Por otro lado, una clase también puede contener métodos totalmente implementados (no abstractos), los cuales serán heredados por sus clases derivadas y podrán ser utilizados sin necesidad de definirlos (pues ya están implementados).</p>
 <p>Cuando trabajes con clases abstractas debes tener en cuenta:</p>
 <ul>
-<li>Una clase abstracta sólo puede usarse para crear nuevas clases derivadas. No se puede hacer un <em>new</em> de una clase abstracta. Se produciría un error de compilación.</li>
+<li>Una clase abstracta sólo puede usarse para crear nuevas clases derivadas. No se puede hacer un <code>new</code> de una clase abstracta. Se produciría un error de compilación.</li>
 <li>Una clase abstracta puede contener métodos totalmente definidos (no abstractos) y métodos sin definir (métodos abstractos).</li>
 </ul>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Basándote en la jerarquía de clases de ejemplo (<code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>), que ya has utilizado en otras ocasiones, modifica lo que consideres oportuno para que <code>Persona</code> sea, a partir de ahora, una clase abstracta (no instanciable) y las otras dos clases sigan siendo clases derivadas de ella, pero sí instanciables.
-En este caso lo único que habría que hacer es añadir el modificador <code>abstract</code> a la clase <code>Persona</code>. El resto de la clase permanecería igual y las clases Alumno y Profesor no tendrían porqué sufrir ninguna modificación.</p>
+<br /><br />En este caso lo único que habría que hacer es añadir el modificador <code>abstract</code> a la clase <code>Persona</code>. El resto de la clase permanecería igual y las clases <code>Alumno</code> y <code>Profesor</code> no tendrían porqué sufrir ninguna modificación.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1177,7 +1225,12 @@ En este caso lo único que habría que hacer es añadir el modificador <code>abs
 <p>Que hereda de <code>AbstractList</code> y de la que hereda la clase <code>LinkedList</code>.    </p>
 </details>
 <h2 id="metodos-abstractos">Métodos abstractos</h2>
-<p>Un método abstracto es un método declarado en una clase para el cual esa clase no proporciona la implementación. Si una clase dispone de al menos un método abstracto se dice que es una clase abstracta. Toda clase que herede (sea subclase) de una clase abstracta debe implementar todos los métodos abstractos de su superclase o bien volverlos a declarar como abstractos (y por tanto también sería abstracta). Para declarar un método abstracto en Java se utiliza el modificador <code>abstract</code>) es un método cuya implementación no se define, sino que se declara únicamente su interfaz (cabecera) para que su cuerpo sea implementado más adelante en una clase derivada.</p>
+<p>Un método abstracto es un método declarado en una clase para el cual esa clase no proporciona la implementación. <br /><br />Si una clase dispone de, al menos, un método abstracto se dice que es una clase abstracta. <br /></p>
+<div class="admonition note">
+<p class="admonition-title">A tener en cuenta</p>
+<p>Toda clase que herede (sea subclase) de una clase abstracta debe implementar todos los métodos abstractos de su superclase o bien volverlos a declarar como abstractos (y por tanto también sería abstracta).</p>
+</div>
+<p>Para declarar un método abstracto en Java se utiliza el modificador <code>abstract</code>. Es un método cuya implementación no se define, sino que se declara únicamente su interfaz (cabecera) para que su cuerpo sea implementado más adelante en una clase derivada.</p>
 <p>Un método se declara como abstracto mediante el uso del modificador <code>abstract</code> (como en las clases abstractas):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="o">[</span><span class="n">modificador_acceso</span><span class="o">]</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tipo</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">nombreMetodo</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">parámetros</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">[</span><span class="n">excepciones</span><span class="o">]</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
@@ -1194,9 +1247,9 @@ En este caso lo único que habría que hacer es añadir el modificador <code>abs
 </ul>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
-<p>Basándote en la jerarquía de clases <code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>, crea un método abstracto llamado <code>mostrarDatos</code> para la clase <code>Persona</code>. Dependiendo del tipo de persona (<code>alumno</code> o <code>profesor</code>) el método <code>mostrarDatos</code> tendrá que mostrar unos u otros datos personales (habrá que hacer implementaciones específicas en cada clase derivada).
-Una vez hecho esto, implementa completamente las tres clases (con todos sus atributos y métodos) y utilízalas en un pequeño programa de ejemplo que cree un objeto de tipo <code>Alumno</code> y otro de tipo <code>Profesor</code>, los rellene con información y muestre esa información en la pantalla a través del método mostrar.
-Dado que el método <code>mostrarDatos</code> no va a ser implementado en la clase Persona, será declarado como abstracto y no se incluirá su implementación:
+<p>Basándote en la jerarquía de clases <code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>, crea un método abstracto llamado <code>mostrarDatos</code> para la clase <code>Persona</code>. Dependiendo del tipo de persona (<em>alumno</em> o <em>profesor</em>) el método <code>mostrarDatos</code> tendrá que mostrar unos u otros datos personales (habrá que hacer implementaciones específicas en cada clase derivada).
+<br /><br />Una vez hecho esto, implementa completamente las tres clases (con todos sus atributos y métodos) y utilízalas en un pequeño programa de ejemplo que cree un objeto de tipo <code>Alumno</code> y otro de tipo <code>Profesor</code>, los rellene con información y muestre esa información en la pantalla a través del método mostrar.
+<br /><br />Dado que el método <code>mostrarDatos</code> no va a ser implementado en la clase <code>Persona</code>, será declarado como abstracto y no se incluirá su implementación:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">protected</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarDatos</span><span class="w"> </span><span class="p">();</span>
 </code></pre></div></td></tr></table></div></p>
 <p>Recuerda que el simple hecho de que la clase <code>Persona</code> contenga un método abstracto hace que la clase sea abstracta (y deberá indicarse como tal en su declaración): </p>
@@ -1204,8 +1257,8 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
-<p>En el caso de la clase <code>Alumno</code> habrá que hacer una implementación específica del método mostrarDatos y lo mismo para el caso de la clase <code>Profesor</code>.</p>
-<p>1) Método mostrarDatos para la clase <code>Alumno</code>.
+<p>En el caso de la clase <code>Alumno</code> habrá que hacer una implementación específica del método <code>mostrarDatos</code> y lo mismo para el caso de la clase <code>Profesor</code>.</p>
+<p>1) Método <code>mostrarDatos</code> para la clase <code>Alumno</code>:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -1230,7 +1283,7 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%-18s%-5.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nota media:&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">notaMedia</span><span class="p">);</span><span class="w">    </span>
 <a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
-<p>2) Método mostrarDatos para la clase <code>Profesor</code>.
+<p>2) Método <code>mostrarDatos</code> para la clase <code>Profesor</code>:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -1255,8 +1308,7 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%-18s%-7.2f €\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Salario:&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">salario</span><span class="p">);</span>
 <a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
-<p>3) Programa de ejemplo de uso.</p>
-<p>Un pequeño programa de ejemplo de uso del método mostrar en estas dos clases podría ser:</p>
+<p>3) Un pequeño programa de ejemplo de uso del método mostrar en estas dos clases podría ser:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1272,7 +1324,11 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <span class="normal"><a href="#__codelineno-9-13">13</a></span>
 <span class="normal"><a href="#__codelineno-9-14">14</a></span>
 <span class="normal"><a href="#__codelineno-9-15">15</a></span>
-<span class="normal"><a href="#__codelineno-9-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDate</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDate</span><span class="p">;</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploUso</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>
@@ -1280,14 +1336,18 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="c1">// Declaración de objetos</span>
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="n">Alumno</span><span class="w"> </span><span class="n">alumno</span><span class="p">;</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="n">Profesor</span><span class="w"> </span><span class="n">profesor</span><span class="p">;</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="c1">// Creación de objetos (llamada a constructores)</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="n">alumno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Juan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Torres&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">1990</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;1DAW&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">7.5</span><span class="p">);</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">profesor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Profesor</span><span class="p">(</span><span class="s">&quot;Antonio&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Campos&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Informatica&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1750</span><span class="p">);</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">        </span><span class="c1">// Utilización del método mostrar</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">        </span><span class="n">alumno</span><span class="p">.</span><span class="na">mostrarDatos</span><span class="p">();</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">        </span><span class="n">profesor</span><span class="p">.</span><span class="na">mostrarDatos</span><span class="p">();</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="p">}</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="c1">// Creación de objetos (llamada a constructores)</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">alumno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">(</span><span class="s">&quot;Juan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Torres&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">1990</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;1DAW&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">7.5</span><span class="p">);</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">        </span><span class="n">profesor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Profesor</span><span class="p">(</span><span class="s">&quot;Antonio&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Campos&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Informatica&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1750</span><span class="p">);</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">        </span><span class="c1">// Utilización del método mostrar</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">        </span><span class="n">alumno</span><span class="p">.</span><span class="na">mostrarDatos</span><span class="p">();</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">        </span><span class="n">profesor</span><span class="p">.</span><span class="na">mostrarDatos</span><span class="p">();</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>La salida debe ser algo parecido a esto:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
@@ -1299,23 +1359,27 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Nombre:<span class="w">           </span>Juan
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Nombre:<span class="w">           </span>Juan
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a>Apellidos:<span class="w">        </span>Torres
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a>Fecha<span class="w"> </span>nacimiento:<span class="w"> </span><span class="m">6</span>/10/1990
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a>Grupo:<span class="w">            </span>1DAW
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a>Nota<span class="w"> </span>media:<span class="w">       </span><span class="m">7</span>,50
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>Nombre:<span class="w">           </span>Antonio
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a>Apellidos:<span class="w">        </span>Campos
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a>Fecha<span class="w"> </span>nacimiento:<span class="w"> </span><span class="m">15</span>/08/1970
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a>Especialidad:<span class="w">     </span>Informatica
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a>Salario:<span class="w">          </span><span class="m">1750</span>,00<span class="w"> </span>€
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>Nombre:<span class="w">           </span>Antonio
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>Apellidos:<span class="w">        </span>Campos
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>Fecha<span class="w"> </span>nacimiento:<span class="w"> </span><span class="m">15</span>/08/1970
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>Especialidad:<span class="w">     </span>Informatica
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>Salario:<span class="w">          </span><span class="m">1750</span>,00<span class="w"> </span>€
 </code></pre></div></td></tr></table></div>
 </details>
 <h2 id="clases-y-metodos-finales">Clases y métodos finales</h2>
-<p>En unidades anteriores has visto el modificador <strong>final</strong>, aunque sólo lo has utilizado por ahora para atributos y variables (por ejemplo para declarar atributos constantes, que una vez que toman un valor ya no pueden ser modificados). Pero este modificador también puede ser utilizado con clases y con métodos (con un comportamiento que no es exactamente igual, aunque puede encontrarse cierta analogía: <strong>no se permite heredar o no se permite redefinir</strong>).</p>
+<p>En unidades anteriores has visto el modificador <code>final</code>, aunque sólo lo has utilizado por ahora para atributos y variables (por ejemplo para declarar atributos constantes, que una vez que toman un valor ya no pueden ser modificados). Pero este modificador también puede ser utilizado con clases y con métodos (con un comportamiento que no es exactamente igual, aunque puede encontrarse cierta analogía: <strong>no se permite heredar o no se permite redefinir</strong>).</p>
+<h3 id="clases-final">Clases final</h3>
 <p>Una clase declarada como <code>final</code> no puede ser heredada, es decir, no puede tener clases derivadas. La jerarquía de clases a la que pertenece acaba en ella (no tendrá clases hijas):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">[</span><span class="n">modificador_acceso</span><span class="o">]</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">nombreClase</span><span class="w"> </span><span class="o">[</span><span class="n">herencia</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">interfaces</span><span class="o">]</span>
 </code></pre></div></td></tr></table></div>
+<h3 id="metodos-final">Métodos final</h3>
 <p>Un método también puede ser declarado como <code>final</code>, en tal caso, ese método no podrá ser redefinido en una clase derivada:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="o">[</span><span class="n">modificador_acceso</span><span class="o">]</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tipo</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">nombreMetodo</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">[</span><span class="n">parámetros</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">[</span><span class="n">excepciones</span><span class="o">]</span>
 </code></pre></div></td></tr></table></div>
@@ -1352,14 +1416,17 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 </tbody>
 </table>
 <p>Veamos un ejemplo de cada posibilidad:</p>
-<p>1) Modificador de una clase.</p>
+<details class="example" open="open">
+<summary>1) Modificador de una clase</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseSinDescendencia</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Clase &quot;no heredable&quot;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="p">...</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>2) Modificador de un atributo.</p>
+</details>
+<details class="example" open="open">
+<summary>2) Modificador de un atributo</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
@@ -1368,22 +1435,26 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <span class="normal"><a href="#__codelineno-14-6">6</a></span>
 <span class="normal"><a href="#__codelineno-14-7">7</a></span>
 <span class="normal"><a href="#__codelineno-14-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseEjemplo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="c1">// Valor constante conocido en tiempo de compilación</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159265</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="c1">// Valor constante conocido en tiempo de compilación</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159265</span><span class="p">;</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4"></a>
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">  </span><span class="c1">// Valor constante conocido solamente en tiempo de ejecución</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SEMILLA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="c1">// Valor constante conocido solamente en tiempo de ejecución</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SEMILLA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>3) Modificador de un método.</p>
+</details>
+<details class="example" open="open">
+<summary>3) Modificador de un método</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
 <span class="normal"><a href="#__codelineno-15-2">2</a></span>
 <span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="nf">metodoNoRedefinible</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">parametro1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Método &quot;no redefinible&quot;</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="p">}</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
-<p>4) Modificador en una variable referencia.</p>
+</details>
+<details class="example" open="open">
+<summary>4) Modificador en una variable referencia</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span>
 <span class="normal"><a href="#__codelineno-16-3">3</a></span>
@@ -1398,17 +1469,20 @@ Dado que el método <code>mostrarDatos</code> no va a ser implementado en la cla
 <a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="c1">// sería una constante más (como un atributo constante).</span>
 <a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NUMERO_DIEZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Valor constante (dentro del ámbito de vida de la variable)</span>
 </code></pre></div></td></tr></table></div>
-<p>5) Modificador en un parámetro de un método.</p>
+</details>
+<details class="example" open="open">
+<summary>5) Modificador en un parámetro de un método</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>
 <span class="normal"><a href="#__codelineno-17-4">4</a></span>
 <span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">metodoConParametrosFijos</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">par1</span><span class="p">,</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">par2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">  </span><span class="c1">// Los parámetros &quot;par1&quot; y &quot;par2&quot; no podrán</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">  </span><span class="c1">// sufrir modificaciones aquí dentro</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="c1">// Los parámetros &quot;par1&quot; y &quot;par2&quot; no podrán</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="c1">// sufrir modificaciones aquí dentro</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+</details>
 
 
 
