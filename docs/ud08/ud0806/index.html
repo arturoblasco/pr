@@ -1477,7 +1477,7 @@ Imagina que estás trabajando con las clases <code>Alumno</code> y <code>Profeso
 <a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">devolverContenidoString</span><span class="p">();</span><span class="w"> </span><span class="c1">// Ligadura dinámica con interfaces</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="conversion-de-objetos">Conversión de objetos</h2>
-<p>Como ya has visto, en principio no se puede acceder a los miembros específicos de una subclase a través de una referencia a una superclase. Si deseas tener acceso a todos los métodos y atributos específicos del objeto subclase tendrás que realizar una conversión explícita (casting) que convierta la referencia más general (superclase) en la del tipo específico del objeto (subclase).</p>
+<p>Como ya has visto, en principio no se puede acceder a los miembros específicos de una subclase a través de una referencia a una superclase. Si deseas tener acceso a todos los métodos y atributos específicos del objeto subclase tendrás que realizar una conversión explícita (<em>casting</em>) que convierta la referencia más general (superclase) en la del tipo específico del objeto (subclase).</p>
 <p>Para que puedas realizar conversiones entre distintas clases es obligatorio que exista una relación de herencia entre ellas (una debe ser clase derivada de la otra). Se realizará una conversión implícita o automática de subclase a superclase siempre que sea necesario, pues un objeto de tipo subclase siempre contendrá toda la información necesaria para ser considerado un objeto de la superclase.</p>
 <p>Ahora bien, la conversión en sentido contrario (de superclase a subclase) debe hacerse de forma explícita y según el caso podría dar lugar a errores por falta de información (atributos) o de métodos. En tales casos se produce una excepción de tipo <code>ClassCastException</code>. </p>
 <p>Por ejemplo, imagina que tienes una clase <code>Animal</code> y una clase <code>Besugo</code>, subclase de <code>Animal</code>:</p>
@@ -1500,7 +1500,7 @@ Imagina que estás trabajando con las clases <code>Alumno</code> y <code>Profeso
 <span class="normal"><a href="#__codelineno-19-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">Animal</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span><span class="w"> </span><span class="c1">// Referencia a objetos de la clase Animal</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Besugo</span><span class="p">();</span><span class="w"> </span><span class="c1">// Referencia a objetos clase Animal, pero apunta realmente a objeto clase Besugo (polimorfismo)</span>
 </code></pre></div></td></tr></table></div>
-<p>El objeto que acabas de crear como instancia de la clase <code>Besugo</code> (subclase de <code>Animal</code>) contiene más información que la que la referencia <code>obj</code> te permite en principio acceder sin que el compilador genere un error (pues es de clase <code>Animal</code>). En concreto los objetos de la clase <code>Besugo</code> disponen de <code>nombre</code> y <code>peso</code>, mientras que los objetos de la clase <code>Animal</code> sólo de <code>nombre</code>. Para acceder a esa información adicional de la clase especializada (<code>peso</code>) tendrás que realizar una conversión explícita (casting):</p>
+<p>El objeto que acabas de crear como instancia de la clase <code>Besugo</code> (subclase de <code>Animal</code>) contiene más información que la que la referencia <code>obj</code> te permite en principio acceder sin que el compilador genere un error (pues es de clase <code>Animal</code>). En concreto los objetos de la clase <code>Besugo</code> disponen de <code>nombre</code> y <code>peso</code>, mientras que los objetos de la clase <code>Animal</code> sólo de <code>nombre</code>. Para acceder a esa información adicional de la clase especializada (<code>peso</code>) tendrás que realizar una conversión explícita (<em>casting</em>):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1">// Casting del tipo Animal al tipo Besugo (funcionará bien porque el objeto es realmente del tipo B)</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;obj.peso=%f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="n">Besugo</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">).</span><span class="na">peso</span><span class="p">);</span>
@@ -1599,10 +1599,11 @@ Imagina que estás trabajando con las clases <code>Alumno</code> y <code>Profeso
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

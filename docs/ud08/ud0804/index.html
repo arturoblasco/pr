@@ -1166,14 +1166,14 @@
 
   <h1>8.4 Clases abstractas</h1>
 
-<p>En determinadas ocasiones, es posible que necesites definir una clase que represente un concepto lo suficientemente abstracto como para que nunca vayan a existir instancias de ella (objetos). ¿Tendría eso sentido? ¿Qué utilidad podría tener?</p>
+<p>En determinadas ocasiones, es posible que necesites definir una clase que represente un concepto lo suficientemente abstracto como para que nunca vayan a existir instancias de ella (objetos). ¿<em>Tendría eso sentido</em>? ¿<em>Qué utilidad podría tener</em>?</p>
 <p>Imagina una aplicación para un centro educativo que utilice las clases de ejemplo <code>Alumno</code> y <code>Profesor</code>, ambas subclases de <code>Persona</code>. Es más que probable que esa aplicación nunca llegue a necesitar objetos de la clase <code>Persona</code>, pues serían demasiado genéricos como para poder ser utilizados (no contendrían suficiente información específica). Podrías llegar entonces a la conclusión de que la clase <code>Persona</code> ha resultado de utilidad como clase base para construir otras clases que hereden de ella, pero no como una clase instanciable de la cual vayan a existir objetos. A este tipo de clases se les llama clases abstractas.</p>
 <div class="admonition note">
 <p class="admonition-title">A tener en cuenta</p>
 <p>En algunos casos puede resultar útil disponer de clases que <strong>nunca serán instanciadas</strong>, sino que <strong>proporcionan un</strong> marco o <strong>modelo a seguir por sus clases derivadas</strong> dentro de una jerarquía de herencia. Son las clases abstractas.</p>
 </div>
 <p>La posibilidad de declarar clases abstractas es una de las características más útiles de los lenguajes orientados a objetos, pues permiten dar unas líneas generales de cómo es una clase sin tener que implementar todos sus métodos o implementando solamente algunos de ellos. Esto resulta especialmente útil cuando las distintas clases derivadas deban proporcionar los mismos métodos indicados en la clase base abstracta, pero su implementación sea específica para cada subclase. </p>
-<p>Imagina que estás trabajando en un entorno de manipulación de objetos gráficos y necesitas trabajar con líneas, círculos, rectángulos, etc. Estos objetos tendrán en común algunos atributos que representen su estado (<em>ubicación</em>, <em>color del contorno</em>, <em>color de relleno</em>, etc.) y algunos métodos que modelen su comportamiento (<em>dibujar</em>, <em>rellenar con un color</em>, <em>escalar</em>, <em>desplazar</em>, <em>rotar</em>, etc.). Algunos de ellos serán comunes para todos ellos (por ejemplo la <em>ubicación</em> o el <em>desplazamiento</em>) y sin embargo otros (como por ejemplo <em>dibujar</em>) necesitarán una implementación específica dependiendo del tipo de objeto. Pero, en cualquier caso, todos ellos necesitan esos métodos (tanto un <em>círculo</em> como un <em>rectángulo</em> necesitan el método <em>dibujar</em>, aunque se lleven a cabo de manera diferente). En este caso resultaría muy útil disponer de una clase abstracta objeto gráfico donde se definirían las líneas generales (algunos atributos concretos comunes, algunos métodos concretos comunes implementados y algunos métodos genéricos comunes sin implementar) de un objeto gráfico y más adelante, según se vayan definiendo clases especializadas (<em>líneas</em>, <em>círculos</em>, <em>rectángulos</em>), se irán concretando en cada subclase aquellos métodos que se dejaron sin implementar en la clase abstracta.</p>
+<p>Imagina que estás trabajando en un entorno de manipulación de objetos gráficos y necesitas trabajar con <em>líneas</em>, <em>círculos</em>, <em>rectángulos</em>, etc. Estos objetos tendrán en común algunos atributos que representen su estado (<em>ubicación</em>, <em>color del contorno</em>, <em>color de relleno</em>, etc.) y algunos métodos que modelen su comportamiento (<em>dibujar</em>, <em>rellenar con un color</em>, <em>escalar</em>, <em>desplazar</em>, <em>rotar</em>, etc.). Algunos de ellos serán comunes para todos ellos (por ejemplo la <em>ubicación</em> o el <em>desplazamiento</em>) y sin embargo otros (como por ejemplo <em>dibujar</em>) necesitarán una implementación específica dependiendo del tipo de objeto. Pero, en cualquier caso, todos ellos necesitan esos métodos (tanto un <em>círculo</em> como un <em>rectángulo</em> necesitan el método <em>dibujar</em>, aunque se lleven a cabo de manera diferente). En este caso resultaría muy útil disponer de una clase abstracta objeto gráfico donde se definirían las líneas generales (algunos atributos concretos comunes, algunos métodos concretos comunes implementados y algunos métodos genéricos comunes sin implementar) de un objeto gráfico y más adelante, según se vayan definiendo clases especializadas (<em>líneas</em>, <em>círculos</em>, <em>rectángulos</em>), se irán concretando en cada subclase aquellos métodos que se dejaron sin implementar en la clase abstracta.</p>
 <h2 id="declaracion-de-una-clase-abstracta">Declaración de una clase abstracta</h2>
 <p>Ya has visto que una clase abstracta es una clase que no se puede instanciar, es decir, que no se pueden crear objetos a partir de ella. La idea es permitir que otras clases deriven de ella, proporcionando un modelo genérico y algunos métodos de utilidad general. Las clases abstractas se declaran mediante el modificador <code>abstract</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1209,25 +1209,27 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>A partir de ahora no podrán existir objetos de la clase <code>Persona</code>. El compilador generaría un error.</p>
+</details>
+<details class="question" open="open">
+<summary>Clases abstractas en la API</summary>
 <p>Localiza en la API de Java algún ejemplo de clase abstracta.</p>
 <p>Existen una gran cantidad de clases abstractas en la API de Java. Aquí tienes un par de ejemplos:</p>
 <ul>
-<li>La clase <code>AbstractList</code>:</li>
-</ul>
+<li>La clase <code>AbstractList</code>:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractCollection</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>De la que heredan clases instanciable como <code>Vector</code> o <code>ArrayList</code>.</p>
-<ul>
-<li>La clase <code>AbstractSequentialList</code>:</li>
-</ul>
+<br />De la que heredan clases instanciable como <code>Vector</code> o <code>ArrayList</code>.
+<br /><br /></li>
+<li>La clase <code>AbstractSequentialList</code>:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractSequentialList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>Que hereda de <code>AbstractList</code> y de la que hereda la clase <code>LinkedList</code>.    </p>
+<br />Que hereda de <code>AbstractList</code> y de la que hereda la clase <code>LinkedList</code>.    </li>
+</ul>
 </details>
 <h2 id="metodos-abstractos">Métodos abstractos</h2>
 <p>Un método abstracto es un método declarado en una clase para el cual esa clase no proporciona la implementación. <br /><br />Si una clase dispone de, al menos, un método abstracto se dice que es una clase abstracta. <br /></p>
 <div class="admonition note">
-<p class="admonition-title">A tener en cuenta</p>
+<p class="admonition-title">Implementar métodos abstractos heredados</p>
 <p>Toda clase que herede (sea subclase) de una clase abstracta debe implementar todos los métodos abstractos de su superclase o bien volverlos a declarar como abstractos (y por tanto también sería abstracta).</p>
 </div>
 <p>Para declarar un método abstracto en Java se utiliza el modificador <code>abstract</code>. Es un método cuya implementación no se define, sino que se declara únicamente su interfaz (cabecera) para que su cuerpo sea implementado más adelante en una clase derivada.</p>
@@ -1558,10 +1560,11 @@
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>
