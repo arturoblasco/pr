@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1218,7 +1220,8 @@
 <p>​   https://sqlitestudio.pl/ (Ubuntu) y</p>
 <p>​   https://github.com/pawelsalawa/sqlitestudio/releases (otras plataformas),</p>
 <p>podemos instalar una aplicación gráfica para trabajar (más fácilmente) con SQLite.</p>
-<p><img src="../../img/ud09/sqlitestudio1.png" alt="bluej 0" style="zoom:70%;" /></p>
+<div style="text-align: center;"><img src="../../img/ud09/sqlitestudio1.png" alt="bluej 0" style="zoom:70%;" /></div>
+
 <p>Mediante estos comandos creamos una base de datos en disco llamada <strong>prudb.bd</strong>.</p>
 <p>Ahora podemos crear las tablas mediante <em>VSCode</em>, añadiendo una nueva <code>DataBaseConnection</code>, al igual que hicimos con <em>MySql</em> (previamente hemos de crear el <code>Driver Definition</code>).</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -1275,7 +1278,8 @@
 </code></pre></div></td></tr></table></div>
 <p>Y vamos a añadir el .jar que hemos descargado al Build path.</p>
 <p>Así que elegimos el jar desde <em>Build Path -&gt; Libraries -&gt; Add External JARs</em>.</p>
-<p><img src="../../img/ud09/1558285819653.png" alt="1558285819653" style="zoom:67%;" /></p>
+<div style="text-align: center;"><img src="../../img/ud09/1558285819653.png" alt="1558285819653" style="zoom:67%;" /></div>
+
 <p>Y ahora modificamos <code>DatabaseConnection</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:sqlite:src/main/resources/network&quot;</span><span class="p">;</span>

@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1168,10 +1170,12 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Hay que tener en cuenta que las clases y métodos utilizados para conectarse a una base de datos (explicados más adelante) funcionan con todos los drivers disponibles para Java (JDBC es solo uno, hay muchos más). Esto es posible ya que el estándar de Java solo los define como interfaces (<em>interface</em>) y cada librería driver los implementa (define las clases y su código). Por ello es necesario utilizar <code>Class.forName(…)</code> para indicarle a Java qué driver vamos a utilizar.</p>
-<p><img src="../../img/ud09/lu8009ml6n_tmp_323050a8fd0104b9.png" alt="img" style="zoom:50%;" /></p>
+<div style="text-align: center;"><img src="../../img/ud09/lu8009ml6n_tmp_323050a8fd0104b9.png" alt="img" style="zoom:50%;" /></div>
+
 <p>Este nivel de asbtracción facilita el desarrollo de proyectos ya que si necesitáramos utilizar otro sistema de base de datos (que no fuera <em>MySQL</em>) solo necesitaríamos cambiar la línea de código que carga el driver y poco más. Si cada sistema de base de datos necesitara que utilizáramos distintas clases y métodos todo sería mucho más complicado.</p>
 <p>Las cuatro clases fundamentales que toda aplicación Java necesita para conectarse a una base de datos y ejecutar sentencias son: <strong><code>DriverManager</code></strong>, <strong><code>Connection</code></strong>, <strong><code>Statement</code></strong> y <strong><code>ResultSet</code></strong>. </p>
-<p><img src="../../img/ud09/jdbc_proceso.png" alt="jdbc proceso" style="zoom:40%;" /></p>
+<div style="text-align: center;"><img src="../../img/ud09/jdbc_proceso.png" alt="jdbc proceso" style="zoom:40%;" /></div>
+
 <h2 id="clase-drivermanager">Clase <code>DriverManager</code></h2>
 <p><strong>Paso 1: Establecer conexión con la BBDD</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>

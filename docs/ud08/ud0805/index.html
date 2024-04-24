@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1266,7 +1268,7 @@
 <li>Todos los atributos son de tipo <code>final</code> y <code>public</code> (tampoco es necesario especificarlo), es decir, constantes y públicos. Hay que darles un valor inicial.</li>
 <li>Todos los métodos son abstractos también de manera implícita (tampoco hay que indicarlo). No tienen cuerpo, tan solo la cabecera.</li>
 </ul>
-<div style="text-align: center;"><img src="../../img/ud08/ud08_003.png" alt="ud08_003" style="zoom: 90%;" /></div>
+<div style="text-align: center;"><img src="../../img/ud08/ud08_003.png" alt="ud08_003" style="zoom: 85%;" /></div>
 
 <p>Como puedes observar, una interfaz consiste esencialmente en una lista de atributos finales (constantes) y métodos abstractos (sin implementar). Su sintaxis quedaría entonces:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1838,31 +1840,30 @@ Lass interfaces <code>Human</code> y <code>Omnivore</code> heredan de varias int
 <details class="example" open="open">
 <summary>Ejemplo 5.6</summary>
 <p>Supongamos una situación en la que nos interesa dejar constancia de que ciertas clases deben implementar una funcionalidad teórica determinada, diferente en cada clase afectada. Estamos hablando, pues, de la definición de un método teórico que algunas clases deberán implementar.<br /><br />
-Un ejemplo real puede ser el método <code>calculoImporteJubilacion()</code> aplicable, de manera diferente, a muchas tipologías de trabajadores y, por tanto, podríamos pensar en diseñar una clase <code>Trabajador</code> en que uno de sus métodos fuera <code>calculoImporteJubilacion()</code>. Esta solución es válida si estamos diseñando una jerarquía de clases a partir de la clase <code>Trabajador</code> de la que cuelguen las clases correspondientes a las diferentes tipologías de trabajadores (metalúrgicos, hostelería, informáticos, profesores...). Además, disponemos del concepto de clase abstracta que cada subclase implemente obligatoriamente el método <code>calculoImporteJubilacion()</code>.<br /><br />
+Un ejemplo real puede ser el método <code>calculoImporteJubilacion()</code> aplicable, de manera diferente, a muchas tipologías de trabajadores y, por tanto, podríamos pensar en diseñar una clase <code>Trabajador</code> en que uno de sus métodos fuera <code>calculoImporteJubilacion()</code>. Esta solución es válida si estamos diseñando una jerarquía de clases a partir de la clase <code>Trabajador</code> de la que cuelguen las clases correspondientes a las diferentes tipologías de trabajadores (<em>metalúrgicos</em>, <em>hostelería</em>, <em>informáticos</em>, <em>profesores</em>...). Además, disponemos del concepto de clase abstracta que cada subclase implemente obligatoriamente el método <code>calculoImporteJubilacion()</code>.<br /><br />
 Pero, ¿y si resulta que ya tenemos las clases <code>Profesor</code>, <code>Informatico</code>, <code>Hostelero</code> en otras jerarquías de clases? La solución consiste en hacer que estas clases derivaran de la clase <code>Trabajador</code>, sin abandonar la derivación que pudieran tener, sería factible en lenguajes orientados a objetos que soportaran la herencia múltiple, pero esto no es factible en el lenguaje Java.
 Para superar esta limitación, Java proporciona las interfaces.</p>
 <blockquote>
-<p>Una interfaz es una <strong>maqueta</strong> contenedora de una lista de métodos abstractos y datos miembro (de tipos primitivos o de clases). Los atributos, si existen, son implícitamente consideradas <code>static</code> y <code>final</code>. Los métodos, si existen, son implícitamente considerados <code>public</code>.<br /><br /></p>
+<p>Una interfaz es una <strong>maqueta</strong> contenedora de una lista de métodos abstractos y datos miembro (de tipos primitivos o de clases). Los atributos, si existen, son implícitamente considerados <code>static</code> y <code>final</code>. Los métodos, si existen, son implícitamente considerados <code>public</code>.</p>
 </blockquote>
+</details>
 <p>Para entender en qué nos pueden ayudar las interface, necesitamos saber:
-<br /><br />- Una interfaz puede ser implementada por múltiples clases, de manera similar a como una clase puede ser superclase de múltiples clases.
-<br /><br />- Las clases que implementan una interfaz están obligadas a sobrescribir todos los métodos definidos en la interfaz. Si la definición de alguno de los métodos a sobrescribir coincide con la definición de algún método heredado, este desaparece de la clase.
-<br /><br />- Una clase puede implementar múltiples interfaces, a diferencia de la derivación, que sólo se permite una única clase base.
-<br /><br />- Una interfaz introduce un nuevo tipo de dato, por la que nunca habrá ninguna instancia, pero sí objetos usuarios de la interfaz (objetos de las clases que implementan la interfaz). Todas las clases que implementan una interfaz son compatibles con el tipo introducido por la interfaz.
-<br /><br />- Una interfaz no proporciona ninguna funcionalidad a un objeto (ya que la clase que implementa la interfaz es la que debe definir la funcionalidad de todos los métodos), pero en cambio proporciona la posibilidad de formar parte de la funcionalidad de otros objetos (pasándola por parámetro en métodos de otras clases).
-<br /><br />- La existencia de las interfaces posibilita la existencia de una jerarquía de tipo (que no debe confundirse con la jerarquía de clases) que permite la herencia múltiple.
-<br /><br />- Una interfaz no se puede instanciar, pero sí se puede hacer referencia.</p>
+    <br /><br />- Una interfaz puede ser implementada por múltiples clases, de manera similar a como una clase puede ser superclase de múltiples clases.
+    <br /><br />- Las clases que implementan una interfaz están obligadas a sobrescribir todos los métodos definidos en la interfaz. Si la definición de alguno de los métodos a sobrescribir coincide con la definición de algún método heredado, este desaparece de la clase.
+    <br /><br />- Una clase puede implementar múltiples interfaces, a diferencia de la derivación, que sólo se permite una única clase base.
+    <br /><br />- Una interfaz introduce un nuevo tipo de dato, por la que nunca habrá ninguna instancia, pero sí objetos usuarios de la interfaz (objetos de las clases que implementan la interfaz). Todas las clases que implementan una interfaz son compatibles con el tipo introducido por la interfaz.
+    <br /><br />- Una interfaz no proporciona ninguna funcionalidad a un objeto (ya que la clase que implementa la interfaz es la que debe definir la funcionalidad de todos los métodos), pero en cambio proporciona la posibilidad de formar parte de la funcionalidad de otros objetos (pasándola por parámetro en métodos de otras clases).
+    <br /><br />- La existencia de las interfaces posibilita la existencia de una jerarquía de tipo (que no debe confundirse con la jerarquía de clases) que permite la herencia múltiple.
+    <br /><br />- Una interfaz no se puede instanciar, pero sí se puede hacer referencia.</p>
 <blockquote>
 <p>Así, si <code>I</code> es una interfaz y <code>C</code> es una clase que implementa la interfaz, se pueden declarar referencias al tipo <code>I</code> que apunten objetos de <code>C</code>:</p>
-</blockquote>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">I</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">parámetros</span><span class="o">&gt;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<ul>
-<li>Las interfaces pueden heredar de otras interfaces y, a diferencia de la derivación de clases, pueden heredar de más de una interfaz.</li>
-</ul>
+</blockquote>
+<p><br />- Las interfaces pueden heredar de otras interfaces y, a diferencia de la derivación de clases, pueden heredar de más de una interfaz.</p>
 <p>Así, si diseñamos la interfaz <code>Trabajador</code>, podemos hacer que las clases ya existentes (<code>Profesor</code>, <code>Informatico</code>, <code>Hostelero</code> ...) la implementen y, por tanto, los objetos de estas clases, además de ser objetos de las superclases respectivas, pasan a ser considerados objetos usuarios del tipo <code>Trabajador</code>. Con esta actuación nos veremos obligados a implementar el método <code>calculoImporteJubilacion()</code> a todas las clases que implementen la interfaz.</p>
 <p>Alguien no experimentado en la gestión de interfaces puede pensar: ¿por qué tanto revuelo con las interfaces si hubiéramos podido diseñar directamente un método llamado <code>calculoImporteJubilacion()</code> en las clases afectadas sin necesidad de definir ninguna interfaz?</p>
-<p>La respuesta radica en el hecho de que la declaración de la interfaz lleva implícita la declaración del tipo <code>Trabajador</code> y, por tanto, podremos utilizar los objetos de todas las clases que implementen la interfaz en cualquier método de cualquier clase que tenga algún argumento referencia al tipo <code>Trabajador</code> como, por ejemplo, en un hipotético método de una hipotética clase llamada Hacienda:</p>
+<p>La respuesta radica en el hecho de que la declaración de la interfaz lleva implícita la declaración del tipo <code>Trabajador</code> y, por tanto, podremos utilizar los objetos de todas las clases que implementen la interfaz en cualquier método de cualquier clase que tenga algún argumento referencia al tipo <code>Trabajador</code> como, por ejemplo, en un hipotético método de una hipotética clase llamada <code>Hacienda</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">enviarBorradorIRPF</span><span class="p">(</span><span class="n">Trabajador</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{...}</span>
 </code></pre></div></td></tr></table></div>
 <p>Por el hecho de existir la interfaz <code>Trabajador</code>, todos los objetos de las clases que la implementan (<code>Profesor</code>, <code>Informatico</code>, <code>Hostelero</code> ...) se pueden pasar como parámetro en las llamadas al método <code>enviarBorradorIRPF(Trabajador t)</code>.</p>
@@ -1887,7 +1888,7 @@ Para superar esta limitación, Java proporciona las interfaces.</p>
 <a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Los métodos de las interfaces a implementar en la clase deben ser obligatoriamente de acceso público.</p>
-<p>Por último, comentar que, como por definición todos los datos miembro que se definen en una interfaz son <code>static</code> y <code>final</code>, y dado que las interfaz no se pueden instanciar, también resultan una buena herramienta para implantar grupos de constantes.</p>
+<p>Por último, comentar que, como por definición todos los datos miembro que se definen en una interfaz son <code>static</code> y <code>final</code>, y dado que las interfaces no se pueden instanciar, también resultan una buena herramienta para implantar grupos de constantes.</p>
 <p>Así, por ejemplo:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
@@ -1900,11 +1901,11 @@ Para superar esta limitación, Java proporciona las interfaces.</p>
 <a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Esta definición nos permite utilizar las constantes declaradas en cualquier clase que implemente la interfaz, de manera tan simple como:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="w"> </span><span class="p">(</span><span class="n">DiasSemana</span><span class="p">.</span><span class="na">NOMBRES_DIAS</span><span class="o">[</span><span class="n">LUNES</span><span class="o">]</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="w"> </span><span class="p">(</span><span class="n">DiasSemana</span><span class="p">.</span><span class="na">NOMBRES_DIAS</span><span class="o">[</span><span class="n">LUNES</span><span class="o">]</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<hr>
-<strong>Ejemplo de diseño de interfaz e implementación en una clase</strong>
-Se presentan un par de interfaces que incorporan datos (de tipo primitivo y de referencia en clase) y métodos y una clase que las implementa. En la declaración de la clase se ve que sólo implementa la interfaz <code>B</code>, pero como esta interfaz deriva de la interfaz <code>A</code> resulta que la clase está implementando las dos interfaces.</p>
+<details class="example" open="open">
+<summary>Ejemplo de diseño de interfaz e implementación en una clase</summary>
+<p>Se presentan un par de interfaces que incorporan datos (de tipo primitivo y de referencia en clase) y métodos y una clase que las implementa. En la declaración de la clase se ve que sólo implementa la interfaz <code>B</code>, pero como esta interfaz deriva de la interfaz <code>A</code> resulta que la clase está implementando las dos interfaces.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
@@ -1945,8 +1946,7 @@ Se presentan un par de interfaces que incorporan datos (de tipo primitivo y de r
 <span class="normal"><a href="#__codelineno-32-38">38</a></span>
 <span class="normal"><a href="#__codelineno-32-39">39</a></span>
 <span class="normal"><a href="#__codelineno-32-40">40</a></span>
-<span class="normal"><a href="#__codelineno-32-41">41</a></span>
-<span class="normal"><a href="#__codelineno-32-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Date</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-32-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Date</span><span class="p">;</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2"></a>
 <a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="kd">interface</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">    </span><span class="n">Date</span><span class="w"> </span><span class="n">ULTIMA_CREACION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Date</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
@@ -1960,34 +1960,33 @@ Se presentan un par de interfaces que incorporan datos (de tipo primitivo y de r
 <a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="p">}</span>
 <a id="__codelineno-32-13" name="__codelineno-32-13"></a>
 <a id="__codelineno-32-14" name="__codelineno-32-14"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Anexo5Interfaces</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-15" name="__codelineno-32-15"></a>
-<a id="__codelineno-32-16" name="__codelineno-32-16"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-32-17" name="__codelineno-32-17"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">fechaCreacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Date</span><span class="p">();</span>
-<a id="__codelineno-32-18" name="__codelineno-32-18"></a>
-<a id="__codelineno-32-19" name="__codelineno-32-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Anexo5Interfaces</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">factor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-20" name="__codelineno-32-20"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VALOR_B</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factor</span><span class="p">;</span>
-<a id="__codelineno-32-21" name="__codelineno-32-21"></a><span class="w">        </span><span class="n">ULTIMA_CREACION</span><span class="p">.</span><span class="na">setTime</span><span class="p">(</span><span class="n">fechaCreacion</span><span class="p">.</span><span class="na">getTime</span><span class="p">());</span>
-<a id="__codelineno-32-22" name="__codelineno-32-22"></a><span class="p">}</span>
-<a id="__codelineno-32-23" name="__codelineno-32-23"></a>
-<a id="__codelineno-32-24" name="__codelineno-32-24"></a><span class="nd">@Override</span>
-<a id="__codelineno-32-25" name="__codelineno-32-25"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodoA</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-26" name="__codelineno-32-26"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;En metodoA, ULTIMA_CREACION = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ULTIMA_CREACION</span><span class="p">);</span>
-<a id="__codelineno-32-27" name="__codelineno-32-27"></a><span class="p">}</span>
-<a id="__codelineno-32-28" name="__codelineno-32-28"></a>
-<a id="__codelineno-32-29" name="__codelineno-32-29"></a><span class="nd">@Override</span>
-<a id="__codelineno-32-30" name="__codelineno-32-30"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodoB</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-31" name="__codelineno-32-31"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;En metodoB, b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-32-32" name="__codelineno-32-32"></a><span class="p">}</span>
-<a id="__codelineno-32-33" name="__codelineno-32-33"></a>
-<a id="__codelineno-32-34" name="__codelineno-32-34"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-35" name="__codelineno-32-35"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inicialmente, ULTIMA_CREACION = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ULTIMA_CREACION</span><span class="p">);</span>
-<a id="__codelineno-32-36" name="__codelineno-32-36"></a><span class="w">    </span><span class="n">Anexo5Interfaces</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Anexo5Interfaces</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-32-37" name="__codelineno-32-37"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="na">metodoA</span><span class="p">();</span>
-<a id="__codelineno-32-38" name="__codelineno-32-38"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="na">metodoB</span><span class="p">();</span>
-<a id="__codelineno-32-39" name="__codelineno-32-39"></a><span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
-<a id="__codelineno-32-40" name="__codelineno-32-40"></a><span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="n">pb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<a id="__codelineno-32-15" name="__codelineno-32-15"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-32-16" name="__codelineno-32-16"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">fechaCreacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Date</span><span class="p">();</span>
+<a id="__codelineno-32-17" name="__codelineno-32-17"></a>
+<a id="__codelineno-32-18" name="__codelineno-32-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Anexo5Interfaces</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">factor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-19" name="__codelineno-32-19"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VALOR_B</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factor</span><span class="p">;</span>
+<a id="__codelineno-32-20" name="__codelineno-32-20"></a><span class="w">        </span><span class="n">ULTIMA_CREACION</span><span class="p">.</span><span class="na">setTime</span><span class="p">(</span><span class="n">fechaCreacion</span><span class="p">.</span><span class="na">getTime</span><span class="p">());</span>
+<a id="__codelineno-32-21" name="__codelineno-32-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-22" name="__codelineno-32-22"></a>
+<a id="__codelineno-32-23" name="__codelineno-32-23"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-32-24" name="__codelineno-32-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodoA</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-25" name="__codelineno-32-25"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;En metodoA, ULTIMA_CREACION = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ULTIMA_CREACION</span><span class="p">);</span>
+<a id="__codelineno-32-26" name="__codelineno-32-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-27" name="__codelineno-32-27"></a>
+<a id="__codelineno-32-28" name="__codelineno-32-28"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-32-29" name="__codelineno-32-29"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodoB</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-30" name="__codelineno-32-30"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;En metodoB, b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-32-31" name="__codelineno-32-31"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-32" name="__codelineno-32-32"></a>
+<a id="__codelineno-32-33" name="__codelineno-32-33"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-34" name="__codelineno-32-34"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inicialmente, ULTIMA_CREACION = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ULTIMA_CREACION</span><span class="p">);</span>
+<a id="__codelineno-32-35" name="__codelineno-32-35"></a><span class="w">        </span><span class="n">Anexo5Interfaces</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Anexo5Interfaces</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-32-36" name="__codelineno-32-36"></a><span class="w">        </span><span class="n">obj</span><span class="p">.</span><span class="na">metodoA</span><span class="p">();</span>
+<a id="__codelineno-32-37" name="__codelineno-32-37"></a><span class="w">        </span><span class="n">obj</span><span class="p">.</span><span class="na">metodoB</span><span class="p">();</span>
+<a id="__codelineno-32-38" name="__codelineno-32-38"></a><span class="w">        </span><span class="n">A</span><span class="w"> </span><span class="n">pa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<a id="__codelineno-32-39" name="__codelineno-32-39"></a><span class="w">        </span><span class="n">B</span><span class="w"> </span><span class="n">pb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<a id="__codelineno-32-40" name="__codelineno-32-40"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-32-41" name="__codelineno-32-41"></a><span class="p">}</span>
-<a id="__codelineno-32-42" name="__codelineno-32-42"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Si lo ejecutamos obtendremos:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>

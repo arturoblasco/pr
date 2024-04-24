@@ -94,3 +94,6 @@ plugins:
 
 extra:
   favicon: favicon.ico
+
+extra_css:
+  - custom.css
