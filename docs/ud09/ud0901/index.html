@@ -572,7 +572,7 @@
         
   
   <span class="md-ellipsis">
-    Ejercicios
+    Actividades
   </span>
   
 
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud08/ud0807/" class="md-nav__link">
+      <a href="../../ud08/ud08pi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +955,7 @@
         
   
   <span class="md-ellipsis">
-    Ejercicios
+    Actividades
   </span>
   
 
@@ -972,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud0912/" class="md-nav__link">
+      <a href="../ud09pi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1089,9 +1089,12 @@
 <p>Hoy en día, la mayoría de aplicaciones informáticas necesitan almacenar y gestionar gran cantidad de datos.</p>
 <p>Esos datos, se suelen guardar en <strong>bases de datos relacionales</strong>, ya que éstas son las más extendidas actualmente.</p>
 <p>Las bases de datos relacionales permiten organizar los datos en <strong>tablas</strong> y esas tablas y datos se relacionan mediante campos clave. Además se trabaja con el lenguaje estándar conocido como <strong>SQL</strong>, para poder realizar las consultas que deseemos a la base de datos.</p>
+<div class="admonition note">
+<p class="admonition-title">Base de datos relacional</p>
 <p>Una base de datos relacional se puede definir de una manera simple como aquella que presenta la información en tablas con filas y columnas.</p>
-<p>Una tabla es una serie de <strong>filas</strong> y <strong>columnas</strong> , en la que cada fila es un <strong>registro</strong> y cada columna es un <strong>campo</strong>. Un campo representa un dato de los elementos almacenados en la tabla (<em>NSS</em>, <em>nombre</em>, <em>etc</em>.). Cada registro representa un elemento de la tabla (el equipo Real Madrid, el equipo Real Murcia, etc.)</p>
-<p>No se permite que pueda aparecer dos o más veces el mismo registro, por lo que uno o más campos de la tabla forman lo que se conoce como <strong>clave primaria</strong> (atributo que se elige como identificador en una tabla, de manera que no haya dos registros iguales, sino que se diferencien al menos en esa clave. Por ejemplo, en el caso de una tabla que guarda datos de personas, el número de la seguridad social, podría elegirse como clave primaria, pues sabemos que aunque haya dos personas llamadas, por ejemplo, Juan Pérez Pérez, estamos seguros de que su número de seguridad social será distinto).</p>
+</div>
+<p>Una tabla es una serie de <strong>filas</strong> y <strong>columnas</strong> , en la que cada fila es un <strong>registro</strong> y cada columna es un <strong>campo</strong>. Un campo representa un dato de los elementos almacenados en la tabla (<em>NSS</em>, <em>nombre</em>, <em>etc</em>.). Cada registro representa un elemento de la tabla (la persona <em>Jose</em>, la persona <em>Carmen</em>, etc.)</p>
+<p>No se permite que pueda aparecer dos o más veces el mismo registro, por lo que uno o más campos de la tabla forman lo que se conoce como <strong>clave primaria</strong> (atributo que se elige como identificador en una tabla, de manera que no haya dos registros iguales, sino que se diferencien al menos en esa clave). Por ejemplo, en el caso de una tabla que guarda datos de personas, el número de la seguridad social, podría elegirse como clave primaria, pues sabemos que aunque haya dos personas llamadas, por ejemplo, Juan Pérez Pérez, estamos seguros de que su número de seguridad social será distinto).</p>
 <p>El sistema gestor de bases de datos, en inglés conocido como: <strong>Database Management System</strong> (<strong>DBMS</strong>) , gestiona el modo en que los datos se almacenan, mantienen y recuperan.</p>
 <p>En el caso de una base de datos relacional, el sistema gestor de base de datos se denomina: <strong>Relational Database Management System</strong> (<strong>RDBMS</strong>).</p>
 <p>Tradicionalmente, la programación de bases de datos ha sido como una Torre de Babel: gran cantidad de productos de bases de datos en el mercado, y cada uno “hablando” en su lenguaje privado con las aplicaciones.</p>
@@ -1103,7 +1106,7 @@
 </ul>
 <h2 id="conexion-a-las-bbdd-conectores">Conexión a las BBDD: conectores</h2>
 <p>Dejemos de momento de lado el desfase Objeto-Relacional y centrémonos ahora en el acceso a Base de Datos Relacionales desde los lenguajes de programación. Lo razonaremos en general y lo aplicaremos a Java.</p>
-<p>Desde la década de los 80 que existen a pleno rendimiento las bases de datos relacionales. Casi todos los Sistemas Gestores de Bases de Datos (excepto los más pequeños como Access o Base de LibreOffice) utilizan la arquitectura cliente-servidor. Esto significa que hay un ordenador central donde está instalado el Sistema Gestor de Bases de Datos Relacional que actúa como servidor, y habrá muchos clientes que se conectarán al servidor haciendo peticiones sobre la Base de Datos.</p>
+<p>Desde la década de los 80 que existen a pleno rendimiento las bases de datos relacionales. Casi todos los Sistemas Gestores de Bases de Datos (excepto los más pequeños como <em>Access</em> o <em>Base</em> de LibreOffice) utilizan la arquitectura cliente-servidor. Esto significa que hay un ordenador central donde está instalado el Sistema Gestor de Bases de Datos Relacional que actúa como servidor, y habrá muchos clientes que se conectarán al servidor haciendo peticiones sobre la Base de Datos.</p>
 <p>Los Sistemas Gestores de Bases de Datos inicialmente disponían de lenguajes de programación propios para poder hacer los accesos desde los clientes. Era muy consistente, pero a base de ser muy poco operativo:</p>
 <ul>
 <li>La empresa desarrolladora del SGBD debían mantener un lenguaje de programación, que resultaba necesariamente muy costoso, si no querían que quedara desfasado.</li>
@@ -1185,10 +1188,11 @@
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

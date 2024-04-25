@@ -572,7 +572,7 @@
         
   
   <span class="md-ellipsis">
-    Ejercicios
+    Actividades
   </span>
   
 
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud08/ud0807/" class="md-nav__link">
+      <a href="../../ud08/ud08pi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +991,7 @@
         
   
   <span class="md-ellipsis">
-    Ejercicios
+    Actividades
   </span>
   
 
@@ -1008,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud0912/" class="md-nav__link">
+      <a href="../ud09pi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,23 +1156,24 @@
 
   <h1>9.3 Acceso a BBDD</h1>
 
-<p>En este apartado se ofrece una introducción a los aspectos fundamentales del acceso a bases de datos mediante código Java. En los siguientes apartados se explicarán algunos aspectos en mayor detalle, sobre todo los relacionados con las clases Statement y ResultSet.</p>
 <h2 id="cargar-el-driver">Cargar el Driver</h2>
 <p>En un proyecto Java que realice conexiones a bases de datos es necesario, antes que nada, utilizar <code>Class.forname(…).newInstance()</code> para cargar dinámicamente el Driver que vamos a utilizar. Esto solo es necesario hacerlo una vez en nuestro programa. Puede lanzar excepciones por lo que es necesario utilizar un bloque <em>try-catch</em>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">).</span><span class="na">newInstance</span><span class="p">();</span><span class="w">        </span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="c1">// manejamos el error</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">).</span><span class="na">newInstance</span><span class="p">();</span><span class="w">    </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">// manejamos el error</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Hay que tener en cuenta que las clases y métodos utilizados para conectarse a una base de datos (explicados más adelante) funcionan con todos los drivers disponibles para Java (JDBC es solo uno, hay muchos más). Esto es posible ya que el estándar de Java solo los define como interfaces (<em>interface</em>) y cada librería driver los implementa (define las clases y su código). Por ello es necesario utilizar <code>Class.forName(…)</code> para indicarle a Java qué driver vamos a utilizar.</p>
-<div style="text-align: center;"><img src="../../img/ud09/lu8009ml6n_tmp_323050a8fd0104b9.png" alt="img" style="zoom:50%;" /></div>
-
 <p>Este nivel de asbtracción facilita el desarrollo de proyectos ya que si necesitáramos utilizar otro sistema de base de datos (que no fuera <em>MySQL</em>) solo necesitaríamos cambiar la línea de código que carga el driver y poco más. Si cada sistema de base de datos necesitara que utilizáramos distintas clases y métodos todo sería mucho más complicado.</p>
+<div style="text-align: center;"><img src="../../img/ud09/clases_conexiones.png" alt="img" style="zoom:70%;" /></div>
+
 <p>Las cuatro clases fundamentales que toda aplicación Java necesita para conectarse a una base de datos y ejecutar sentencias son: <strong><code>DriverManager</code></strong>, <strong><code>Connection</code></strong>, <strong><code>Statement</code></strong> y <strong><code>ResultSet</code></strong>. </p>
 <div style="text-align: center;"><img src="../../img/ud09/jdbc_proceso.png" alt="jdbc proceso" style="zoom:40%;" /></div>
 
@@ -1366,10 +1367,11 @@ st.close();</code></p>
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>
