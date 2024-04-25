@@ -1179,6 +1179,8 @@
 
 <h2 id="clase-drivermanager">Clase <code>DriverManager</code></h2>
 <p><strong>Paso 1: Establecer conexión con la BBDD</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo de conexión según SGBD</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1189,9 +1191,9 @@
 <span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cm">/* Para MySQL:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm">     jdbc  --&gt; driver</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm">     mysql --&gt; protocolo driver</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cm">     localhost:3306/gestionPedidos --&gt; detalles de la conexión</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm">    jdbc  --&gt; driver</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm">    mysql --&gt; protocolo driver</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cm">    localhost:3306/gestionPedidos --&gt; detalles de la conexión</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="cm">*/</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nl">jdbc</span><span class="p">:</span><span class="n">mysql</span><span class="p">:</span><span class="c1">//localhost:3306/gestionPedidos</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>
@@ -1199,48 +1201,57 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nl">jdbc</span><span class="p">:</span><span class="n">oracle</span><span class="p">:</span><span class="n">juan</span><span class="nd">@servidor</span><span class="p">:</span><span class="mi">3306</span><span class="p">:</span><span class="n">gestionPedidos</span><span class="w"> </span><span class="c1">// para Oracle</span>
 </code></pre></div></td></tr></table></div>
+</div>
 <p>Vamos a necesitar información adicional como son los datos de <em>usuario</em> y <em>contraseña</em>.</p>
 <p>La clase <strong>java.sql.DriverManager</strong> es la capa gestora del driver JDBC. Se encarga de manejar el Driver apropiado y <strong>permite crear conexiones con una base de datos</strong> mediante el método estático <strong><code>getConnection()</code></strong> que tiene dos variantes:</p>
-<p>​   - <code>DriveManager.getConnection(String url)</code></p>
-<p>​   - <code>DriveManager.getConnection(String url, String user, String password)</code></p>
-<p>Este método intentará establecer una conexión con la base de datos según la URL indicada. Opcionalmente se le puede pasar el usuario y contraseña como argumento (también se puede indicar en la propia URL). Si la conexión es satisfactoria devolverá un objeto <strong>Connection</strong>.</p>
-<p>Ejemplo de conexión a la base de datos <em>prueba</em> en localhost:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/prueba&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="s">&quot;root&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">DriveManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1">// y</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">DriveManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p>Este método intentará establecer una conexión con la base de datos según la <em>URL</em> indicada. Opcionalmente se le puede pasar el <em>usuario</em> y <em>contraseña</em> como argumento (también se puede indicar en la propia <em>URL</em>). Si la conexión es satisfactoria devolverá un objeto <strong>Connection</strong>.</p>
+<details class="example" open="open">
+<summary>Ejemplo de conexión a la base de datos <em>prueba</em> en localhost</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/prueba&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Connection</span><span class="w"> </span><span class="n">conexion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="s">&quot;root&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p>Este método puede lanzar dos tipos de excepciones (que habrá que manejar con un <em>try-catch</em>):</p>
 <ul>
 <li><strong>SQLException</strong>: la conexión no ha podido producirse. Puede ser por multitud de motivos como una URL mal formada, un error en la red, host o puerto incorrecto, base de datos no existente, usuario y contraseña no válidos, etc.</li>
-<li><strong>SQLTimeOutException</strong>: se ha superado el <em>LoginTiemout</em> sin recibir respuesta del servidor.</li>
+<li><strong>SQLTimeoutException</strong>: se ha superado el <em>LoginTimeout</em> sin recibir respuesta del servidor.</li>
 </ul>
 <h2 id="clase-connection">Clase <code>Connection</code></h2>
 <p><strong>Paso 2. Crear un objeto Statement</strong></p>
 <p>Un objeto <strong>java.sql.Connection representa una</strong> <strong>sesión de</strong> <strong>conexión con una base de datos</strong>. Una aplicación puede tener tantas conexiones como necesite, ya sea con una o varias bases de datos.</p>
-<p>El método más relevante es <strong><code>createStatement()</code></strong> que devuelve un objeto <em>Statement</em> asociado a dicha conexión que permite ejecutar sentencias SQL. El método <em>createStatement()</em> puede lanzar excepciones de tipo <strong>SQLException</strong>.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<p>El método más relevante es <strong><code>createStatement()</code></strong> que devuelve un objeto <em>Statement</em> asociado a dicha conexión que permite ejecutar sentencias SQL.</p>
+<p>El método <em>createStatement()</em> también puede lanzar excepciones de tipo <strong>SQLException</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>Cuando ya no la necesitemos es aconsejable <strong>cerrar</strong> <strong>la conexión con <code>close()</code></strong> para liberar recursos:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">conexion</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="clase-statement">Clase <code>Statement</code></h2>
 <p><strong>Paso 3. Ejecutar sentencia SQL</strong></p>
-<p>Un objeto <strong>java.sql.Statement</strong> permite <strong>ejecutar</strong> <strong>sentencias SQL</strong> <strong>en</strong> <strong>la base de datos</strong> a través de la conexión con la que se creó el <em>Statement</em> (ver apartado anterior). Los tres métodos más comunes de ejecución de sentencias SQL son <code>executeQuery(…)</code>, <code>executeUpdate(…)</code> y <code>execute(…)</code>. Pueden lanzar excepciones de tipo <strong>SQLException</strong> y <strong>SQLTimeoutException</strong>.</p>
+<p>Un objeto <strong>java.sql.Statement</strong> permite <strong>ejecutar</strong> <strong>sentencias SQL</strong> <strong>en</strong> <strong>la base de datos</strong> a través de la conexión con la que se creó el <em>Statement</em> (ver <em>Paso 2</em>). Los tres métodos más comunes de ejecución de sentencias SQL son <code>executeQuery(…)</code>, <code>executeUpdate(…)</code> y <code>execute(…)</code>.</p>
+<p>Estos tres métodos pueden lanzar excepciones de tipo <strong>SQLException</strong> y <strong>SQLTimeoutException</strong>.</p>
 <ul>
-<li><strong><code>ResultSet executeQuery(String sql)</code></strong>: ejecuta la sentencia sql indicada (de tipo <em>SELECT</em>). Devuelve un objeto ResultSet con los datos proporcionados por el servidor.  </li>
+<li><strong><code>ResultSet executeQuery(String sql)</code></strong>: ejecuta la sentencia sql indicada (de tipo <em>SELECT</em>). Devuelve un objeto <em>ResultSet</em> con los datos proporcionados por el servidor.  </li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM vendedores&quot;</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM vendedores&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><code>int executeUpdate(String sql)</code></strong>: ejecuta la sentencia sql indicada (de tipo <em>DML</em> como por ejemplo <em>INSERT</em>, <em>UPDATE</em> o <em>DELETE</em>).  Devuelve un el número de registros que han sido insertados, modificados o eliminados.</li>
+<li><strong><code>int executeUpdate(String sql)</code></strong>: ejecuta la sentencia sql indicada (de tipo <em>DML</em> como por ejemplo <em>INSERT</em>, <em>UPDATE</em> o <em>DELETE</em>).  Devuelve un número de registros que han sido insertados, modificados o eliminados.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeUpdate</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;INSERT INTO vendedores VALUES (1,&#39;Pedro Gil&#39;, &#39;2017-04-11&#39;, 15000);&quot;</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeUpdate</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;INSERT INTO vendedores VALUES (1,&#39;Pedro Gil&#39;, &#39;2017-04-11&#39;, 15000);&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Cuando ya no lo necesitemos es aconsejable <strong>cerrar el <em>statement</em> con <code>close()</code></strong> para liberar recursos:</p>
-<p><code>java
-st.close();</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
 <div class="admonition note">
-<p class="admonition-title">Revisa con cuidado el siguiente ejemplo</p>
+<p class="admonition-title">Nota</p>
 <p>Podríamos decir que este <em>resultset</em> es una especie de <em>tabla virtual</em> que se almacena en memoria con la información en su interior.</p>
 </div>
 <h2 id="clase-resultset">Clase <code>ResultSet</code></h2>
@@ -1254,15 +1265,19 @@ st.close();</code></p>
 <ul>
 <li><strong><code>String getString(String columnLabel)</code></strong>: devuelve un dato <em>String</em> de la columna indicada por su nombre. </li>
 </ul>
-<p>Por ejemplo: </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">);</span>
+<details class="example" open="open">
+<summary>Por ejemplo</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
+</details>
 <ul>
 <li><strong><code>String getString(int columnIndex)</code></strong>: devuelve un dato <em>String</em> de la columna indicada por su nombre (la primera columna es la 1, no la cero). </li>
 </ul>
-<p>Por ejemplo: </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<details class="example" open="open">
+<summary>Por ejemplo</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
+</details>
 <p>Existen métodos análogos a los anteriores para obtener valores de tipo <em>int</em>, <em>long</em>, <em>float</em>, <em>double</em>, <em>boolean</em>, <em>Date</em>, <em>Time</em>, <em>Array</em>, etc. Pueden consultarse todos en la <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/ResultSet.html">documentación oficial de Java</a>.</p>
 <ul>
 <li><strong><code>int getInt(String columnLabel)</code></strong></li>
@@ -1277,21 +1292,25 @@ st.close();</code></p>
 </ul>
 <p>Más adelante veremos cómo se realiza la modificación e inserción de datos.</p>
 <p>Todos estos métodos pueden lanzar una <strong>SQLException</strong>.</p>
-<p>Veamos un ejemplo de cómo recorrer un <em>ResultSet</em> llamado <em>rs</em> y mostrarlo por pantalla:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span>
-<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">while</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">);</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="n">Date</span><span class="w"> </span><span class="n">fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getDate</span><span class="p">(</span><span class="s">&quot;fecha_ingreso&quot;</span><span class="p">);</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getFloat</span><span class="p">(</span><span class="s">&quot;salario&quot;</span><span class="p">);</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fecha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">salario</span><span class="p">);</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>
+<details class="example" open="open">
+<summary>Ejemplo para recorrer un <em>ResultSet</em> llamado <em>rs</em> y mostrarlo por pantalla</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">while</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="n">Date</span><span class="w"> </span><span class="n">fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getDate</span><span class="p">(</span><span class="s">&quot;fecha_ingreso&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getFloat</span><span class="p">(</span><span class="s">&quot;salario&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fecha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">salario</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+</details>
 
 
 
@@ -1367,11 +1386,10 @@ st.close();</code></p>
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>
