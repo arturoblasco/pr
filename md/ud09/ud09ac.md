@@ -1,10 +1,9 @@
-**Ejercicio 1**
+## Ejercicio 1
 
 ...
 
 <hr>
-
-**Ejercicio 2 : completo**
+## Ejercicio 2 : completo
 
 Veamos un ejemplo completo de conexión y acceso a una base de datos utilizando todos los elementos mencionados en este apartado.
 
@@ -49,7 +48,7 @@ try {
 
 <hr>
 
-**Ejercicio 3**
+## Ejercicio 3
 
 Crea una aplicación que nos permita gestionar la base de datos network. 
 

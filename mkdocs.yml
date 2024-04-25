@@ -30,8 +30,8 @@ nav:
       - 8.4 Clases abstractas: ud08/ud0804.md
       - 8.5 Interfaces: ud08/ud0805.md
       - 8.6 Polimorfismo: ud08/ud0806.md
-      - Ejercicios: ud08/ud08ac.md
-      - Píldoras informáticas: ud08/ud0807.md
+      - Actividades: ud08/ud08ac.md
+      - Píldoras informáticas: ud08/ud08pi.md
       - Fuentes de información: ud08/ud08re.md
   - UD 9 Acceso a bases de datos:
       - 9.1 Introducción: ud09/ud0901.md
@@ -45,8 +45,8 @@ nav:
       - 9.9 Sentencias predefinidas: ud09/ud0909.md
       - 9.10 Trabajar con Sqlite: ud09/ud0910.md
       - 9.11 Repository pattern: ud09/ud0911.md
-      - Ejercicios: ud09/ud09ac.md
-      - Píldoras informáticas: ud09/ud0912.md
+      - Actividades: ud09/ud09ac.md
+      - Píldoras informáticas: ud09/ud09pi.md
       - Fuentes de información: ud09/ud09re.md
   - UD 10 Interfaz gráfica: default.md
 

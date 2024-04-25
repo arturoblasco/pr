@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="465.98337"
-     inkscape:cy="36.062446"
+     inkscape:zoom="1"
+     inkscape:cx="259.5"
+     inkscape:cy="986.5"
      inkscape:window-width="1920"
      inkscape:window-height="1003"
      inkscape:window-x="0"
@@ -39,6 +39,18 @@
      showguides="false" />
   <defs
      id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ff8c75;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#ffeca6;stop-opacity:0;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
@@ -91,6 +103,15 @@
          stdDeviation="1.0836729"
          id="feGaussianBlur20-7" />
     </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="125.54066"
+       y1="232.44037"
+       x2="14.581306"
+       y2="232.65265"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      inkscape:label="Capa 1"
@@ -107,7 +128,7 @@
        inkscape:export-xdpi="64.701042"
        inkscape:export-ydpi="64.701042" />
     <rect
-       style="fill:#fff3c7;fill-opacity:1;stroke:none;stroke-width:1.15986;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:url(#linearGradient2);fill-opacity:1;stroke:none;stroke-width:1.15986;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
        id="rect15"
        width="146.25676"
        height="43.368137"
@@ -118,7 +139,7 @@
        inkscape:export-ydpi="125.81963" />
     <path
        id="path15"
-       style="fill:#fff3c7;stroke-width:0.845054;stroke-linecap:square"
+       style="fill:#ff8c75;stroke-width:0.845054;stroke-linecap:square;fill-opacity:1"
        inkscape:transform-center-x="-11.098004"
        inkscape:transform-center-y="-6.1849367e-06"
        d="M 188.64971,233.09233 145.345,271.53696 v -76.88924 z"
@@ -525,7 +546,7 @@
     </g>
     <g
        id="g29"
-       transform="translate(8.5454551,-0.6751725)">
+       transform="translate(6.4287883,-0.6751725)">
       <rect
          style="opacity:0.492301;fill:#545146;fill-opacity:1;stroke:none;stroke-width:0.687753;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter20-7)"
          id="rect3-92-2-0-2"
@@ -593,7 +614,7 @@
          y="213.03886" /></text>
     <g
        id="g28"
-       transform="translate(10.264297,-0.6218005)">
+       transform="translate(6.0309634,-0.6218005)">
       <rect
          style="opacity:0.492301;fill:#545146;fill-opacity:1;stroke:none;stroke-width:0.687753;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter20-9)"
          id="rect3-92-2-0-0"
@@ -645,7 +666,7 @@
     </g>
     <g
        id="g27"
-       transform="translate(8.4437514,-2.2065675)">
+       transform="translate(2.093751,-2.2065675)">
       <rect
          style="opacity:0.492301;fill:#545146;fill-opacity:1;stroke:none;stroke-width:0.687753;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter20-76)"
          id="rect3-92-2-0-6"
