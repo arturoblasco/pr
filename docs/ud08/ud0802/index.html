@@ -1182,7 +1182,7 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p">...</span><span class="w">    </span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>En unidades anteriores has trabajado con la clase <code>Punto</code>, que definía las coordenadas de un punto en el plano, y con la clase <code>Rectangulo</code>, que definía una figura de tipo rectángulo también en el plano a partir de dos de sus vértices (inferior izquierdo y superior derecho). Tal y como hemos formalizado ahora los tipos de relaciones entre clases, parece bastante claro que aquí tendrías un caso de composición: "un rectángulo contiene puntos". Por tanto, podrías ahora redefinir los atributos de la clase <code>Rectangulo</code> (cuatro números reales) como dos objetos de tipo <code>Punto</code>:</p>
+<p>En unidades anteriores has trabajado con la clase <code>Punto</code>, que definía las coordenadas de un punto en el plano, y con la clase <code>Rectangulo</code>, que definía una figura de tipo rectángulo también en el plano a partir de dos de sus vértices (inferior izquierdo y superior derecho). Tal y como hemos formalizado ahora los tipos de relaciones entre clases, parece bastante claro que aquí tendrías un caso de composición: "<em>un rectángulo contiene puntos</em>". Por tanto, podrías ahora redefinir los atributos de la clase <code>Rectangulo</code> (cuatro números reales) como dos objetos de tipo <code>Punto</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1231,29 +1231,29 @@
 <span class="normal"><a href="#__codelineno-2-23">23</a></span>
 <span class="normal"><a href="#__codelineno-2-24">24</a></span>
 <span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Punto</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">public</span><span class="w"> </span><span class="nf">Punto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Punto</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setX</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setX</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17"></a>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="p">}</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-21" name="__codelineno-2-21"></a>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setY</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="p">}</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setY</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>En la siguiente presentación puedes observar detalladamente el proceso completo de elaboración de la clase <code>Rectangulo</code> haciendo uso de la clase <code>Punto</code>:</p>
@@ -1304,7 +1304,8 @@
 <p>Hasta ahora los métodos de tipo <em>get</em> devolvían tipos primitivos, es decir, copias del contenido (a veces con algún tipo de modificación o de formato) que había almacenado en los atributos, pero los atributos seguían "a salvo" como elementos privados de la clase. Pero, a partir de este momento, al tener objetos dentro de las clases y no sólo tipos primitivos, es posible que en un determinado momento interese devolver un objeto completo.</p>
 <div class="admonition danger">
 <p class="admonition-title">Cuidado al devolver atributos de tipo objeto</p>
-<p>Ahora bien, cuando vayas a devolver un objeto habrás de obrar con mucha precaución. Si en un método de la clase devuelves directamente un objeto que es un atributo, <strong>estarás ofreciendo directamente una referencia a un objeto atributo que probablemente has definido como privado</strong>. ¡De esta forma estás volviendo a hacer público un atributo que inicialmente era privado! </p>
+<p>Ahora bien, cuando vayas a devolver un objeto habrás de obrar con mucha precaución. Si en un método de la clase devuelve directamente un objeto que es un atributo, <strong>estarás ofreciendo directamente una referencia a un objeto atributo que probablemente has definido como privado</strong>.<br /><br />
+¡De esta forma estás volviendo a hacer público un atributo que inicialmente era privado! </p>
 </div>
 <p>Para evitar ese tipo de situaciones (ofrecer al exterior referencias a objetos privados) puedes optar por diversas alternativas, procurando siempre evitar la devolución directa de un atributo que sea un objeto:</p>
 <p>​   1) Una opción podría ser devolver siempre tipos primitivos.</p>
@@ -1333,7 +1334,7 @@
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vertice2</span><span class="p">;</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Esto funcionaría perfectamente, pero deberías tener cuidado con este tipo de métodos que devuelven directamente una referencia a un objeto atributo que probablemente has definido como privado. <strong>Cuidado!!</strong> estás de alguna manera haciendo público un atributo que fue declarado como privado.</p>
+<p>Esto funcionaría perfectamente, pero deberías tener cuidado con este tipo de métodos que devuelven directamente una referencia a un objeto atributo que probablemente has definido como privado. <strong>Cuidado!! estás de alguna manera haciendo público un atributo que fue declarado como privado</strong>.</p>
 <p>Para evitar que esto suceda bastaría con <strong>crear un nuevo objeto que fuera una copia del atributo que se desea devolver</strong> (en este caso un objeto de la clase <code>Punto</code>).</p>
 <p>Aquí tienes la solución para la nueva clase <code>Rectangulo</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1505,7 +1506,7 @@
 <p>En el fondo, los objetos no son más que variables de tipo referencia a la zona de memoria en la que se encuentra toda la información del objeto en sí mismo. Esto es, puedes tener un único objeto y múltiples referencias a él. Pero sólo se trata de un objeto, y cualquier modificación desde una de sus referencias afectaría a todas las demás, pues estamos hablando del mismo objeto.</p>
 </div>
 <p>Recuerda también que sólo se crean objetos cuando se llama a un constructor (uso de <code>new</code>). Si realizas asignaciones o pasos de parámetros, no se están copiando o pasando copias de los objetos, sino simplemente de las referencias, y por tanto se tratará siempre del mismo objeto. </p>
-<p>Se trata de un efecto similar al que sucedía en los métodos de tipo <em>get</em>, pero en este caso en sentido contrario (en lugar de que nuestra clase "<em>regale</em>" al exterior uno de sus atributos objeto mediante una referencia, en esta ocasión se "<em>adueña</em>" de un parámetro objeto que probablemente pertenezca a otro objeto y que es posible que el futuro haga uso de él).</p>
+<p>Se trata de un efecto similar al que sucedía en los métodos de tipo <em>get</em>, pero en este caso en sentido contrario (en lugar de que nuestra clase "<em>regale</em>" al exterior uno de sus atributos objeto mediante una referencia, en esta ocasión se "<em>adueña</em>" de un parámetro objeto que probablemente pertenezca a otro objeto y que es posible que en el futuro haga uso de él).</p>
 <p>Para entender mejor estos posibles efectos podemos continuar con el ejemplo de la clase <code>Rectangulo</code> que contiene en su interior dos objetos de la clase <code>Punto</code>. En los constructores del rectángulo habrá que incluir todo lo necesario para crear dos instancias de la clase <code>Punto</code> evitando las referencias a parámetros (haciendo copias).</p>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
@@ -1526,7 +1527,7 @@
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<br />
+<hr />
 2º) Para el segundo constructor habrá que crear dos puntos con las coordenadas x1, y1, x2, y2 que han sido pasadas como parámetros:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
@@ -1536,7 +1537,7 @@
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="p">);</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<br />
+<hr />
 3º) En el caso del tercer constructor puedes utilizar directamente los dos puntos que se pasan como parámetros para construir los vértices del rectángulo.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
@@ -1567,7 +1568,7 @@ b) Llamar al constructor copia de la clase <code>Punto</code>, si es que se disp
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="w"> </span><span class="p">(</span><span class="n">vertice2</span><span class="p">);</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<br />
+<hr />
 4º) Para el cuarto caso, el caso del constructor que recibe como parámetros la <em>base</em> y la <em>altura</em>, habrá que crear sendos vértices con valores (0,0) y (0 + base, 0 + altura), o lo que es lo mismo: (0,0) y (base, altura).</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
@@ -1577,7 +1578,7 @@ b) Llamar al constructor copia de la clase <code>Punto</code>, si es que se disp
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">vertice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Punto</span><span class="p">(</span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="n">altura</span><span class="p">);</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<br />
+<hr />
 5º) Quedaría finalmente por implementar el constructor copia, quinto caso:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
@@ -1640,11 +1641,24 @@ Así ahora el método <code>main</code> que comprueba la clase <code>Rectangulo<
 </code></pre></div></td></tr></table></div>
 <p>Se pueden distinguir varios tipos de clases internas:</p>
 <ul>
-<li>Clases <strong>internas estáticas</strong> (o clases anidadas), declaradas con el modificador <code>static</code>.</li>
-<li>Clases <strong>internas miembro</strong>, conocidas habitualmente como clases internas. Declaradas al máximo nivel de la clase contenedora y no estáticas.</li>
-<li>Clases <strong>internas locales</strong>, que se declaran en el interior de un bloque de código (normalmente dentro de un método).</li>
-<li>Clases <strong>anónimas</strong>, similares a las internas locales, pero sin nombre (sólo existirá un objeto de ellas y, al no tener nombre, no tendrán constructores). Se suelen usar en la gestión de eventos en los interfaces gráficos.<br /><br />+
-Aquí tienes algunos ejemplos:</li>
+<li>
+<p>Clases <strong>internas estáticas</strong> (o clases <strong>anidadas</strong>), declaradas con el modificador <code>static</code>.</p>
+<p>Estas clases anidadas, como miembros de una clase que son (miembros de <code>ClaseContenedora</code>), pueden ser declaradas con los modificadores <code>public</code>, <code>protected</code>, <code>private</code> o de <code>paquete</code>, como el resto de miembros.<br /><br /></p>
+</li>
+<li>
+<p>Clases <strong>internas miembro</strong>, conocidas habitualmente como clases <strong>internas</strong>. Declaradas al máximo nivel de la clase contenedora y no estáticas.</p>
+<p>Estas clases internas (no estáticas) tienen acceso a otros miembros de la clase dentro de la que está definida aunque sean privados (se trata en cierto modo de un miembro más de la clase), mientras que las anidadas (estáticas) no.</p>
+<p>Las clases internas se utilizan en algunos casos para:<br />
+- Agrupar clases que sólo tiene sentido que existan en el entorno de la clase en la que han sido definidas, de manera que se oculta su existencia al resto del código.<br />
+- Incrementar el nivel de encapsulación y ocultamiento.<br />
+- Proporcionar un código fuente más legible y fácil de mantener (el código de las clases internas y anidadas está más cerca de donde es usado).<br /><br /></p>
+</li>
+<li>
+<p>Clases <strong>internas locales</strong>, que se declaran en el interior de un bloque de código (normalmente dentro de un método).<br /><br /></p>
+</li>
+<li>
+<p>Clases <strong>anónimas</strong>, similares a las internas locales, pero sin nombre (sólo existirá un objeto de ellas y, al no tener nombre, no tendrán constructores). Se suelen usar en la gestión de eventos en los interfaces gráficos.</p>
+</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
 <span class="normal"><a href="#__codelineno-15-2">2</a></span>
@@ -1664,15 +1678,10 @@ Aquí tienes algunos ejemplos:</li>
 <a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Las clases anidadas, como miembros de una clase que son (miembros de <code>ClaseContenedora</code>), pueden ser declaradas con los modificadores <code>public</code>, <code>protected</code>, <code>private</code> o de <code>paquete</code>, como el resto de miembros.</p>
-<p>Las clases internas (no estáticas) tienen acceso a otros miembros de la clase dentro de la que está definida aunque sean privados (se trata en cierto modo de un miembro más de la clase), mientras que las anidadas (estáticas) no.</p>
-<p>Las clases internas se utilizan en algunos casos para:</p>
-<ul>
-<li>Agrupar clases que sólo tiene sentido que existan en el entorno de la clase en la que han sido definidas, de manera que se oculta su existencia al resto del código.</li>
-<li>Incrementar el nivel de encapsulación y ocultamiento.</li>
-<li>Proporcionar un código fuente más legible y fácil de mantener (el código de las clases internas y anidadas está más cerca de donde es usado).</li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
 <p>En Java es posible definir clases internas y anidadas, permitiendo todas esas posibilidades. Aunque para los ejemplos con los que vas a trabajar no las vas a necesitar por ahora. </p>
+</div>
 <details class="example" open="open">
 <summary>Ejemplo de ClaseContenedora y ClaseInterna</summary>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
