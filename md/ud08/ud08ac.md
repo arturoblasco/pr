@@ -2,6 +2,8 @@
 
 ### Ejercicio01
 
+Paquete: `centroestudios`.
+
 Diseñar una jerarquía de clases para modelizar las **aulas de un centro de estudios**.
 
 De un `Aula` se conoce el `código` (numérico), la `longitud` y la `anchura`. Se desea un método que devuelva la capacidad del aula sabiendo que esta se calcula a partir de la superficie a razón de 1 alumnos por cada 1.4 metros cuadrados de superficie.
@@ -17,6 +19,8 @@ Implementar el método `toString` de cada una de las clases diseñadas para que 
    <hr>
 
 ### Ejercicio02
+
+paquete: `videojuegos`
 
 Un salón de **VideoJuegos** dispone de ordenadores en los que los clientes pueden jugar. Además de jugar en el establecimiento, la empresa alquila y vende juegos.
 
@@ -46,8 +50,10 @@ Un salón de **VideoJuegos** dispone de ordenadores en los que los clientes pued
       - `toString()` devuelve todos los datos del `JuegoEnVenta`.
 
 <hr>
+
 ### Ejercicio03
 
+paquete: `fnmt`
 
 La **Fabrica Nacional de Moneda y Timbre** quiere almacenar cierta información técnica del dinero (billetes y monedas) que emite. En concreto, le interesa:
 
@@ -70,8 +76,10 @@ a) Diseñar la clase abstracta `Dinero` y sus subclases `Moneda` y `Billete`, de
 b) Diseñar la clase `TestDinero` para probar las clases desarrolladas: Crear objetos de las clases `Moneda` y `Billete` y mostrarlos por pantalla.
 
 <hr>
+
 ### Ejercicio04
 
+paquete: `centrocomercial`
 
 Un **centro comercial** quiere mostrar cierta información sobre los televisores que vende. Los televisores pueden ser de dos tipos: de tubo o LCD. En concreto, de cada televisor le interesa mostrar:
 
@@ -94,8 +102,10 @@ a) Diseñar la clase `Televisor` con los atributos y métodos comunes a los dos 
 b) Diseñar la clase `TestTV` para probar las clases diseñadas. Crear algunos objetos de las clases `TVTubo` y `TVLCD` y mostrarlos por pantalla.
 
 <hr>
+
 ### Ejercicio05
 
+paquete: `preguntas`
 
 De cada pareja de afirmaciones **indica cuál es la verdaderas**:<br />
       a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.<br />
@@ -122,8 +132,10 @@ De cada pareja de afirmaciones **indica cuál es la verdaderas**:<br />
 	v) Una clase definida final y abstract podría resultar útil.<br />
 
 <hr>
+
 ### Ejercicio06
 
+paquete: `preguntas2`
 
 Dada las siguientes **definiciones de clases**:
 
@@ -214,6 +226,8 @@ class Test{
 
 ### **Ejercicio07**
 
+paquete: `obra`
+
 Dada la siguiente **jerarquía de clases**:
 
 ```java
@@ -273,8 +287,10 @@ public static void main(String[] args){
     ```
 
 <hr>
+
 ### Ejercicio08
 
+paquete: `preguntas3`
 
 Las clases siguientes implementan una **jerarquía de herencia**
 
@@ -346,8 +362,10 @@ public class CuestionHerencia{
 ​	b) **Una vez corregido** el programa, **escribir la salida** por pantalla resultado de su ejecución.
 
 <hr>
+
 ### Ejercicio09
 
+paquete: `supermercado`
 
 *Supermercado: Práctica con interfaces y polimorfismo.*
 
@@ -424,6 +442,8 @@ El producto tendrá como propiedades la marca, el tipo de vino, los grados de al
 
 ### **Ejercicio10**
 
+paquete: `facultad`
+
 Realizar una aplicación para la gestión de la información de las personas vinculadas a una `Facultad`, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio.
 A continuación, se detalla qué tipo de información debe gestionar esta aplicación:
 
@@ -445,26 +465,34 @@ El ejercicio consiste, en primer lugar, en definir la jerarquía de clases de es
 En el método `main` crear un array de `personas`. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.
 
 <hr>
+
 ### Ejercicio11
 
+paquete: `trabajadores`
 
 Crea una clase `Empleado` y una subclase `Encargado`. Los encargados reciben un 10% más de sueldo base que un empleado normal. Implementa dichas clases en el paquete objetos y sobrescribe el método `getSueldo()` para ambas clases.
 
 <hr>
+
 ### Ejercicio12
 
+paquete: `juego`
 
 Crear la clase `Dado`, la cual desciende de la clase `Sorteo`. La clase `Dado`, en la llamada `lanzar()` mostrará un número aleatorio del 1 al 6. Crear la clase `Moneda`, la cual desciende de la clase `Sorteo`. Esta clase en la llamada al método `lanzar()` mostrará las palabras cara o cruz. Realizar una clase con un método `main` que compruebe todo lo realizado.
 
 <hr>
+
 ### Ejercicio13
 
+paquete: `alimento`
 
 Realiza una clase `Huevo` con un atributo `tamaño` (`S`, `M`, `L`, `XL`) con el método `toString`. La clase `Huevo` está compuesta por dos clases internas, una `Clara` y otra `Yema`. Ambas clases tienen un atributo `color` y el método `toString`. Realiza un método `main` en el que se cree un objeto de tipo `Huevo`, `Clara` y `Yema`, se le asigne valor a sus atributos y se muestren los valores.
 
 ## Ejercicios Lionel
 
 ### **Ejercicio14 - Astros**
+
+paquete: `astros`
 
 Define una jerarquía de clases que permita almacenar datos sobre los planetas y satélites (lunas) que forman parte del sistema solar.
 
@@ -495,6 +523,8 @@ Una posible solución sería crear una lista de objetos, insertar los planetas y
 
 ### **Ejercicio15 - Mascotas**
 
+paquete: `mascotas`
+
 Implementa una clase llamada **Inventario** que utilizaremos para almacenar referencias a todos los animales existentes en una tienda de mascotas. 
 
 Esta clase debe cumplir con los siguientes requisitos: 
@@ -519,6 +549,8 @@ El diagrama UML sería:
 <hr>
 
 ### **Ejercicio16 - Banco**
+
+paquete: `banco`
 
 Vamos a hacer una aplicación que simule el funcionamiento de un banco.
 
@@ -551,6 +583,8 @@ El diagrama UML sería:
 <hr>
 
 ### **Ejercicio17 - Empresa y empleados**
+
+paquete: `empresaempleados`
 
 Vamos a implementar dos clases que permitan gestionar datos de empresas y sus empleados.
 
@@ -588,8 +622,10 @@ Las **empresas** tienen las siguientes características:
     El IRPF realmente es más complejo pero se ha simplificado para no complicar demasiado este ejercicio.
 
 <hr>
+
 ### Ejercicio18 - Vehículos
 
+paquete: `vehiculos`
 
 !!!note "Aconsejable"
  	Realizar el diseño UML antes de empezar a programar.
@@ -615,8 +651,10 @@ Implementa todas las clases necesarias con: atributos, constructor con parámetr
 Implementa también una clase Programa para hacer algunas pruebas: Instancia varios vehículos de todo tipo (coches, motos, barcos, submarinos, aviones y helicópteros) así como vehículos genericos (terrestres, acuáticos y aéreos). Crea un ArrayList y añade todos los vehículos. Recorre la lista y llama al método imprimir de todos los vehículos.
 
 <hr>
+
 ### Ejercicio19 - Figuras
 
+paquete: `figuras`
 
 Implementa una **interface** llamada **iFigura2D** que declare los métodos:
 
