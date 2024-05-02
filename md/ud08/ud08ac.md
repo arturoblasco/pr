@@ -2,7 +2,7 @@
 
 ### Ejercicio01
 
-Paquete: `centroestudios`.
+paquete: `_01_centroestudios`.
 
 Diseñar una jerarquía de clases para modelizar las **aulas de un centro de estudios**.
 
@@ -16,15 +16,18 @@ Implementar el método `toString` de cada una de las clases diseñadas para que 
 
 - En las aulas de música e informática el texto irá precedido por "*Aula de música*" o "*Aula de informática*", según corresponda.
 
-   <hr>
+
+Crea también una clase `TestAula` para probar las clases generadas.
+
+<hr>
 
 ### Ejercicio02
 
-paquete: `videojuegos`
+paquete: `_02_videojuegos`
 
 Un salón de **VideoJuegos** dispone de ordenadores en los que los clientes pueden jugar. Además de jugar en el establecimiento, la empresa alquila y vende juegos.
 
-2.1. Diseñar la clase `Juego` siguiendo las siguientes especificaciones: 
+a) Diseñar la clase `Juego` siguiendo las siguientes especificaciones: 
 
 - Atributos protected: `titulo` (String), `fabricante` (String), `año` (int).
 - Constructor `public Juego(String t, String f, int a)`.
@@ -33,53 +36,59 @@ Un salón de **VideoJuegos** dispone de ordenadores en los que los clientes pued
 - `public boolean equals(Object o)`: Dos juegos son iguales si tienen el mismo título, fabricante y año.
 - `public int compareTo(Object o)`: Un juego es menor que otro si su título es menor. A igual título, si su fabricante es menor. A igual título y fabricante, si su año es menor.
 
-2.2. Diseñar las clases `JuegoEnAlquiler` y `JuegoEnVenta` (y otras si se considera oportuno), sabiendo que, además de los atributos descritos anteriormente, tienen.
+b) Diseñar las clases `JuegoEnAlquiler` y `JuegoEnVenta` (y otras si se considera oportuno), sabiendo que, además de los atributos descritos anteriormente, tienen.
 
 - `precio`.
+
 - `nº de copias disponibles`.
+
 - `JuegoEnAlquiler`.
-      - tiene un atributo que indica el número de días que se alquila. (Por el precio indicado, hay juegos que se alquilan por un día, otros por 2, etc...).
-      - Constructor que recibe todos sus datos.
+      - tiene un atributo que indica el *número de días* que se alquila. 
+          
+      - *constructor* que recibe todos sus datos.
+      
       - tiene un método `alquilar` que decrementa el número de copias disponibles.
       - tiene un método `devolver` que incrementa el número de copias disponibles.
       - `toString()` devuelve todos los datos del `JuegoEnAlquiler`.
 
 - `JuegoEnVenta`
-      - `Constructor` que recibe todos sus datos.
-      - tiene un método `vender`, que decrementa el número de copias disponibles.
-      - `toString()` devuelve todos los datos del `JuegoEnVenta`.
+     - *constructor* que recibe todos sus datos.
+     - tiene un método `vender`, que decrementa el número de copias disponibles.
+     - `toString()` devuelve todos los datos del `JuegoEnVenta`.
+
+c) Crea también una clase `TestJuego` para probar objetos de las clases `JuegoEnAlquiler` y `JuegoEnVenta`.
 
 <hr>
 
 ### Ejercicio03
 
-paquete: `fnmt`
+paquete: `_03_fnmt`
 
 La **Fabrica Nacional de Moneda y Timbre** quiere almacenar cierta información técnica del dinero (billetes y monedas) que emite. En concreto, le interesa:
 
-- `Valor`: Valor de la moneda o billete, en euros. (`double`).
-- `Año de emisión`: Año en que fue emitida la moneda o billete. (`int`).
+- *Valor*: Valor de la moneda o billete, en euros. (`double`).
+- *Año de emisión*: Año en que fue emitida la moneda o billete. (`int`).
 - De las monedas, 
-      - `Diámetro`: Diámetro de la moneda, en milímetros. (`double`).
-      - `Peso`: Peso de la moneda, en gramos (`double`).
-- De los billetes.
-      - `Altura del billete`, en mm (`double`).
-      - `Anchura del billete`, en mm (`double`).
+     - *Diámetro*: Diámetro de la moneda, en milímetros. (`double`).
+     - *Peso*: Peso de la moneda, en gramos (`double`).
+- De los billetes,
+     - *Altura* del billete, en mm (`double`).
+     - *Anchura* del billete, en mm (`double`).
 
 a) Diseñar la clase abstracta `Dinero` y sus subclases `Moneda` y `Billete`, desarrollando:
 
-- Constructores que reciban los datos necesarios para inicializar los atributos de la clase correspondiente.
+- *Constructores* que reciban los datos necesarios para inicializar los atributos de la clase correspondiente.
 - `equals`: Dos monedas o billetes son iguales si tienen el mismo año de emisión y valor.
 - `compareTo`: Es menor (mayor) el de menor (mayor) año, a igual año es menor (mayor) el de menor (mayor) valor.
 - `toString`: Que muestre todos los datos del billete o moneda. Los billetes irán precedidos por el texto "BILLETE" y las monedas por el texto "MONEDA".
 
-b) Diseñar la clase `TestDinero` para probar las clases desarrolladas: Crear objetos de las clases `Moneda` y `Billete` y mostrarlos por pantalla.
+b) Diseñar la clase `TestDinero` para probar las clases desarrolladas. Crear objetos de las clases `Moneda` y `Billete` y mostrarlos por pantalla.
 
 <hr>
 
 ### Ejercicio04
 
-paquete: `centrocomercial`
+paquete: `_04_centrocomercial`
 
 Un **centro comercial** quiere mostrar cierta información sobre los televisores que vende. Los televisores pueden ser de dos tipos: de tubo o LCD. En concreto, de cada televisor le interesa mostrar:
 
@@ -105,37 +114,37 @@ b) Diseñar la clase `TestTV` para probar las clases diseñadas. Crear algunos o
 
 ### Ejercicio05
 
-paquete: `preguntas`
+paquete: `_05_preguntas`
 
-De cada pareja de afirmaciones **indica cuál es la verdaderas**:<br />
-      a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.<br />
-	b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.<br />
-	c) Si una clase es abstracta no se puede instanciar.<br />
-	d) Si una clase es abstracta no se puede heredar de ella.<br />
-	e) Una clase abstracta tiene que tener métodos abstractos.<br />
-	f) Una clase puede ser abstracta y no tener métodos abstractos.<br />
-	g) Si una clase tiene métodos abstractos tiene que ser abstracta.<br />
-	h) Una clase puede tener métodos abstractos y no ser abstracta.<br />
-	i) Si una clase es abstracta sus subclases no pueden ser abstractas.<br />
-	j) Una clase abstracta puede tener subclases que también sean abstractas.<br />
-	k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.<br />
-	l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.<br />
-	m) Si un método se define final se tiene que reescribir en las subclases.<br />
-	n) Si un método se define final no se puede reescribir en las subclases.<br />
-	o) Una clase puede tener un método final y no ser una clase final.<br />
-	p) Si una clase tiene un método final tiene que ser una clase final.<br />
-	q) Si una clase se define final no se pueden definir subclases de ella.<br />
-	r) Si una clase se define final no se puede instanciar.<br />
-	s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.<br />
-	t) Un método definido final y abstract podría resultar útil.<br />
-	u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.<br />
-	v) Una clase definida final y abstract podría resultar útil.<br />
+De cada pareja de afirmaciones **indica cuál es la verdadera**:
+
+a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.<br>	b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.
+
+c) Si una clase es abstracta no se puede instanciar.<br>	d) Si una clase es abstracta no se puede heredar de ella.
+
+e) Una clase abstracta tiene que tener métodos abstractos.<br>	f) Una clase puede ser abstracta y no tener métodos abstractos.
+
+g) Si una clase tiene métodos abstractos tiene que ser abstracta.<br>	h) Una clase puede tener métodos abstractos y no ser abstracta.
+
+i) Si una clase es abstracta sus subclases no pueden ser abstractas.<br>	j) Una clase abstracta puede tener subclases que también sean abstractas.
+
+k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.<br>	l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.
+
+m) Si un método se define final se tiene que reescribir en las subclases.<br>	n) Si un método se define final no se puede reescribir en las subclases.
+
+o) Una clase puede tener un método final y no ser una clase final.<br>	p) Si una clase tiene un método final tiene que ser una clase final.
+
+q) Si una clase se define final no se pueden definir subclases de ella.<br>	r) Si una clase se define final no se puede instanciar.
+
+s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.<br>	t) Un método definido final y abstract podría resultar útil.
+
+u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.<br>	v) Una clase definida final y abstract podría resultar útil.<br />
 
 <hr>
 
 ### Ejercicio06
 
-paquete: `preguntas2`
+paquete: `_06_preguntas2`
 
 Dada las siguientes **definiciones de clases**:
 
@@ -226,7 +235,7 @@ class Test{
 
 ### **Ejercicio07**
 
-paquete: `obra`
+paquete: `_07_obra`
 
 Dada la siguiente **jerarquía de clases**:
 
@@ -260,7 +269,7 @@ public class Albañil extends Obrero {
 }
 ```
 
-Indicar **qué líneas** del siguiente fragmento de programa **producirán errores de compilación**,
+a) Indicar **qué líneas** del siguiente fragmento de programa **producirán errores de compilación**,
 
 ```java
 public static void main(String[] args){
@@ -277,20 +286,22 @@ public static void main(String[] args){
 }
 ```
 
-**Una vez eliminadas** las líneas con error, indicar **cuál sería la salida** por pantalla del programa.
+b) **Una vez eliminadas** las líneas con error, indicar **cuál sería la salida** por pantalla del programa.
 
-!!! question "¿**Sería correcta** la instrucción siguiente?"
+c) ¿**Sería correcta** la instrucción siguiente?"
 
-    ```java
-        Albañil a = new Albañil();
-        System.out.println(a.toString());
-    ```
+```java
+Albañil a = new Albañil();
+System.out.println(a.toString());
+```
+
+
 
 <hr>
 
 ### Ejercicio08
 
-paquete: `preguntas3`
+paquete: `_08_preguntas3`
 
 Las clases siguientes implementan una **jerarquía de herencia**
 
@@ -365,93 +376,98 @@ public class CuestionHerencia{
 
 ### Ejercicio09
 
-paquete: `supermercado`
+paquete: `_09_supermercado`
 
-*Supermercado: Práctica con interfaces y polimorfismo.*
+*Práctica con interfaces y polimorfismo.*
 
 **Supermercado**. Creación de Interfaces 
 
 Supón que debe crear distintas clases Java para describir los productos que vende un supermercado. 
 
-Para unificar el código de los distintos programadores del equipo debes crear las siguientes Interfaces Java para describir algunas características de los productos. 
+Para unificar el código de los distintos programadores del equipo debes crear las siguientes Interfaces Java para describir algunas características de los productos:
 
-**Interfaz EsLiquido**. Esta interfaz indica que los objetos creados a partir de la clase serán líquidos, y tendrá los siguientes métodos: 
+- Interfaz `EsLiquido` : Esta interfaz indica que los objetos creados a partir de la clase serán líquidos, y tendrá los siguientes métodos: 
 
-```java
-public void setVolumen(double v); 
-public double getVolumen(); 
-public void setTipoEnvase(String env); 
-public String getTipoEnvase();
-```
+   ```java
+   public void setVolumen(double v); 
+   public double getVolumen(); 
+   public void setTipoEnvase(String env); 
+   public String getTipoEnvase();
+   ```
 
-**Interfaz EsAlimento**. Esta interfaz indica que los objetos creados a partir de la clase serán alimentos, y tendrá los siguientes métodos: 
+- Interfaz `EsAlimento` : Esta interfaz indica que los objetos creados a partir de la clase serán alimentos, y tendrá los siguientes métodos: 
 
-```java
-public void setCaducidad(LocalDate fc); 
-public LocalDate getCaducidad(); 
-public int getCalorias();
-```
+   ```java
+   public void setCaducidad(LocalDate fc); 
+   public LocalDate getCaducidad(); 
+   public int getCalorias();
+   ```
 
-**Interfaz ConDescuento**. Esta interfaz indicará que el producto tiene descuento e incluirá los siguientes métodos: 
+- Interfaz `ConDescuento` : Esta interfaz indicará que el producto tiene descuento e incluirá los siguientes métodos: 
 
-```java
-public void setDescuento(double des); 
-public double getDescuento(); 
-public double getPrecioDescuento();
-```
+   ```java
+   public void setDescuento(double des); 
+   public double getDescuento(); 
+   public double getPrecioDescuento();
+   ```
 
 **Creación de clases de productos**. Se pide que programes las siguientes clases de productos, implementando las interfaces que sean necesarias.
 
-**Clase Detergente**. Define una botella de detergente (debes tener en cuenta que este producto puede tener descuento).
+a) Clase `Detergente` : Define una botella de detergente (debes tener en cuenta que este producto puede tener descuento).
 
-Sus propiedades principales serán: `marca` (String) y `precio` (double).
+Sus propiedades principales serán: *marca* (String) y *precio* (double).
 
 Incluye otras propiedades según sea necesario a la hora de implementar las interfaces. 
 
 - Constructor: programa un constructor que reciba como parámetros una marca y un precio. 
 - Métodos *set* y *get*: programa métodos set y get para la marca y el precio.
-- Métodos de las interfaces: programa los métodos de las interfaces. 
+- Métodos de las interfaces: implementa los métodos de las interfaces. 
 - Método `toString`: programa el método toString con todas las características del producto. 
 
-**Clase Cereales**. Define el producto caja de cereales (este producto no tiene descuentos).
+b) Clase `Cereales` : Define el producto caja de cereales (este producto no tiene descuentos).
 
 Las propiedades del producto serán `marca`, `precio` y `tipo` de cereal (String).
 
 - Programa un *constructor* que reciba como parámetros las tres propiedades anteriores. 
 - Programa los métodos *set* y *get* para dichas propiedades. 
-- Programa los métodos de las interfaces implementadas (si es necesario añade más propiedades a la clase).
+- Implementa los métodos de las interfaces implementadas (si es necesario añade más propiedades a la clase).
 
-!!!warning "A tener en cuenta!"
-    Las calorías serán las siguientes: 5 si el cereal es espelta, 8 si es maíz, 12 si es trigo, y 15 en los demás casos.
+!!!note "A tener en cuenta"
+    Las calorías serán las siguientes:<br>
+        - 5 si el cereal es espelta, <br>
+    - 8 si es maíz, <br>
+    - 12 si es trigo, y <br>
+    - 15 en los demás casos.
 
 - Programa el método `toString` para devolver una cadena con todas las características del producto.
 
-**Clase Vino**. Esta clase describirá el producto botella de vino (este producto es susceptible de tener descuento).
+c) Clase `Vino` : Esta clase describirá el producto botella de vino (este producto es susceptible de tener descuento).
 
 El producto tendrá como propiedades la marca, el tipo de vino, los grados de alcohol y el precio.
 
 - Programa al igual que los productos anteriores un constructor con estas cuatro propiedades como parámetros.
 - Programa también los métodos set, get, toString y los métodos de las interfaces. Añada nuevas propiedades si es necesario. 
 
-!!!warning "A tener en cuenta!"
+!!!note "A tener en cuenta"
     Las calorías se calcularán multiplicando por 10 la graduación alcohólica.
 
-**Programa de prueba**. Realiza un programa de prueba dónde crees varios productos de cada clase. Haz un ejemplo de polimorfismo creando un ArrayList de productos alimenticios y calculando la suma de sus calorías.
+d ) Programa de `TestSupermercado` : Realiza un programa de prueba donde crees varios productos de cada clase. Haz un ejemplo de polimorfismo creando un *ArrayList* de productos alimenticios y calculando la suma de sus calorías.
 
 <hr>
 
 ### **Ejercicio10**
 
-paquete: `facultad`
+paquete: `_10_facultad`
 
-Realizar una aplicación para la gestión de la información de las personas vinculadas a una `Facultad`, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio.
+Realizar una aplicación para la gestión de la información de las personas vinculadas a una *Facultad*, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio.
+
 A continuación, se detalla qué tipo de información debe gestionar esta aplicación:
 
-- Por cada `Persona`, se debe conocer, al menos, su `nombre` y `apellidos`, su `número de identificación` y su `estado civil`.
-- Con respecto a los `Empleados`, sean del tipo que sean, hay que saber su `año de incorporación` a la facultad y qué `número de despacho` tienen asignado.
-- En cuanto a los `Estudiantes`, se requiere almacenar el `curso` en el que están matriculados.
-- Por lo que se refiere a los `Profesores`, es necesario gestionar a qué `departamento` pertenecen (`lenguajes`, `matemáticas`, `arquitectura`, ...).
-- Sobre el `Personal de servicio`, hay que conocer a qué `sección` están asignados (`biblioteca`, `decanato`, `secretaría`, ...).
+- Por cada `Persona`, se debe conocer, al menos, su *nombre* y *apellidos*, su *número de identificación* y su *estado civil*.
+- Con respecto a los `Empleados`, sean del tipo que sean, hay que saber su *año de incorporación* a la facultad y qué *número de despacho* tienen asignado.
+- En cuanto a los `Estudiantes`, se requiere almacenar el *curso* en el que están matriculados.
+- Por lo que se refiere a los `Profesores`, es necesario gestionar a qué *departamento* pertenecen (lenguajes, matemáticas, arquitectura, ...).
+- Sobre el `Personal de servicio`, hay que conocer a qué *sección* están asignados (biblioteca, decanato, secretaría, ...).
 
 El ejercicio consiste, en primer lugar, en definir la jerarquía de clases de esta aplicación. A continuación, debe programar las clases definidas en las que, además de los constructores, hay que desarrollar los métodos correspondientes a las siguientes acciones:
 
@@ -462,13 +478,13 @@ El ejercicio consiste, en primer lugar, en definir la jerarquía de clases de es
 - Traslado de sección de un empleado del personal de servicio.
 - Imprimir toda la información de cada tipo de individuo.
 
-En el método `main` crear un array de `personas`. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.
+En el método `main` crear un array de *personas*. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.
 
 <hr>
 
 ### Ejercicio11
 
-paquete: `trabajadores`
+paquete: `_11_trabajadores`
 
 Crea una clase `Empleado` y una subclase `Encargado`. Los encargados reciben un 10% más de sueldo base que un empleado normal. Implementa dichas clases en el paquete objetos y sobrescribe el método `getSueldo()` para ambas clases.
 
@@ -476,33 +492,41 @@ Crea una clase `Empleado` y una subclase `Encargado`. Los encargados reciben un 
 
 ### Ejercicio12
 
-paquete: `juego`
+paquete: `_12_juego`
 
-Crear la clase `Dado`, la cual desciende de la clase `Sorteo`. La clase `Dado`, en la llamada `lanzar()` mostrará un número aleatorio del 1 al 6. Crear la clase `Moneda`, la cual desciende de la clase `Sorteo`. Esta clase en la llamada al método `lanzar()` mostrará las palabras cara o cruz. Realizar una clase con un método `main` que compruebe todo lo realizado.
+a) Crear la clase `Dado`, la cual desciende de la clase `Sorteo`. La clase `Dado`, en la llamada `lanzar()` mostrará un número aleatorio del 1 al 6. 
+
+b) Crear la clase `Moneda`, la cual desciende de la clase `Sorteo`. Esta clase en la llamada al método `lanzar()` mostrará las palabras cara o cruz. 
+
+c) Realizar una clase con un método `main` que compruebe todo lo realizado.
 
 <hr>
 
 ### Ejercicio13
 
-paquete: `alimento`
+paquete: `_13_alimento`
 
-Realiza una clase `Huevo` con un atributo `tamaño` (`S`, `M`, `L`, `XL`) con el método `toString`. La clase `Huevo` está compuesta por dos clases internas, una `Clara` y otra `Yema`. Ambas clases tienen un atributo `color` y el método `toString`. Realiza un método `main` en el que se cree un objeto de tipo `Huevo`, `Clara` y `Yema`, se le asigne valor a sus atributos y se muestren los valores.
+a) Realiza una clase `Huevo` con un atributo `tamaño` (`S`, `M`, `L`, `XL`) con el método `toString`. 
+
+b) La clase `Huevo` está compuesta por dos clases internas, una `Clara` y otra `Yema`. Ambas clases tienen un atributo `color` y el método `toString`. 
+
+c) Realiza un método `main` en el que se cree un objeto de tipo `Huevo`, `Clara` y `Yema`, se le asigne valor a sus atributos y se muestren los valores.
 
 ## Ejercicios Lionel
 
 ### **Ejercicio14 - Astros**
 
-paquete: `astros`
+paquete: `_14_astros`
 
 Define una jerarquía de clases que permita almacenar datos sobre los planetas y satélites (lunas) que forman parte del sistema solar.
 
 Algunos atributos que necesitaremos almacenar son: 
 
-- Masa del cuerpo.
+- *Masa del cuerpo*.
 - Diámetro medio.
-- Período de rotación sobre su propio eje.
-- Período de traslación alrededor del cuerpo que orbitan.
-- Distancia media a ese cuerpo.
+- *Período de rotación* sobre su propio eje.
+- *Período de traslación* alrededor del cuerpo que orbitan.
+- *Distancia media* a ese cuerpo.
 - etc.
 
 Define las clases necesarias conteniendo: 
@@ -517,20 +541,21 @@ El diagrama UML sería:
 
 <img src="../../img/ud08/ud08_ej14.png" alt="ud08_ej14" style="zoom:60%;" />
 
-Una posible solución sería crear una lista de objetos, insertar los planetas y satélites (directamente mediante código o solicitándolos por pantalla) y luego mostrar un pequeño menú que permita al usuario imprimir la información del astro que elija.
+!!!note "Posible solución"
+	Una posible solución sería crear una lista de objetos, insertar los planetas y satélites (directamente mediante código o solicitándolos por pantalla) y luego mostrar un pequeño menú que permita al usuario imprimir la información del astro que elija.
 
 <hr>
 
 ### **Ejercicio15 - Mascotas**
 
-paquete: `mascotas`
+paquete: `_15_mascotas`
 
-Implementa una clase llamada **Inventario** que utilizaremos para almacenar referencias a todos los animales existentes en una tienda de mascotas. 
+Implementa una clase llamada `Inventario` que utilizaremos para almacenar referencias a todos los animales existentes en una tienda de mascotas. 
 
 Esta clase debe cumplir con los siguientes requisitos: 
 
 - En la tienda existirán 4 tipos de animales: perros, gatos, loros y canarios. 
-- Los animales deben almacenarse en un `ArrayList` privado dentro de la clase **Inventario**. 
+- Los animales deben almacenarse en un `ArrayList` privado dentro de la clase `Inventario`. 
    - La clase debe permitir realizar las siguientes acciones:
       - Mostrar la lista de animales (solo tipo y nombre, 1 línea por animal).
       - Mostrar todos los datos de un animal concreto.
@@ -550,31 +575,31 @@ El diagrama UML sería:
 
 ### **Ejercicio16 - Banco**
 
-paquete: `banco`
+paquete: `_16_banco`
 
 Vamos a hacer una aplicación que simule el funcionamiento de un banco.
 
-Crea una clase **CuentaBancaria** con los atributos: **iban** y **saldo**. Implementa métodos para:
+Crea una clase `CuentaBancaria` con los atributos: *iban* y *saldo*. Implementa métodos para:
 
 - Consultar los atributos. 
 - Ingresar dinero.
 - Retirar dinero.
 - Traspasar dinero de una cuenta a otra.
 
-Para los tres últimos métodos puede utilizarse internamente un método privado más general llamado **añadir(...)** que añada una cantidad (positiva o negativa) al saldo.
+Para los tres últimos métodos puede utilizarse internamente un método privado más general llamado `añadir(...)` que añada una cantidad (positiva o negativa) al saldo.
 
-También habrá un atributo común a todas las instancias llamado **interesAnualBasico**, que en principio puede ser constante.
+También habrá un atributo común a todas las instancias llamado *interesAnualBasico*, que en principio puede ser constante.
 
-La clase tiene que ser ***abstracta*** y debe tener un método **calcularIntereses()** que se dejará sin implementar.
+La clase tiene que ser ***abstracta*** y debe tener un método `calcularIntereses()` que se dejará sin implementar.
 
 También puede ser útil implementar un método para mostrar los datos de la cuenta.
 
-De esta clase heredarán dos subclases: **CuentaCorriente** y **CuentaAhorro**. La diferencia entre ambas será la manera de calcular los intereses:
+De esta clase heredarán dos subclases: `CuentaCorriente` y `CuentaAhorro`. La diferencia entre ambas será la manera de calcular los intereses:
 
 - A la primera se le incrementará el saldo teniendo en cuenta el interés anual básico.
-- La segunda tendrá una constante de clase llamada **saldoMinimo**. Si no se llega a este saldo el interés será la mitad del interés básico. Si se supera el saldo mínimo el interés aplicado será el doble del interés anual básico.
+- La segunda tendrá una constante de clase llamada *saldoMinimo*. Si no se llega a este saldo el interés será la mitad del interés básico. Si se supera el saldo mínimo el interés aplicado será el doble del interés anual básico.
 
-Implementa una clase principal con función main para probar el funcionamiento de las tres clases: Crea varias cuentas bancarias de distintos tipos, pueden estar en un ArrayList si lo deseas; prueba a realizar ingresos, retiradas y transferencias; calcula los intereses y muéstralos por pantalla; etc.
+Implementa una clase principal con función main para probar el funcionamiento de las tres clases: Crea varias cuentas bancarias de distintos tipos, pueden estar en un *ArrayList* si lo deseas; prueba a realizar ingresos, retiradas y transferencias; calcula los intereses y muéstralos por pantalla; etc.
 
 El diagrama UML sería:
 
@@ -584,13 +609,13 @@ El diagrama UML sería:
 
 ### **Ejercicio17 - Empresa y empleados**
 
-paquete: `empresaempleados`
+paquete: `_17_empresaempleados`
 
 Vamos a implementar dos clases que permitan gestionar datos de empresas y sus empleados.
 
 Los **empleados** tienen las siguientes características:
 
-- Un empleado tiene nombre, DNI, sueldo bruto (mensual), edad, teléfono y dirección.
+- Un empleado tiene *nombre*, *DNI*, *sueldo* *bruto* (mensual), *edad*, *teléfono* y *dirección*.
 - El nombre y DNI de un empleado no pueden variar.
 - Es obligatorio que todos los empleados tengan al menos definido su nombre, DNI y el sueldo bruto. Los demás datos no son obligatorios.
 - Será necesario un método para imprimir por pantalla la información de un empleado.
@@ -606,7 +631,7 @@ Por ejemplo, un empleado con un sueldo bruto anual de 17.000 € tendrá un 30% 
 
 Las **empresas** tienen las siguientes características:
 
-- Una empresa tiene nombre y CIF (datos que no pueden variar), además de teléfono, dirección y empleados. Cuando se crea una nueva empresa esta carece de empleados.
+- Una empresa tiene *nombre* y *CIF* (datos que no pueden variar), además de *teléfono*, *dirección* y *empleados*. Cuando se crea una nueva empresa esta carece de empleados.
 - Serán necesarios métodos para:
    - Añadir y eliminar empleados a la empresa.
    - Mostrar por pantalla la información de todos los empleados.
@@ -625,7 +650,7 @@ Las **empresas** tienen las siguientes características:
 
 ### Ejercicio18 - Vehículos
 
-paquete: `vehiculos`
+paquete: `_18_vehiculos`
 
 !!!note "Aconsejable"
  	Realizar el diseño UML antes de empezar a programar.
@@ -654,9 +679,9 @@ Implementa también una clase Programa para hacer algunas pruebas: Instancia var
 
 ### Ejercicio19 - Figuras
 
-paquete: `figuras`
+paquete: `_19_figuras`
 
-Implementa una **interface** llamada **iFigura2D** que declare los métodos:
+Implementa una **interface** llamada `iFigura2D` que declare los métodos:
 
 - `double perimetro()`: Para devolver el perímetro de la figura.
 - `double area()`: Para devolver el área de la figura.
