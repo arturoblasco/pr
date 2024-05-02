@@ -1314,7 +1314,8 @@
 <p>A partir de ahora, un objeto de la clase <code>Alumno</code> contendrá los atributos <code>grupo</code> y <code>notaMedia</code> (propios de la clase <code>Alumno</code>), pero también <code>nombre</code>, <code>apellidos</code> y <code>fechaNacim</code> (propios de su clase base <code>Persona</code> y que por tanto ha heredado).</p>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
-<p>Imagina que también necesitas una clase <code>Profesor</code>, que contará con atributos como <em>nombre</em>, <em>apellidos</em>, <em>fecha de nacimiento</em>, <em>salario</em> y <em>especialidad</em>. ¿Cómo crearías esa nueva clase y qué atributos le añadirías?<br /><br />
+<p>Imagina que también necesitas una clase <code>Profesor</code>, que contará con atributos como <em>nombre</em>, <em>apellidos</em>, <em>fecha de nacimiento</em>, <em>salario</em> y <em>especialidad</em>. ¿Cómo crearías esa nueva clase y qué atributos le añadirías?<br /></p>
+<p><strong>SOLUCIÓN</strong><br/>
 Está claro que un <code>Profesor</code> es otra especialización de <code>Persona</code>, al igual que lo era <code>Alumno</code>, así que podrías crear otra clase derivada de <code>Persona</code> y así aprovechar los atributos genéricos (<em>nombre</em>, <em>apellidos</em>, <em>fecha de nacimiento</em>) que posee todo objeto de tipo <code>Persona</code>. Tan solo faltaría añadirle sus atributos específicos (<em>salario</em> y <em>especialidad</em>):</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
@@ -1405,7 +1406,8 @@ Está claro que un <code>Profesor</code> es otra especialización de <code>Perso
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Reescribe las clases <code>Alumno</code> y <code>Profesor</code> utilizando el modificador protected para sus atributos del mismo modo que se ha hecho para su superclase <code>Persona</code>.</p>
-<p>1) Clase <code>Alumno</code>. Se trata simplemente de añadir el modificador de acceso protected a los nuevos atributos que añade la clase:
+<p><strong>SOLUCIÓN</strong><br/>
+1) Clase <code>Alumno</code>. Se trata simplemente de añadir el modificador de acceso protected a los nuevos atributos que añade la clase:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
@@ -1435,7 +1437,7 @@ Está claro que un <code>Profesor</code> es otra especialización de <code>Perso
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Dadas las clases <code>Alumno</code> y <code>Profesor</code> que has utilizado anteriormente, implementa métodos <em>get</em> y <em>set</em> en las clases <code>Alumno</code> y <code>Profesor</code> para trabajar con sus cinco atributos (tres heredados más dos específicos).</p>
-<p><strong>POSIBLE SOLUCIÓN</strong></p>
+<p><strong>SOLUCIÓN</strong></p>
 <p>1) Clase <code>Alumno</code>.<br/>Se trata de heredar de la clase <code>Persona</code> y por tanto utilizar con normalidad sus atributos heredados como si pertenecieran a la propia clase (de hecho se puede considerar que le pertenecen, dado que los ha heredado).
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
@@ -1714,7 +1716,7 @@ Está claro que un <code>Profesor</code> es otra especialización de <code>Perso
 <li>Seis por ser Persona (<code>getNombre</code>, <code>getApellidos</code>, <code>getFechaNacim</code>, <code>setNombre</code>, <code>setApellidos</code>, <code>setFechaNacim</code>).</li>
 <li>Oros cuatro más por ser Alumno (<code>getGrupo</code>, <code>setGrupo</code>, <code>getNotaMedia</code>, <code>setNotaMedia</code>).</li>
 </ul>
-<p>Sin embargo, sólo tendrías que definir esos cuatro últimos (los específicos) pues los genéricos ya los has heredado de la superclase.</p>
+<p>Sin embargo, solo tendrías que definir esos cuatro últimos (los específicos) pues los genéricos ya los has heredado de la superclase.</p>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
@@ -1798,7 +1800,8 @@ Está claro que un <code>Profesor</code> es otra especialización de <code>Perso
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Dadas las clases <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code> que has utilizado anteriormente, redefine el método <code>getNombre</code> para que devuelva la cadena "<em>Alumno: </em>", junto con el nombre del alumno, si se trata de un objeto de la clase <code>Alumno</code> o bien "<em>Profesor: </em>", junto con el nombre del profesor, si se trata de un objeto de la clase <code>Profesor</code>.</p>
-<p>1) Clase <code>Alumno</code>.<br />Al heredar de la clase <code>Persona</code> tan solo es necesario escribir métodos para los nuevos atributos (métodos especializados de acceso a los atributos especializados), pues los métodos genéricos (de acceso a los atributos genéricos) ya forman parte de la clase al haberlos heredado. Esos son los métodos que se implementaron en el ejercicio anterior (<code>getGrupo</code>, <code>setGrupo</code>, etc.).</p>
+<p><strong>SOLUCIÓN</strong><br/>
+1) Clase <code>Alumno</code>.<br />Al heredar de la clase <code>Persona</code> tan solo es necesario escribir métodos para los nuevos atributos (métodos especializados de acceso a los atributos especializados), pues los métodos genéricos (de acceso a los atributos genéricos) ya forman parte de la clase al haberlos heredado. Esos son los métodos que se implementaron en el ejercicio anterior (<code>getGrupo</code>, <code>setGrupo</code>, etc.).</p>
 <p>Ahora bien, hay que escribir otro método más, pues tienes que redefinir el método <code>getNombre</code> para que tenga un comportamiento un poco diferente al <code>getNombre</code> que se hereda de la clase base <code>Persona</code>:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
@@ -1830,8 +1833,9 @@ Está claro que un <code>Profesor</code> es otra especialización de <code>Perso
 <details class="example" open="open">
 <summary>Ejemplo: método <em>mostrarDatos</em> de <code>Alumno</code></summary>
 <p>Imagina que la clase <code>Persona</code> dispone de un método que permite mostrar el contenido de algunos datos personales de los objetos de este tipo (<em>nombre</em>, <em>apellidos</em>, etc.).
-<br /><br />Por otro lado, la clase <code>Alumno</code> también necesita un método similar, pero que muestre también su información especializada (<em>grupo</em>, <em>nota media</em>, etc.). ¿Cómo podrías aprovechar el método de la superclase para no tener que volver a escribir su contenido en la subclase?
-<br /><br />Podría hacerse de una manera tan sencilla como la siguiente:
+<br /><br />Por otro lado, la clase <code>Alumno</code> también necesita un método similar, pero que muestre también su información especializada (<em>grupo</em>, <em>nota media</em>, etc.). ¿Cómo podrías aprovechar el método de la superclase para no tener que volver a escribir su contenido en la subclase?</p>
+<p><strong>SOLUCIÓN</strong><br/>
+Podría hacerse de una manera tan sencilla como la siguiente:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span>
 <span class="normal"><a href="#__codelineno-16-3">3</a></span>
@@ -1849,7 +1853,8 @@ Está claro que un <code>Profesor</code> es otra especialización de <code>Perso
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Dadas las clases <code>Persona</code>, <code>Alumno</code> y <code>Profesor</code>, define un método mostrar para la clase <code>Persona</code>, que muestre el contenido de los atributos (datos personales) de un objeto de la clase <code>Persona</code>. A continuación, define sendos métodos mostrar especializados para las clases <code>Alumno</code> y <code>Profesor</code> que "amplíen" la funcionalidad del método mostrar original de la clase Persona.</p>
-<p>1) Método mostrar de la clase <code>Persona</code>.
+<p><strong>SOLUCIÓN</strong><br/>
+1) Método mostrar de la clase <code>Persona</code>.
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>
@@ -1904,7 +1909,7 @@ Está claro que un <code>Profesor</code> es otra especialización de <code>Perso
 <p>En el caso del constructor por defecto (el que crea el compilador si el programador no ha escrito ninguno), el compilador añade lo primero de todo, antes de la inicialización de los atributos a sus valores por defecto, una llamada al constructor de la clase base mediante la referencia <code>super</code>.</p>
 <p>A la hora de destruir un objeto (método <code>finalize</code>) es importante llamar a los finalizadores en el orden inverso a como fueron llamados los constructores (primero se liberan los recursos de la clase derivada y después los de la clase base mediante la llamada <code>super.finalize()</code>).</p>
 <details class="example" open="open">
-<summary>Constructor de <code>Alumno</code> que hereda parte del constructor de `Persona</summary>
+<summary>Constructor de <code>Alumno</code> que hereda parte del constructor de <code>Persona</code></summary>
 <p>Si la clase <code>Persona</code> tuviera un constructor de este tipo:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>

@@ -1301,7 +1301,8 @@
 <p>Serán las clases que implementen esta interfaz (<code>León</code>, <code>Leopardo</code>, <code>Cocodrilo</code>, <code>Rana</code>, <code>Lagarto</code>, <code>Hombre</code>, etc.) las que definan cada uno de los métodos por dentro.</p>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
-<p>Crea una interfaz en Java cuyo nombre sea <code>Imprimible</code> y que contenga algunos métodos útiles para mostrar el contenido de una clase:<br /><br />
+<p>Crea una interfaz en Java cuyo nombre sea <code>Imprimible</code> y que contenga algunos métodos útiles para mostrar el contenido de una clase:<br /><br /></p>
+<p><strong>SOLUCIÓN</strong><br/>
 1) Método <code>devolverContenidoString</code>, que crea un <code>String</code> con una representación de todo el contenido público (o que se decida que deba ser mostrado) del objeto y lo devuelve. El formato será una lista de pares "<em>nombre=valor</em>" de cada atributo separado por comas y la lista completa encerrada entre llaves: "<code>{&lt;nombre_atributo_1&gt;=&lt;valor_atributo_1&gt;, ..., &lt;nombre_atributo_n&gt;=&lt;valor_atributo_n&gt;}</code>".</p>
 <p>2) Método <code>devolverContenidoArrayList</code>, que crea un <code>ArrayList</code> de <code>String</code> con una representación de todo el contenido público (o que se decida que deba ser mostrado) del objeto y lo devuelve.</p>
 <p>3) Método <code>devolverContenidoHashMap</code>, similar al anterior, pero en lugar devolver en un <code>ArrayList</code> los valores de los atributos, se devuelve en una <code>HashMap</code> en forma de pares (<code>nombre</code>, <code>valor</code>).
@@ -1364,7 +1365,8 @@ Se trata simplemente de declarar la interfaz e incluir en su interior esos tres 
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Haz que las clases <code>Alumno</code> y <code>Profesor</code> implementen la interfaz <code>Imprimible</code> que se ha escrito en el ejercicio anterior.</p>
-<p>La primera opción que se te puede ocurrir es pensar que en ambas clases habrá que indicar que implementan la interfaz <code>Imprimible</code> y por tanto definir los métodos que ésta incluye: <code>devolverContenidoString</code>, <code>devolverContenidoHashMap</code> y <code>devolverContenidoArrayList</code>.</p>
+<p><strong>SOLUCIÓN</strong><br/>
+La primera opción que se te puede ocurrir es pensar que en ambas clases habrá que indicar que implementan la interfaz <code>Imprimible</code> y por tanto definir los métodos que ésta incluye: <code>devolverContenidoString</code>, <code>devolverContenidoHashMap</code> y <code>devolverContenidoArrayList</code>.</p>
 <p>Si las clases <code>Alumno</code> y <code>Profesor</code> no heredaran de la misma clase habría que hacerlo obligatoriamente así, pues no comparten superclase y precisamente para eso sirven las interfaces: para implementar determinados comportamientos que no pertenecen a la estructura jerárquica de herencia en la que se encuentra una clase (de esta manera, clases que no tienen ninguna relación de herencia podrían compartir interfaz).</p>
 <p>Pero en este caso podríamos aprovechar que ambas clases sí son subclases de una misma superclase (heredan de la misma) y hacer que la interfaz <code>Imprimible</code> sea implementada directamente por la superclase (<code>Persona</code>) y de este modo ahorrarnos bastante código. Así no haría falta indicar explícitamente que <code>Alumno</code> y <code>Profesor</code> implementan la interfaz <code>Imprimible</code>, pues lo estarán haciendo de forma implícita al heredar de una clase que ya ha implementado esa interfaz (la clase <code>Persona</code>, que es padre de ambas).</p>
 <p>Una vez que los métodos de la interfaz estén implementados en la clase <code>Persona</code>, tan solo habrá que redefinir o ampliar los métodos de la interfaz para que se adapten a cada clase hija específica (<code>Alumno</code> o <code>Profesor</code>), ahorrándonos tener que escribir varias veces la parte de código que obtiene los atributos genéricos de la clase <code>Persona</code>.</p>
@@ -1542,7 +1544,10 @@ En este caso habría que proceder exactamente de la misma manera que con la clas
 </code></pre></div></td></tr></table></div>
 <p>Esta interfaz se declara pública para que pueda ser implementada por código en cualquier paquete.</p>
 <p><strong>Los métodos que implementan una interfaz deben declararse públicos.</strong> Además, el tipo del método de implementación debe coincidir exactamente con el tipo especificado en la definición de la interfaz.</p>
+<details class="example" open="open">
+<summary>Ejemplo</summary>
 <p>Aquí hay un ejemplo que implementa la interfaz de <code>Series</code> mostrada anteriormente. Crea una clase llamada <code>DeDos</code>, que genera una serie de números, cada uno mayor que el anterior.</p>
+<p><strong>SOLUCIÓN</strong><br/>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
@@ -1566,31 +1571,35 @@ En este caso habría que proceder exactamente de la misma manera que con la clas
 <span class="normal"><a href="#__codelineno-19-21">21</a></span>
 <span class="normal"><a href="#__codelineno-19-22">22</a></span>
 <span class="normal"><a href="#__codelineno-19-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">class</span> <span class="nc">DeDos</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Series</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">iniciar</span><span class="p">;</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">iniciar</span><span class="p">;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
 <a id="__codelineno-19-4" name="__codelineno-19-4"></a>
-<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">  </span><span class="n">DeDos</span><span class="p">(){</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">    </span><span class="n">iniciar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">    </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span><span class="n">DeDos</span><span class="p">(){</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="n">iniciar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-19-9" name="__codelineno-19-9"></a>
-<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getSiguiente</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">    </span><span class="n">valor</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getSiguiente</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-19-14" name="__codelineno-19-14"></a>
-<a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">reiniciar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="w">    </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iniciar</span><span class="p">;</span>
-<a id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">reiniciar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iniciar</span><span class="p">;</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-19-18" name="__codelineno-19-18"></a>
-<a id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setComenzar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="w">    </span><span class="n">iniciar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-19-21" name="__codelineno-19-21"></a><span class="w">    </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<a id="__codelineno-19-22" name="__codelineno-19-22"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setComenzar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="w">        </span><span class="n">iniciar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-19-21" name="__codelineno-19-21"></a><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-19-23" name="__codelineno-19-23"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div></td></tr></table></div></p>
+</details>
 <p>Observa que los métodos <code>getSiguiente()</code>, <code>reiniciar()</code> y <code>setComenzar()</code> se declaran utilizando el especificador de acceso público (<code>public</code>). Esto es necesario. Siempre que implementes un método definido por una interfaz, debe implementarse como público porque todos los miembros de una interfaz son implícitamente públicos.</p>
+<details class="example" open="open">
+<summary>Ejemplo</summary>
 <p>Aquí hay una clase que demuestra <code>DeDos</code>:</p>
+<p><strong>SOLUCIÓN</strong><br/>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
@@ -1609,24 +1618,24 @@ En este caso habría que proceder exactamente de la misma manera que con la clas
 <span class="normal"><a href="#__codelineno-20-16">16</a></span>
 <span class="normal"><a href="#__codelineno-20-17">17</a></span>
 <span class="normal"><a href="#__codelineno-20-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kd">class</span> <span class="nc">SeriesDemo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">    </span><span class="n">DeDos</span><span class="w"> </span><span class="n">ob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DeDos</span><span class="p">();</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente valor es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob</span><span class="p">.</span><span class="na">getSiguiente</span><span class="p">());</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nReiniciando&quot;</span><span class="p">);</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">    </span><span class="n">ob</span><span class="p">.</span><span class="na">reiniciar</span><span class="p">();</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente valor es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob</span><span class="p">.</span><span class="na">getSiguiente</span><span class="p">());</span>
-<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nIniciando en 100&quot;</span><span class="p">);</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="w">    </span><span class="n">ob</span><span class="p">.</span><span class="na">setComenzar</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<a id="__codelineno-20-15" name="__codelineno-20-15"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente valor es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob</span><span class="p">.</span><span class="na">getSiguiente</span><span class="p">());</span>
-<a id="__codelineno-20-16" name="__codelineno-20-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">        </span><span class="n">DeDos</span><span class="w"> </span><span class="n">ob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DeDos</span><span class="p">();</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente valor es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob</span><span class="p">.</span><span class="na">getSiguiente</span><span class="p">());</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nReiniciando&quot;</span><span class="p">);</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">        </span><span class="n">ob</span><span class="p">.</span><span class="na">reiniciar</span><span class="p">();</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente valor es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob</span><span class="p">.</span><span class="na">getSiguiente</span><span class="p">());</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nIniciando en 100&quot;</span><span class="p">);</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="w">        </span><span class="n">ob</span><span class="p">.</span><span class="na">setComenzar</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Siguiente valor es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ob</span><span class="p">.</span><span class="na">getSiguiente</span><span class="p">());</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-20-18" name="__codelineno-20-18"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div></td></tr></table></div></p>
 <p>Salida:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
@@ -1662,7 +1671,12 @@ En este caso habría que proceder exactamente de la misma manera que con la clas
 <a id="__codelineno-21-16" name="__codelineno-21-16"></a>Siguiente<span class="w"> </span>valor<span class="w"> </span>es:<span class="w"> </span><span class="m">108</span>
 <a id="__codelineno-21-17" name="__codelineno-21-17"></a>Siguiente<span class="w"> </span>valor<span class="w"> </span>es:<span class="w"> </span><span class="m">110</span>
 </code></pre></div></td></tr></table></div>
+</details>
 <p>Está permitido y es común para las clases que implementan interfaces definir miembros adicionales propios. Por ejemplo, la siguiente versión de <code>DeDos</code> agrega el método <code>getAnterior()</code>, que devuelve el valor anterior:</p>
+<details class="example" open="open">
+<summary>Ejemplo</summary>
+<p>Aquí hay una clase que demuestra <code>DeDos</code>:</p>
+<p><strong>SOLUCIÓN</strong><br/>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
@@ -1726,7 +1740,8 @@ En este caso habría que proceder exactamente de la misma manera que con la clas
 <a id="__codelineno-22-30" name="__codelineno-22-30"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">anterior</span><span class="p">;</span>
 <a id="__codelineno-22-31" name="__codelineno-22-31"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-22-32" name="__codelineno-22-32"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div></td></tr></table></div></p>
+</details>
 <p>Observa que la adición de <code>getAnterior()</code> requirió un cambio en las implementaciones de los métodos definidos por <code>Series</code>. Sin embargo, dado que la interfaz con esos métodos permanece igual, el cambio es continuo y no rompe el código preexistente. Esta es una de las ventajas de las interfaces.</p>
 <p>Como se explicó, cualquier cantidad de clases puede implementar una interfaz. Por ejemplo, aquí hay una clase llamada <code>DeTres</code> que genera una serie que consta de múltiplos de tres:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>

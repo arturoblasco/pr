@@ -1500,7 +1500,7 @@
 
 <h2 id="ejercicios-herencia">Ejercicios Herencia</h2>
 <h3 id="ejercicio01">Ejercicio01</h3>
-<p>Paquete: <code>centroestudios</code>.</p>
+<p>paquete: <code>_01_centroestudios</code>.</p>
 <p>Diseñar una jerarquía de clases para modelizar las <strong>aulas de un centro de estudios</strong>.</p>
 <p>De un <code>Aula</code> se conoce el <code>código</code> (numérico), la <code>longitud</code> y la <code>anchura</code>. Se desea un método que devuelva la capacidad del aula sabiendo que esta se calcula a partir de la superficie a razón de 1 alumnos por cada 1.4 metros cuadrados de superficie.</p>
 <p>Además de las aulas, digamos normales, existen aulas de informática y aulas de música. En las aulas de música se necesita conocer si tienen o no piano. De las aulas de informática se conoce el número de ordenadores y su capacidad no se calcula en función de la superficie, sino a razón de dos alumnos por ordenador.</p>
@@ -1513,12 +1513,13 @@
 <p>En las aulas de música e informática el texto irá precedido por "<em>Aula de música</em>" o "<em>Aula de informática</em>", según corresponda.</p>
 </li>
 </ul>
+<p>Crea también una clase <code>TestAula</code> para probar las clases generadas.</p>
 <hr>
 
 <h3 id="ejercicio02">Ejercicio02</h3>
-<p>paquete: <code>videojuegos</code></p>
+<p>paquete: <code>_02_videojuegos</code></p>
 <p>Un salón de <strong>VideoJuegos</strong> dispone de ordenadores en los que los clientes pueden jugar. Además de jugar en el establecimiento, la empresa alquila y vende juegos.</p>
-<p>2.1. Diseñar la clase <code>Juego</code> siguiendo las siguientes especificaciones: </p>
+<p>a) Diseñar la clase <code>Juego</code> siguiendo las siguientes especificaciones: </p>
 <ul>
 <li>Atributos protected: <code>titulo</code> (String), <code>fabricante</code> (String), <code>año</code> (int).</li>
 <li>Constructor <code>public Juego(String t, String f, int a)</code>.</li>
@@ -1527,16 +1528,26 @@
 <li><code>public boolean equals(Object o)</code>: Dos juegos son iguales si tienen el mismo título, fabricante y año.</li>
 <li><code>public int compareTo(Object o)</code>: Un juego es menor que otro si su título es menor. A igual título, si su fabricante es menor. A igual título y fabricante, si su año es menor.</li>
 </ul>
-<p>2.2. Diseñar las clases <code>JuegoEnAlquiler</code> y <code>JuegoEnVenta</code> (y otras si se considera oportuno), sabiendo que, además de los atributos descritos anteriormente, tienen.</p>
+<p>b) Diseñar las clases <code>JuegoEnAlquiler</code> y <code>JuegoEnVenta</code> (y otras si se considera oportuno), sabiendo que, además de los atributos descritos anteriormente, tienen.</p>
 <ul>
-<li><code>precio</code>.</li>
-<li><code>nº de copias disponibles</code>.</li>
+<li>
+<p><code>precio</code>.</p>
+</li>
+<li>
+<p><code>nº de copias disponibles</code>.</p>
+</li>
 <li>
 <p><code>JuegoEnAlquiler</code>.</p>
 <ul>
-<li>tiene un atributo que indica el número de días que se alquila. (Por el precio indicado, hay juegos que se alquilan por un día, otros por 2, etc...).</li>
-<li>Constructor que recibe todos sus datos.</li>
-<li>tiene un método <code>alquilar</code> que decrementa el número de copias disponibles.</li>
+<li>
+<p>tiene un atributo que indica el <em>número de días</em> que se alquila. </p>
+</li>
+<li>
+<p><em>constructor</em> que recibe todos sus datos.</p>
+</li>
+<li>
+<p>tiene un método <code>alquilar</code> que decrementa el número de copias disponibles.</p>
+</li>
 <li>tiene un método <code>devolver</code> que incrementa el número de copias disponibles.</li>
 <li><code>toString()</code> devuelve todos los datos del <code>JuegoEnAlquiler</code>.</li>
 </ul>
@@ -1544,43 +1555,44 @@
 <li>
 <p><code>JuegoEnVenta</code></p>
 <ul>
-<li><code>Constructor</code> que recibe todos sus datos.</li>
+<li><em>constructor</em> que recibe todos sus datos.</li>
 <li>tiene un método <code>vender</code>, que decrementa el número de copias disponibles.</li>
 <li><code>toString()</code> devuelve todos los datos del <code>JuegoEnVenta</code>.</li>
 </ul>
 </li>
 </ul>
+<p>c) Crea también una clase <code>TestJuego</code> para probar objetos de las clases <code>JuegoEnAlquiler</code> y <code>JuegoEnVenta</code>.</p>
 <hr>
 
 <h3 id="ejercicio03">Ejercicio03</h3>
-<p>paquete: <code>fnmt</code></p>
+<p>paquete: <code>_03_fnmt</code></p>
 <p>La <strong>Fabrica Nacional de Moneda y Timbre</strong> quiere almacenar cierta información técnica del dinero (billetes y monedas) que emite. En concreto, le interesa:</p>
 <ul>
-<li><code>Valor</code>: Valor de la moneda o billete, en euros. (<code>double</code>).</li>
-<li><code>Año de emisión</code>: Año en que fue emitida la moneda o billete. (<code>int</code>).</li>
+<li><em>Valor</em>: Valor de la moneda o billete, en euros. (<code>double</code>).</li>
+<li><em>Año de emisión</em>: Año en que fue emitida la moneda o billete. (<code>int</code>).</li>
 <li>De las monedas, <ul>
-<li><code>Diámetro</code>: Diámetro de la moneda, en milímetros. (<code>double</code>).</li>
-<li><code>Peso</code>: Peso de la moneda, en gramos (<code>double</code>).</li>
+<li><em>Diámetro</em>: Diámetro de la moneda, en milímetros. (<code>double</code>).</li>
+<li><em>Peso</em>: Peso de la moneda, en gramos (<code>double</code>).</li>
 </ul>
 </li>
-<li>De los billetes.<ul>
-<li><code>Altura del billete</code>, en mm (<code>double</code>).</li>
-<li><code>Anchura del billete</code>, en mm (<code>double</code>).</li>
+<li>De los billetes,<ul>
+<li><em>Altura</em> del billete, en mm (<code>double</code>).</li>
+<li><em>Anchura</em> del billete, en mm (<code>double</code>).</li>
 </ul>
 </li>
 </ul>
 <p>a) Diseñar la clase abstracta <code>Dinero</code> y sus subclases <code>Moneda</code> y <code>Billete</code>, desarrollando:</p>
 <ul>
-<li>Constructores que reciban los datos necesarios para inicializar los atributos de la clase correspondiente.</li>
+<li><em>Constructores</em> que reciban los datos necesarios para inicializar los atributos de la clase correspondiente.</li>
 <li><code>equals</code>: Dos monedas o billetes son iguales si tienen el mismo año de emisión y valor.</li>
 <li><code>compareTo</code>: Es menor (mayor) el de menor (mayor) año, a igual año es menor (mayor) el de menor (mayor) valor.</li>
 <li><code>toString</code>: Que muestre todos los datos del billete o moneda. Los billetes irán precedidos por el texto "BILLETE" y las monedas por el texto "MONEDA".</li>
 </ul>
-<p>b) Diseñar la clase <code>TestDinero</code> para probar las clases desarrolladas: Crear objetos de las clases <code>Moneda</code> y <code>Billete</code> y mostrarlos por pantalla.</p>
+<p>b) Diseñar la clase <code>TestDinero</code> para probar las clases desarrolladas. Crear objetos de las clases <code>Moneda</code> y <code>Billete</code> y mostrarlos por pantalla.</p>
 <hr>
 
 <h3 id="ejercicio04">Ejercicio04</h3>
-<p>paquete: <code>centrocomercial</code></p>
+<p>paquete: <code>_04_centrocomercial</code></p>
 <p>Un <strong>centro comercial</strong> quiere mostrar cierta información sobre los televisores que vende. Los televisores pueden ser de dos tipos: de tubo o LCD. En concreto, de cada televisor le interesa mostrar:</p>
 <ul>
 <li>Marca (<code>String</code>).</li>
@@ -1603,34 +1615,23 @@
 <hr>
 
 <h3 id="ejercicio05">Ejercicio05</h3>
-<p>paquete: <code>preguntas</code></p>
-<p>De cada pareja de afirmaciones <strong>indica cuál es la verdaderas</strong>:<br />
-      a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.<br />
-    b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.<br />
-    c) Si una clase es abstracta no se puede instanciar.<br />
-    d) Si una clase es abstracta no se puede heredar de ella.<br />
-    e) Una clase abstracta tiene que tener métodos abstractos.<br />
-    f) Una clase puede ser abstracta y no tener métodos abstractos.<br />
-    g) Si una clase tiene métodos abstractos tiene que ser abstracta.<br />
-    h) Una clase puede tener métodos abstractos y no ser abstracta.<br />
-    i) Si una clase es abstracta sus subclases no pueden ser abstractas.<br />
-    j) Una clase abstracta puede tener subclases que también sean abstractas.<br />
-    k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.<br />
-    l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.<br />
-    m) Si un método se define final se tiene que reescribir en las subclases.<br />
-    n) Si un método se define final no se puede reescribir en las subclases.<br />
-    o) Una clase puede tener un método final y no ser una clase final.<br />
-    p) Si una clase tiene un método final tiene que ser una clase final.<br />
-    q) Si una clase se define final no se pueden definir subclases de ella.<br />
-    r) Si una clase se define final no se puede instanciar.<br />
-    s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.<br />
-    t) Un método definido final y abstract podría resultar útil.<br />
-    u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.<br />
-    v) Una clase definida final y abstract podría resultar útil.<br /></p>
+<p>paquete: <code>_05_preguntas</code></p>
+<p>De cada pareja de afirmaciones <strong>indica cuál es la verdadera</strong>:</p>
+<p>a) Se dice que instanciamos una clase cuando creamos objetos de dicha clase.<br>    b) Se dice que instanciamos una clase cuando creamos una subclase de dicha clase.</p>
+<p>c) Si una clase es abstracta no se puede instanciar.<br>    d) Si una clase es abstracta no se puede heredar de ella.</p>
+<p>e) Una clase abstracta tiene que tener métodos abstractos.<br>  f) Una clase puede ser abstracta y no tener métodos abstractos.</p>
+<p>g) Si una clase tiene métodos abstractos tiene que ser abstracta.<br>   h) Una clase puede tener métodos abstractos y no ser abstracta.</p>
+<p>i) Si una clase es abstracta sus subclases no pueden ser abstractas.<br>    j) Una clase abstracta puede tener subclases que también sean abstractas.</p>
+<p>k) Si un método es abstracto en una clase, tiene que ser no abstracto en la subclase, o bien, la subclase tiene que ser también abstracta.<br>  l) Si un método es abstracto en una clase, no puede ser abstracto en las subclases.</p>
+<p>m) Si un método se define final se tiene que reescribir en las subclases.<br>   n) Si un método se define final no se puede reescribir en las subclases.</p>
+<p>o) Una clase puede tener un método final y no ser una clase final.<br>  p) Si una clase tiene un método final tiene que ser una clase final.</p>
+<p>q) Si una clase se define final no se pueden definir subclases de ella.<br> r) Si una clase se define final no se puede instanciar.</p>
+<p>s) Un método definido final y abstract resultaría inútil, puesto que nunca se podría implementar en las subclases.<br>  t) Un método definido final y abstract podría resultar útil.</p>
+<p>u) Una clase definida final y abstract resultaría inútil, puesto que no se podría instanciar ni heredar de ella.<br>    v) Una clase definida final y abstract podría resultar útil.<br /></p>
 <hr>
 
 <h3 id="ejercicio06">Ejercicio06</h3>
-<p>paquete: <code>preguntas2</code></p>
+<p>paquete: <code>_06_preguntas2</code></p>
 <p>Dada las siguientes <strong>definiciones de clases</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1755,7 +1756,7 @@
 <p>​   f) Si el método <code>toString</code> no se hubiera definido en ninguna de las tres clases ¿daría error el <code>sout</code> del método <code>main</code>?</p>
 <h2 id="ejercicios-polimorfismo">Ejercicios Polimorfismo</h2>
 <h3 id="ejercicio07"><strong>Ejercicio07</strong></h3>
-<p>paquete: <code>obra</code></p>
+<p>paquete: <code>_07_obra</code></p>
 <p>Dada la siguiente <strong>jerarquía de clases</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
@@ -1811,7 +1812,7 @@
 <a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Indicar <strong>qué líneas</strong> del siguiente fragmento de programa <strong>producirán errores de compilación</strong>,</p>
+<p>a) Indicar <strong>qué líneas</strong> del siguiente fragmento de programa <strong>producirán errores de compilación</strong>,</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -1836,18 +1837,16 @@
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="p">((</span><span class="n">Albañil</span><span class="p">)</span><span class="n">o1</span><span class="p">).</span><span class="na">levantarMuro</span><span class="p">();</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Una vez eliminadas</strong> las líneas con error, indicar <strong>cuál sería la salida</strong> por pantalla del programa.</p>
-<div class="admonition question">
-<p class="admonition-title">¿<strong>Sería correcta</strong> la instrucción siguiente?</p>
+<p>b) <strong>Una vez eliminadas</strong> las líneas con error, indicar <strong>cuál sería la salida</strong> por pantalla del programa.</p>
+<p>c) ¿<strong>Sería correcta</strong> la instrucción siguiente?"</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w">    </span><span class="n">Albañil</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Albañil</span><span class="p">();</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Albañil</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Albañil</span><span class="p">();</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
-</div>
 <hr>
 
 <h3 id="ejercicio08">Ejercicio08</h3>
-<p>paquete: <code>preguntas3</code></p>
+<p>paquete: <code>_08_preguntas3</code></p>
 <p>Las clases siguientes implementan una <strong>jerarquía de herencia</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
@@ -1965,12 +1964,14 @@
 <hr>
 
 <h3 id="ejercicio09">Ejercicio09</h3>
-<p>paquete: <code>supermercado</code></p>
-<p><em>Supermercado: Práctica con interfaces y polimorfismo.</em></p>
+<p>paquete: <code>_09_supermercado</code></p>
+<p><em>Práctica con interfaces y polimorfismo.</em></p>
 <p><strong>Supermercado</strong>. Creación de Interfaces </p>
 <p>Supón que debe crear distintas clases Java para describir los productos que vende un supermercado. </p>
-<p>Para unificar el código de los distintos programadores del equipo debes crear las siguientes Interfaces Java para describir algunas características de los productos. </p>
-<p><strong>Interfaz EsLiquido</strong>. Esta interfaz indica que los objetos creados a partir de la clase serán líquidos, y tendrá los siguientes métodos: </p>
+<p>Para unificar el código de los distintos programadores del equipo debes crear las siguientes Interfaces Java para describir algunas características de los productos:</p>
+<ul>
+<li>Interfaz <code>EsLiquido</code> : Esta interfaz indica que los objetos creados a partir de la clase serán líquidos, y tendrá los siguientes métodos: </li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
@@ -1979,14 +1980,18 @@
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setTipoEnvase</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">env</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getTipoEnvase</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Interfaz EsAlimento</strong>. Esta interfaz indica que los objetos creados a partir de la clase serán alimentos, y tendrá los siguientes métodos: </p>
+<ul>
+<li>Interfaz <code>EsAlimento</code> : Esta interfaz indica que los objetos creados a partir de la clase serán alimentos, y tendrá los siguientes métodos: </li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setCaducidad</span><span class="p">(</span><span class="n">LocalDate</span><span class="w"> </span><span class="n">fc</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="nf">getCaducidad</span><span class="p">();</span><span class="w"> </span>
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCalorias</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Interfaz ConDescuento</strong>. Esta interfaz indicará que el producto tiene descuento e incluirá los siguientes métodos: </p>
+<ul>
+<li>Interfaz <code>ConDescuento</code> : Esta interfaz indicará que el producto tiene descuento e incluirá los siguientes métodos: </li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDescuento</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">des</span><span class="p">);</span><span class="w"> </span>
@@ -1994,52 +1999,56 @@
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getPrecioDescuento</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Creación de clases de productos</strong>. Se pide que programes las siguientes clases de productos, implementando las interfaces que sean necesarias.</p>
-<p><strong>Clase Detergente</strong>. Define una botella de detergente (debes tener en cuenta que este producto puede tener descuento).</p>
-<p>Sus propiedades principales serán: <code>marca</code> (String) y <code>precio</code> (double).</p>
+<p>a) Clase <code>Detergente</code> : Define una botella de detergente (debes tener en cuenta que este producto puede tener descuento).</p>
+<p>Sus propiedades principales serán: <em>marca</em> (String) y <em>precio</em> (double).</p>
 <p>Incluye otras propiedades según sea necesario a la hora de implementar las interfaces. </p>
 <ul>
 <li>Constructor: programa un constructor que reciba como parámetros una marca y un precio. </li>
 <li>Métodos <em>set</em> y <em>get</em>: programa métodos set y get para la marca y el precio.</li>
-<li>Métodos de las interfaces: programa los métodos de las interfaces. </li>
+<li>Métodos de las interfaces: implementa los métodos de las interfaces. </li>
 <li>Método <code>toString</code>: programa el método toString con todas las características del producto. </li>
 </ul>
-<p><strong>Clase Cereales</strong>. Define el producto caja de cereales (este producto no tiene descuentos).</p>
+<p>b) Clase <code>Cereales</code> : Define el producto caja de cereales (este producto no tiene descuentos).</p>
 <p>Las propiedades del producto serán <code>marca</code>, <code>precio</code> y <code>tipo</code> de cereal (String).</p>
 <ul>
 <li>Programa un <em>constructor</em> que reciba como parámetros las tres propiedades anteriores. </li>
 <li>Programa los métodos <em>set</em> y <em>get</em> para dichas propiedades. </li>
-<li>Programa los métodos de las interfaces implementadas (si es necesario añade más propiedades a la clase).</li>
+<li>Implementa los métodos de las interfaces implementadas (si es necesario añade más propiedades a la clase).</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">A tener en cuenta!</p>
-<p>Las calorías serán las siguientes: 5 si el cereal es espelta, 8 si es maíz, 12 si es trigo, y 15 en los demás casos.</p>
+<div class="admonition note">
+<p class="admonition-title">A tener en cuenta</p>
+<p>Las calorías serán las siguientes:<br>
+    - 5 si el cereal es espelta, <br>
+- 8 si es maíz, <br>
+- 12 si es trigo, y <br>
+- 15 en los demás casos.</p>
 </div>
 <ul>
 <li>Programa el método <code>toString</code> para devolver una cadena con todas las características del producto.</li>
 </ul>
-<p><strong>Clase Vino</strong>. Esta clase describirá el producto botella de vino (este producto es susceptible de tener descuento).</p>
+<p>c) Clase <code>Vino</code> : Esta clase describirá el producto botella de vino (este producto es susceptible de tener descuento).</p>
 <p>El producto tendrá como propiedades la marca, el tipo de vino, los grados de alcohol y el precio.</p>
 <ul>
 <li>Programa al igual que los productos anteriores un constructor con estas cuatro propiedades como parámetros.</li>
 <li>Programa también los métodos set, get, toString y los métodos de las interfaces. Añada nuevas propiedades si es necesario. </li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">A tener en cuenta!</p>
+<div class="admonition note">
+<p class="admonition-title">A tener en cuenta</p>
 <p>Las calorías se calcularán multiplicando por 10 la graduación alcohólica.</p>
 </div>
-<p><strong>Programa de prueba</strong>. Realiza un programa de prueba dónde crees varios productos de cada clase. Haz un ejemplo de polimorfismo creando un ArrayList de productos alimenticios y calculando la suma de sus calorías.</p>
+<p>d ) Programa de <code>TestSupermercado</code> : Realiza un programa de prueba donde crees varios productos de cada clase. Haz un ejemplo de polimorfismo creando un <em>ArrayList</em> de productos alimenticios y calculando la suma de sus calorías.</p>
 <hr>
 
 <h3 id="ejercicio10"><strong>Ejercicio10</strong></h3>
-<p>paquete: <code>facultad</code></p>
-<p>Realizar una aplicación para la gestión de la información de las personas vinculadas a una <code>Facultad</code>, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio.
-A continuación, se detalla qué tipo de información debe gestionar esta aplicación:</p>
+<p>paquete: <code>_10_facultad</code></p>
+<p>Realizar una aplicación para la gestión de la información de las personas vinculadas a una <em>Facultad</em>, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio.</p>
+<p>A continuación, se detalla qué tipo de información debe gestionar esta aplicación:</p>
 <ul>
-<li>Por cada <code>Persona</code>, se debe conocer, al menos, su <code>nombre</code> y <code>apellidos</code>, su <code>número de identificación</code> y su <code>estado civil</code>.</li>
-<li>Con respecto a los <code>Empleados</code>, sean del tipo que sean, hay que saber su <code>año de incorporación</code> a la facultad y qué <code>número de despacho</code> tienen asignado.</li>
-<li>En cuanto a los <code>Estudiantes</code>, se requiere almacenar el <code>curso</code> en el que están matriculados.</li>
-<li>Por lo que se refiere a los <code>Profesores</code>, es necesario gestionar a qué <code>departamento</code> pertenecen (<code>lenguajes</code>, <code>matemáticas</code>, <code>arquitectura</code>, ...).</li>
-<li>Sobre el <code>Personal de servicio</code>, hay que conocer a qué <code>sección</code> están asignados (<code>biblioteca</code>, <code>decanato</code>, <code>secretaría</code>, ...).</li>
+<li>Por cada <code>Persona</code>, se debe conocer, al menos, su <em>nombre</em> y <em>apellidos</em>, su <em>número de identificación</em> y su <em>estado civil</em>.</li>
+<li>Con respecto a los <code>Empleados</code>, sean del tipo que sean, hay que saber su <em>año de incorporación</em> a la facultad y qué <em>número de despacho</em> tienen asignado.</li>
+<li>En cuanto a los <code>Estudiantes</code>, se requiere almacenar el <em>curso</em> en el que están matriculados.</li>
+<li>Por lo que se refiere a los <code>Profesores</code>, es necesario gestionar a qué <em>departamento</em> pertenecen (lenguajes, matemáticas, arquitectura, ...).</li>
+<li>Sobre el <code>Personal de servicio</code>, hay que conocer a qué <em>sección</em> están asignados (biblioteca, decanato, secretaría, ...).</li>
 </ul>
 <p>El ejercicio consiste, en primer lugar, en definir la jerarquía de clases de esta aplicación. A continuación, debe programar las clases definidas en las que, además de los constructores, hay que desarrollar los métodos correspondientes a las siguientes acciones:</p>
 <ul>
@@ -2050,33 +2059,37 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <li>Traslado de sección de un empleado del personal de servicio.</li>
 <li>Imprimir toda la información de cada tipo de individuo.</li>
 </ul>
-<p>En el método <code>main</code> crear un array de <code>personas</code>. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.</p>
+<p>En el método <code>main</code> crear un array de <em>personas</em>. Crear diferentes instancias de las subclases e insertarlas en el array. Probar los diferentes métodos desarrollados.</p>
 <hr>
 
 <h3 id="ejercicio11">Ejercicio11</h3>
-<p>paquete: <code>trabajadores</code></p>
+<p>paquete: <code>_11_trabajadores</code></p>
 <p>Crea una clase <code>Empleado</code> y una subclase <code>Encargado</code>. Los encargados reciben un 10% más de sueldo base que un empleado normal. Implementa dichas clases en el paquete objetos y sobrescribe el método <code>getSueldo()</code> para ambas clases.</p>
 <hr>
 
 <h3 id="ejercicio12">Ejercicio12</h3>
-<p>paquete: <code>juego</code></p>
-<p>Crear la clase <code>Dado</code>, la cual desciende de la clase <code>Sorteo</code>. La clase <code>Dado</code>, en la llamada <code>lanzar()</code> mostrará un número aleatorio del 1 al 6. Crear la clase <code>Moneda</code>, la cual desciende de la clase <code>Sorteo</code>. Esta clase en la llamada al método <code>lanzar()</code> mostrará las palabras cara o cruz. Realizar una clase con un método <code>main</code> que compruebe todo lo realizado.</p>
+<p>paquete: <code>_12_juego</code></p>
+<p>a) Crear la clase <code>Dado</code>, la cual desciende de la clase <code>Sorteo</code>. La clase <code>Dado</code>, en la llamada <code>lanzar()</code> mostrará un número aleatorio del 1 al 6. </p>
+<p>b) Crear la clase <code>Moneda</code>, la cual desciende de la clase <code>Sorteo</code>. Esta clase en la llamada al método <code>lanzar()</code> mostrará las palabras cara o cruz. </p>
+<p>c) Realizar una clase con un método <code>main</code> que compruebe todo lo realizado.</p>
 <hr>
 
 <h3 id="ejercicio13">Ejercicio13</h3>
-<p>paquete: <code>alimento</code></p>
-<p>Realiza una clase <code>Huevo</code> con un atributo <code>tamaño</code> (<code>S</code>, <code>M</code>, <code>L</code>, <code>XL</code>) con el método <code>toString</code>. La clase <code>Huevo</code> está compuesta por dos clases internas, una <code>Clara</code> y otra <code>Yema</code>. Ambas clases tienen un atributo <code>color</code> y el método <code>toString</code>. Realiza un método <code>main</code> en el que se cree un objeto de tipo <code>Huevo</code>, <code>Clara</code> y <code>Yema</code>, se le asigne valor a sus atributos y se muestren los valores.</p>
+<p>paquete: <code>_13_alimento</code></p>
+<p>a) Realiza una clase <code>Huevo</code> con un atributo <code>tamaño</code> (<code>S</code>, <code>M</code>, <code>L</code>, <code>XL</code>) con el método <code>toString</code>. </p>
+<p>b) La clase <code>Huevo</code> está compuesta por dos clases internas, una <code>Clara</code> y otra <code>Yema</code>. Ambas clases tienen un atributo <code>color</code> y el método <code>toString</code>. </p>
+<p>c) Realiza un método <code>main</code> en el que se cree un objeto de tipo <code>Huevo</code>, <code>Clara</code> y <code>Yema</code>, se le asigne valor a sus atributos y se muestren los valores.</p>
 <h2 id="ejercicios-lionel">Ejercicios Lionel</h2>
 <h3 id="ejercicio14-astros"><strong>Ejercicio14 - Astros</strong></h3>
-<p>paquete: <code>astros</code></p>
+<p>paquete: <code>_14_astros</code></p>
 <p>Define una jerarquía de clases que permita almacenar datos sobre los planetas y satélites (lunas) que forman parte del sistema solar.</p>
 <p>Algunos atributos que necesitaremos almacenar son: </p>
 <ul>
-<li>Masa del cuerpo.</li>
+<li><em>Masa del cuerpo</em>.</li>
 <li>Diámetro medio.</li>
-<li>Período de rotación sobre su propio eje.</li>
-<li>Período de traslación alrededor del cuerpo que orbitan.</li>
-<li>Distancia media a ese cuerpo.</li>
+<li><em>Período de rotación</em> sobre su propio eje.</li>
+<li><em>Período de traslación</em> alrededor del cuerpo que orbitan.</li>
+<li><em>Distancia media</em> a ese cuerpo.</li>
 <li>etc.</li>
 </ul>
 <p>Define las clases necesarias conteniendo: </p>
@@ -2088,16 +2101,19 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <p>Define un método, que dado un objeto del sistema solar (planeta o satélite), imprima toda la información que se dispone sobre el mismo (además de su lista de satélites si los tuviera).</p>
 <p>El diagrama UML sería:</p>
 <p><img src="../../img/ud08/ud08_ej14.png" alt="ud08_ej14" style="zoom:60%;" /></p>
+<div class="admonition note">
+<p class="admonition-title">Posible solución</p>
 <p>Una posible solución sería crear una lista de objetos, insertar los planetas y satélites (directamente mediante código o solicitándolos por pantalla) y luego mostrar un pequeño menú que permita al usuario imprimir la información del astro que elija.</p>
+</div>
 <hr>
 
 <h3 id="ejercicio15-mascotas"><strong>Ejercicio15 - Mascotas</strong></h3>
-<p>paquete: <code>mascotas</code></p>
-<p>Implementa una clase llamada <strong>Inventario</strong> que utilizaremos para almacenar referencias a todos los animales existentes en una tienda de mascotas. </p>
+<p>paquete: <code>_15_mascotas</code></p>
+<p>Implementa una clase llamada <code>Inventario</code> que utilizaremos para almacenar referencias a todos los animales existentes en una tienda de mascotas. </p>
 <p>Esta clase debe cumplir con los siguientes requisitos: </p>
 <ul>
 <li>En la tienda existirán 4 tipos de animales: perros, gatos, loros y canarios. </li>
-<li>Los animales deben almacenarse en un <code>ArrayList</code> privado dentro de la clase <strong>Inventario</strong>. </li>
+<li>Los animales deben almacenarse en un <code>ArrayList</code> privado dentro de la clase <code>Inventario</code>. </li>
 <li>La clase debe permitir realizar las siguientes acciones:<ul>
 <li>Mostrar la lista de animales (solo tipo y nombre, 1 línea por animal).</li>
 <li>Mostrar todos los datos de un animal concreto.</li>
@@ -2114,35 +2130,35 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <hr>
 
 <h3 id="ejercicio16-banco"><strong>Ejercicio16 - Banco</strong></h3>
-<p>paquete: <code>banco</code></p>
+<p>paquete: <code>_16_banco</code></p>
 <p>Vamos a hacer una aplicación que simule el funcionamiento de un banco.</p>
-<p>Crea una clase <strong>CuentaBancaria</strong> con los atributos: <strong>iban</strong> y <strong>saldo</strong>. Implementa métodos para:</p>
+<p>Crea una clase <code>CuentaBancaria</code> con los atributos: <em>iban</em> y <em>saldo</em>. Implementa métodos para:</p>
 <ul>
 <li>Consultar los atributos. </li>
 <li>Ingresar dinero.</li>
 <li>Retirar dinero.</li>
 <li>Traspasar dinero de una cuenta a otra.</li>
 </ul>
-<p>Para los tres últimos métodos puede utilizarse internamente un método privado más general llamado <strong>añadir(...)</strong> que añada una cantidad (positiva o negativa) al saldo.</p>
-<p>También habrá un atributo común a todas las instancias llamado <strong>interesAnualBasico</strong>, que en principio puede ser constante.</p>
-<p>La clase tiene que ser <strong><em>abstracta</em></strong> y debe tener un método <strong>calcularIntereses()</strong> que se dejará sin implementar.</p>
+<p>Para los tres últimos métodos puede utilizarse internamente un método privado más general llamado <code>añadir(...)</code> que añada una cantidad (positiva o negativa) al saldo.</p>
+<p>También habrá un atributo común a todas las instancias llamado <em>interesAnualBasico</em>, que en principio puede ser constante.</p>
+<p>La clase tiene que ser <strong><em>abstracta</em></strong> y debe tener un método <code>calcularIntereses()</code> que se dejará sin implementar.</p>
 <p>También puede ser útil implementar un método para mostrar los datos de la cuenta.</p>
-<p>De esta clase heredarán dos subclases: <strong>CuentaCorriente</strong> y <strong>CuentaAhorro</strong>. La diferencia entre ambas será la manera de calcular los intereses:</p>
+<p>De esta clase heredarán dos subclases: <code>CuentaCorriente</code> y <code>CuentaAhorro</code>. La diferencia entre ambas será la manera de calcular los intereses:</p>
 <ul>
 <li>A la primera se le incrementará el saldo teniendo en cuenta el interés anual básico.</li>
-<li>La segunda tendrá una constante de clase llamada <strong>saldoMinimo</strong>. Si no se llega a este saldo el interés será la mitad del interés básico. Si se supera el saldo mínimo el interés aplicado será el doble del interés anual básico.</li>
+<li>La segunda tendrá una constante de clase llamada <em>saldoMinimo</em>. Si no se llega a este saldo el interés será la mitad del interés básico. Si se supera el saldo mínimo el interés aplicado será el doble del interés anual básico.</li>
 </ul>
-<p>Implementa una clase principal con función main para probar el funcionamiento de las tres clases: Crea varias cuentas bancarias de distintos tipos, pueden estar en un ArrayList si lo deseas; prueba a realizar ingresos, retiradas y transferencias; calcula los intereses y muéstralos por pantalla; etc.</p>
+<p>Implementa una clase principal con función main para probar el funcionamiento de las tres clases: Crea varias cuentas bancarias de distintos tipos, pueden estar en un <em>ArrayList</em> si lo deseas; prueba a realizar ingresos, retiradas y transferencias; calcula los intereses y muéstralos por pantalla; etc.</p>
 <p>El diagrama UML sería:</p>
 <p><img src="../../img/ud08/ud08_ej16.png" alt="ud08_ej14" style="zoom:60%;" /></p>
 <hr>
 
 <h3 id="ejercicio17-empresa-y-empleados"><strong>Ejercicio17 - Empresa y empleados</strong></h3>
-<p>paquete: <code>empresaempleados</code></p>
+<p>paquete: <code>_17_empresaempleados</code></p>
 <p>Vamos a implementar dos clases que permitan gestionar datos de empresas y sus empleados.</p>
 <p>Los <strong>empleados</strong> tienen las siguientes características:</p>
 <ul>
-<li>Un empleado tiene nombre, DNI, sueldo bruto (mensual), edad, teléfono y dirección.</li>
+<li>Un empleado tiene <em>nombre</em>, <em>DNI</em>, <em>sueldo</em> <em>bruto</em> (mensual), <em>edad</em>, <em>teléfono</em> y <em>dirección</em>.</li>
 <li>El nombre y DNI de un empleado no pueden variar.</li>
 <li>Es obligatorio que todos los empleados tengan al menos definido su nombre, DNI y el sueldo bruto. Los demás datos no son obligatorios.</li>
 <li>Será necesario un método para imprimir por pantalla la información de un empleado.</li>
@@ -2173,7 +2189,7 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <p>Por ejemplo, un empleado con un sueldo bruto anual de 17.000 € tendrá un 30% de IRPF. Para calcular su sueldo neto mensual se descontará un 30% a su sueldo bruto mensual.</p>
 <p>Las <strong>empresas</strong> tienen las siguientes características:</p>
 <ul>
-<li>Una empresa tiene nombre y CIF (datos que no pueden variar), además de teléfono, dirección y empleados. Cuando se crea una nueva empresa esta carece de empleados.</li>
+<li>Una empresa tiene <em>nombre</em> y <em>CIF</em> (datos que no pueden variar), además de <em>teléfono</em>, <em>dirección</em> y <em>empleados</em>. Cuando se crea una nueva empresa esta carece de empleados.</li>
 <li>Serán necesarios métodos para:</li>
 <li>Añadir y eliminar empleados a la empresa.</li>
 <li>Mostrar por pantalla la información de todos los empleados.</li>
@@ -2190,7 +2206,7 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <hr>
 
 <h3 id="ejercicio18-vehiculos">Ejercicio18 - Vehículos</h3>
-<p>paquete: <code>vehiculos</code></p>
+<p>paquete: <code>_18_vehiculos</code></p>
 <div class="admonition note">
 <p class="admonition-title">Aconsejable</p>
 <p>Realizar el diseño UML antes de empezar a programar.</p>
@@ -2216,8 +2232,8 @@ A continuación, se detalla qué tipo de información debe gestionar esta aplica
 <hr>
 
 <h3 id="ejercicio19-figuras">Ejercicio19 - Figuras</h3>
-<p>paquete: <code>figuras</code></p>
-<p>Implementa una <strong>interface</strong> llamada <strong>iFigura2D</strong> que declare los métodos:</p>
+<p>paquete: <code>_19_figuras</code></p>
+<p>Implementa una <strong>interface</strong> llamada <code>iFigura2D</code> que declare los métodos:</p>
 <ul>
 <li><code>double perimetro()</code>: Para devolver el perímetro de la figura.</li>
 <li><code>double area()</code>: Para devolver el área de la figura.</li>

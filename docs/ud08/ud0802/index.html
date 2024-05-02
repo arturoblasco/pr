@@ -1205,7 +1205,8 @@
 <p>Método <code>calcularPerimetro</code>, que calcula y devuelve la longitud del perímetro de la figura.</p>
 </li>
 </ul>
-<p>En ambos casos la interfaz no se ve modificada en absoluto (desde fuera su funcionamiento es el mismo), pero internamente deberás tener en cuenta que ya no existen los atributos <code>x1</code>, <code>y1</code>, <code>x2</code>, <code>y2</code>, de tipo <code>double</code>, sino los atributos <code>vertice1</code> y <code>vertice2</code> de tipo <code>Punto</code>.</p>
+<p><strong>SOLUCIÓN</strong><br/>
+En ambos casos la interfaz no se ve modificada en absoluto (desde fuera su funcionamiento es el mismo), pero internamente deberás tener en cuenta que ya no existen los atributos <code>x1</code>, <code>y1</code>, <code>x2</code>, <code>y2</code>, de tipo <code>double</code>, sino los atributos <code>vertice1</code> y <code>vertice2</code> de tipo <code>Punto</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1319,7 +1320,8 @@
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Dada la clase <code>Rectangulo</code>, escribe sus nuevos métodos <code>getVertice1</code> y <code>getVertice2</code> para que devuelvan los vértices inferior izquierdo y superior derecho del rectángulo (objetos de tipo <code>Punto</code>), teniendo en cuenta su nueva estructura de atributos (dos objetos de la clase <code>Punto</code>, en lugar de cuatro elementos de tipo <code>double</code>):</p>
-<p>Los métodos de obtención de vértices devolverán objetos de la clase <code>Punto</code>:</p>
+<p><strong>SOLUCIÓN</strong> (no correcta)<br />
+Los métodos de obtención de vértices devolverán objetos de la clase <code>Punto</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -1335,7 +1337,8 @@
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Esto funcionaría perfectamente, pero deberías tener cuidado con este tipo de métodos que devuelven directamente una referencia a un objeto atributo que probablemente has definido como privado. <strong>Cuidado!! estás de alguna manera haciendo público un atributo que fue declarado como privado</strong>.</p>
-<p>Para evitar que esto suceda bastaría con <strong>crear un nuevo objeto que fuera una copia del atributo que se desea devolver</strong> (en este caso un objeto de la clase <code>Punto</code>).</p>
+<p><strong>SOLUCIÓN</strong> (correcta)<br />
+Para evitar que esto suceda bastaría con <strong>crear un nuevo objeto que fuera una copia del atributo que se desea devolver</strong> (en este caso un objeto de la clase <code>Punto</code>).</p>
 <p>Aquí tienes la solución para la nueva clase <code>Rectangulo</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
@@ -1516,8 +1519,8 @@
 3º) Un constructor con dos parámetros, <code>punto1</code>, <code>punto2</code>, que rellene los valores iniciales de los atributos del rectángulo con los valores proporcionados a través de los parámetros.<br /><br />
 4º) Un constructor con dos parámetros, <code>base</code> y <code>altura</code>, que cree un rectángulo donde el vértice inferior derecho esté ubicado en la posición (0,0) y que tenga una base y una altura tal y como indican los dos parámetros proporcionados.<br /><br />
 5º) Un constructor copia.</p>
-<p><strong>POSIBLE SOLUCIÓN</strong></p>
-<p>Durante el proceso de creación de un objeto (constructor) de la clase contenedora (en este caso <code>Rectangulo</code>) hay que tener en cuenta también la creación (llamada a constructores) de aquellos objetos que son contenidos (en este caso objetos de la clase <code>Punto</code>).<br /><br />
+<p><strong>SOLUCIÓN</strong><br/>
+Durante el proceso de creación de un objeto (constructor) de la clase contenedora (en este caso <code>Rectangulo</code>) hay que tener en cuenta también la creación (llamada a constructores) de aquellos objetos que son contenidos (en este caso objetos de la clase <code>Punto</code>).<br /><br />
 1º) En el caso del primer constructor, habrá que crear dos puntos con las coordenadas (0,0) y (1,1) y asignarlos a los atributos correspondientes (<code>vertice1</code> y <code>vertice2</code>):</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>

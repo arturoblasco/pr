@@ -1196,8 +1196,9 @@
 </ul>
 <details class="example" open="open">
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
-<p>Basándote en la jerarquía de clases de ejemplo (<code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>), que ya has utilizado en otras ocasiones, modifica lo que consideres oportuno para que <code>Persona</code> sea, a partir de ahora, una clase abstracta (no instanciable) y las otras dos clases sigan siendo clases derivadas de ella, pero sí instanciables.
-<br /><br />En este caso lo único que habría que hacer es añadir el modificador <code>abstract</code> a la clase <code>Persona</code>. El resto de la clase permanecería igual y las clases <code>Alumno</code> y <code>Profesor</code> no tendrían porqué sufrir ninguna modificación.</p>
+<p>Basándote en la jerarquía de clases de ejemplo (<code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>), que ya has utilizado en otras ocasiones, modifica lo que consideres oportuno para que <code>Persona</code> sea, a partir de ahora, una clase abstracta (no instanciable) y las otras dos clases sigan siendo clases derivadas de ella, pero sí instanciables.</p>
+<p><strong>SOLUCIÓN</strong><br/>
+En este caso lo único que habría que hacer es añadir el modificador <code>abstract</code> a la clase <code>Persona</code>. El resto de la clase permanecería igual y las clases <code>Alumno</code> y <code>Profesor</code> no tendrían porqué sufrir ninguna modificación.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1218,14 +1219,36 @@
 <p>Existen una gran cantidad de clases abstractas en la API de Java. Aquí tienes un par de ejemplos:</p>
 <ul>
 <li>La clase <code>AbstractList</code>:
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractCollection</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractCollection</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="c1">// Métodos abstractos</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">size</span><span class="p">();</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<br />De la que heredan clases instanciable como <code>Vector</code> o <code>ArrayList</code>.
+De la que heredan clases instanciable como <code>Vector</code> o <code>ArrayList</code>.
 <br /><br /></li>
 <li>La clase <code>AbstractSequentialList</code>:
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractSequentialList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractSequentialList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="c1">// Métodos abstractos</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">listIterator</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<br />Que hereda de <code>AbstractList</code> y de la que hereda la clase <code>LinkedList</code>.    </li>
+Esta clase hereda de <code>AbstractList</code>, y de esta hereda la clase <code>LinkedList</code>.    </li>
 </ul>
 </details>
 <h2 id="metodos-abstractos">Métodos abstractos</h2>
@@ -1253,7 +1276,9 @@
 <summary>Revisa con cuidado el siguiente ejemplo</summary>
 <p>Basándote en la jerarquía de clases <code>Persona</code>, <code>Alumno</code>, <code>Profesor</code>, crea un método abstracto llamado <code>mostrarDatos</code> para la clase <code>Persona</code>. Dependiendo del tipo de persona (<em>alumno</em> o <em>profesor</em>) el método <code>mostrarDatos</code> tendrá que mostrar unos u otros datos personales (habrá que hacer implementaciones específicas en cada clase derivada).
 <br /><br />Una vez hecho esto, implementa completamente las tres clases (con todos sus atributos y métodos) y utilízalas en un pequeño programa de ejemplo que cree un objeto de tipo <code>Alumno</code> y otro de tipo <code>Profesor</code>, los rellene con información y muestre esa información en la pantalla a través del método mostrar.
-<br /><br />Dado que el método <code>mostrarDatos</code> no va a ser implementado en la clase <code>Persona</code>, será declarado como abstracto y no se incluirá su implementación:
+<br /><br /></p>
+<p><strong>SOLUCIÓN</strong><br/>
+Dado que el método <code>mostrarDatos</code> no va a ser implementado en la clase <code>Persona</code>, será declarado como abstracto y no se incluirá su implementación:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">protected</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarDatos</span><span class="w"> </span><span class="p">();</span>
 </code></pre></div></td></tr></table></div></p>
 <p>Recuerda que el simple hecho de que la clase <code>Persona</code> contenga un método abstracto hace que la clase sea abstracta (y deberá indicarse como tal en su declaración): </p>
