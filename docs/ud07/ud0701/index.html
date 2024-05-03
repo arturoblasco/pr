@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#composicion" class="md-skip">
+        <a href="#estructuras-de-almacenamiento" class="md-skip">
           Skip to content
         </a>
       
@@ -466,27 +466,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#composicion" class="md-nav__link">
+  <a href="#estructuras-de-almacenamiento" class="md-nav__link">
     <span class="md-ellipsis">
-      Composición
+      Estructuras de almacenamiento
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#herencia" class="md-nav__link">
+  <a href="#clases-y-metodos-genericos" class="md-nav__link">
     <span class="md-ellipsis">
-      Herencia
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#herencia-o-composicion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Herencia o composición?
+      Clases y métodos genéricos
     </span>
   </a>
   
@@ -592,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud07806.md" class="md-nav__link">
+      <a href="../ud0706.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud08pi.md" class="md-nav__link">
+      <a href="../ud07pi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud08re.md" class="md-nav__link">
+      <a href="../ud07re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1288,27 +1279,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#composicion" class="md-nav__link">
+  <a href="#estructuras-de-almacenamiento" class="md-nav__link">
     <span class="md-ellipsis">
-      Composición
+      Estructuras de almacenamiento
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#herencia" class="md-nav__link">
+  <a href="#clases-y-metodos-genericos" class="md-nav__link">
     <span class="md-ellipsis">
-      Herencia
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#herencia-o-composicion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Herencia o composición?
+      Clases y métodos genéricos
     </span>
   </a>
   
@@ -1332,97 +1314,301 @@
   <h1>7.1 Introducción</h1>
 
 <div style="text-align:center;">
-    <img src="../../img/ud08/cover08.png" alt="portada" style="max-width:50%;" />
+    <img src="../../img/ud07/cover07.png" alt="portada" style="max-width:50%;" />
 </div>
 
-<p>Cuando estudiaste el concepto de clase, ésta fue descrita como una especie de mecanismo de definición (plantillas), en el que se basaría el entorno de ejecución a la hora de construir un objeto: un mecanismo de definición de objetos.</p>
-<p>Por tanto, a la hora de diseñar un conjunto de clases para modelar el conjunto de información cuyo tratamiento se desea automatizar, es importante establecer apropiadamente las posibles relaciones que puedan existir entre unas clases y otras.</p>
-<p>En algunos casos es posible que no exista relación alguna entre unas clases y otras, pero lo más habitual es que sí exista: una clase puede ser una <strong>especialización</strong> (relación entre dos clases donde una de ellas, la subclase, es una versión más especializada que la otra, la superclase, compartiendo características en común pero añadiendo ciertas características específicas que la especializan). El punto de vista inverso sería la <strong>generalización</strong> (relación entre dos clases donde una de ellas, la superclase, es una versión más genérica que la otra, la subclase, compartiendo características en común pero sin las propiedades específicas que caracterizan a la subclase). Es decir, que entre unas clases y otras habrá que definir cuál es su relación (si es que existe alguna).</p>
-<p>Se pueden distinguir diversos <strong>tipos de relaciones</strong> entre clases:</p>
-<ul>
-<li><strong>Clientela</strong>. Cuando una clase utiliza objetos de otra clase (por ejemplo al pasarlos como parámetros a través de un método).</li>
-<li><strong>Composición</strong>. Cuando alguno de los atributos de una clase es un objeto de otra clase.</li>
-<li><strong>Anidamiento</strong>. Cuando se definen clases en el interior de otra clase.</li>
-<li><strong>Herencia</strong>. Cuando una clase comparte determinadas características con otra (clase base), añadiéndole alguna funcionalidad específica (especialización).</li>
-</ul>
-<p>La relación de <strong>clientela</strong> la llevas utilizando desde que has empezado a programar en Java, pues desde tu clase principal (clase con método <code>main</code> ) has estado declarando, creando y utilizando objetos de otras clases. Por ejemplo, si utilizas un objeto <code>String</code> dentro de la clase principal de tu programa, éste será cliente de la clase <code>String</code> (como sucederá con prácticamente cualquier programa que se escriba en Java). Es la relación fundamental y más habitual entre clases (la utilización de unas clases por parte de otras) y, por supuesto, la que más vas a utilizar tú también; de hecho, ya la has estado utilizando y lo seguirás haciendo.</p>
-<p>La relación de <strong>composición</strong> es posible que ya la hayas tenido en cuenta si has definido clases que contenían (tenían como atributos) otros objetos en su interior, lo cual es bastante habitual. Por ejemplo, si escribes una clase donde alguno de sus atributos es un objeto de tipo <code>String</code> , ya se está produciendo una relación de tipo composición (tu clase "tiene" un <code>String</code> , es decir, está compuesta por un objeto <code>String</code> y por algunos elementos más).</p>
-<p>La relación de <strong>anidamiento</strong> (o anidación) es quizá menos habitual, pues implica declarar unas clases dentro de otras (clases internas o anidadas). En algunos casos puede resultar útil para tener un nivel más de encapsulamiento (ocultamiento del estado de un objeto, de sus datos miembro o atributos) de manera que sólo se puede cambiar mediante las operaciones (métodos) definidas para ese objeto. Cada objeto está aislado del exterior de manera que se protegen los datos contra su modificación por quien no tenga derecho a acceder a ellos, eliminando efectos secundarios y colaterales no deseados. Este modo de proceder permite que el usuario de una clase pueda obviar la implementación de los métodos y propiedades para concentrarse sólo en cómo usarlos. Por otro lado se evita que el usuario pueda cambiar su estado de manera imprevista e incontrolada, y oculta información (efecto que se consigue gracias a la encapsulación: se evita la visibilidad de determinados miembros de una clase al resto del código del programa para de ese modo comunicarse con los objetos de la clase únicamente a través de su interfaz/métodos).</p>
-<p>En el caso de la relación de <strong>herencia</strong> también la has visto ya, pues seguro que has utilizado unas clases que derivaban de otras, sobre todo, en el caso de los objetos que forman parte de las interfaces gráficas. Lo más probable es que hayas tenido que declarar clases que derivaban de algún componente gráfico (<code>JFrame</code>, <code>JDialog</code>, etc.).</p>
-<p>Podría decirse que tanto la composición como la anidación son casos particulares de clientela, pues en realidad en todos esos casos una clase está haciendo uso de otra (al contener atributos que son objetos de la otra clase, al definir clases dentro de otras clases, al utilizar objetos en el paso de parámetros, al declarar variables locales utilizando otras clases, etc.).</p>
-<p>A lo largo de la unidad, irás viendo distintas posibilidades de implementación de clases haciendo uso de todas estas relaciones, centrándonos especialmente en el caso de la herencia, que es la que permite establecer las relaciones más complejas.</p>
-<h2 id="composicion">Composición</h2>
-<p>Cuando en un sistema de información, una determinada <strong>entidad <code>A</code> contiene a otra <code>B</code></strong> como una de sus partes, se suele decir que se está produciendo una relación de composición. Es decir, el objeto de la clase <code>A</code> contiene a uno o varios objetos de la clase <code>B</code>.</p>
-<p>Por ejemplo, si describes una entidad <code>País</code> compuesta por una serie de atributos, entre los cuales se encuentra una lista de comunidades autónomas, podrías decir que los objetos de la clase <code>País</code> contienen varios objetos de la clase <code>ComunidadAutonoma</code>. Por otro lado, los objetos de la clase <code>ComunidadAutonoma</code> podrían contener como atributos objetos de la clase <code>Provincia</code>, la cual a su vez también podría contener objetos de la clase <code>Municipio</code>.</p>
-<p>Como puedes observar, la composición puede encadenarse todas las veces que sea necesario hasta llegar a objetos básicos del lenguaje o hasta tipos primitivos que ya no contendrán otros objetos en su interior. Ésta es la forma más habitual de definir clases: mediante otras clases ya definidas anteriormente. Es una manera eficiente y sencilla de gestionar la reutilización de todo el código ya escrito. Si se definen clases que describen entidades distinguibles y con funciones claramente definidas, podrán utilizarse cada vez que haya que representar objetos similares dentro de otras clases.</p>
-<div class="admonition note">
-<p class="admonition-title">Anotación</p>
-<p>La composición se da cuando una clase contiene algún atributo que es una referencia a un objeto de otra clase.</p>
+<p>Cuando el volumen de datos a manejar por una aplicación es elevado, no basta con utilizar variables.</p>
+<p>Manejar los datos de un único pedido en una aplicación puede ser relativamente sencillo, pues un pedido está compuesto por una serie de datos y eso simplemente se traduce en varias variables. Pero, ¿qué ocurre cuando en una aplicación tenemos que gestionar varios pedidos a la vez? Lo mismo ocurre en otros casos. </p>
+<p>Para poder realizar ciertas aplicaciones se necesita poder manejar datos que van más allá de meros datos simples (números y letras). A veces, los datos que tiene que manejar la aplicación son datos compuestos, es decir, datos que están compuestos a su vez de varios datos más simples. Por ejemplo, un pedido está compuesto por varios datos, los datos podrían ser el cliente que hace el pedido, la dirección de entrega, la fecha requerida de entrega y los artículos del pedido.</p>
+<p>Los datos compuestos son un tipo de estructura de datos, y en realidad ya los has manejado. Las clases son un ejemplo de estructuras de datos que permiten almacenar datos compuestos, y el objeto en sí, la instancia de una clase, sería el dato compuesto. Pero, a veces, los datos tienen estructuras aún más complejas, y son necesarias soluciones adicionales.</p>
+<p>Esas soluciones consisten básicamente en la capacidad de poder manejar varios datos del mismo o diferente tipo de forma dinámica y flexible.</p>
+<h2 id="estructuras-de-almacenamiento">Estructuras de almacenamiento</h2>
+<p>¿Cómo almacenarías en memoria un listado de números del que tienes que extraer el valor máximo?</p>
+<p>Seguro que te resultaría fácil. Pero, ¿y si el listado de números no tiene un tamaño fijo, sino que puede variar en tamaño de forma dinámica? Entonces la cosa se complica.</p>
+<p>Un listado de números que aumenta o decrece en tamaño es una de las cosas que aprenderás a utilizar aquí, utilizando estructuras de datos.</p>
+<p>Pasaremos por alto las clases y los objetos, pues ya los has visto con anterioridad, pero debes saber que las clases en sí mismas son la evolución de un tipo de estructuras de datos conocidas como datos compuestos (también llamadas registros). Las clases, además de aportar la ventaja de agrupar datos relacionados entre sí en una misma estructura (característica aportada por los datos compuestos), permiten agregar métodos que manejen dichos datos, ofreciendo una herramienta de programación sin igual. Pero todo esto ya lo sabías.</p>
+<p>Las <strong>estructuras</strong> de almacenamiento, en general, se pueden clasificar de varias formas, atendiendo a: </p>
+<table>
+<thead>
+<tr>
+<th>si pueden almacenar datos de diferente tipo o no</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>con capacidad de almacenar varios datos <strong>del mismo tipo</strong>: varios números, varios caracteres, etc.</td>
+<td>los <strong>arrays</strong>, las <strong>listas</strong>, los <strong>conjuntos</strong>, las <strong>cadenas de caracteres</strong></td>
+</tr>
+<tr>
+<td>con capacidad de almacenar varios datos <strong>de distinto tipo:</strong> números, fechas, cadenas de caracteres, etc.</td>
+<td>las <strong>clases</strong></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>en función de si pueden o no cambiar de tamaño</strong> de forma dinámica</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cuyo <strong>tamaño</strong> se establece en <strong>el momento de la creación</strong> o definición y su tamaño no puede variar después.</td>
+<td>los <strong>arrays</strong>, las <strong>matrices</strong> (arrays multidimensionales)</td>
+</tr>
+<tr>
+<td>cuyo <strong>tamaño es variable</strong> (conocidas como estructuras dinámicas). Su tamaño crece o decrece según las necesidades de forma dinámica.</td>
+<td>las <strong>listas</strong>, <strong>árboles</strong>, <strong>conjuntos</strong> y el caso de algunos tipos de cadenas de caracteres.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>atendiendo a <strong>la forma en la que los datos se ordenan</strong> dentro de la estructura</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>que <strong>no se ordenan de por sí</strong>, y debe ser el programador el encargado de ordenar los datos si fuera necesario</td>
+<td>los <strong>arrays</strong></td>
+</tr>
+<tr>
+<td><strong>ordenadas</strong>: al incorporar un dato nuevo a todos los datos existentes, este se almacena en una posición concreta que irá en función del orden. El orden establecido en la estructura puede variar dependiendo de las necesidades del programa: alfabético, orden numérico de mayor a menor, momento de inserción, etc.</td>
+<td><strong>ArrayList</strong>, <strong>TreeSet</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Todavía no conoces mucho de las estructuras, y probablemente todo te suena raro y extraño. No te preocupes, poco a poco irás descubriéndolas. Verás que son sencillas de utilizar y muy cómodas.</p>
+<h2 id="clases-y-metodos-genericos">Clases y métodos genéricos</h2>
+<p>¿<em>Crees que el código es más legible al utilizar genéricos o que se complica</em>? La verdad es que al principio cuesta, pero después, el código se entiende mejor que si se empieza a insertar conversiones de tipo.</p>
+<p>Las clases genéricas son equivalentes a los métodos genéricos pero a nivel de clase, permiten definir un parámetro de tipo genérico que se podrá usar a lo largo de toda la clase, facilitando así crear clases genéricas que son capaces de trabajar con diferentes tipos de datos base. Para crear una clase genérica se especifican los parámetros de tipo al lado del nombre de la clase:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Util</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">invertir</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">       </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">          </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">          </span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">[</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">          </span><span class="n">array</span><span class="o">[</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">       </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>En el ejemplo anterior, la clase <code>Util</code> contiene el método <code>invertir</code> cuya función es invertir el orden de los elementos de cualquier <code>array</code>, sea del tipo que sea. Para usar esa clase genérica hay que crear un objeto o instancia de dicha clase especificando el tipo base entre los símbolos menor que ("<code>&lt;</code>") y mayor que ("<code>&gt;</code>"), justo detrás del nombre de la clase. Veamos un ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">};</span><span class="w"> </span><span class="c1">//el array clase wrapper</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">Util</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Util</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">u</span><span class="p">.</span><span class="na">invertir</span><span class="p">(</span><span class="n">numeros</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">numeros</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Como puedes observar, el uso de genéricos es sencillo, tanto a nivel de clase como a nivel de método.</p>
+<p>Simplemente, a la hora de crear una instancia de una clase genérica, hay que especificar el tipo, tanto en la definición (<code>Util&lt;Integer&gt; u</code>) como en la creación (<code>new Util&lt;Integer&gt;()</code>).</p>
+<p>Los genéricos los vamos a usar ampliamente a partir de ahora, aplicados a un montón de clases genéricas que tiene Java y que son de gran utilidad, por lo que es conveniente que aprendas bien a usar una clase genérica.</p>
+<div class="admonition warning">
+<p class="admonition-title">Parámetros de las clases genéricas</p>
+<p>Los parámetros de tipo de las clases genéricas solo pueden ser clases:<br />
+:no_entry: no pueden ser jamás tipos de datos primitivos como <code>int</code>, <code>short</code>, <code>double</code>, etc.<br />
+:white_check_mark: debemos usar sus clases envoltorio (<em>wrappers</em>) <code>Integer</code>, <code>Short</code>, <code>Double</code>, etc.</p>
 </div>
-<p>Una forma sencilla de plantearte si la relación que existe entre dos clases A y B es de composición podría ser mediante la expresión idiomática "<strong><em>tiene un</em></strong>": "<em>la clase A tiene uno o varios objetos de la clase B</em>", o visto de otro modo: "<em>Objetos de la clase B pueden formar parte de la clase A</em>". </p>
-<details class="example" open="open">
-<summary>Algunos ejemplos ...</summary>
+<p>Todavía hay un montón de cosas más sobre los métodos y las clases genéricas que deberías saber. A continuación se muestran algunos usos interesantes de los genéricos:</p>
 <ul>
-<li>Un coche tiene un motor y tiene cuatro ruedas.</li>
-<li>Una persona tiene un nombre, una fecha de nacimiento, una cuenta bancaria asociada para ingresar la nómina, etc.</li>
-<li>Un cocodrilo bajo investigación científica que tiene un número de dientes determinado, una edad, unas coordenadas de ubicación geográfica (medidas con GPS), etc.</li>
+<li>Dos o más parámetros de tipo (I):</li>
 </ul>
-</details>
-<details class="example" open="open">
-<summary>Recuperando algunos ejemplos de clases que ya hemos utilizado anteriormente ...</summary>
+<p>Si el método genérico necesita tener dos o más parámetros genéricos, podemos indicarlo separándolos por comas. </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Util</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">M</span><span class="o">&gt;</span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">M</span><span class="o">&gt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumaDeLongitudes</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="o">[]</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>​   En el ejemplo anterior se suman las longitudes de dos arrays que no tienen que ser del mismo tipo.</p>
 <ul>
-<li>Una clase <code>Rectangulo</code> podría contener en su interior dos objetos de la clase <code>Punto</code> para almacenar los vértices inferior izquierdo y superior derecho.</li>
-<li>Una clase <code>Empleado</code> podría contener en su interior un objeto de la clase <code>DNI</code> para almacenar su DNI/NIF, y otro objeto de la clase <code>CuentaBancaria</code> para guardar la cuenta en la que se realizan los ingresos en nómina.</li>
+<li>Dos o más parámetros de tipo (II):</li>
 </ul>
-</details>
-<div class="admonition note">
-<p class="admonition-title">¿Podría decirse que la relación que existe entre la clase <code>Ave</code> y la clase <code>Loro</code> es una relación de composición?</p>
-<p>No. Aunque claramente existe algún tipo de relación entre ambas, no parece que sea la de composición. No parece que se cumpla la expresión "tiene un": "Un loro tiene un ave". Se cumpliría más bien una expresión del tipo "es un": "Un loro es un ave". Algunos objetos que cumplirían la relación de composición podrían ser <code>Pico</code> o <code>Alas</code>, pues "un loro tiene un pico y dos alas", del mismo modo que "un ave tiene pico y dos alas". Este tipo de relación parece más de herencia (un loro es un tipo de ave).</p>
-</div>
-<h2 id="herencia">Herencia</h2>
-<p>El mecanismo que permite crear clases basándose en otras que ya existen es conocido como herencia. Como ya has visto en unidades anteriores, Java implementa la herencia mediante la utilización de la palabra reservada <code>extends</code>.</p>
-<p>El concepto de herencia es algo bastante simple y sin embargo muy potente: cuando se desea definir una nueva clase y ya existen clases que, de alguna manera, implementan parte de la funcionalidad que se necesita, es posible crear una nueva clase derivada de la que ya tienes. Al hacer esto se posibilita la reutilización de todos los atributos y métodos de la clase que se ha utilizado como base (clase madre o superclase), sin la necesidad de tener que escribirlos de nuevo.</p>
-<p>Una subclase hereda todos los miembros de su clase madre (atributos, métodos y clases internas). Los constructores no se heredan, aunque se pueden invocar desde la subclase.</p>
-<details class="example" open="open">
-<summary>Algunos ejemplos ...</summary>
+<p>Usar un método o una clase con dos o más parámetros genéricos es sencillo, a la hora de invocar al método o crear la clase, se indican los tipos base separados por coma.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Double</span><span class="o">[]</span><span class="w">  </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0d</span><span class="p">,</span><span class="mf">1d</span><span class="p">,</span><span class="mf">2d</span><span class="p">,</span><span class="mf">3d</span><span class="p">,</span><span class="mf">4d</span><span class="p">};</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Util</span><span class="p">.</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="n">Double</span><span class="o">&gt;</span><span class="n">sumaDeLongitudes</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <ul>
-<li>Un <em>coche</em> es un <em>vehículo</em> (heredará atributos como la <em>velocidad máxima</em> o métodos como <em>parar</em> y <em>arrancar</em>).</li>
-<li>Un <em>empleado</em> es una <em>persona</em> (heredará atributos como el <em>nombre</em> o la <em>fecha de nacimiento</em>).</li>
-<li>Un <em>rectángulo</em> es una <em>figura geométrica</em> en el plano (heredará métodos como el <em>cálculo de la superficie</em> o de su <em>perímetro</em>).</li>
-<li>Un cocodrilo es un reptil (heredará atributos como por ejemplo el <em>número de dientes</em>).</li>
+<li>Dos o más parámetros de tipo (III):</li>
 </ul>
-</details>
-<p>En este caso la expresión idiomática que puedes usar para plantearte si el tipo de relación entre dos clases A y B es de herencia podría ser "<strong><em>es un</em></strong>": "<em>la clase B es un tipo específico de la clase A</em>" (especialización), o visto de otro modo: "<em>la clase A es un caso general de la clase B</em>" (generalización).</p>
-<details class="example" open="open">
-<summary>Recuperando algunos ejemplos de clases que ya hemos utilizado anteriormente ...</summary>
+<p>Si una clase genérica necesita tener dos o más parámetros genéricos, podemos indicarlo separándolos por comas.
+   En el ejemplo anterior se muestra una clase que almacena una terna de elementos de diferente tipo base que están relacionados entre sí.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Terna</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="n">C</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Terna</span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">c</span><span class="p">){</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="nf">getA</span><span class="p">(){</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="nf">getB</span><span class="p">(){</span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="p">;}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="nf">getC</span><span class="p">(){</span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">;}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <ul>
-<li>Una ventana en una aplicación gráfica puede ser una clase que herede de <code>JFrame</code> (componente <code>Swing</code>: <code>javax.swing.JFrame</code>), de esta manera esa clase será un marco que dispondrá de todos los métodos y atributos de <code>JFrame</code> más aquellos que tú decidas incorporarle al rellenarlo de componentes gráficos.</li>
-<li>Una caja de diálogo puede ser un tipo de <code>JDialog</code> (otro componente <code>Swing</code>: <code>javax.swing.JDialog</code>).</li>
+<li>Métodos con tipos adicionales:</li>
 </ul>
-</details>
-<p>En Java, la clase <code>Object</code> (dentro del paquete <code>java.lang</code>) define e implementa el comportamiento común a todas las clases (incluidas aquellas que tú escribas). Como recordarás, ya se dijo que en Java cualquier clase deriva en última instancia de la clase <code>Object</code>.</p>
-<p>Todas las clases tienen una clase madre, que a su vez también posee una superclase, y así sucesivamente hasta llegar a la clase <code>Object</code> . De esta manera, se construye lo que habitualmente se conoce como una jerarquía de clases, que en el caso de Java tendría a la clase <code>Object</code> en la raíz.</p>
-<div class="admonition note">
-<p class="admonition-title">Anotación</p>
-<p>Cuando escribas una clase en Java, puedes hacer que herede de una determinada clase madre (mediante el uso de <code>extends</code>) o bien no indicar ninguna herencia. En tal caso, aunque no indiques explícitamente ningún tipo de herencia, el compilador asumirá entonces de manera implícita que tu clase hereda de la clase <code>Object</code>, que define e implementa el comportamiento común a todas las clases.</p>
-</div>
-<h2 id="herencia-o-composicion">¿Herencia o composición?</h2>
-<p>Cuando escribas tus propias clases, debes intentar tener claro en qué casos utilizar la composición y cuándo la herencia:</p>
+<p>Una clase genérica puede tener unos parámetros genéricos, pero si en uno de sus métodos necesitamos otros parámetros genéricos distintos, no hay problema, podemos combinarlos.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">class</span> <span class="nc">Util</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="n">Util</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">){</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">salida</span><span class="p">(</span><span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <ul>
-<li><strong>Composición</strong>: cuando una clase está formada por objetos de otras clases. En estos casos se incluyen objetos de esas clases, pero no necesariamente se comparten características con ellos (no se heredan características de esos objetos, sino que directamente se utilizarán sus atributos y sus métodos). Esos objetos incluidos no son más que atributos miembros de la clase que se está definiendo.</li>
-<li><strong>Herencia</strong>: cuando una clase cumple todas las características de otra. En estos casos la clase derivada es una especialización (o particularización, extensión o restricción) de la clase base. Desde otro punto de vista se diría que la clase base es una generalización de las clases derivadas.</li>
+<li>Inferencia (<em>deducción</em>) de tipos (I):</li>
 </ul>
-<details class="example" open="open">
-<summary>Ejemplo</summary>
-<p>Imagina que dispones de una clase <em>Punto</em> (ya la has utilizado en otras ocasiones) y decides definir una nueva clase llamada <em>Círculo</em>. Dado que un punto tiene como atributos sus coordenadas en plano (x1, y1), decides que es buena idea aprovechar esa información e incorporarla en la clase Circulo que estás escribiendo. Para ello utilizas la herencia, de manera que al derivar la clase <em>Círculo</em> de la clase <em>Punto</em>, tendrás disponibles los atributos x1 e y1. Ahora solo faltaría añadirle algunos atributos y métodos más como por ejemplo el radio del círculo, el cálculo de su área y su perímetro, etc. </p>
-<p>En principio parece que la idea pueda funcionar pero es posible que más adelante, si continúas construyendo una jerarquía de clases, observes que puedas llegar a conclusiones incongruentes al suponer que un círculo es una especialización de un punto (un tipo de punto). ¿Todas aquellas figuras que contengan uno o varios puntos deberían ser tipos de punto? ¿Y si tienes varios puntos? ¿Cómo accedes a ellos? ¿Un rectángulo también tiene sentido que herede de un punto? No parece muy buena idea.</p>
-<p>Parece que en este caso habría resultado mejor establecer una relación de <em>composición</em>. Analízalo detenidamente: ¿cuál de estas dos situaciones te suena mejor?</p>
-<ol>
-<li>"Un círculo es un punto (su centro)", y por tanto heredará las coordenadas x1 e y1 que tiene todo punto. Además tendrá otras características específicas como el radio o métodos como el cálculo de la longitud de su perímetro o de su área.</li>
-<li>"Un círculo tiene un punto (su centro)", junto con algunos atributos más como por ejemplo el radio. También tendrá métodos para el cálculo de su área o de la longitud de su perímetro.</li>
-</ol>
-<p>Parece que en este caso la composición refleja con mayor fidelidad la relación que existe entre ambas clases. Normalmente suele ser suficiente con plantearse las preguntas "¿B es un tipo de A?" o "¿B contiene elementos de tipo A?".</p>
-</details>
+<p>No siempre es necesario indicar los tipos a la hora de instanciar un método genérico. A partir de Java 7, es capaz de determinar los tipos a partir de los parámetros.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">Double</span><span class="o">[]</span><span class="w">  </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0d</span><span class="p">,</span><span class="mf">1d</span><span class="p">,</span><span class="mf">2d</span><span class="p">,</span><span class="mf">3d</span><span class="p">,</span><span class="mf">4d</span><span class="p">};</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">util</span><span class="p">.</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="n">Double</span><span class="o">&gt;</span><span class="n">sumaDeLongitudes</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">);</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">util</span><span class="p">.</span><span class="na">sumaDeLongitudes</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">);</span><span class="w">  </span><span class="c1">//no es necesario indicar el tipo para instanciar</span>
+</code></pre></div></td></tr></table></div>
+<p>Las dos expresiones de arriba serian válidas y funcionarían. Si no es capaz de inferirlos, nos dará un error a la hora de compilar.</p>
+<ul>
+<li>Inferencia de tipos (II):</li>
+</ul>
+<p>A partir de Java 7 es posible usar el operador diamante <code>&lt; &gt;</code> para simplificar la instanciación o creación de nuevos objetos a partir de clases genéricas. <strong>Cuidado, esto solo es posible a partir de Java 7</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">Integer</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">Double</span><span class="w">  </span><span class="n">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.3d</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">Float</span><span class="w">   </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.4f</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">Terna</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="n">Double</span><span class="p">,</span><span class="n">Float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Terna</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">f1</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Limitación de tipos:</li>
+</ul>
+<p>Se pueden limitar el conjunto de tipos que se pueden usar con una clase o método genérico usando el operador <code>extends</code>. El operador <code>extends</code> permite indicar que la clase que se pasa como parámetro genérico tiene que derivar de una clase específica.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Util</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Number</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="nf">sumar</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">t2</span><span class="p">){</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">();</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>En el ejemplo, no se admitirá ninguna clase que no derive de <code>Number</code>, pudiendo así realizar operaciones matemáticas.</p>
+<ul>
+<li>Paso de clases genéricas por parámetro:</li>
+</ul>
+<p>Cuando un método tiene como parámetro una clase genérica (como en el caso del método test del ejemplo), se puede especificar cuál debe ser el tipo base usado en la instancia de la clase genérica que se le pasa como argumento. Esto permite, entre otras cosas, crear diferentes versiones de un mismo método (sobrecarga), dependiendo del tipo base usado en la instancia de la clase genérica se ejecutará una versión u otra.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo</span><span class="w"> </span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">...</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="w"> </span><span class="p">(</span><span class="n">Ejemplo</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Paso de clases genéricas por parámetro. Wildcards (I):</li>
+</ul>
+<p>Cuando un método admite como parámetro una clase genérica en la que no importa el tipo de objeto sobre la que se ha creado, podemos usar el interrogante para indicar "<em>cualquier tipo</em>".</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo</span><span class="w"> </span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">}</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="p">...</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="w"> </span><span class="p">(</span><span class="n">Ejemplo</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">   </span><span class="p">...</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Paso de clases genéricas por parámetro. Wildcards (II):</li>
+</ul>
+<p>También es posible limitar el conjunto de tipos que una clase genérica puede usar, a través del operador <code>extends</code>. El ejemplo anterior es como decir "<em>cualquier tipo que derive de Number</em>".</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo</span><span class="w"> </span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">}</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">...</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="w"> </span><span class="p">(</span><span class="n">Ejemplo</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Number</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">   </span><span class="p">...</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 
