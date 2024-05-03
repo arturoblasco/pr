@@ -22,7 +22,16 @@ nav:
   - UD 4 Estructuras de datos Arrays y matrices. Recursividad: default.md
   - UD 5 Desarrollo de clases: default.md
   - UD 6 Lectura y escritura de información: default.md
-  - UD 7 Colecciones: default.md
+  - UD 7 Colecciones:
+      - 7.1 Introducción: ud07/ud0701.md
+      - 7.2 Colecciones: ud07/ud0702.md
+      - 7.3 Iteradores: ud07/ud0703.md
+      - 7.4 Comparadores: ud07/ud0704.md
+      - 7.5 Extras: ud07/ud0705.md
+      - 7.6 Funciones lambda: ud07/ud07806.md
+      - Actividades: ud07/ud07ac.md
+      - Píldoras informáticas: ud07/ud08pi.md
+      - Fuentes de información: ud07/ud08re.md
   - UD 8 Composición, Herencia y Polimorfismo:
       - 8.1 Relaciones entre clases: ud08/ud0801.md
       - 8.2 Composición: ud08/ud0802.md
