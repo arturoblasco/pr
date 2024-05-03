@@ -7,4 +7,4 @@
 - [Apuntes IOC Programació bàsica (Joan Arnedo Moreno)](https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m03_/web/fp_asx_m03_htmlindex/index.html){:target="_blank"}
 - [Apuntes IOC Programació Orientada a Objectes (Joan Arnedo Moreno)](https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m03_/web/fp_dam_m03_htmlindex/index.html){:target="_blank"}
 - [Apuntes Lionel](https://github.com/lionel-ict/ApuntesProgramacion){:target="_blank"}
-- https://www.cs.usfca.edu/~galles/visualization/Algorithms.html(https://www.cs.usfca.edu/~galles/visualization/Algorithms.html){:target="_blank"}
+- [https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html){:target="_blank"}
