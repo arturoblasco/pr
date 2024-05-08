@@ -87,7 +87,7 @@ En esta clase, se deben implementar los siguientes métodos:
 
 **D)** En la **clase `GestorVuelos`** se probará el comportamiento de las clases anteriores. En esta clase se debe implementar el método `main` en el que, por simplificar, se pide únicamente:
 
-- La creación de la compañía aérea `AirVostrum`. Se dispone de un fichero de texto "`AirVostrum.txt`", con la información de los vuelos que ofrece.
+- La creación de la compañía aérea `AirVostrum`. Se dispone de un fichero de texto **[`AirVostrum.txt`](./AirVostrum.txt){:target="_blank"}**, con la información de los vuelos que ofrece.
 - Reserva de un asiento de ventanilla en un vuelo de *València* a *Milán* por parte de *Manuel* *Soler Roca*. Para ello:
   - Mostraremos vuelos con origen *València* y destino *Milán*, que no estén completos.
   - Pediremos al usuario el identificador del vuelo en que quiere hacer la reserva.
@@ -173,7 +173,7 @@ Durante el proceso se pueden producir diversas incidencias, como por ejemplo, qu
 
 Se implementarán los siguientes métodos:
 
-- **`public Surtido() throws FileNotFoundException`**: crea el surtido con los datos de los productos que se encuentran en el fichero `productos.txt`. El fichero tiene el siguiente formato:
+- **`public Surtido() throws FileNotFoundException`**: crea el surtido con los datos de los productos que se encuentran en el fichero **[`productos.txt`](./productos.txt){:target="_blank"}**. El fichero tiene el siguiente formato:
 
   ```
   <nº de productos>
@@ -499,7 +499,8 @@ Escribir un programa que almacene en un fichero binario (`notas.dat`) las notas 
 ## Más ejercicios (Lionel)
 
 !!!note "Descargar Documentos.zip"
-	Para probar algunos de estos ejercicios debes utilizar el archivo `Documentos.zip`. Descárgalo del aula virtual y descomprímelo en la carpeta de cada proyecto que crees.
+	Para probar algunos de estos ejercicios debes utilizar el archivo **[`Documentos.zip`](./Documentos.zip){:target="_blank"}**. Descárgalo del aula virtual y descomprímelo en la carpeta de cada proyecto que crees.
+
 
 ### Ejercicio 31
 

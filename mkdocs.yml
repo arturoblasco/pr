@@ -20,13 +20,27 @@ nav:
   - UD 2 Utilización de objetos y clases: default.md
   - UD 3 Estructuras de control y excepciones: default.md
   - UD 4 Estructuras de datos Arrays y matrices. Recursividad: default.md
-  - UD 5 Desarrollo de clases: default.md
+  - UD 5 Desarrollo de clases:
+      - 5.1 Introducción: ud05/ud0501.md
+      - 5.2 Estructura y miembros de una clase: ud05/ud0502.md
+      - 5.3 Atributos: ud05/ud0503.md
+      - 5.4 Métodos: ud05/ud0504.md
+      - 5.5 Encapsulación, control de acceso y visibilidad: ud05/ud0505.md
+      - 5.6 Utilización de métodos y atributos de una clase: ud05/ud0506.md
+      - 5.7 Constructores: ud05/ud0507.md
+      - 5.8 Introducción a la herencia: ud05/ud0508.md
+      - 5.9 Empaquetado de clases: ud05/ud0509.md
+      - 5.10 Anexos: ud05/ud0510.md
+      - Actividades: ud05/ud05ac.md
+      - Píldoras informáticas: ud05/ud05pi.md
+      - Fuentes de información: ud05/ud05re.md
   - UD 6 Lectura y escritura de información:
       - 6.1 Streams (flujos): ud06/ud0601.md
       - 6.2 Ficheros: ud06/ud0602.md
       - 6.3 Serialización: ud06/ud0603.md
       - 6.4 Sockets: ud06/ud0604.md
       - 6.5 Manejo de ficheros y carpetas: ud06/ud0605.md
+      - 6.6 Comparativa CRUD: ud06/ud0606.md
       - Actividades: ud06/ud06ac.md
       - Píldoras informáticas: ud06/ud06pi.md
       - Fuentes de información: ud06/ud06re.md
