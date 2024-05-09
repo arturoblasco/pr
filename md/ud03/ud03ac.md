@@ -247,7 +247,7 @@ Dados dos números enteros, num1 y num2, realizar un programa que escriba uno de
 
     - "el producto de los dos números es positivo o nulo" o bien
     - "el producto de los dos números es negativo".
-
+    
     Resolverlo sin calcular el producto, sino teniendo en cuenta únicamente el signo de los números a multiplicar.
 <hr>
 
@@ -273,7 +273,7 @@ Una compañía editorial dispone de 2 tipos de publicaciones: libros y revistas.
     | De 6 a 10 unidades      | 10 % de descuento | 15 % de descuento |
     | De 11 a 20 unidades     | 15 % de descuento | 20 % de descuento |
     | A partir de 20 unidades | 20 % de descuento | 25 % de descuento |
-
+    
     Escribe un método `calcularCoste` que, recibiendo el tipo de publicación (`String`), que puede ser "libro" o "revista", el precio individual (`double`) y el número de unidades solicitado (`int`), devuelva el coste del pedido (aplicando el descuento correspondiente).
     Escribe un programa en el que el usuario indique cantidad y precio de revistas y cantidad y precio de libros que incluye un pedido, y muestre el coste del pedido
 <hr>
@@ -285,13 +285,13 @@ Se desea calcular el coste del trayecto realizado en taxi en función de los kil
     - Días laborables en horario nocturno: 0.84 €/km.
     - Sábados y domingos: 0.93 €/km.
     - Además, la tarifa mínima diurna es de 2.95€ y la mínima nocturna de 4€.
-
+    
     Escribir un programa que solicite al usuario:
-
+    
     - La hora (hora y minutos) en que se realizó el trayecto.
     - El día de la semana (se supone que el usuario introduce un valor entre 1 para lunes y 7 para domingo)
     - Los quilómetros recorridos.
-
+    
     Y muestre el coste del trayecto
 <hr>
 
@@ -305,7 +305,7 @@ Se desea implementar un programa que determine si dos datos `x` e `y` de entrada
     | x :  | a    | a    | a    | a    | a    | b    | b    | b    | b    | b    |
     | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
     | y :  | 1    | 3    | 5    | 7    | 9    | 2    | 4    | 6    | 8    | 10   |
-
+    
     Se pide implementar un programa que lea de teclado el valor de `x` y el valor de `y`, e indique por pantalla "VALIDOS" o "NO VALIDOS". Se pide hacerlo de forma que no se utilice ninguna estructura condicional (if, switch,...), es decir, se calculará una expresión booleana que determine si x e y son válidos. Se procurará que la expresión booleana propuesta sea breve y concisa.
 
 ## Ejercicios `bucles simples`
@@ -822,10 +822,11 @@ Se pide la traducción de dicho análisis por casos a Java mediante:
 - Una única instrucción, de la forma p = ..., que utilice el operador ternario.
 
 ## Trazas
-### Traza 01 
+
 Indica cual será la salida producida por los siguientes programas, teniendo en cuenta los datos de entrada:
 
-A) **Datos de entrada: 2, 5**
+### Traza 01 
+**Datos de entrada: 2, 5**
 
 ```java
 public static void main (String[] args){
@@ -946,7 +947,8 @@ public static int calcular (int x){
 }
 ```
 
-B) **Datos de entrada: 2, 5, 7**
+### Traza 02 
+**Datos de entrada: 2, 5, 7**
 
 ```java
 public static void main (String[] args){
@@ -967,7 +969,8 @@ public static void main (String[] args){
 }
 ```
 
-C) **Datos de entrada: 2, 5, 7, 9, -9, -7, -5, -2**
+### Traza 03 
+**Datos de entrada: 2, 5, 7, 9, -9, -7, -5, -2**
 
 ```java
 public static void main (String[] args){
@@ -997,7 +1000,8 @@ public static void main (String[] args){
 }
 ```
 
-D) **Datos de entrada: 5, 5, 7, -5, -4, 2**
+### Traza 04
+**Datos de entrada: 5, 5, 7, -5, -4, 2**
 
 ```java
 public static void main (String[] args){
@@ -1055,7 +1059,8 @@ public static void main (String[] args){
 }
 ```
 
-E) **Datos de entrada: 5, 5, 7, -5, -4, 2**
+### Traza 05
+**Datos de entrada: 5, 5, 7, -5, -4, 2**
 
 ```java
 public static void main(String[] args) {
@@ -1073,7 +1078,8 @@ public static void main(String[] args) {
 }
 ```
 
-F) **Datos de entrada: 2, 4, 7, 5, -6, -3, 6, 6**
+### Traza 06
+**Datos de entrada: 2, 4, 7, 5, -6, -3, 6, 6**
 
 ```java
 public static void main (String[] args){
@@ -1101,7 +1107,8 @@ public static void main (String[] args){
 }
 ```
 
-G) **Datos de entrada: 3, 3, 5, 5, -3, -7, 2, 2**
+### Traza 07
+**Datos de entrada: 3, 3, 5, 5, -3, -7, 2, 2**
 
 ```java
 public static void main (String[] args){
@@ -1118,103 +1125,139 @@ public static void main (String[] args){
 }
 ```
 
-​		56.9)**Datos de entrada: 3, 2, 1, 4**
+### Traza 08
+**Datos de entrada: 3, 2, 1, 4**
 
-1. ```java
-   public static void main (String[] args){
-       int a=0,b;
-       b = tec.nextInt();
-       for(int i=1;i<=b,i++) a=(a+i)*i;
-       System.out.println(a);
-   }
-   ```
+```java
+public static void main (String[] args){
+    int a=0,b;
+    b = tec.nextInt();
+    for(int i=1;i<=b,i++) a=(a+i)*i;
+    System.out.println(a);
+}
+```
 
-2. **Datos de entrada:**
+### Traza 09
+**Datos de entrada:**
 
-   ```java
-   public static void main (String[] args){
-       int x,y;
-       for (x=3;x>=1;x--){
-           for(y=1;y<=x;y++) System.out.println(x);
-           System.out.println();
-       }
-   }
-   ```
+```java
+public static void main (String[] args){
+    int x,y;
+    for (x=3;x>=1;x--){
+        for(y=1;y<=x;y++) System.out.println(x);
+            System.out.println();
+    }
+}
+```
 
-3. **Datos de entrada:**
+### Traza 10
+**Datos de entrada:**
 
-   ```java
-   public static void main (String[] args){
-       int x,y;
-       x=0;
+```java
+public static void main (String[] args){
+    int x,y;
+    x=0;
+    y=0;
+    for (int i=1;i<=2;i++) {
+        for (int j=1;j<=3;j++) x=(x+i)*j;
+			y+=x;
+    }
+    System.out.println("%d %d %n",x,y);
+}
+```
+
+### Traza 11
+**Datos de entrada: 4, 5, 6, 7, 8, 9**
+
+```java
+public static void main (String[] args){
+   int x,y;
+   do x = tec.nextInt();
+   
+   while (x<=5);
        y=0;
-       for (int i=1;i<=2;i++) {
-           for (int j=1;j<=3;j++) x=(x+i)*j;
-           	y+=x;
-       }
-       System.out.println("%d %d %n",x,y);
-   }
-   ```
-
-4. **Datos de entrada: 4, 5, 6, 7, 8, 9**
-
-   ```java
-   public static void main (String[] args){
-       int x,y;
-       do x = tec.nextInt();
-       while (x<=5);
-       y=0;
-       for (int i=12;i>=x;i-=2) y+=(x*i);
+       
+   for (int i=12;i>=x;i-=2) y+=(x*i);
        System.out.println(y);
-   }
-   ```
+}
+```
 
 ## Excepciones
 
-57. **Ejercicio 57**. (*01Edades*) Escribe un programa que solicite al usuario la edad de cinco personas y calcule la media. La edad  de una persona debe ser un valor entero comprendido en el rango [0,110]. Realiza tres versiones:
+### Ejercicio 57 `_57Edades` 
 
-          1. Si se introduce mal la edad de una persona se vuelve a pedir la edad de esa persona.
-          2. Si se introduce mal la edad de una persona, el programa muestra un mensaje de error, no calcula la media y termina.
-          3. Si se introduce mal la edad de una persona, el programa vuelve a solicitar la edad de las cinco personas (comienza el proceso).
+Escribe un programa que solicite al usuario la edad de cinco personas y calcule la media. La edad  de una persona debe ser un valor entero comprendido en el rango [0,110]. Realiza tres versiones:
 
-58. **Ejercicio 58**. Escribe programas que se indican a continuación. Ejecuta cada programa haciendo que la entrada del usuario provoque una excepción. Anota el nombre de la excepción que se produce y cuál es la jerarquía de objetos de la que desciende:
+    1. Si se introduce mal la edad de una persona se vuelve a pedir la edad de esa persona.
+    2. Si se introduce mal la edad de una persona, el programa muestra un mensaje de error, no calcula la media y termina.
+    3. Si se introduce mal la edad de una persona, el programa vuelve a solicitar la edad de las cinco personas (comienza el proceso).
 
-    1. Programa que solicita dos números enteros (a y b) y muestra el resultado de su división (a/b).
+<hr>
 
-       1. El usuario introduce 0 como valor de b.
-       2. El usuario introduce letras cuando el programa espera números enteros.
-       3. El usuario introduce un número real cuando el programa espera un entero.
+### Ejercicio 58 `Division`
 
-    2. Programa que solicita al usuario su nombre y una posición dentro del nombre. Se muestra al usuario la letra del nombre cuya posición se ha indicado. Por ejemplo:
+Ejecuta este programa haciendo que la entrada del usuario provoque una excepción. Anota el nombre de la excepción que se produce y cuál es la jerarquía de objetos de la que desciende.
 
-    ```sh
-    Introduce nombre: Javi
-    Introduce posición: 2
-    En la posición 2 de Javi está la letra a
-    ```
+Programa que solicita dos números enteros (a y b) y muestra el resultado de su división (a/b).
 
-    3. El usuario introduce una posición inválida.
+1. El usuario introduce 0 como valor de b.
+2. El usuario introduce letras cuando el programa espera números enteros.
+3. El usuario introduce un número real cuando el programa espera un entero.
 
-59. **Ejercicio 59**. Repite el ejercicio anterior utilizando métodos y llamándolos desde el método `main`:
+<hr>
 
-    1. Un método `dividir` que devuelva el cociente de dos números que recibe como parámetro
-    1. Un método `letraNombre` que, dados un String `nombre` y un entero `pos`, devuelva el carácter del nombre que ocupa la posición indicada.
+### Ejercicio 59 `Posicion`
 
+Ejecuta este programa haciendo que la entrada del usuario provoque una excepción. Anota el nombre de la excepción que se produce y cuál es la jerarquía de objetos de la que desciende.
 
-​		Ejecuta los programas provocando errores (como en el ejercicio anterior) y observa los mensajes que se generan.
+Programa que solicita al usuario su nombre y una posición dentro del nombre. Se muestra al usuario la letra del nombre cuya posición se ha indicado. Por ejemplo:
 
-60. **Ejercicio 60**. Escribir un programa que divida dos números que se reciben en main en `args[0]` y `args[1]`. 
+```sh
+Introduce nombre: Javi
+Introduce posición: 2
+En la posición 2 de Javi está la letra a
+```
 
-​		Ejemplo:
+El usuario introduce una posición inválida.
+
+<hr>
+
+### Ejercicio 60 `Dividir2`
+
+Repite el ejercicio anterior utilizando métodos y llamándolos desde el método `main`:
+
+Un método `dividir` que devuelva el cociente de dos números que recibe como parámetro.
+
+Ejecuta los programas provocando errores (como en el ejercicio anterior) y observa los mensajes que se generan.
+
+<hr>
+
+### Ejercicio 61 `Posicion2`
+
+Un método `letraNombre` que, dados un String `nombre` y un entero `pos`, devuelva el carácter del nombre que ocupa la posición indicada.
+
+Ejecuta los programas provocando errores (como en el ejercicio anterior) y observa los mensajes que se generan.
+
+<hr>
+
+### Ejercicio 62 `Division3`
+
+Escribir un programa que divida dos números que se reciben en `main` en `args[0]` y `args[1]`. 
+
+Ejemplo:
 
 ```sh
 $ java dividir 10 5
 10/5 es igual a 2
 ```
 
-​		Donde 10 y 5 son `args[0]` y `args[1]` respectivamente, es decir los parámetros con que llamamos al programa dividir.
+Donde 10 y 5 son `args[0]` y `args[1]` respectivamente, es decir los parámetros con que llamamos al programa dividir.
 
-61. **Ejercicio 61**. Justifica por qué se produce error en el siguiente fragmento de código
+<hr>
+
+### Ejercicio 64 `Pregunta64`
+
+Justifica por qué se produce error en el siguiente fragmento de código
 
 ```java
 try {
@@ -1238,7 +1281,11 @@ try {
 }
 ```
 
-62. **Ejercicio 62**. Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
+<hr>
+
+### Ejercicio 65 `Pregunta65`
+
+Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
 
 ```java
 public class Uno {
@@ -1273,117 +1320,134 @@ public class Uno {
 }
 ```
 
-63. **Ejercicio 63**. Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
+<hr>
+
+### Ejercicio 66 `Pregunta66`
+
+Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
 
 ```java
 public class Dos {
-      private static int metodo()  {
-            int valor=0;
-            try   {
-                  valor = valor+1;
-                  valor = valor + Integer.parseInt("W");
-                  valor = valor + 1;
-                  System.out.println("Valor al final del try: " + valor);
-            } catch(NumberFormatException e) {
-                  valor = valor + Integer.parseInt("42");
-                  System.out.println("Valor al final del catch: " + valor) ;
-            } finally {
-                  valor = valor + 1;
-                  System.out.println("Valor al final de finally: " + valor) ;
-            }
+	private static int metodo()  {
+		int valor=0;
+		try {
+            valor = valor+1;
+            valor = valor + Integer.parseInt("W");
             valor = valor + 1;
-            System.out.println ("Valor antes del return: " + valor) ;
-            return valor ;
-      }
+            System.out.println("Valor al final del try: " + valor);
+        } catch(NumberFormatException e) {
+            valor = valor + Integer.parseInt("42");
+            System.out.println("Valor al final del catch: " + valor) ;
+        } finally {
+            valor = valor + 1;
+            System.out.println("Valor al final de finally: " + valor) ;
+        }
+        valor = valor + 1;
+        System.out.println ("Valor antes del return: " + valor) ;
+        return valor ;
+    }
       
-      public static void main (String[] args)  {
-            try  {
-                System .out.println(metodo());
-            }  catch (Exception e) {
-                  System.err.println("Excepcion en metodo() ");
-                  e.printStackTrace();
-            }
-      }
+    public static void main (String[] args)  {
+        try {
+            System .out.println(metodo());
+        } catch (Exception e) {
+            System.err.println("Excepcion en metodo() ");
+            e.printStackTrace();
+        }
+   }
 }
 ```
 
-64. **Ejercicio 64**. Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
+<hr>
+
+### Ejercicio 67 `Pregunta67`
+
+Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
 
 ```java
 public class Tres {
-      private static int metodo()  {
-            int valor = 0;
-            try {
-                  valor = valor +1;
-                  valor = valor + Integer.parseInt("W");
-                  valor = valor + 1;
-                  System.out.println("Valor al final del try : " + valor);
-            } catch (NumberFormatException e) {
-                  valor = valor + Integer.parseInt("W");
-                  System.out.println("Valor al final del catch : " + valor);
-            } finally {
-                  valor = valor + 1;
-                  System.out.println("Valor al final de finally: " + valor);
-            }
-            valor = valor + 1;
-            System.out.println ("Valor antes del return: " + valor);
-            return valor ;
-      }
+	private static int metodo()  {
+		int valor = 0;
+		try {
+             valor = valor +1;
+             valor = valor + Integer.parseInt("W");
+             valor = valor + 1;
+             System.out.println("Valor al final del try : " + valor);
+        } catch (NumberFormatException e) {
+             valor = valor + Integer.parseInt("W");
+             System.out.println("Valor al final del catch : " + valor);
+        } finally {
+             valor = valor + 1;
+             System.out.println("Valor al final de finally: " + valor);
+        }
+        valor = valor + 1;
+        System.out.println ("Valor antes del return: " + valor);
+        return valor ;
+	}
 
-      public static void main (String[ ] args)
-      {
-            try {
-                  System.out.println(metodo ());
-            } catch (Exception e) {
-                  System.err.println("Excepcion en metodo()") ;
-                  e.printStackTrace();
-            }
-      }
+	public static void main (String[ ] args)
+	{
+		try {
+			System.out.println(metodo ());
+		} catch (Exception e) {
+			System.err.println("Excepcion en metodo()") ;
+			e.printStackTrace();
+		}
+   }
 }
 ```
 
-65. **Ejercicio 65**. Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
+<hr>
+
+### Ejercicio 68 `Pregunta68`
+
+Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:
 
 ```java
 import java.io.*;
 
 public class Cuatro
 {
-      private static int metodo()  {
-            int valor = 0;
-            try {
-                  valor = valor+1;
-                  valor = valor + Integer.parseInt("W");
-                  valor = valor + 1;
-                  System.out.println("Valor al final del try : " + valor) ;
-                  throw new IOException();
-            } catch (IOException e)  {
-                  valor = valor + Integer.parseInt("42");
-                  System.out.println("Valor al final del catch : " + valor);
-            } finally {
-                  valor = valor + 1;
-                  System.out.println("Valor al final de finally: " + valor);
-            }
+	private static int metodo()  {
+		int valor = 0;
+        try {
+            valor = valor+1;
+            valor = valor + Integer.parseInt("W");
             valor = valor + 1;
-            System.out.println ("Valor antes del return: " + valor) ;
-            return valor ;
-      }
+            System.out.println("Valor al final del try : " + valor) ;
+            throw new IOException();
+        } catch (IOException e)  {
+            valor = valor + Integer.parseInt("42");
+            System.out.println("Valor al final del catch : " + valor);
+        } finally {
+            valor = valor + 1;
+            System.out.println("Valor al final de finally: " + valor);
+        }
+        valor = valor + 1;
+        System.out.println ("Valor antes del return: " + valor) ;
+        return valor ;
+   }
 
-      public static void main(String[] args)  {
-            try {
-                  System.out.println(metodo());
-            } catch (Exception e) {
-                  System.err.println("Excepcion en metodo()");
-                  e.printStackTrace();
-            }
-      }
+   public static void main(String[] args)  {
+        try {
+            System.out.println(metodo());
+        } catch (Exception e) {
+            System.err.println("Excepcion en metodo()");
+            e.printStackTrace();
+        }
+   }
 }
 ```
 
-66. **Ejercicio 66**. Indica qué se mostrará por pantalla cuando se ejecute esta clase:
-    1. Si se ejecuta con java Cinco casa
-    1. Si se ejecuta con java Cinco 0
-    1. Si se ejecuta con java Cinco 7
+<hr>
+
+### Ejercicio 69 `Pregunta69`
+
+Indica qué se mostrará por pantalla cuando se ejecute esta clase:
+
+1. Si se ejecuta con java Cinco casa
+1. Si se ejecuta con java Cinco 0
+1. Si se ejecuta con java Cinco 7
 
 
 ```java
@@ -1406,7 +1470,11 @@ public class Cinco {
 }
 ```
 
-67. **Ejercicio 67**. Indica cuál será la salida del siguiente programa y por qué
+<hr>
+
+### Ejercicio 70 `Pregunta70`
+
+Indica cuál será la salida del siguiente programa y por qué
 
 ```java
 public class Seis {
@@ -1438,7 +1506,10 @@ public class Seis {
 }
 ```
 
-68. **Ejercicio 68**. Indica cuál será la salida del siguiente programa y por qué
+<hr>
+### Ejercicio 71 `Pregunta71`
+
+Indica cuál será la salida del siguiente programa y por qué
 
 ```java
 public class Siete {
@@ -1463,7 +1534,10 @@ public class Siete {
 
 ## Actividades
 
-1. **Actividad 1**. Transforma el siguiente bucle for en un bucle while:
+
+### Actividad 01
+
+Transforma el siguiente bucle for en un bucle while:
 
 ```java
 for (i=5; i<15; i++) { 
@@ -1471,10 +1545,23 @@ for (i=5; i<15; i++) {
 }
 ```
 
-2. **Actividad 2**. Programa que muestre por pantalla los 5 primeros números pares. 
-3. **Actividad 3**. Programa que muestre por pantalla del número 200 al 300.
+<hr>
 
-4. **Actividad 4**. Programa que muestre en pantalla la tabla de multiplicar del 1 al 10 con el formato:
+### Actividad 02
+
+Programa que muestre por pantalla los 5 primeros números pares. 
+
+<hr>
+
+### Actividad 03
+
+Programa que muestre por pantalla del número 200 al 300.
+
+<hr>
+
+### Actividad 04
+
+Programa que muestre en pantalla la tabla de multiplicar del 1 al 10 con el formato:
 
 ```sh
 ...
@@ -1490,19 +1577,84 @@ Tabla del 3
 ...
 ```
 
-5. **Actividad 5**. Programa que muestre los números del 1 al 100 sin mostrar los múltiplos de 5.
-6. **Actividad 6**. Leer un número y mostrar su cuadrado, repetir el proceso hasta que se introduzca un número negativo.
-7. **Actividad 7**. Leer un número e indicar si es positivo o negativo. El proceso se repetirá hasta que se introduzca un 0.
-8. **Actividad 8**. Leer números hasta que se introduzca un 0. Para cada uno indicar si es par o impar.
-9. **Actividad 9**. Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.
-10. **Actividad 10**. Realizar un juego para adivinar un número `X`. Para ello pedir un número `N`, y luego ir pidiendo números indicando "mayor" o "menor" según sea mayor o menor con respecto a `X`. El proceso termina cuando el usuario acierta.
-11. **Actividad 11**. Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos.
-12. **Actividad 12**. Pedir números hasta que se introduzca uno negativo, y calcular la media.
-13. **Actividad 13**. Pedir un número `N`, y mostrar todos los números del 1 al `N`.
-14. **Actividad 14**. Escribir todos los números del 100 al 0 de 7 en 7. 
-15. **Actividad 15**. Pedir 15 números y escribir la suma total.
-16. **Actividad 16**. Diseñar un programa que muestre el producto de los 10 primeros números impares.
-17. **Actividad 17**. Pedir un número y calcular su factorial (el factorial se representa con el simbolo  `!`).
+<hr>
+
+### Actividad 05
+
+
+Programa que muestre los números del 1 al 100 sin mostrar los múltiplos de 5.
+
+<hr>
+
+### Actividad 06
+
+Leer un número y mostrar su cuadrado, repetir el proceso hasta que se introduzca un número negativo.
+
+<hr>
+
+### Actividad 07
+
+Leer un número e indicar si es positivo o negativo. El proceso se repetirá hasta que se introduzca un 0.
+
+<hr>
+
+### Actividad 08
+
+Leer números hasta que se introduzca un 0. Para cada uno indicar si es par o impar.
+
+<hr>
+
+### Actividad 09
+
+Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.
+
+<hr>
+
+### Actividad 10
+
+Realizar un juego para adivinar un número `X`. Para ello pedir un número `N`, y luego ir pidiendo números indiando "mayor" o "menor" según sea mayor o menor con respecto a `X`. El proceso termina cuando el usuario acierta.
+
+<hr>
+
+### Actividad 11
+
+Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos.
+
+<hr>
+
+### Actividad 12
+
+Pedir números hasta que se introduzca uno negativo, y calcular la media.
+
+<hr>
+
+### Actividad 13
+
+Pedir un número `N`, y mostrar todos los números del 1 al `N`.
+
+<hr>
+
+### Actividad 14
+
+Escribir todos los números del 100 al 0 de 7 en 7. 
+
+<hr>
+
+### Actividad 15
+
+Pedir 15 números y escribir la suma total.
+
+<hr>
+
+### Actividad 16
+
+Diseñar un programa que muestre el producto de los 10 primeros números impares.
+
+<hr>
+
+### Actividad 17
+
+Pedir un número y calcular su factorial (el factorial se representa con el simbolo  `!`).
 
 ​		Aquí tienes el factorial de los 5 primeros números enteros:
 
@@ -1514,32 +1666,122 @@ Tabla del 3
 5! = 5 * 4 * 3 * 2 * 1 = 120
 ```
 
-18. **Actividad 18**. Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.
-19. **Actividad 1**9. Pedir 10 sueldos. Mostrar su suma y cuantos hay mayores de 1000€.
-20. **Actividad 20**. Dadas las edades y alturas de 5 alumnos, mostrar la edad y la estatura media, la cantidad de alumnos mayores de 18 años, y la cantidad de alumnos que miden más de 1.75.
-21. **Actividad 21**. Pide un número (que debe estar entre 0 y 10) y mostrar la tabla de multiplicar de dicho número.
-22. **Actividad 22**. Dadas 6 notas, escribir la cantidad de alumnos aprobados y suspensos. 
-23. **Actividad 23**. Pedir un número `N`, introducir `N` sueldos, y mostrar el sueldo máximo. 
-24. **Actividad 24**. Pedir 10 números, y mostrar al final si se ha introducido alguno negativo.
-25. **Actividad 25**. Pedir 5 calificaciones de alumnos y decir al final si hay algún suspenso.
-26. **Actividad 26**. Pedir 5 números e indicar si alguno es múltiplo de 3.
-27. **Actividad 27**. Realiza un programa que pida una hora por teclado y que muestre luego buenos días, buenas tardes o buenas noches según la hora. Se utilizarán los tramos de 6 a 12, de 13 a 20 y de 21 a 5. respectivamente. Sólo se tienen en cuenta las horas, los minutos no se deben introducir por teclado.
-28. **Actividad 28**. Escribe un programa en que dado un número del 1 a 7 escriba el correspondiente nombre del día de la semana.
-29. **Actividad 29**. Escribe un programa que calcule el salario semanal de un trabajador teniendo en cuenta que las horas ordinarias (40 primeras horas de trabajo) se pagan a 12 euros la hora. A partir de la hora 41, se pagan a 16 euros la hora.
-30. **Actividad 30**. Realiza un programa que calcule la media de tres notas.
-31. **Actividad 31**. Amplía el programa anterior para que diga la nota del boletín (insuficiente, suficiente, bien, notable o sobresaliente).
-32. **Actividad 32**. Escribe un programa que nos diga el horóscopo a partir del día y el mes de nacimiento.
-33. **Actividad 33**. Realiza un minicuestionario con 4 preguntas tipo test sobre las asignaturas que se imparten en el curso. Cada pregunta acertada sumará un punto. El programa mostrará al final la calificación obtenida.
-34. **Actividad 34**. Calcula la nota de un trimestre de la asignatura Programación. El programa pedirá las dos notas que ha sacado el alumno en los dos primeros controles. Si la media de los dos controles da un número mayor o igual a 5, el alumno está aprobado y se mostrará la media. En caso de que la media sea un número menor que 5, el alumno habrá tenido que hacer el examen de recuperación que se califica como apto o no apto, por tanto se debe preguntar al usuario ¿Cuál ha sido el resultado de la recuperación? (apto/no apto). Si el resultado de la recuperación es apto, la nota será un 5; en caso contrario, la nota será 1.
+<hr>
 
-​		Ejemplo 1:
+### Actividad 18
+
+Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.
+
+<hr>
+
+### Actividad 19
+
+Pedir 10 sueldos. Mostrar su suma y cuantos hay mayores de 1000€.
+
+<hr>
+
+### Actividad 20
+
+
+
+Dadas las edades y alturas de 5 alumnos, mostrar la edad y la estatura media, la cantidad de alumnos mayores de 18 años, y la cantidad de alumnos que miden más de 1.75.
+
+<hr>
+
+### Actividad 21
+
+
+
+Pide un número (que debe estar entre 0 y 10) y mostrar la tabla de multiplicar de dicho número.
+
+<hr>
+
+### Actividad 22
+
+
+
+Dadas 6 notas, escribir la cantidad de alumnos aprobados y suspensos. 
+
+<hr>
+
+### Actividad 23
+
+Pedir un número `N`, introducir `N` sueldos, y mostrar el sueldo máximo. 
+
+<hr>
+
+### Actividad 24
+
+Pedir 10 números, y mostrar al final si se ha introducido alguno negativo.
+
+<hr>
+
+### Actividad 25
+
+Pedir 5 calificaciones de alumnos y decir al final si hay algún suspenso.
+
+<hr>
+
+### Actividad 26
+
+Pedir 5 números e indicar si alguno es múltiplo de 3.
+
+<hr>
+
+### Actividad 27
+
+Realiza un programa que pida una hora por teclado y que muestre luego buenos días, buenas tardes o buenas noches según la hora. Se utilizarán los tramos de 6 a 12, de 13 a 20 y de 21 a 5. respectivamente. Sólo se tienen en cuenta las horas, los minutos no se deben introducir por teclado.
+
+<hr>
+
+### Actividad 28
+
+Escribe un programa en que dado un número del 1 a 7 escriba el correspondiente nombre del día de la semana.
+
+<hr>
+
+### Actividad 29
+
+Escribe un programa que calcule el salario semanal de un trabajador teniendo en cuenta que las horas ordinarias (40 primeras horas de trabajo) se pagan a 12 euros la hora. A partir de la hora 41, se pagan a 16 euros la hora.
+
+<hr>
+
+### Actividad 30
+
+Realiza un programa que calcule la media de tres notas.
+
+<hr>
+
+### Actividad 31
+
+Amplía el programa anterior para que diga la nota del boletín (insuficiente, suficiente, bien, notable o sobresaliente).
+
+<hr>
+
+### Actividad 32
+
+Escribe un programa que nos diga el horóscopo a partir del día y el mes de nacimiento.
+
+<hr>
+
+### Actividad 33
+
+Realiza un minicuestionario con 4 preguntas tipo test sobre las asignaturas que se imparten en el curso. Cada pregunta acertada sumará un punto. El programa mostrará al final la calificación obtenida.
+
+<hr>
+
+### Actividad 34
+
+Calcula la nota de un trimestre de la asignatura Programación. El programa pedirá las dos notas que ha sacado el alumno en los dos primeros controles. Si la media de los dos controles da un número mayor o igual a 5, el alumno está aprobado y se mostrará la media. En caso de que la media sea un número menor que 5, el alumno habrá tenido que hacer el examen de recuperación que se califica como apto o no apto, por tanto se debe preguntar al usuario ¿Cuál ha sido el resultado de la recuperación? (apto/no apto). Si el resultado de la recuperación es apto, la nota será un 5; en caso contrario, la nota será 1.
+
+Ejemplo 1:
 
 ```sh
 Nota del primer control: 7 Nota del segundo control: 10
 Tu nota de Programación es 8.5
 ```
 
-​		Ejemplo 2:
+Ejemplo 2:
 
 ```sh
 Nota del primer control: 6 Nota del segundo control: 3
@@ -1547,7 +1789,7 @@ Nota del primer control: 6 Nota del segundo control: 3
 Tu nota de Programación es 5
 ```
 
-​		Ejemplo 3:
+Ejemplo 3:
 
 ```sh
 Nota del primer control: 6 Nota del segundo control: 3
@@ -1555,23 +1797,97 @@ Nota del primer control: 6 Nota del segundo control: 3
 Tu nota de Programación es 1
 ```
 
-	35. **Actividad 35**. Muestra los números múltiplos de 5 entre el 0 y el 100 utilizando un bucle `for`. 
-	35. **Actividad 36**. Muestra los números múltiplos de 5 entre el 0 y el 100 utilizando un bucle `while`.
-	35. **Actividad 37**. Muestra los números múltiplos de 5 entre el 0 y el 100 utilizando un bucle `do while`.
-	35. **Actividad 38**. Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás utilizando un bucle `for`.
-	35. **Actividad 39**. Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás utilizando un bucle `while`
-	35. **Actividad 40**. Muestra los números del 320 al 160, contando de 20 en 20 utilizando un bucle `do-while`.
-	35. **Actividad 41**. Realiza el control de acceso a una caja fuerte. La combinación será un número de 4 cifras. El programa nos pedirá la combinación para abrirla. Si no acertamos, se nos mostrará el mensaje " Lo siento, esa no es la combinación" y si acertamos se nos dirá "La caja fuerte se ha abierto satisfactoriamente" . Tendremos cuatro oportunidades para abrir la caja fuerte.
-	35. **Actividad 42**. Escribe un programa que muestre en tres columnas, el cuadrado y el cubo de los 5 primeros números enteros a partir de uno que se introduce por teclado.
-	35. **Actividad 43**. Escribe un programa que pida una base y un exponente (entero positivo) y que calcule la potencia. (sin usar `Math`)
-	35. **Actividad 44**. Realiza un programa que sume los 100 números siguientes a un número entero y positivo introducido por teclado. Se debe comprobar que el dato introducido es correcto (que es un número positivo).
-	35. **Actividad 45**. Escribe un programa que obtenga los números enteros comprendidos entre dos números introducidos por teclado y validados como distintos, el programa debe empezar por el menor de los enteros introducidos e ir incrementando de 7 en 7.
-	35. **Actividad 46**. Realiza un programa que vaya pidiendo números hasta que se introduzca un numero negativo y nos diga cuantos números se han introducido, la media de los impares y el mayor de los pares. El número negativo sólo se utiliza para indicar el final de la introducción de datos pero no se incluye en el cómputo.
-	35. **Actividad 47**. Escribe un programa que permita ir introduciendo una serie indeterminada de números mientras su suma no supere el valor 10000. Cuando esto último ocurra, se debe mostrar el total acumulado, el contador de los números introducidos y la media.
-	35. **Actividad 48**. Escribe un programa que muestre, cuente y sume los múltiplos de 3 que hay entre 1 y un número leído por teclado.
-	35. **Actividad 49**. Escribe un programa que calcule el precio final de un producto según su base imponible (precio antes de impuestos), el tipo de IVA aplicado (general, reducido o superreducido) y el código promocional. Los tipos de IVA general, reducido y superreducido son del 21%, 10% y 4% respectivamente. Los códigos promocionales pueden ser nopro, mitad, meno5 o 5porc que significan respectivamente que no se aplica promoción, el precio se reduce a la mitad, se descuentan 5 euros o se descuenta el 5%.
+<hr>
 
-​		Ejemplo:
+### Actividad 35
+
+Muestra los números múltiplos de 5 entre el 0 y el 100 utilizando un bucle `for`. 
+
+<hr>
+
+### Actividad 36
+
+Muestra los números múltiplos de 5 entre el 0 y el 100 utilizando un bucle `while`.
+
+<hr>
+
+### Actividad 37
+
+Muestra los números múltiplos de 5 entre el 0 y el 100 utilizando un bucle `do while`.
+
+<hr>
+
+### Actividad 38
+
+Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás utilizando un bucle `for`.
+
+<hr>
+
+### Actividad 39
+
+Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás utilizando un bucle `while`
+
+<hr>
+
+### Actividad 40
+
+Muestra los números del 320 al 160, contando de 20 en 20 utilizando un bucle `do-while`.
+
+<hr>
+
+### Actividad 41
+
+Realiza el control de acceso a una caja fuerte. La combinación será un número de 4 cifras. El programa nos pedirá la combinación para abrirla. Si no acertamos, se nos mostrará el mensaje " Lo siento, esa no es la combinación" y si acertamos se nos dirá "La caja fuerte se ha abierto satisfactoriamente" . Tendremos cuatro oportunidades para abrir la caja fuerte.
+
+<hr>
+
+### Actividad 42
+
+Escribe un programa que muestre en tres columnas, el cuadrado y el cubo de los 5 primeros números enteros a partir de uno que se introduce por teclado.
+
+<hr>
+
+### Actividad 43
+
+Escribe un programa que pida una base y un exponente (entero positivo) y que calcule la potencia. (sin usar `Math`)
+
+<hr>
+
+### Actividad 44
+
+Realiza un programa que sume los 100 números siguientes a un número entero y positivo introducido por teclado. Se debe comprobar que el dato introducido es correcto (que es un número positivo).
+
+<hr>
+
+### Actividad 45
+
+Escribe un programa que obtenga los números enteros comprendidos entre dos números introducidos por teclado y validados como distintos, el programa debe empezar por el menor de los enteros introducidos e ir incrementando de 7 en 7.
+
+<hr>
+
+### Actividad 46
+
+Realiza un programa que vaya pidiendo números hasta que se introduzca un numero negativo y nos diga cuantos números se han introducido, la media de los impares y el mayor de los pares. El número negativo sólo se utiliza para indicar el final de la introducción de datos pero no se incluye en el cómputo.
+
+<hr>
+
+### Actividad 47
+
+Escribe un programa que permita ir introduciendo una serie indeterminada de números mientras su suma no supere el valor 10000. Cuando esto último ocurra, se debe mostrar el total acumulado, el contador de los números introducidos y la media.
+
+<hr>
+
+### Actividad 48
+
+Escribe un programa que muestre, cuente y sume los múltiplos de 3 que hay entre 1 y un número leído por teclado.
+
+<hr>
+
+### Actividad 49
+
+Escribe un programa que calcule el precio final de un producto según su base imponible (precio antes de impuestos), el tipo de IVA aplicado (general, reducido o superreducido) y el código promocional. Los tipos de IVA general, reducido y superreducido son del 21%, 10% y 4% respectivamente. Los códigos promocionales pueden ser nopro, mitad, meno5 o 5porc que significan respectivamente que no se aplica promoción, el precio se reduce a la mitad, se descuentan 5 euros o se descuenta el 5%.
+
+Ejemplo:
 
 ```sh
 Introduzca la base imponible: 25
@@ -1584,9 +1900,13 @@ Precio con IVA 13.75
 TOTAL 13.75
 ```
 
-50. **Actividad 50**. Pedir un año e indicar si es bisiesto, teniendo en cuenta que son bisiestos todos los años divisibles por 4, excluyendo los que sean divisibles por 100, pero no los que sean divisibles por 400.
+<hr>
 
-​		En pseudocódigo se calcularía así:
+### Actividad 50
+
+Pedir un año e indicar si es bisiesto, teniendo en cuenta que son bisiestos todos los años divisibles por 4, excluyendo los que sean divisibles por 100, pero no los que sean divisibles por 400.
+
+En pseudocódigo se calcularía así:
 
 ```pseudocode
 SI (año divisible por 4) Y (año no divisible por 100) O (año divisible por 400)))ENTONCES
@@ -1596,16 +1916,44 @@ SINO
 FIN_SI
 ```
 
-51. **Actividad 51**. Pedir un número de 20 a 99 y mostrarlo escrito. Por ejemplo, para 56 mostrar: cincuenta y seis.
-52. **Actividad 52**. Introducir datos de un vehículo (marca, modelo y precio). Devolver el precio con IVA del vehículo. Controlar con Excepciones que el precio del vehículo introducido son números y que el cálculo de Precio Final con IVA no devuelva error.
-53. **Actividad 53**. Introducir códigos de alumnos, nombre y nota hasta que se introduzca un código de alumno negativo. Devolver la nota media de los alumnos la clase. Controlar con Excepciones que las notas introducidas son números y que si no se introducen alumnos el cálculo de la media no devuelva error.
-54. **Actividad 54**. Crear una función o método llamado `impFinal`, que calcule el importe final de una compra. Los parámetros que se le pasarán a la función son el `precio` del producto, las `cantidad de unidades` compradas, el `porcentaje de iva` y el `porcentaje de descuento`. El método principal debe pedir por teclado el precio del producto, las unidades adquiridas, el porcentaje de IVA y el porcentaje de descuento y devolver el `Importe final` de la Factura.
-55. **Actividad 55**. Crear una función que calcule la capacidad de un disco. La capacidad se calcula multiplicando los Cabezales o pistas del disco por los Cilindros por los Sectores por Tamaño de Sector. El método principal debe pedir por teclado los Cabezales o Pistas del disco, los Cilindros, Sectores y Tamaño de Sector y devolver la Capacidad del disco en Gigabytes.
+<hr>
 
-​		Por ejemplo: Calcular la capacidad de un disco teniendo en cuenta que dispone de 10 Cabezales o Pistas, 65535 Cilindros, 1024 Sectores/pista y 				un Tamaño de 512 bytes/sector:
+### Actividad 51
+
+Pedir un número de 20 a 99 y mostrarlo escrito. Por ejemplo, para 56 mostrar: cincuenta y seis.
+
+<hr>
+
+### Actividad 52
+
+Introducir datos de un vehículo (marca, modelo y precio). Devolver el precio con IVA del vehículo. Controlar con Excepciones que el precio del vehículo introducido son números y que el cálculo de Precio Final con IVA no devuelva error.
+
+<hr>
+
+### Actividad 53
+
+Introducir códigos de alumnos, nombre y nota hasta que se introduzca un código de alumno negativo. Devolver la nota media de los alumnos la clase. Controlar con Excepciones que las notas introducidas son números y que si no se introducen alumnos el cálculo de la media no devuelva error.
+
+<hr>
+
+### Actividad 54
+
+Crear una función o método llamado `impFinal`, que calcule el importe final de una compra. Los parámetros que se le pasarán a la función son el `precio` del producto, las `cantidad de unidades` compradas, el `porcentaje de iva` y el `porcentaje de descuento`. El método principal debe pedir por teclado el precio del producto, las unidades adquiridas, el porcentaje de IVA y el porcentaje de descuento y devolver el `Importe final` de la Factura.
+
+<hr>
+
+### Actividad 55
+
+Crear una función que calcule la capacidad de un disco. La capacidad se calcula multiplicando los Cabezales o pistas del disco por los Cilindros por los Sectores por Tamaño de Sector. El método principal debe pedir por teclado los Cabezales o Pistas del disco, los Cilindros, Sectores y Tamaño de Sector y devolver la Capacidad del disco en Gigabytes.
+
+Por ejemplo: Calcular la capacidad de un disco teniendo en cuenta que dispone de 10 Cabezales o Pistas, 65535 Cilindros, 1024 Sectores/pista y 				un Tamaño de 512 bytes/sector:
 
 ​		Capacidad del disco = 10 * 65535 * 1024 * 512 = 343597383680 bytes
 
 ​		343597383680 bytes / 1024 / 1024 / 1024 = 320 Gbytes
 
-56. **Actividad 56**. Función que devuelva el mayor de tres números. El método principal debe pedir por teclado los tres números introducidos por el teclado. La función debe recibir como parámetros los tres números y devolver el mayor.
+<hr>
+
+### Actividad 56
+
+Función que devuelva el mayor de tres números. El método principal debe pedir por teclado los tres números introducidos por el teclado. La función debe recibir como parámetros los tres números y devolver el mayor.
