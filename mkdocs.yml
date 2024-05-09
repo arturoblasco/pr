@@ -18,8 +18,27 @@ nav:
   - UD 0 Conocimientos previos: default.md
   - UD 1 Elemenos de un programa informático: default.md
   - UD 2 Utilización de objetos y clases: default.md
-  - UD 3 Estructuras de control y excepciones: default.md
-  - UD 4 Estructuras de datos Arrays y matrices. Recursividad: default.md
+  - UD 3 Estructuras de control y excepciones:
+      - 3.1 Introducción: ud03/ud0301.md
+      - 3.2 Sentencias y bloques: ud03/ud0302.md
+      - 3.3 Sentencias de selección: ud03/ud0303.md
+      - 3.4 Estructuras de repetición: ud03/ud0304.md
+      - 3.5 Estructuras de salto: ud03/ud0305.md
+      - 3.6 Escepciones: ud03/ud0306.md
+      - Actividades: ud03/ud03ac.md
+      - Píldoras informáticas: ud03/ud03pi.md
+      - Fuentes de información: ud03/ud03re.md
+  - UD 4 Estructuras de datos Arrays y matrices. Recursividad:
+      - 4.1 Introducción: ud04/ud0401.md
+      - 4.2 Arrays: ud04/ud0402.md
+      - 4.3 Problemas de recorrido, búsqueda y ordenación: ud04/ud0403.md
+      - 4.4 Arrays bidimensionales: ud04/ud0404.md
+      - 4.5 Arrays multidimensionales: ud04/ud0405.md
+      - 4.6 Recursividad: ud04/ud0406.md
+      - 4.7 Anexos: ud04/ud0407.md
+      - Actividades: ud04/ud04ac.md
+      - Píldoras informáticas: ud04/ud04pi.md
+      - Fuentes de información: ud04/ud04re.md
   - UD 5 Desarrollo de clases:
       - 5.1 Introducción: ud05/ud0501.md
       - 5.2 Estructura y miembros de una clase: ud05/ud0502.md
