@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#variables" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -369,6 +374,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.4 Variables, identificadores, convenciones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -378,6 +394,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificadores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convenciones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2823,6 +2883,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identificadores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convenciones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2838,7 +2933,76 @@
 
   <h1>1.4 Variables, identificadores, convenciones</h1>
 
-
+<h2 id="variables">Variables</h2>
+<p>Una <strong>variable</strong> es una zona en la memoria del computador con un valor que puede ser almacenado para ser usado más tarde en el programa. Las variables vienen determinadas por:</p>
+<ul>
+<li>un <strong>nombre</strong>, que permite al programa acceder al valor que contiene en memoria. Debe ser un identificador válido.</li>
+<li>
+<p>un <strong>tipo de dato</strong>, que especifica qué clase de información guarda la variable en esa zona de memoria</p>
+</li>
+<li>
+<p>un <strong>rango de valores</strong> que puede admitir dicha variable.</p>
+</li>
+</ul>
+<p>Las variables declaradas dentro de un bloque <code>{ }</code> son accesibles solo dentro de ese bloque. Una variable local no puede ser declarada como <code>static</code>. Una variable no puede declararse fuera de la clase.</p>
+<p>Visibilidad, ámbito o scope de una variable es la parte de código del programa donde la variable es accesible y utilizable. Las variables de un bloque son visibles y existen dentro de dicho bloque. Las funciones miembro de clase podrán acceder a todas las variables miembro de dicha clase pero no a las variables locales de otra función miembro.</p>
+<p>Al nombre que le damos a la variable se le llama identificador. Los identificadores permiten nombrar los elementos que se están manejando en un programa. Vamos a ver con más detalle ciertos aspectos sobre los identificadores que debemos tener en cuenta.</p>
+<h2 id="identificadores">Identificadores</h2>
+<p>Un <strong>identificador</strong> en Java es una secuencia ilimitada sin espacios de letras y dígitos Unicode, de forma que el primer símbolo de la secuencia puede ser una letra, un símbolo de subrayado (<code>_</code>) o el símbolo dólar (<code>$</code>). Por ejemplo, son válidos los siguientes identificadores:</p>
+<ul>
+<li>x5</li>
+<li>ατη</li>
+<li>NUM_MAX</li>
+<li>numCuenta</li>
+</ul>
+<p>Unicode es un código de caracteres o sistema de codificación, un alfabeto que recoge los caracteres de prácticamente todos los idiomas importantes del mundo. Además, el código Unicode es “compatible” con el código ASCII, ya que para los caracteres del código ASCII, Unicode asigna como código los mismos 8 bits, a los que les añade a la izquierda otros 8 bits todos a cero. La conversión de un carácter ASCII a Unicode es inmediata.</p>
+<h2 id="convenciones">Convenciones</h2>
+<p><strong>Normas de estilo para nombrar variables</strong></p>
+<p>A la hora de nombrar un identificador existen una serie de normas de estilo de uso generalizado que, no siendo obligatorias, se usan en la mayor parte del código Java. Estas reglas para la nomenclatura de variables son las siguientes:</p>
+<ul>
+<li>Java distingue las mayúsculas de las minúsculas. Por ejemplo, <code>Alumno</code> y <code>alumno</code> son variables diferentes.</li>
+<li>No se suelen utilizar identificadores que comiencen con <code>$</code> o <code>_</code>, además el símbolo del dólar, por convenio, no se utiliza nunca.</li>
+<li>No se puede utilizar el valor booleano (<code>true</code> o <code>false</code>) ni el valor nulo (<code>null</code>).</li>
+<li>Los identificadores deben ser lo más descriptivos posibles. Es mejor usar palabras completas en vez de abreviaturas crípticas. Así nuestro código será más fácil de leer y comprender. En muchos casos también hará que nuestro código se auto-documente. Por ejemplo, si tenemos que darle el nombre a una variable que almacena los datos de un cliente sería recomendable que la misma se llamara algo así como <code>FicheroClientes</code> o <code>ManejadorCliente</code>, y no algo poco descriptivo como <code>Cl33</code>.</li>
+</ul>
+<p>Además de estas restricciones, en la siguiente tabla puedes ver otras convenciones, que no siendo obligatorias, sí son recomendables a la hora de crear identificadores en Java.</p>
+<table>
+<thead>
+<tr>
+<th>Identificador</th>
+<th>Convención</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nombre de variable</td>
+<td>Comienza por letra minúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. A esto se le llama <em>lowerCamelCase</em>.</td>
+<td>numAlumnos, suma</td>
+</tr>
+<tr>
+<td>nombre de constante</td>
+<td>En letras mayúsculas, separando las palabras con el guión bajo, por convenio el guión bajo no se utiliza en ningún otro sitio</td>
+<td>TAM_MAX, PI</td>
+</tr>
+<tr>
+<td>nombre de una clase</td>
+<td>Comienza por letra mayúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. A esto se le llama <em>upperCamelCase</em>.</td>
+<td>String, MiTipo</td>
+</tr>
+<tr>
+<td>nombre de función</td>
+<td>Comienza por letra minúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. A esto se le llama <em>lowerCamelCase</em>.</td>
+<td>modificaValor, obtieneValor</td>
+</tr>
+</tbody>
+</table>
+<p>Puedes consultar estas y otras convenciones sobre código Java en este <a href="https://www.um.es/docencia/vjimenez/ficheros/practicas/ConvencionesCodigoJava.pdf" target="_blank">enlace</a>.</p>
+<p><strong>Palabras reservadas</strong>
+Las palabras reservadas, a veces también llamadas palabras clave o keywords, son secuencias de caracteres formadas con letras ASCII cuyo uso se reserva al lenguaje y, por tanto, no pueden utilizarse para crear identificadores.</p>
+<p>Las palabras reservadas en Java son:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">abstract</span><span class="p">,</span><span class="w"> </span><span class="k">continue</span><span class="p">,</span><span class="w"> </span><span class="k">for</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="p">,</span><span class="w"> </span><span class="k">switch</span><span class="p">,</span><span class="w"> </span><span class="k">assert</span><span class="p">,</span><span class="w"> </span><span class="k">default</span><span class="p">,</span><span class="w"> </span><span class="k">goto</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="p">,</span><span class="w"> </span><span class="kd">synchronized</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="p">,</span><span class="w"> </span><span class="k">do</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="p">,</span><span class="w"> </span><span class="kd">private</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="k">break</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kd">implements</span><span class="p">,</span><span class="w"> </span><span class="kd">protected</span><span class="p">,</span><span class="w"> </span><span class="k">throw</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="k">else</span><span class="p">,</span><span class="w"> </span><span class="n">import</span><span class="p">,</span><span class="w"> </span><span class="kd">public</span><span class="p">,</span><span class="w"> </span><span class="kd">throws</span><span class="p">,</span><span class="w"> </span><span class="k">case</span><span class="p">,</span><span class="w"> </span><span class="kd">enum</span><span class="p">,</span><span class="w"> </span><span class="k">instanceof</span><span class="p">,</span><span class="w"> </span><span class="k">return</span><span class="p">,</span><span class="w"> </span><span class="kd">transient</span><span class="p">,</span><span class="w"> </span><span class="k">catch</span><span class="p">,</span><span class="w"> </span><span class="kd">extends</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">short</span><span class="p">,</span><span class="w"> </span><span class="k">try</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="kd">final</span><span class="p">,</span><span class="w"> </span><span class="kd">interface</span><span class="err">,</span> <span class="nc">static</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="p">,</span><span class="w"> </span><span class="kd">class</span><span class="err">,</span> <span class="nc">finally</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="p">,</span><span class="w"> </span><span class="kd">strictfp</span><span class="p">,</span><span class="w"> </span><span class="kd">volatile</span><span class="p">,</span><span class="w"> </span><span class="kd">const</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kd">native</span><span class="p">,</span><span class="w"> </span><span class="kd">super</span><span class="p">,</span><span class="w"> </span><span class="k">while</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -2914,11 +3078,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#generar-numeros-aleatorios" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -537,6 +542,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.12 Herramientas útiles para empezar
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -546,6 +562,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generar-numeros-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generar números aleatorios.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducir-un-texto-desde-el-teclado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducir un texto desde el teclado.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-y-salida-por-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada y Salida por consola
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-y-salida-con-joptionpane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada y Salida con JOptionPane
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2823,6 +2892,50 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generar-numeros-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generar números aleatorios.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducir-un-texto-desde-el-teclado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducir un texto desde el teclado.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-y-salida-por-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada y Salida por consola
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-y-salida-con-joptionpane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada y Salida con JOptionPane
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2838,7 +2951,247 @@
 
   <h1>1.12 Herramientas útiles para empezar</h1>
 
-
+<h2 id="generar-numeros-aleatorios">Generar números aleatorios.</h2>
+<p>Podemos generar números aleatorios entre 0 y 1 utilizando el método random de la clase <code>Math</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">entero</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número es: &quot;</span><span class="o">+</span><span class="n">numero</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número es: &quot;</span><span class="o">+</span><span class="n">numero</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número sin decimales es: &quot;</span><span class="o">+</span><span class="n">entero</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="introducir-un-texto-desde-el-teclado">Introducir un texto desde el teclado.</h2>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p>Este método de leer texto y números desde consola no nos servirá cuando comencemos a usar IDE's.</p>
+</div>
+<p>Podemos introducir texto desde el teclado utilizando <code>System.console().readLine();</code> </p>
+<p>Devuelve la cadena de caracteres introducida.</p>
+<p>Para otro tipo de dato hay que usar métodos de conversión:</p>
+<ul>
+<li><strong>Integer.parseInt</strong>(System.console().readLine())</li>
+<li><strong>Double.parseDouble</strong>(System.console().readLine())</li>
+<li>…</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo 1: Introducción de texto</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce un texto: &quot;</span><span class="p">);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">().</span><span class="na">readLine</span><span class="p">();</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El texto introducido es: &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">texto</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo 2: Introducción de un número entero</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">texto2</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">entero2</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce un número: &quot;</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">texto2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">().</span><span class="na">readLine</span><span class="p">();</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">entero2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">texto2</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número introducido es: &quot;</span><span class="o">+</span><span class="n">entero2</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo 2: Introducción de un número decimal</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">String</span><span class="w"> </span><span class="n">texto3</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">doble3</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce un número decimal: &quot;</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">texto3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">console</span><span class="p">().</span><span class="na">readLine</span><span class="p">();</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">doble3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">texto3</span><span class="p">);</span><span class="w"> </span><span class="c1">// convertimos texto a doble</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número decimal introducido es: &quot;</span><span class="o">+</span><span class="n">doble3</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="entrada-y-salida-por-consola">Entrada y Salida por consola</h2>
+<p>Podemos utilizar una variable de tipo Scanner para leer desde consola.</p>
+<p>(1) Para ello deberemos, primero, importar la librería <code>util</code>:
+    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>(2) Después inicializar una variable (en el ejemplo <code>sc</code>) de tipo Scanner:
+    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p>(3) Para guardar en las variables correspondientes (entero, float, double, string, char...):
+    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextFloat</span><span class="p">();</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c1">// o </span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="admonition example">
+<p class="admonition-title">En el siguiente ejemplo podemos observar mejor lo expuesto:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// importar libreria</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mostrarinformacion</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">entero</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">decimal</span><span class="p">;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">cadena</span><span class="p">;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="p">;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="c1">// guardar cadena y convertir a valores y tipos correspondientes:</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Muestra un número entero: &quot;</span><span class="p">);</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">        </span><span class="n">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Muestra un número flotante: &quot;</span><span class="p">);</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="n">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextFloat</span><span class="p">();</span><span class="w"> </span><span class="c1">//recordar poner coma para el decimal</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Muestra un texto o cadena: &quot;</span><span class="p">);</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">        </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">();</span><span class="w"> </span><span class="c1">//solo mostrará la primera palabra</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">        </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">//solo mostrará la primera palabra       </span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Muestra una sola letra: &quot;</span><span class="p">);</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">//solo mostrará la primera letra</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="c1">// mostrar en ventana los valores:</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El número entero guardado es: &quot;</span><span class="o">+</span><span class="n">entero</span><span class="p">);</span><span class="w">     </span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">        </span><span class="c1">//el resto de variables se muestran igual que la línia anterior</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="entrada-y-salida-con-joptionpane">Entrada y Salida con JOptionPane</h2>
+<p>Otra forma de introducir y mostrar información, más elegante que por consola, es utilizar ventanas.</p>
+<p>(1) Para ello deberemos, primero, importar la librería <code>util</code>:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>(2) Para guardar la información que introduciremos desde la ventana emergente:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">variable_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;texto en descripción de ventana:&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title"> </p>
+<p>Debemos tener en cuenta que la información que se <em>recoge</em> en dicha ventana es SIEMPRE una cadena; por lo que, si queremos almacenar su valor con otro tipo de datos distinto, deberemos hacerlo explícitamente mediante el tipo de datos en cuestión y método <em>parse</em>.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inserta un número entero:&quot;</span><span class="p">));</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">decimal</span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inserta un número decimal:&quot;</span><span class="p">));</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="n">letra</span><span class="o">=</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inserta una letra:&quot;</span><span class="p">).</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>(3) Para mostrar por ventana emergente alguna variable:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;la cadena es: &quot;</span><span class="o">+</span><span class="n">cadena</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">En el siguiente ejemplo podemos observar mejor lo expuesto:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">// importar libreria</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.JOptionPane</span><span class="p">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mostrarinformacion</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">cadena</span><span class="p">;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">entero</span><span class="p">;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="p">;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">decimal</span><span class="p">;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="c1">// guardar cadena y convertir a valores y tipos correspondientes:</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;texto en descripción de ventana:&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="n">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inserta un número entero:&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// convertir la cadena a otro tipo; como entero</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">    </span><span class="n">decimal</span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inserta un número decimal:&quot;</span><span class="p">));</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">    </span><span class="n">letra</span><span class="o">=</span><span class="w"> </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showInputDialog</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inserta una letra:&quot;</span><span class="p">).</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">    </span><span class="c1">// mostrar en ventana los valores:</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">    </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;la cadena es: &quot;</span><span class="o">+</span><span class="n">cadena</span><span class="p">);</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">    </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;el número entero es: &quot;</span><span class="o">+</span><span class="n">entero</span><span class="p">);</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">    </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;la número decimal es: &quot;</span><span class="o">+</span><span class="n">decimal</span><span class="p">);</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">    </span><span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;la letra es: &quot;</span><span class="o">+</span><span class="n">letra</span><span class="p">);</span><span class="w">       </span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
 
 
 
@@ -2914,11 +3267,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

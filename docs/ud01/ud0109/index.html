@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#operadores-aritmeticos" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -474,6 +479,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.9 Operadores y expresiones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -483,6 +499,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Aritméticos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-relacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Relacionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Lógicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-unarios-o-unitarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Unarios o Unitarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-asignacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de Asignación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-desplazamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de desplazamiento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-condicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operador condicional ?:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prevalencia-de-operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevalencia de operadores
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2823,6 +2928,86 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-aritmeticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Aritméticos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-relacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Relacionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Lógicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-unarios-o-unitarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Unarios o Unitarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-asignacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de Asignación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-desplazamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores de desplazamiento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operador-condicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operador condicional ?:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prevalencia-de-operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevalencia de operadores
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2838,7 +3023,542 @@
 
   <h1>1.9 Operadores y expresiones</h1>
 
-
+<h2 id="operadores-aritmeticos">Operadores Aritméticos</h2>
+<p>Los <strong>Operadores Aritméticos</strong> permiten realizar operaciones matemáticas:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Operación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>A + B</td>
+<td>Suma</td>
+</tr>
+<tr>
+<td>-</td>
+<td>A - B</td>
+<td>Resta</td>
+</tr>
+<tr>
+<td>*</td>
+<td>A * B</td>
+<td>Multiplicación</td>
+</tr>
+<tr>
+<td>/</td>
+<td>A / B</td>
+<td>División</td>
+</tr>
+<tr>
+<td>%</td>
+<td>A % B</td>
+<td>Módulo o resto de una división entera</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">suma</span><span class="p">,</span><span class="w"> </span><span class="n">resta</span><span class="p">,</span><span class="w"> </span><span class="n">producto</span><span class="p">,</span><span class="w"> </span><span class="n">division</span><span class="p">,</span><span class="w"> </span><span class="n">resto</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="mi">8</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">      </span><span class="c1">// 13</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">     </span><span class="c1">// 3</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 40</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.6</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">     </span><span class="c1">// 3</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="operadores-relacionales">Operadores Relacionales</h2>
+<p>Los <strong>Operadores Relacionales</strong> permiten evaluar (la respuesta es un booleano: sí o no) la igualdad de los operandos:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Operación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>A &lt; B</td>
+<td>A menor que B</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>A &gt; B</td>
+<td>A mayor que B</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>A &lt;= B</td>
+<td>A menor o igual que B</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>A &gt;= B</td>
+<td>A mayor o igual que B</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>A != B</td>
+<td>A distinto de B</td>
+</tr>
+<tr>
+<td>==</td>
+<td>A == B</td>
+<td>A igual a B</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Por ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">valor2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">compara</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w">  </span><span class="c1">// true</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w">  </span><span class="c1">// false</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="operadores-logicos">Operadores Lógicos</h2>
+<p>Los <strong>Operadores Lógicos</strong> permiten realizar operaciones lógicas:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Manejo</th>
+<th>Operación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;   o   &amp;</td>
+<td>A &amp;&amp; B<br />ó  A &amp; B</td>
+<td>A AND B.<br />El resultado será true si ambos operadores son true y false en caso contrario.</td>
+</tr>
+<tr>
+<td>||   o   |</td>
+<td>A || B<br />ó  A | B</td>
+<td>A OR B.<br />El resultado será false si ambos operandos son false y true en caso contrario</td>
+</tr>
+<tr>
+<td>!</td>
+<td>!A</td>
+<td>NOT A.<br />Si el operando es true el resultado es false y si el operando es false el resultado es true.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>A ^ B</td>
+<td>A XOR B.<br />El resultado será true si un operando es true y el otro false, y false en caso contrario.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">sueldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1400</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">logica</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">edad</span><span class="o">&lt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//true</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">  </span><span class="c1">//false</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//true</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&lt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">  </span><span class="c1">//false</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">edad</span><span class="o">&lt;</span><span class="mi">40</span><span class="p">);</span><span class="w">                </span><span class="c1">//false</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//true</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&lt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//false</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Para representar resultados de operadores Lógicos también se pueden usar tablas de verdad a las que conviene acostumbrarse:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A &amp;&amp; B</th>
+<th>A || B</th>
+<th>!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>false</td>
+<td>false</td>
+<td><em>false</em></td>
+<td><em>false</em></td>
+<td><em>true</em></td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td><em>false</em></td>
+<td><em>true</em></td>
+<td><em>false</em></td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td><em>false</em></td>
+<td><em>true</em></td>
+<td><em>true</em></td>
+</tr>
+<tr>
+<td>true</td>
+<td>true</td>
+<td><em>true</em></td>
+<td><em>true</em></td>
+<td><em>false</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="operadores-unarios-o-unitarios">Operadores Unarios o Unitarios</h2>
+<p>Los <strong>Operadores Unarios</strong> o <strong>Unitarios</strong> permiten realizar incrementos y decrementos:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Operación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>++</td>
+<td>A++    o    ++A</td>
+<td>Incremento de A</td>
+</tr>
+<tr>
+<td>--</td>
+<td>A--    o    --A</td>
+<td>Decremento de A</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">m</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 6</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">n</span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>En el caso de utilizarlo como prefijo el valor de asignación será el valor del operando más el incremento de la unidad. Y si lo utilizamos como sufijo se asignará el valor del operador y luego se incrementará la unidad sobre el operando.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="c1">// A vale 2 y B vale 2</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// A vale 3 y B vale 2</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="operadores-de-asignacion">Operadores de Asignación</h2>
+<p>Los <strong>Operadores de Asignación</strong> permiten asignar valores:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Operación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>A = B</td>
+<td>Asignación (<em>como ya hemos visto</em>)</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>A += B</td>
+<td>Suma y asignación. La operación  A+=B  equivale a  A=A+B</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>A -= B</td>
+<td>Resta y asignación. La operación  A-=B  equivale a  A=A-B</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>A *= B</td>
+<td>Multiplicación y asignación. La operación  A*=B  equivale a A=A*B</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>A %= B</td>
+<td>Módulo y asignación. La operación  A%=B  equivale a  A=A%B</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>A /= B</td>
+<td>División y asignación. La operación  A/=B  equivale a  A=A/B</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">dato1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">dato2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">dato</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">dato</span><span class="o">=</span><span class="n">dato1</span><span class="p">;</span><span class="w">   </span><span class="c1">// dato vale 10</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">dato2</span><span class="o">+=</span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 12</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">dato2</span><span class="o">-=</span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 2</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">dato2</span><span class="o">*=</span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 20</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">dato2</span><span class="o">/=</span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// datos2 vale 2</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">dato1</span><span class="o">%=</span><span class="n">dato2</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato1 vale0</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Prioridad de operadores</p>
+<p>Los operadores tienen diferente Prioridad por lo que es interesante utilizar paréntesis para controlar las operaciones sin necesidad de depender de la prioridad de los operadores.</p>
+</div>
+<h2 id="operadores-de-desplazamiento">Operadores de desplazamiento</h2>
+<p>Los <strong>Operadores de desplazamiento</strong> permiten desplazar los bits de los valores:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Utilización</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;&lt;</td>
+<td>A &lt;&lt; B</td>
+<td>Desplazamiento de A a la izquierda en B posiciones. Multiplica por 2 el número B de veces.</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>A &gt;&gt; B</td>
+<td>Desplazamiento de A a la derecha en B posiciones, tiene en cuenta el signo. Divide por 2 el número B de veces.</td>
+</tr>
+<tr>
+<td>&gt;&gt;&gt;</td>
+<td>A &gt;&gt;&gt; B</td>
+<td>Desplazamiento de A a la derecha en B posiciones, no tiene en cuenta el signo. (simplemente agrega ceros por la izquierda)</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>A &amp; B</td>
+<td>Operación AND a nivel de bits</td>
+</tr>
+<tr>
+<td>|</td>
+<td>A | B</td>
+<td>Operación OR a nivel de bits</td>
+</tr>
+<tr>
+<td>^</td>
+<td>A ^ B</td>
+<td>Operación XOR a nivel de bits</td>
+</tr>
+<tr>
+<td>~</td>
+<td>~A</td>
+<td>Complemento de A a nivel de bits</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1">// 00000000000000000000000000100001 : j = 33</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1">// 00000000000000000000000010000100 : k = 33 &lt;&lt; 2 ; k = 132</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">132</span><span class="p">;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">// 00000000000000000000000010000100 : o = 132    </span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1">// 00000000000000000000000000100001 : p = 132 &gt;&gt; 2 ; p = 33</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="c1">// 11111111111111111111111111111111 : x = -1</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="c1">// 00111111111111111111111111111111 : y = x &gt;&gt;&gt; 2; y = 1073741823</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">132</span><span class="p">;</span><span class="w">   </span><span class="c1">// q: 00000000000000000000000010000100</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">144</span><span class="p">;</span><span class="w">   </span><span class="c1">// r: 00000000000000000000000010010000</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// s: 00000000000000000000000010000000 </span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="c1">// El resultado da 128 </span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// t: 00000000000000000000000010010100 </span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="c1">// El resultado da 148</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// u: 00000000000000000000000000010100 </span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="c1">// El resultado da 20 </span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">q</span><span class="p">;</span><span class="w">    </span><span class="c1">// v: 11111111111111111111111101111011 </span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="c1">// El resultado da -133 </span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="operador-condicional">Operador condicional <code>?:</code></h2>
+<p>El <strong>operador condicional</strong> <code>?:</code> sirve para evaluar una condición y devolver un resultado en función de si es verdadera o falsa dicha condición. Es el único operador ternario de Java, y como tal, necesita tres operandos para formar una expresión:</p>
+<ul>
+<li>El <strong>primer operando</strong> se sitúa a la izquierda del símbolo de interrogación, y siempre será una expresión booleana, también llamada <strong>condición</strong>. </li>
+<li>El <strong>siguiente operando</strong> se sitúa a la derecha del símbolo de interrogación y antes de los dos puntos, y es el valor que devolverá el operador condicional <strong>si la condición es verdadera</strong>. </li>
+<li>El <strong>último operando</strong>, que aparece después de los dos puntos, es la expresión cuyo resultado se devolverá <strong>si la condición evaluada es falsa</strong>.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">condición</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">exp1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">exp2</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo,  en la expresión:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span><span class="o">?</span><span class="n">x</span><span class="p">:</span><span class="n">y</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Se evalúa la condición de si x es mayor que y, en caso afirmativo se devuelve el valor de la variable x, y en caso contrario se devuelve el valor de y.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo para calcular qué número es mayor:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">mayor</span><span class="p">,</span><span class="w"> </span><span class="n">exp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">exp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">mayor</span><span class="o">=</span><span class="p">(</span><span class="n">exp1</span><span class="o">&gt;</span><span class="n">exp2</span><span class="p">)</span><span class="o">?</span><span class="n">exp1</span><span class="p">:</span><span class="n">exp2</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1">// mayor valdrá 25</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>El operador condicional se puede sustituir por la sentencia <code>if...then...else</code> que veremos más adelante.</p>
+<h2 id="prevalencia-de-operadores">Prevalencia de operadores</h2>
+<p>Los operadores tienen diferente <strong>Prioridad</strong> por lo que es interesante utilizar paréntesis para controlar las operaciones sin necesidad de depender de la prioridad de los operadores.</p>
+<p>Prevalencia de operadores, ordenados de arriba a abajo de más a menos prioridad:</p>
+<table>
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Operadores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operadores posfijos</td>
+<td>op++   op--</td>
+</tr>
+<tr>
+<td>operadores unarios</td>
+<td>++op   --op   +op   -op   ~   !</td>
+</tr>
+<tr>
+<td>multiplicación y división</td>
+<td>*   /   %</td>
+</tr>
+<tr>
+<td>suma y resta</td>
+<td>+   -</td>
+</tr>
+<tr>
+<td>desplazamiento</td>
+<td>&lt;&lt;   &gt;&gt;   &gt;&gt;&gt;</td>
+</tr>
+<tr>
+<td>operadores relacionales</td>
+<td>&lt;   &gt;   &lt;=   =&gt;</td>
+</tr>
+<tr>
+<td>equivalencia</td>
+<td>==   !=</td>
+</tr>
+<tr>
+<td>operador AND</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>operador XOR</td>
+<td>^</td>
+</tr>
+<tr>
+<td>operador OR</td>
+<td>|</td>
+</tr>
+<tr>
+<td>AND booleano</td>
+<td>&amp;&amp;</td>
+</tr>
+<tr>
+<td>OR booleano</td>
+<td>||</td>
+</tr>
+<tr>
+<td>condicional</td>
+<td>?:</td>
+</tr>
+<tr>
+<td>operadores de asignación</td>
+<td>=   +=   -=   *=   /=   %=   &amp;=   ^=   |=   &lt;&lt;=   &gt;&gt;=   &gt;&gt;&gt;=</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="w"> </span><span class="o">=</span><span class="mi">8</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y3</span><span class="p">;</span><span class="w">   </span><span class="c1">// 22</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 64</span>
+</code></pre></div></td></tr></table></div>
+</div>
 
 
 
@@ -2914,11 +3634,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

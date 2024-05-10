@@ -2838,7 +2838,51 @@
 
   <h1>1.8 Constantes y literales</h1>
 
-
+<p>Las <strong>constantes</strong> se utilizan para almacenar datos que no varían nunca, asegurándonos que el valor no va a poder ser modificado.</p>
+<p>Podemos declarar una constante utilizando:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tipo</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">datos</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">nombre</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">constante</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>El calificador final indica que es constante. A continuación indicaremos el tipo de dato, el nombre de la constante y el valor que se le asigna.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">IVA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.21</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Los <strong>literales</strong> pueden ser de tipo simple, null o string, como por ejemplo <em>230</em>, <em>null</em> o "<em>Java</em>".</p>
+<p>Respecto a los literales existen unos caracteres especiales que se representan utilizando secuencias de escape:</p>
+<table>
+<thead>
+<tr>
+<th>Secuencia de escape</th>
+<th>Significado</th>
+<th>Secuencia de escape</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\b</td>
+<td>Retroceso</td>
+<td>\r</td>
+<td>Retorno de carro</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>Tabulador</td>
+<td>\’’</td>
+<td>Carácter comillas dobles</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>Salto de línea</td>
+<td>\’</td>
+<td>Carácter comillas simples</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Salto de página</td>
+<td>\</td>
+<td>Barra diagonal</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2914,11 +2958,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

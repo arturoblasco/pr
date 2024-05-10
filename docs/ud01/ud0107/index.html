@@ -2838,7 +2838,46 @@
 
   <h1>1.7 Tipos enumerados</h1>
 
-
+<p>Los tipos de datos enumerados son una forma de declarar una variable con un conjunto restringido de valores. Por ejemplo, los días de la semana, las estaciones del año, los meses, etc. Es como si definiéramos nuestro propio tipo de datos.</p>
+<p>La forma de declararlos es con la palabra reservada <code>enum</code>, seguida del nombre de la variable y la lista de valores que puede tomar entre llaves. A los valores que se colocan dentro de las llaves se les considera como constantes, van separados por comas y deben ser valores únicos.</p>
+<p>La lista de valores se coloca entre llaves, porque un tipo de datos <code>enum</code> no es otra cosa que una especie de clase en Java, y todas las clases llevan su contenido entre llaves.</p>
+<p>Al considerar Java este tipo de datos como si de una clase se tratara, no sólo podemos definir los valores de un tipo enumerado, sino que también podemos definir operaciones a realizar con él y otro tipo de elementos, lo que hace que este tipo de dato sea más versátil y potente que en otros lenguajes de programación.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de uso de datos enumerados</p>
+<p>En el siguiente ejemplo puedes comprobar el uso que se hace de los tipos de datos enumerados.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">tiposEnumerados</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">dias</span><span class="w"> </span><span class="p">{</span><span class="n">Lunes</span><span class="p">,</span><span class="w"> </span><span class="n">Martes</span><span class="p">,</span><span class="w"> </span><span class="n">Miercoles</span><span class="p">,</span><span class="w"> </span><span class="n">Jueves</span><span class="p">,</span><span class="w"> </span><span class="n">Viernes</span><span class="p">,</span><span class="w"> </span><span class="n">Sabado</span><span class="p">,</span><span class="w"> </span><span class="n">Domingo</span><span class="p">};</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="n">dias</span><span class="w"> </span><span class="n">diaActual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dias</span><span class="p">.</span><span class="na">Martes</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="n">dias</span><span class="w"> </span><span class="n">diaSiguiente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dias</span><span class="p">.</span><span class="na">Miercoles</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Hoy es: &quot;</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">diaActual</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mañana es: &quot;</span><span class="o">+</span><span class="n">diaSiguiente</span><span class="p">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>El resultado después de la ejecución será:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Hoy</span><span class="w"> </span><span class="n">es</span><span class="p">:</span><span class="w"> </span><span class="n">Martes</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">Y</span><span class="w"> </span><span class="n">mañana</span><span class="w"> </span><span class="n">es</span><span class="p">:</span><span class="w"> </span><span class="n">Miercoles</span>
+</code></pre></div></td></tr></table></div>
+<p>Tenemos una variable <code>dias</code> que almacena los días de la semana. Para acceder a cada elemento del tipo enumerado se utiliza el nombre de la variable seguido de un punto y el valor en la lista. Más tarde veremos que podemos añadir métodos y campos o variables en la declaración del tipo enumerado, ya que como hemos comentado un tipo enumerado en Java tiene el mismo tratamiento que las clases.</p>
+<p>En este ejemplo hemos utilizado el método <code>System.out.print</code>. Como podrás comprobar si lo ejecutas, la instrucción <code>print</code> escribe el texto que tiene entre comillas pero no salta a la siguiente línea, por lo que la instrucción <code>println</code> escribe justo a continuación.</p>
+<p>Sin embargo, también podemos escribir varias líneas usando una única sentencia. Así lo hacemos en la instrucción <code>println</code>, la cual imprime como resultado tres líneas de texto. Para ello hemos utilizado un carácter especial, llamado carácter escape (<code>\</code>). Este carácter sirve para darle ciertas órdenes al compilador, en lugar de que salga impreso en pantalla. Después del carácter de escape viene otro carácter que indica la orden a realizar, juntos reciben el nombre de secuencia de escape. La secuencia de escape <code>\n</code> recibe el nombre de carácter de nueva línea. Cada vez que el compilador se encuentra en un texto ese carácter, el resultado es que mueve el cursor al principio de la línea siguiente. En el próximo apartado vamos a ver algunas de las secuencias de escape más utilizadas.</p>
+</div>
 
 
 
@@ -2914,11 +2953,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

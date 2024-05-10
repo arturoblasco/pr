@@ -2838,7 +2838,143 @@
 
   <h1>1.5 Tipos de datos</h1>
 
-
+<p>Los tipos de datos se utilizan para declarar variables y el compilador sepa de antemano que tipo de información contendrá la variable.</p>
+<p>Java dispone de los siguientes tipos de datos simples:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tipo de dato</strong></th>
+<th><strong>Representación</strong></th>
+<th style="text-align: right;"><strong>Tamaño (Bytes)</strong></th>
+<th style="text-align: right;"><strong>Rango de Valores</strong></th>
+<th style="text-align: right;"><strong>Valor por defecto</strong></th>
+<th><strong>Clase Asociada</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>byte</strong></td>
+<td>Numérico  Entero con signo</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-128 a 127</td>
+<td style="text-align: right;">0</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td><strong>short</strong></td>
+<td>Numérico  Entero con signo</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-32768 a  32767</td>
+<td style="text-align: right;">0</td>
+<td>Short</td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td>Numérico  Entero con signo</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-2147483648 a 2147483647</td>
+<td style="text-align: right;">0</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td><strong>long</strong></td>
+<td>Numérico  Entero con signo</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">-9223372036854775808 a  9223372036854775807</td>
+<td style="text-align: right;">0</td>
+<td>Long</td>
+</tr>
+<tr>
+<td><strong>float</strong></td>
+<td>Numérico  en Coma flotante de precisión  simple Norma IEEE 754</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-3.4x10^-38^ a 3.4x10^38^</td>
+<td style="text-align: right;">0.0</td>
+<td>Float</td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>Numérico  en Coma flotante de precisión doble Norma IEEE 754</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">-1.8x10^-308^ a 1.8x10 ^308^</td>
+<td style="text-align: right;">0.0</td>
+<td>Double</td>
+</tr>
+<tr>
+<td><strong>char</strong></td>
+<td>Carácter  Unicode</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">\u0000  a \uFFFF</td>
+<td style="text-align: right;">\u0000</td>
+<td>Character</td>
+</tr>
+<tr>
+<td><strong>boolean</strong></td>
+<td>Dato  lógico</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">true ó false</td>
+<td style="text-align: right;">false</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><strong>void</strong></td>
+<td>-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td>Void</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Sobre valores por defecto e inicialización de variables:</p>
+<p><a href="https://stackoverflow.com/questions/19131336/default-values-and-initialization-in-java" target="_blank">https://stackoverflow.com/questions/19131336/default-values-and-initialization-in-java</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplos de declaración y asignación de valores a variables:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Tipo de datos</th>
+<th style="text-align: left;">código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">byte</td>
+<td style="text-align: left;"><code>byte a;</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">short</td>
+<td style="text-align: left;"><code>short b, c=3;</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">int</td>
+<td style="text-align: left;"><code>int d=-30;</code><br /><code>int e=0xC125; //la 0x significa Hexadecimal</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">long</td>
+<td style="text-align: left;"><code>long b=46240;</code><br /><code>long b=5L; // La L en este caso indica Long</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">char</td>
+<td style="text-align: left;"><code>char car1='c'</code><br /><code>char car2=99; //car1 y car2 son iguales, la c equivale al ascii 99</code><br /><code>char letra = '\u0063'; //código unicode del carácter "c"</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">float</td>
+<td style="text-align: left;"><code>float pi=3.1416;</code><br /><code>float pi=3.1416F; //La F significa float</code><br /><code>float medio=1/2; //0.5</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">double</td>
+<td style="text-align: left;"><code>double millon=1e6; // 1x10^6</code><br /><code>double medio=1/2D; //0.5, la D significa double</code><br /><code>double z=.123; //si la parte entera es 0 se puede omitir</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">boolean</td>
+<td style="text-align: left;"><code>boolean primero;</code><br /><code>boolean par=false;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
@@ -2914,11 +3050,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

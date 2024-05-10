@@ -2838,7 +2838,451 @@
 
   <h1>1.15 Ejemplos</h1>
 
+<div class="admonition example">
+<p class="admonition-title">Ejemplo unidad 01</p>
+<p>public class EjemploUD01 {</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span></pre></div></td><td class="code"><div><pre><span></span><code>// variable de clase precisa static para poder usarse dentro de la funcion main()
+static double dto = 0.25;
 
+public static void main(String[] args) {
+
+    // Declaración y asignación de valores a variables
+    byte a;
+    a = 127;
+    short c = 3;
+    int d = -30;
+    int e = 0xC125;
+    long l = 5L;
+    char car1 = 99; //car1 es la letra &quot;c&quot; equivale al ascii 99
+    char letra = &#39;\u0061&#39;; //código unicode del carácter &quot;a&quot;
+    double b = 5F;
+    double f = 1e6;
+    float g = 1 / 2F;
+    boolean par = false;
+
+    // Declaración y asignación constantes y literales
+    final double IVA = 0.21;
+    System.out.println(&quot;1a linea\n2a linea\n3a \&quot;linea\&quot;&quot;);
+
+    //Muestra por pantalla literales y contenidos de variables.
+    System.out.println(&quot;Hola Mundo&quot;);
+    System.out.println(&quot;a vale &quot; + a);
+    System.out.println(&quot;b vale &quot; + b);
+    System.out.println(&quot;c vale &quot; + c);
+    System.out.println(&quot;d vale &quot; + d);
+    System.out.println(&quot;e vale &quot; + e);
+    System.out.println(&quot;f vale &quot; + f);
+    System.out.println(&quot;g vale &quot; + g);
+    System.out.println(&quot;g vale &quot; + l);
+    System.out.println(&quot;g vale &quot; + car1);
+    System.out.println(&quot;g vale &quot; + letra);
+    System.out.println(&quot;g vale &quot; + par);
+
+    // uso de la constante
+    double precio = 430;
+    double preciofinal = precio + ((precio - (precio * dto)) * IVA) - (precio * dto);
+    System.out.println(IVA);
+    System.out.println(preciofinal);
+
+    // Operadores aritméticos
+    double num1, num2, suma, resta, producto, division, resto;
+    num1 = 8;
+    num2 = 5;
+    suma = num1 + num2;     // 13
+    resta = num1 - num2;    // 3
+    producto = num1 * num2; // 40
+    division = num1 / num2; // 1.6
+    resto = num1 % num2;    // 3
+    System.out.println(&quot;Suma: &quot; + suma);
+    System.out.println(&quot;Resta: &quot; + resta);
+    System.out.println(&quot;Producto: &quot; + producto);
+    System.out.println(&quot;División: &quot; + division);
+    System.out.println(&quot;Resto: &quot; + resto);
+
+    // Operadores Relacionales
+    int valor1 = 10;
+    int valor2 = 3;
+    boolean compara;
+    compara = valor1 &gt; valor2; // true
+    System.out.println(&quot;Mayor:&quot; + compara);
+    compara = valor1 &lt; valor2; // false
+    System.out.println(&quot;Menor:&quot; + compara);
+    compara = valor1 &gt;= valor2; // true
+    System.out.println(&quot;Mayor o igual: &quot; + compara);
+    compara = valor1 &lt;= valor2; // false
+    System.out.println(&quot;Menor o igual: &quot; + compara);
+    compara = valor1 == valor2; // false
+    System.out.println(&quot;Igual: &quot; + compara);
+    compara = valor1 != valor2; // true
+    System.out.println(&quot;Distinto: &quot; + compara);
+
+    //Operadores Lógicos
+    double sueldo = 1400;
+    int edad = 34;
+    boolean logica;
+    logica = (sueldo &gt; 1000 &amp; edad &lt; 40);  //true
+    System.out.println(&quot;AND: &quot; + logica);
+    logica = (sueldo &gt; 1000 &amp;&amp; edad &gt; 40); //false
+    System.out.println(&quot;AND: &quot; + logica);
+    logica = (sueldo &gt; 1000 | edad &gt; 40);  //true
+    System.out.println(&quot;OR: &quot; + logica);
+    logica = (sueldo &lt; 1000 || edad &gt; 40); //false
+    System.out.println(&quot;OR: &quot; + logica);
+    logica = !(edad &lt; 40);                 //false
+    System.out.println(&quot;NOT: &quot; + logica);
+    logica = (sueldo &gt; 1000 ^ edad &gt; 40);  //true
+    System.out.println(&quot;XOR: &quot; + logica);
+    logica = (sueldo &lt; 1000 ^ edad &gt; 40);  //false
+    System.out.println(&quot;XOR: &quot; + logica);
+
+    //Operadores Unarios o Unitarios
+    int m = 5, n = 3;
+    m++; // 6
+    n--; // 2
+    System.out.println(&quot;Incremento: &quot; + m);
+    System.out.println(&quot;Decremento: &quot; + n);
+
+    int A = 1, B;
+    B = ++A; // A vale 2 y B vale 2
+    System.out.println(&quot;A vale: &quot; + A + &quot; B vale: &quot; + B);
+    B = A++; // A vale 3 y B vale 2
+    System.out.println(&quot;A vale: &quot; + A + &quot; B vale: &quot; + B);
+
+    //Operadores de Asignación
+    int dato1 = 10, dato2 = 2, dato;
+    dato = dato1;   // dato vale 10
+    System.out.println(&quot;= : &quot; + dato);
+    dato2 *= dato1; // dato2 vale20
+    System.out.println(&quot;*= : &quot; + dato2);
+    dato2 /= dato1; // datos2 vale 2
+    System.out.println(&quot;/= : &quot; + dato2);
+    dato2 += dato1; // dato2 vale 12
+    System.out.println(&quot;+= : &quot; + dato2);
+    dato2 -= dato1; // dato2 vale 2
+    System.out.println(&quot;-= : &quot; + dato2);
+    dato1 %= dato2; // dato1 vale 0
+    System.out.println(&quot;%= : &quot; + dato1);
+
+    // Operadores de desplazamiento
+    int j = 33;
+    int k = j &lt;&lt; 2;
+    // 00000000000000000000000000100001 : j = 33
+    // 00000000000000000000000010000100 : k = 33 &lt;&lt; 2 ; k = 132
+    System.out.println(&quot;k= : &quot; + k);
+    int o = 132;
+    int p = o &gt;&gt; 2;
+    // 00000000000000000000000010000100 : o = 132    
+    // 00000000000000000000000000100001 : p = 132 &gt;&gt; 2 ; p = 33
+    System.out.println(&quot;p= : &quot; + p);
+    int x = -1;
+    int y = x &gt;&gt;&gt; 2;
+    // 11111111111111111111111111111111 : x = -1
+    // 00111111111111111111111111111111 : y = x &gt;&gt;&gt; 2; y = 1073741823
+    System.out.println(&quot;y= : &quot; + y);
+    int q = 132;   // q: 00000000000000000000000010000100
+    int r = 144;   // r: 00000000000000000000000010010000
+    int s = q &amp; r; // s: 00000000000000000000000010000000 
+    // El resultado da 128
+    System.out.println(&quot;s= : &quot; + s);
+    int t = q | r; // t: 00000000000000000000000010010100 
+    // El resultado da 148
+    System.out.println(&quot;t= : &quot; + t);
+    int u = q ^ r; // u: 00000000000000000000000000010100 
+    // El resultado da 20 
+    System.out.println(&quot;u= : &quot; + u);
+    int v = ~q;    // v: 11111111111111111111111101111011 
+    // El resultado da -133 
+    System.out.println(&quot;v= : &quot; + v);
+
+    // Operador condicional
+    int mayor, exp1 = 15, exp2 = 25;
+    mayor=(exp1&gt;exp2)?exp1:exp2;
+    // mayor valdrá 25
+    System.out.println(&quot;mayor= : &quot; + mayor);
+
+    // Prioridad de los operadores
+    int x1, y1 = 6, y2 = 2, y3 = 8;
+    x1 = y1 + y2 * y3; //22
+    System.out.println(&quot;Sin paréntesis: &quot; + x);
+    x1 = (y1 + y2) * y3; // 64
+    System.out.println(&quot;Con paréntesis: &quot; + x);
+
+    // Conversión Implícita
+    byte origen = 5;
+    short destino;
+    destino = origen; // 5
+    System.out.println(&quot;Implícita: &quot; + destino);
+
+    // Conversión Explícita
+    byte destino2;
+    short origen2 = 3;
+    destino2 = (byte) origen2; // 3
+    System.out.println(&quot;Explícito: &quot; + destino2);
+
+    // comentario de una sola línea
+
+    /* Esto es un comentario
+    de varias líneas */
+
+    /** Comentario de documentación.
+    Javadoc extrae los comentarios del código y
+    genera un archivo html a partir de este tipo de comentarios
+    */
+
+    //Generar número aleatorios
+    double numero;
+    int entero;
+    numero = Math.random();
+    System.out.println(&quot;El número es: &quot;+numero);
+    numero = Math.random()*100;
+    System.out.println(&quot;El número es: &quot;+numero);
+    entero = (int)(Math.random()*100);
+    System.out.println(&quot;El número sin decimales es: &quot;+entero);
+
+    //Introducir texto desde teclado
+    String texto;
+    System.out.print(&quot;Introduce un texto: &quot;);
+    texto = System.console().readLine();
+    System.out.println(&quot;El texto introducido es: &quot;+ texto);
+
+    //Introducir un número entero desde teclado
+    String texto2;
+    int entero2;
+    System.out.print(&quot;Introduce un número: &quot;);
+    texto2 = System.console().readLine();
+    entero2 = Integer.parseInt(texto2);
+    System.out.println(&quot;El número introducido es:&quot;+entero2);
+
+    //Introducir un número decimal desde teclado
+    String texto3;
+    double doble3;
+    System.out.print(&quot;Introduce un número decimal: &quot;);
+    texto3 = System.console().readLine();
+    doble3 = Double.parseDouble(texto3); // convertimos texto a doble
+    System.out.println(&quot;Número decimal introducido es: &quot;+doble3);
+}
+</code></pre></div></td></tr></table></div>
+<p>}</p>
+</div>
 
 
 
@@ -2914,11 +3358,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

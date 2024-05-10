@@ -2838,7 +2838,29 @@
 
   <h1>1.13 Instalar Java en Linux</h1>
 
+<p>(1) Comprobamos la versión actual de Java:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>$<span class="w"> </span>java<span class="w"> </span>-version
+</code></pre></div></td></tr></table></div>
+<div style="text-align:center;">
+    <img src="../../img/ud01/java_linux02.png" alt="java_linux02" style="max-width:90%;" />
+</div>
 
+<p>Si vemos que no tenemos ninguna versión, <strong>instalamos el JRE predeterminado</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>default-jre
+</code></pre></div></td></tr></table></div>
+<div style="text-align:center;">
+    <img src="../../img/ud01/java_linux01.png" alt="java_linux01" style="max-width:90%;" />
+</div>
+
+<p>(2) Para compilar y ejecutar Java necesitamos el programa javac (viene con JDK). </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>$<span class="w"> </span>javac<span class="w"> </span>-version
+</code></pre></div></td></tr></table></div>
+<p>Si no tenemos salida, <strong>instalamos JDK predeterminado</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>default-jdk
+</code></pre></div></td></tr></table></div>
+<div style="text-align:center;">
+    <img src="../../img/ud01//home/arturo/iesmre/pr/pr23/UD01/assets/java_linux03.png.png" alt="/home/arturo/iesmre/pr/pr23/UD01/assets/java_linux03.png" style="max-width:90%;" />
+</div>
 
 
 
@@ -2914,11 +2936,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

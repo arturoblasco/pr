@@ -2838,7 +2838,31 @@
 
   <h1>1.11 Comentarios</h1>
 
-
+<p>Los comentarios son muy importantes a la hora de describir qué hace un determinado programa. A lo largo de la unidad los hemos utilizado para documentar los ejemplos y mejorar la comprensión del código. Para lograr ese objetivo, es normal que cada programa comience con unas líneas de comentario que indiquen, al menos, una breve descripción del programa, el autor del mismo y la última fecha en que se ha modificado.</p>
+<p>Todos los lenguajes de programación disponen de alguna forma de introducir comentarios en el código. En el caso de Java, nos podemos encontrar los siguientes tipos de comentarios:</p>
+<ul>
+<li>Comentarios de <strong>una sola línea</strong>. Utilizaremos el delimitador <code>//</code> para introducir comentarios de sólo una línea.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// comentario de una sola línea</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Comentarios de <strong>múltiples líneas</strong>. Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco (<code>/*</code>), al principio del párrafo y un asterisco seguido de una barra inclinada (<code>*/</code>) al final del mismo.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cm">/* Esto es un comentario</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm">de varias líneas */</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Comentarios <strong>Javadoc</strong>. Utilizaremos los delimitadores <code>/**</code> y <code>*/</code>. Al igual que con los comentarios tradicionales, el texto entre estos delimitadores será ignorado por el compilador. Este tipo de comentarios se emplean para generar documentación automática del programa. A través del programa javadoc, incluido en JavaSE, se recogen todos estos comentarios y se llevan a un documento en formato .html.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cm">/** Comentario de documentación.</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="cm">Javadoc extrae los comentarios del código y</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cm">genera un archivo html a partir de este tipo de comentarios</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="cm">*/</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -2914,11 +2938,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>

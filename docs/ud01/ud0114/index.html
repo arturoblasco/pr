@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#instalar-java" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -579,6 +584,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.14 Instalar Java en Windows
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -588,6 +604,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalar Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio-code-instalar-extension-java-extension-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Studio Code. Instalar extensión Java Extension Pack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificar-fichero-tasks-de-vscode-para-compilar-y-ejecutar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar fichero tasks de VSCode para compilar y ejecutar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-y-ejecutar-un-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar y ejecutar un programa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-extensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      otras extensiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2823,6 +2901,59 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalar Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-studio-code-instalar-extension-java-extension-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Studio Code. Instalar extensión Java Extension Pack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificar-fichero-tasks-de-vscode-para-compilar-y-ejecutar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar fichero tasks de VSCode para compilar y ejecutar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-y-ejecutar-un-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar y ejecutar un programa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-extensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      otras extensiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2838,7 +2969,183 @@
 
   <h1>1.14 Instalar Java en Windows</h1>
 
+<h2 id="instalar-java">Instalar Java</h2>
+<p>(1) Comprobamos la versión actual de Java:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>java<span class="w"> </span>-version
+</code></pre></div></td></tr></table></div>
+<div style="text-align:center;">
+       <img src="../../img/ud01/java_windows1.png" alt="java_windows1" style="max-width:90%;" />
+   </div>
 
+<p>(2) Si el sistema nos responde con algún mensaje de error, es que no tenemos instalado ni <em>JRE</em> ni <em>JDK</em>; deberemos comprobar si podemos ejecutar el compilador javac:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>javac<span class="w"> </span>-version
+</code></pre></div></td></tr></table></div>
+<p>pues si no tenemos instalado este deberemos instalar JDK desde <a href="http://www.oracle.com/technetwork/java/javase/downloads" target="_blank">enlace a JDK de Oracle</a>.</p>
+<p>(3) Después de la instalar JDK deberemos añadir, de forma manual, la ruta donde está instalado al conjunto de rutas de Windows donde se encuentran los programas ejecutables.</p>
+<p>Para ello:</p>
+<ul>
+<li>
+<p>Acceder a la ventana Sistema: <code>Panel de control -- Sistema y Seguridad  -- Sistema</code> y después a <code>Cambiar configuración</code>:</p>
+<p><div style="text-align:center;">
+        <img src="../../img/ud01/java_windows2.png" alt="java_windows2" style="max-width:90%;" />
+    </div></p>
+</li>
+<li>
+<p>En la pestaña <code>Opciones avanzadas</code> pulsar el botón <code>Variables de entorno...</code>:</p>
+<p><div style="text-align:center;">
+        <img src="../../img/ud01/java_windows3.png" alt="java_windows3" style="max-width:90%;" />
+    </div></p>
+</li>
+<li>
+<p>Seleccionar la variable <code>Path</code> y pulsar <code>Editar</code>(o doble clic):</p>
+<p><div style="text-align:center;">
+        <img src="../../img/ud01/java_windows4.png" alt="java_windows4" style="max-width:90%;" />
+    </div></p>
+</li>
+<li>
+<p>Añadir a la ruta actual de Path: <strong>un punto y coma</strong> y <strong>la ruta</strong> donde se encuentran los ejecutable de JDK que acabamos de instalar (que por lo general será <strong>c:\Program Files\Java\jdk[VERSION_INSTALADA]\bin</strong>):</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">;</span><span class="w"> </span>C:<span class="se">\P</span>rogram<span class="w"> </span>Files<span class="se">\J</span>ava<span class="se">\j</span>dk<span class="o">[</span>VERSION_INSTALADA<span class="o">]</span><span class="se">\b</span>in
+</code></pre></div></td></tr></table></div>
+<p><div style="text-align:center;">
+        <img src="../../img/ud01/java_windows5.png" alt="java_windows5" style="max-width:90%;" />
+    </div></p>
+</li>
+</ul>
+<h2 id="visual-studio-code-instalar-extension-java-extension-pack">Visual Studio Code. Instalar extensión Java Extension Pack</h2>
+<p>Abrimos Visual Studio Code y, en extensiones, instalamos la extensión <strong>Java Extension Pack</strong>:</p>
+<div style="text-align:center;">
+       <img src="../../img/ud01/java_vscode01.png" alt="java_vscode01" style="max-width:90%;" />
+   </div>
+
+<h2 id="modificar-fichero-tasks-de-vscode-para-compilar-y-ejecutar">Modificar fichero tasks de VSCode para compilar y ejecutar</h2>
+<blockquote>
+<p>Este punto es opcional.</p>
+</blockquote>
+<p>Tenemos que editar el fichero de tareas <code>tasks.json</code>, para crear un par de ellas: <code>JC</code>, para compilar el archhivo .java; y <code>JR</code>, para ejecutarlo:</p>
+<ul>
+<li>Abriremos <code>Terminal - Configurar tares de compilación predeterminada...</code> y pulsamos <code>Intro</code>:</li>
+</ul>
+<div style="text-align:center;">
+         <img src="../../img/ud01/java_vscode02.png" alt="java_vscode02" style="max-width:90%;" />
+     </div>
+
+<div style="text-align:center;">
+         <img src="../../img/ud01/java_vscode03.png" alt="java_vscode03" style="max-width:90%;" />
+     </div>
+
+<p>Borramos el contenido del fichero e introducimos el siguiente código:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="s">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2.0.0&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="s">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">      </span><span class="s">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;JC&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">      </span><span class="s">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;java&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">      </span><span class="s">&quot;windows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">          </span><span class="s">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C:\\Program Files\\Java\\jdk1.8.0_341\\bin\\javac.exe&quot;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">      </span><span class="s">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">          </span><span class="s">&quot;${file}&quot;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">      </span><span class="o">]</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">      </span><span class="s">&quot;problemMatcher&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[]</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">      </span><span class="s">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">          </span><span class="s">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;build&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">          </span><span class="s">&quot;isDefault&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">      </span><span class="s">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;JR&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">      </span><span class="s">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;java&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">      </span><span class="s">&quot;windows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">          </span><span class="s">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C:\\Program Files\\Java\\jdk1.8.0_341\\bin\\java.exe&quot;</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">      </span><span class="s">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">          </span><span class="s">&quot;${fileBasenameNoExtension}&quot;</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">      </span><span class="o">]</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">  </span><span class="o">]</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Podemos observar que en "command" ponemos la ruta donde se encuentra instalado JDK <code>C:\Program Files\Java\jdk1.8.0_341\bin\</code>.</p>
+<p>Quedaría de la siguiente manera:</p>
+<div style="text-align:center;">
+       <img src="../../img/ud01/java_vscode04.png" alt="java_vscode04" style="max-width:90%;" />
+   </div>
+
+<h2 id="compilar-y-ejecutar-un-programa">Compilar y ejecutar un programa</h2>
+<p>Una vez realizado los dos pasos anteriores ya podremos realizar las dos tareas (JC para compilar y JR para ejecutar).</p>
+<p>(1) Desde <code>Terminal - Ejecutar tarea ... </code> y elegir, primero, compilar (<strong>JC</strong>):</p>
+<div style="text-align:center;">
+       <img src="../../img/ud01/java_vscode07.png" alt="java_vscode07" style="max-width:90%;" />
+   </div>
+
+<p>(2) Desde <code>Terminal - Ejecutar tarea ... </code> y elegir, seguidamente, ejecutar (<strong>JR</strong>):</p>
+<h2 id="otras-extensiones">otras extensiones</h2>
+<p>En Visual Studio Code existen numerosas extensiones que nos pueden ayudar en, dependiendo el lenguaje que utilicemos, muchos aspectos; como autorelleno, colores, idioma, etc.</p>
+<p>Aquí van algunas extensiones que podremos tener:</p>
+<ul>
+<li>
+<p>Spanish Language Pack for Visual Studio</p>
+</li>
+<li>
+<p>Prettier - Code formatter</p>
+</li>
+<li>
+<p>Polacode</p>
+</li>
+<li>
+<p>Material Icon Theme</p>
+</li>
+<li>
+<p>Error Lens</p>
+</li>
+<li>
+<p>Atom One Dark Theme</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Debugger for Java</p>
+</li>
+<li>
+<p>Language Supoort for Java (TM)</p>
+</li>
+<li>
+<p>Project Manager for Java</p>
+</li>
+<li>
+<p>Test Runner for Java</p>
+</li>
+</ul>
 
 
 
@@ -2914,11 +3221,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>
