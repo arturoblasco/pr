@@ -15,9 +15,38 @@ dev_addr: localhost:4000
 #   - Títol: Document.md
 nav:
   - Inicio: index.md
-  - UD 0 Conocimientos previos: default.md
-  - UD 1 Elemenos de un programa informático: default.md
-  - UD 2 Utilización de objetos y clases: default.md
+  - UD 0 Conocimientos previos: index.md
+  - UD 1 Elemenos de un programa informático:
+      - 1.1 Piensa como un programador: ud01/ud0101.md
+      - 1.2 Problemas, algoritmos y programas: ud01/ud0102.md
+      - 1.3 Java: ud01/ud0103.md
+      - 1.4 Variables, identificadores, convenciones: ud01/ud0104.md
+      - 1.5 Tipos de datos: ud01/ud0105.md
+      - 1.6 Tipos referenciados: ud01/ud0106.md
+      - 1.7 Tipos enumerados: ud01/ud0107.md
+      - 1.8 Constantes y literales: ud01/ud0108.md
+      - 1.9 Operadores y expresiones: ud01/ud0109.md
+      - 1.10 Conversiones de tipo: ud01/ud0110.md
+      - 1.11 Comentarios: ud01/ud0111.md
+      - 1.12 Herramientas útiles para empezar: ud01/ud0112.md
+      - 1.13 Instalar Java en Linux: ud01/ud0113.md
+      - 1.14 Instalar Java en Windows: ud01/ud0114.md
+      - 1.15 Ejemplos: ud01/ud0115.md
+      - Actividades: ud01/ud01ac.md
+      - Píldoras informáticas: ud01/ud01pi.md
+      - Fuentes de información: ud01/ud01re.md
+  - UD 2 Utilización de objetos y clases:
+      - 2.1 Introducción a la POO: ud02/ud0201.md
+      - 2.2 Características de la POO: ud02/ud0202.md
+      - 2.3 Objetos y Clases: ud02/ud0203.md
+      - 2.4 Utilización de objetos: ud02/ud0204.md
+      - 2.5 Utilización de métodos: ud02/ud0205.md
+      - 2.6 Librerías de objetos (paquetes): ud02/ud0206.md
+      - 2.7 Cadenas de caracteres. La clase String: ud02/ud0207.md
+      - Ejemplos: ud02/ud0208.md
+      - Actividades: ud02/ud02ac.md
+      - Píldoras informáticas: ud02/ud02pi.md
+      - Fuentes de información: ud02/ud02re.md
   - UD 3 Estructuras de control y excepciones:
       - 3.1 Introducción: ud03/ud0301.md
       - 3.2 Sentencias y bloques: ud03/ud0302.md

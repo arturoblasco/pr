@@ -1,0 +1,5 @@
+- [Curso Java. Estructuras principales I. Vídeo 4](https://youtu.be/Lj97ujkeUXc){:target="_blank"}
+- [Curso Java. Estructuras principales II. Vídeo 5](https://youtu.be/OS1F6VNA6hs){:target="_blank"}
+- [Curso Java. Estructuras principales III. Declaración variables Eclipse  Vídeo 6](https://youtu.be/bq6nJRJq27A){:target="_blank"}
+- [Curso Java. Estructuras principales IV. Constantes y Operadores. Vídeo 7](https://youtu.be/qdxwWkTxcmc){:target="_blank"}
+- [Curso Java. Estructuras principales V. Constantes y Operadores II. Vídeo 8](https://youtu.be/MoJxxPgCBcg){:target="_blank"}
