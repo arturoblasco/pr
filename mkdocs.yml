@@ -15,7 +15,11 @@ dev_addr: localhost:4000
 #   - Títol: Document.md
 nav:
   - Inicio: index.md
-  - UD 0 Conocimientos previos: index.md
+  - UD 0 Conocimientos previos:
+      - 0.1 Markdown: ud00/ud0001.md
+      - 0.2 Git y Github: ud00/ud0002.md
+      - Actividades: ud00/ud00ac.md
+      - Fuentes de información: ud00/ud00re.md
   - UD 1 Elemenos de un programa informático:
       - 1.1 Piensa como un programador: ud01/ud0101.md
       - 1.2 Problemas, algoritmos y programas: ud01/ud0102.md

@@ -1,0 +1,4242 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud0001/">
+      
+      
+        <link rel="next" href="../ud00ac/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>0.2 Git y Github - Programació</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Programació" class="md-header__button md-logo" aria-label="Programació" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programació
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              0.2 Git y Github
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canvia a mode oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canvia a mode normal"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canvia a mode normal" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programació" class="md-nav__button md-logo" aria-label="Programació" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    Programació
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 0 Conocimientos previos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD 0 Conocimientos previos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud0001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1 Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    0.2 Git y Github
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    0.2 Git y Github
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-git-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración (git config)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de repositorios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de repositorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-un-repositorio-nuevo-git-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de un repositorio nuevo (git init)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-de-repositorios-git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copia de repositorios (git clone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-a-un-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir cambios a un repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-a-la-zona-de-intercambio-temporal-git-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir cambios a la zona de intercambio temporal (git add)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-al-repositorio-git-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir cambios al repositorio (git commit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro de cambios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenciar-un-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referenciar un commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-e-historia-de-un-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado e historia de un repositorio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estado e historia de un repositorio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-el-estado-de-un-repositorio-git-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar el estado de un repositorio (git status)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-el-historial-de-versiones-de-un-repositorio-git-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar el historial de versiones de un repositorio (git log)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-los-datos-de-un-commit-git-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar los datos de un commit (git show)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-el-historial-de-cambios-de-un-fichero-git-annotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar el historial de cambios de un fichero (git annotate)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-las-diferencias-entre-versiones-git-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar las diferencias entre versiones (git diff)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deshacer-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deshacer cambios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deshacer cambios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-cambios-del-directorio-de-trabajo-o-volver-a-una-version-anterior-git-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar cambios del directorio de trabajo o volver a una versión anterior (git checkout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-cambios-de-la-zona-de-intercambio-temporal-git-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar cambios de la zona de intercambio temporal (git reset)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-cambios-de-un-commit-git-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar cambios de un commit (git reset)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ramas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ramas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-ramas-git-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de ramas (git branch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listado-de-ramas-git-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listado de ramas (git log)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-ramas-git-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambio de ramas (git checkout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-de-ramas-git-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fusión de ramas (git merge)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-conflictos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de conflictos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reorganizacion-de-ramas-git-rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reorganización de ramas (git rebase)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-ramas-git-branch-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación de ramas (git branch -d)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repositorios-remotos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositorios remotos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es GitHub?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es GitHub?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-con-clave-publicaprivada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración con clave publica/privada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración con clave publica/privada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generar-la-clave-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generar la clave (Linux)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-la-clave-a-nuestra-cuenta-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir la clave a nuestra cuenta github
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-nuestro-equipo-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar nuestro equipo linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-un-repositorio-remoto-git-remote-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir un repositorio remoto (git remote add)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-de-repositorios-remotos-git-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista de repositorios remotos (git remote)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-cambios-desde-un-repositorio-remoto-git-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar cambios desde un repositorio remoto (git pull)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subir-cambios-a-un-repositorio-remoto-git-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subir cambios a un repositorio remoto (git push)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colaboracion-en-repositorios-remotos-de-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colaboración en repositorios remotos de GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vscode-integrado-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      VsCode integrado en GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VsCode integrado en GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localizar-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localizar repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-vscode-integrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir VSCode integrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-un-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar un archivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-integrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git integrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud00ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud00re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 1 Elemenos de un programa informático
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD 1 Elemenos de un programa informático
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Piensa como un programador
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0102/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Problemas, algoritmos y programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0103/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0104/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Variables, identificadores, convenciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0105/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0106/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Tipos referenciados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0107/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7 Tipos enumerados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0108/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.8 Constantes y literales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0109/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.9 Operadores y expresiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0110/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.10 Conversiones de tipo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0111/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.11 Comentarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0112/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.12 Herramientas útiles para empezar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0113/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.13 Instalar Java en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0114/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.14 Instalar Java en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud0115/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud01ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud01pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/ud01re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 2 Utilización de objetos y clases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD 2 Utilización de objetos y clases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Introducción a la POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Características de la POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Objetos y Clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Utilización de objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Utilización de métodos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Librerías de objetos (paquetes)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0207/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7 Cadenas de caracteres. La clase String
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud0208/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud02ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud02pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud02/ud02re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 3 Estructuras de control y excepciones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD 3 Estructuras de control y excepciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud0301/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud0302/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Sentencias y bloques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud0303/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Sentencias de selección
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud0304/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4 Estructuras de repetición
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud0305/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5 Estructuras de salto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud0306/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.6 Excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud03ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud03pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud03/ud03re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 4 Estructuras de datos Arrays y matrices. Recursividad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD 4 Estructuras de datos Arrays y matrices. Recursividad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud0401/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud0402/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2 Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud0403/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Problemas de recorrido, búsqueda y ordenación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud0404/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4 Arrays bidimensionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud0405/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.5 Arrays multidimensionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud0406/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.6 Recursividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud0407/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.7 Anexos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud04ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud04pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud04/ud04re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 5 Desarrollo de clases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD 5 Desarrollo de clases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0501/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0502/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2 Estructura y miembros de una clase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0503/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3 Atributos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0504/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.4 Métodos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0505/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.5 Encapsulación, control de acceso y visibilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0506/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.6 Utilización de métodos y atributos de una clase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0507/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.7 Constructores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0508/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.8 Introducción a la herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0509/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.9 Empaquetado de clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud0510/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.10 Anexos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud05ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud05pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud05/ud05re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 6 Lectura y escritura de información
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            UD 6 Lectura y escritura de información
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud0601/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1 Streams (flujos)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud0602/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2 Ficheros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud0603/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3 Serialización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud0604/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.4 Sockets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud0605/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.5 Manejo de ficheros y carpetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud0606/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.6 Comparativa CRUD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud06ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud06pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud06/ud06re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 7 Colecciones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            UD 7 Colecciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud0701/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud0702/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2 Colecciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud0703/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3 Iteradores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud0704/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4 Comparadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud0705/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5 Extras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud0706/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.6 Programación funcional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud07ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud07pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud07/ud07re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 8 Composición, Herencia y Polimorfismo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            UD 8 Composición, Herencia y Polimorfismo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud0801/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1 Relaciones entre clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud0802/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2 Composición
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud0803/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3 Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud0804/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.4 Clases abstractas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud0805/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.5 Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud0806/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.6 Polimorfismo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud08ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud08pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud08/ud08re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD 9 Acceso a bases de datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            UD 9 Acceso a bases de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0901/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0902/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2 JDBC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0903/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3 Acceso a BBDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0904/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4 Navegabilidad y concurrencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0905/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5 Consultas (Query)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0906/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.6 Modificación (update)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0907/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.7 Inserción (insert)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0908/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.8 Borrado (delete)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0909/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.9 Sentencias predefinidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0910/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.10 Trabajar con Sqlite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud0911/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.11 Repository pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud09ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud09pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Píldoras informáticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud09/ud09re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuentes de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../default/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD 10 Interfaz gráfica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-git-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración (git config)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de repositorios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de repositorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-un-repositorio-nuevo-git-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de un repositorio nuevo (git init)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-de-repositorios-git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copia de repositorios (git clone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-a-un-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir cambios a un repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-a-la-zona-de-intercambio-temporal-git-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir cambios a la zona de intercambio temporal (git add)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-cambios-al-repositorio-git-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir cambios al repositorio (git commit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro de cambios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenciar-un-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referenciar un commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-e-historia-de-un-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado e historia de un repositorio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estado e historia de un repositorio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-el-estado-de-un-repositorio-git-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar el estado de un repositorio (git status)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-el-historial-de-versiones-de-un-repositorio-git-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar el historial de versiones de un repositorio (git log)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-los-datos-de-un-commit-git-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar los datos de un commit (git show)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-el-historial-de-cambios-de-un-fichero-git-annotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar el historial de cambios de un fichero (git annotate)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrar-las-diferencias-entre-versiones-git-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar las diferencias entre versiones (git diff)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deshacer-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deshacer cambios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deshacer cambios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-cambios-del-directorio-de-trabajo-o-volver-a-una-version-anterior-git-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar cambios del directorio de trabajo o volver a una versión anterior (git checkout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-cambios-de-la-zona-de-intercambio-temporal-git-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar cambios de la zona de intercambio temporal (git reset)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-cambios-de-un-commit-git-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar cambios de un commit (git reset)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ramas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ramas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-ramas-git-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de ramas (git branch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listado-de-ramas-git-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listado de ramas (git log)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-ramas-git-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambio de ramas (git checkout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-de-ramas-git-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fusión de ramas (git merge)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-conflictos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolución de conflictos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reorganizacion-de-ramas-git-rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reorganización de ramas (git rebase)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-ramas-git-branch-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación de ramas (git branch -d)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repositorios-remotos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositorios remotos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es GitHub?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es GitHub?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-con-clave-publicaprivada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración con clave publica/privada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración con clave publica/privada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generar-la-clave-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generar la clave (Linux)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-la-clave-a-nuestra-cuenta-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir la clave a nuestra cuenta github
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-nuestro-equipo-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar nuestro equipo linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-un-repositorio-remoto-git-remote-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir un repositorio remoto (git remote add)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-de-repositorios-remotos-git-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista de repositorios remotos (git remote)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-cambios-desde-un-repositorio-remoto-git-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar cambios desde un repositorio remoto (git pull)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subir-cambios-a-un-repositorio-remoto-git-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subir cambios a un repositorio remoto (git push)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colaboracion-en-repositorios-remotos-de-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colaboración en repositorios remotos de GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vscode-integrado-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      VsCode integrado en GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VsCode integrado en GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localizar-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localizar repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-vscode-integrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir VSCode integrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-un-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar un archivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-integrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git integrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>0.2 Git y Github</h1>
+
+<h2 id="git">Git</h2>
+<h3 id="configuracion-git-config">Configuración (<code>git config</code>)</h3>
+<p>Establecer el nombre de usuario:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your-Full-Name&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Establecer el correo del usuario:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your-email-address&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Activar el coloreado de la salida:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>color.ui<span class="w"> </span>auto
+</code></pre></div></td></tr></table></div>
+<p>Mostrar el estado original en los conflictos</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>merge.conflictstyle<span class="w"> </span>diff3
+</code></pre></div></td></tr></table></div>
+<p>Mostrar la configuración</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>config<span class="w"> </span>--list
+</code></pre></div></td></tr></table></div>
+<h3 id="creacion-de-repositorios">Creación de repositorios</h3>
+<h4 id="creacion-de-un-repositorio-nuevo-git-init">Creación de un repositorio nuevo (<code>git init</code>)</h4>
+<p>Este comando crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada .git que contiene la base de datos donde se registran los cambios en el repositorio.</p>
+<p><code>git init &lt;nombre-repositorio&gt;</code> crea un repositorio nuevo con el nombre <nombre-repositorio>.</p>
+<h4 id="copia-de-repositorios-git-clone">Copia de repositorios (<code>git clone</code>)</h4>
+<p>A partir de que se hace la copia, los dos repositorios, el original y la copia, son independientes, es decir, cualquier cambio en uno de ellos no se verá reflejado en el otro.</p>
+<p><code>git clone &lt;url-repositorio&gt;</code> crea una copia local del repositorio ubicado en la dirección <url-repositorio>.</p>
+<h4 id="anadir-cambios-a-un-repositorio">Añadir cambios a un repositorio</h4>
+<p>Con Git, cualquier cambio que hagamos en un proyecto tiene que pasar por tres estados hasta que guarde definitivamente en el repositorio.</p>
+<p><strong>Directorio de trabajo</strong>: Es el directorio que contiene una copia de una versión concreta del proyecto en la que se está trabajando. Puede contener ficheros que no pertenecen al repositorio.</p>
+<p><strong>Zona temporal de intercambio (staging area)</strong>: es una zona donde se guardan los cambios temporalmente desde el directorio de trabajo antes de hacerlos definitivos y registrarlos en el repositorio.</p>
+<p><strong>Repositorio</strong>: Es donde finalmente se guardan los cambios confirmados desde la zona temporal de intercambio.</p>
+<h4 id="anadir-cambios-a-la-zona-de-intercambio-temporal-git-add">Añadir cambios a la zona de intercambio temporal (<code>git add</code>)</h4>
+<p><code>git add &lt;fichero&gt;</code> añade los cambios en el fichero <fichero> del directorio de trabajo a la zona de intercambio temporal. <code>git add &lt;carpeta&gt;</code> añade los cambios en todos los ficheros de la carpeta <carpeta> del directorio de trabajo a la zona de intercambio temporal. <code>git add .</code> añade todos los cambios de todos ficheros no guardados aún en la zona de intercambio temporal.</p>
+<h4 id="anadir-cambios-al-repositorio-git-commit">Añadir cambios al repositorio (<code>git commit</code>)</h4>
+<p><code>git commit -m "mensaje"</code> confirma todos los cambios de la zona de intercambio temporal añadiéndolos al repositorio y creando una nueva versión del proyecto. <code>"mensaje"</code> es un breve mensaje describiendo los cambios realizados que se asociará a la nueva versión del proyecto.</p>
+<p><code>git commit --amend -m "mensaje"</code> cambia el mensaje del último commit por el nuevo mensaje <code>"mensaje"</code>.</p>
+<p><img src="assets/03_git_commit.png" style="zoom:67%;" /></p>
+<h4 id="registro-de-cambios">Registro de cambios</h4>
+<p>Para guardar los cambios en un repositorio Git utiliza una estructura de tres niveles:</p>
+<ul>
+<li>
+<p><strong>Commit</strong> Contiene información sobre el autor, el momento y el mensaje de los cambios.</p>
+</li>
+<li>
+<p><strong>Árbol (tree)</strong> Cada commit contiene además un árbol donde se registran los nombres y rutas de los ficheros en el repositorio cuando se hizo el commit.</p>
+</li>
+<li>
+<p><strong>Blob (binary file object)</strong> Para cada uno de los ficheros listados en el árbol hay un blob, que contiene una instantánea comprimida del contenido del fichero cuando se hizo el commit.</p>
+</li>
+</ul>
+<p>Si un fichero del repositorio no ha cambiado en el commit, el árbol apunta al blob del fichero del último commit donde el fichero cambió.</p>
+<h4 id="referenciar-un-commit">Referenciar un commit</h4>
+<p>Cada commit tiene asociado un código hash de 40 caracteres hexadecimales que lo identifica de manera única. Hay dos formas de referirse a un commit:</p>
+<ul>
+<li><strong>Nombre absoluto</strong>: Se utiliza su código hash (basta indicar los 4 o 5 primeros dígitos).</li>
+<li><strong>Nombre relativo</strong>: Se utiliza la palabra <strong>HEAD</strong> para referirse siempre al último commit. Para referirse al penúltimo commit se utiliza <strong>HEAD~1</strong>, al antepenúltimo <strong>HEAD~2</strong>, etc.</li>
+</ul>
+<h3 id="estado-e-historia-de-un-repositorio">Estado e historia de un repositorio</h3>
+<h4 id="mostrar-el-estado-de-un-repositorio-git-status">Mostrar el estado de un repositorio (<code>git status</code>)</h4>
+<p><code>git status</code> muestra el estado de los cambios en el repositorio desde la última versión guardada. En particular, muestra los ficheros con cambios en el directorio de trabajo que no se han añadido a la zona de intercambio temporal y los ficheros en la zona de intercambio temporal que no se han añadido al repositorio.</p>
+<h4 id="mostrar-el-historial-de-versiones-de-un-repositorio-git-log">Mostrar el historial de versiones de un repositorio (<code>git log</code>)</h4>
+<p><code>git log</code> muestra el historial de commits de un repositorio ordenado cronológicamente. Para cada commit muestra su código hash, el autor, la fecha, la hora y el mensaje asociado. Este comando es muy versátil y muestra la historia del repositorio en distintos formatos dependiendo de los parámetros que se le den. Los más comunes son:</p>
+<ul>
+<li><code>--oneline</code> muestra cada commit en una línea produciendo una salida más compacta.</li>
+<li><code>--graph</code> muestra la historia en forma de grafo.</li>
+</ul>
+<h4 id="mostrar-los-datos-de-un-commit-git-show">Mostrar los datos de un commit (<code>git show</code>)</h4>
+<p><code>git show</code> muestra el usuario, el día, la hora y el mensaje del último commit, así como las diferencias con el anterior.</p>
+<p><code>git show &lt;commit&gt;</code> muestra el usuario, el día, la hora y el mensaje del <code>commit</code> indicado, así como las diferencias con el anterior.</p>
+<h4 id="mostrar-el-historial-de-cambios-de-un-fichero-git-annotate">Mostrar el historial de cambios de un fichero (<code>git annotate</code>)</h4>
+<p><code>git annotate</code> muestra el contenido de un fichero anotando cada línea con información del commit en el que se introdujo. Cada línea de la salida contiene los 8 primeros dígitos del código hash del commit correspondiente al cambio, el autor de los cambio, la fecha, el número de línea del fichero y el contenido de la línea.</p>
+<h4 id="mostrar-las-diferencias-entre-versiones-git-diff">Mostrar las diferencias entre versiones (<code>git diff</code>)</h4>
+<p><code>git diff</code> muestra las diferencias entre el directorio de trabajo y la zona de intercambio temporal. <code>git diff --cached</code> muestra las diferencias entre la zona de intercambio temporal y el último commit. <code>git diff HEAD</code> muestra la diferencia entre el directorio de trabajo y el último commit.</p>
+<h3 id="deshacer-cambios">Deshacer cambios</h3>
+<h4 id="eliminar-cambios-del-directorio-de-trabajo-o-volver-a-una-version-anterior-git-checkout">Eliminar cambios del directorio de trabajo o volver a una versión anterior (<code>git checkout</code>)</h4>
+<p><code>git checkout &lt;commit&gt; -- &lt;file&gt;</code> actualiza el fichero <code>&lt;file&gt;</code> a la versión correspondiente al commit <code>&lt;commit&gt;</code>.</p>
+<p>Suele utilizarse para eliminar los cambios en un fichero que no han sido guardados aún en la zona de intercambio temporal, mediante el comando <code>git checkout HEAD -- &lt;file&gt;</code></p>
+<h4 id="eliminar-cambios-de-la-zona-de-intercambio-temporal-git-reset">Eliminar cambios de la zona de intercambio temporal (<code>git reset</code>)</h4>
+<p><code>git reset &lt;fichero&gt;</code> elimina los cambios del fichero <code>&lt;fichero&gt;</code> de la zona de intercambio temporal, pero preserva los cambios en el directorio de trabajo.</p>
+<p>Para eliminar por completo los cambios de un fichero que han sido guardados en la zona de intercambio temporal hay que aplicar este comando y después <code>git checkout HEAD -- &lt;fichero&gt;</code>.</p>
+<h4 id="eliminar-cambios-de-un-commit-git-reset">Eliminar cambios de un commit (<code>git reset</code>)</h4>
+<ul>
+<li><code>git reset --hard &lt;commit&gt;</code> elimina todos los cambios desde el commit <code>&lt;commit&gt;</code> y actualiza el <code>HEAD</code> este commit. </li>
+</ul>
+<p><strong>¡Ojo!</strong> Usar con cuidado este comando pues los cambios posteriores al commit indicado se pierden por completo.</p>
+<p>Suele usarse para eliminar todos los cambios en el directorio de trabajo desde el último commit mediante el comando <code>git reset --hard HEAD</code>.</p>
+<ul>
+<li><code>git reset &lt;commit&gt;</code> actualiza el HEAD al commit <code>&lt;commit&gt;</code>; es decir, elimina todos los commits posteriores a este commit, pero no elimina los cambios del directorio de trabajo.</li>
+</ul>
+<h3 id="ramas">Ramas</h3>
+<p>Inicialmente cualquier repositorio tiene una única rama llamada <strong>master</strong> (o <strong>main</strong>) donde se van sucediendo todos los commits de manera lineal.</p>
+<p>Una de las características más útiles de Git es que permite la creación de ramas para trabajar en distintas versiones de un proyecto a la vez.</p>
+<p>Esto es muy útil si, por ejemplo, se quieren añadir nuevas funcionalidades al proyecto sin que interfieran con lo desarrollado hasta ahora.</p>
+<p>Cuando se termina el desarrollo de las nuevas funcionalidades las ramas <strong>se pueden fusionar</strong> para incorporar los cambios al proyecto principal.</p>
+<h4 id="creacion-de-ramas-git-branch">Creación de ramas (<code>git branch</code>)</h4>
+<p><code>git branch &lt;rama&gt;</code> crea una nueva rama con el nombre <code>&lt;rama&gt;</code> en el repositorio a partir del último commit, es decir, donde apunte HEAD. Al crear una rama a partir de un commit, el flujo de commits se bifurca en dos de manera que se pueden desarrollar dos versiones del proyecto en paralelo.</p>
+<div style="text-align:center;">
+    <img src="../../img/ud00/04_branch.png" alt="04_branch" style="max-width:75%;" />
+</div>
+
+<h4 id="listado-de-ramas-git-log">Listado de ramas (<code>git log</code>)</h4>
+<p><code>git branch</code> muestra las ramas activas de un repositorio indicando con <strong>*</strong> la rama activa en ese momento. <code>git log --graph --oneline</code> muestra la historia del repositorio en forma de grafo (<code>--graph</code>) incluyendo todas las ramas (<code>--all</code>).</p>
+<h4 id="cambio-de-ramas-git-checkout">Cambio de ramas (<code>git checkout</code>)</h4>
+<p><code>git checkout &lt;rama&gt;</code> actualiza los ficheros del directorio de trabajo a la última versión del repositorio correspondiente a la rama <code>&lt;rama&gt;</code>, y la activa, es decir, HEAD pasa a apuntar al último commit de esta rama. <code>git checkout -b &lt;rama&gt;</code> crea una nueva rama con el nombre <code>&lt;rama&gt;</code> y la activa, es decir, HEAD pasa a apuntar al último commit de esta rama. Este comando es equivalente aplicar los comandos <code>git branch &lt;rama&gt;</code> y después <code>git checkout &lt;rama&gt;</code>.</p>
+<h4 id="fusion-de-ramas-git-merge">Fusión de ramas (<code>git merge</code>)</h4>
+<p><code>git merge &lt;rama&gt;</code> integra los cambios de la rama <code>&lt;rama&gt;</code> en la rama actual a la que apunta HEAD.</p>
+<div style="text-align:center;">
+    <img src="../../img/ud00/05_git_merge.png" alt="05_git_merge" style="max-width:75%;" />
+</div>
+
+<h4 id="resolucion-de-conflictos">Resolución de conflictos</h4>
+<p>Para fusionar dos ramas es necesario que no haya conflictos entre los cambios realizados a las dos versiones del proyecto.</p>
+<p>Si en ambas versiones se han hecho cambios sobre la misma parte de un fichero, entonces se produce un conflicto y es necesario resolverlo antes de poder fusionar las ramas.</p>
+<p>La resolución debe hacerse manualmente observando los cambios que interfieren y decidiendo cuáles deben prevalecer, aunque existen herramientas como <code>KDif3</code> o <code>meld</code> que facilitan el proceso.</p>
+<h4 id="reorganizacion-de-ramas-git-rebase">Reorganización de ramas (<code>git rebase</code>)</h4>
+<p><code>git rebase &lt;rama-1&gt; &lt;rama-2&gt;</code> replica los cambios de la rama <code>&lt;rama-2&gt;</code> en la rama <code>&lt;rama-1&gt;</code> partiendo del ancestro común de ambas ramas. El resultado es el mismo que la fusión de las dos ramas pero la bifurcación de la <code>&lt;rama-2&gt;</code> desaparece ya que sus commits pasan a estar en la <code>&lt;rama-1&gt;</code>.</p>
+<h4 id="eliminacion-de-ramas-git-branch-d">Eliminación de ramas (git branch -d)</h4>
+<p><code>git branch -d &lt;rama&gt;</code> elimina la rama de nombre <code>&lt;rama&gt;</code> siempre y cuando haya sido fusionada previamente. </p>
+<p><code>git branch -D &lt;rama&gt;</code> elimina la rama de nombre <code>&lt;rama&gt;</code> incluso si no ha sido fusionada. Si la rama no ha sido fusionada previamente se perderán todos los cambios de esa rama.</p>
+<h4 id="repositorios-remotos">Repositorios remotos</h4>
+<p>La otra característica de Git, que unida a las ramas, facilita la colaboración entre distintos usuarios en un proyecto son los repositorios remotos.</p>
+<p>Git permite la creación de una copia del repositorio en un servidor git en internet. La principal ventaja de tener una copia remota del repositorio, a parte de servir como copia de seguridad, es que otros usuarios pueden acceder a ella y hacer también cambios.</p>
+<p>Existen muchos proveedores de alojamiento para repositorios Git pero los más usados son <a href="https://github.com/">GitHub</a> y <a href="https://about.gitlab.com/">GitLab</a>.</p>
+<h2 id="que-es-github">¿Qué es GitHub?</h2>
+<div style="text-align:center;">
+    <img src="../../img/ud00/06_github.png" alt="06_github" style="max-width:25%;" />
+</div>
+
+<p><a href="https://github.com/">GitHub</a> es el proveedor de alojamiento en la nube para repositorios gestionados con git más usado y el que actualmente tiene alojados más proyectos de desarrollo de software de código abierto en el mundo.</p>
+<p>La principal ventaja de <a href="https://github.com/">GitHub</a> es que permite albergar un número ilimitado de repositorios tanto públicos como privados, y que además ofrece servicios de registro de errores, solicitud de nuevas funcionalidades, gestión de tareas, wikis o publicación de páginas web, para cada proyecto, incluso con el plan básico que es gratuito.</p>
+<h3 id="configuracion-con-clave-publicaprivada">Configuración con clave publica/privada</h3>
+<p>Seguir el manual de <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">github</a>, que resumimos en estos puntos:</p>
+<h4 id="generar-la-clave-linux">Generar la clave (Linux)</h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>o:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Después introducir la ubicación del archivo (o dejarlo por defecto) y introducir la <code>passphrase</code>.</p>
+<h4 id="anadir-la-clave-a-nuestra-cuenta-github">Añadir la clave a nuestra cuenta github</h4>
+<p>Siguiendo los pasos de la <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">documentación</a>.</p>
+<h4 id="configurar-nuestro-equipo-linux">Configurar nuestro equipo linux</h4>
+<p>Algunas redes bloquean el acceso al puerto <code>22</code> (como por ejemplo la red del instituto), por ello <code>github</code> tiene habilitada la posibilidad de acceder a <code>ssh</code> a través del puerto <code>443</code> (típicamente <code>https</code>). Para configurar nuestro equipo y acceder a <code>github</code> mediante <code>ssh</code> con nuestro usuario y nuestra clave debemos configurar el archivo <code>~/.ssh/config</code> con el siguiente contenido:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Host github.com
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Hostname ssh.github.com
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Port 443
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>User arturobc
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>IdentityFile ~/.ssh/pubuntu_github_ssh_key
+</code></pre></div></td></tr></table></div>
+<h3 id="anadir-un-repositorio-remoto-git-remote-add">Añadir un repositorio remoto (<code>git remote add</code>)</h3>
+<p><code>git remote add &lt;repositorio-remoto&gt; &lt;url&gt;</code> crea un enlace con el nombre <code>&lt;repositorio-remoto&gt;</code> a un repositorio remoto ubicado en la dirección <code>&lt;url&gt;</code>.</p>
+<p>Cuando se añade un repositorio remoto a un repositorio, Git seguirá también los cambios del repositorio remoto de manera que se pueden descargar los cambios del repositorio remoto al local y se pueden subir los cambios del repositorio local al remoto.</p>
+<h3 id="lista-de-repositorios-remotos-git-remote">Lista de repositorios remotos (<code>git remote</code>)</h3>
+<p><code>git remote</code> muestra un listado con todos los enlaces a repositorios remotos de nidos en un repositorio local. <code>git remote -v</code> muestra además las direcciones url para cada repositorio remoto.</p>
+<h3 id="descargar-cambios-desde-un-repositorio-remoto-git-pull">Descargar cambios desde un repositorio remoto (<code>git pull</code>)</h3>
+<p><code>git pull &lt;remoto&gt; &lt;rama&gt;</code> descarga los cambios de la rama <code>&lt;rama&gt;</code> del repositorio remoto <code>&lt;remoto&gt;</code> y los integra en la última versión del repositorio local, es decir, en el HEAD.</p>
+<p><code>git fetch &lt;remoto&gt;</code> descarga los cambios del repositorio remoto <code>&lt;remoto&gt;</code> pero no los integra en la última versión del repositorio local.</p>
+<h3 id="subir-cambios-a-un-repositorio-remoto-git-push">Subir cambios a un repositorio remoto (<code>git push</code>)</h3>
+<p><code>git push &lt;remoto&gt; &lt;rama&gt;</code> sube al repositorio remoto <code>&lt;remoto&gt;</code> los cambios de la rama <code>&lt;rama&gt;</code> en el repositorio local.</p>
+<h3 id="colaboracion-en-repositorios-remotos-de-github">Colaboración en repositorios remotos de GitHub</h3>
+<p>Existen dos formas de colaborar en un repositorio alojado en GitHub:</p>
+<ul>
+<li>Ser colaborador del repositorio:</li>
+<li><code>Recibir autorización de colaborador</code> por parte de la persona propietaria del proyecto.</li>
+<li><code>Clonar</code> el repositorio en local.</li>
+<li><code>Hacer cambios</code> en el repositorio local.</li>
+<li><code>Subir los cambios</code> al repositorio remoto. Primero hacer <code>git pull</code> para integrar los cambios remotos en el repositorio local y luego <code>git push</code> para subir los cambios del repositorio local al remoto.</li>
+<li>Replicar el repositorio y solicitar integración de cambios:</li>
+<li><code>Replicar</code> el repositorio remoto en nuestra cuenta de GitHub mediante un <code>fork</code>.</li>
+<li><code>Hacer cambios</code> en nuestro repositorio remoto.</li>
+<li>Solicitar a la persona propietaria del repositorio original que <code>integre nuestros cambios</code> en su repositorio mediante un <code>pull request</code>.</li>
+</ul>
+<h2 id="vscode-integrado-en-github"><code>VsCode</code> integrado en <code>GitHub</code></h2>
+<h3 id="localizar-repositorio">Localizar repositorio</h3>
+<p>Primero localizamos el repositorio remoto de Github con el que queremos colaborar:</p>
+<ol>
+<li>Buscamos al usuario (En todo <code>GitHub</code>):</li>
+</ol>
+<div style="text-align:center;">
+       <img src="../../img/ud00/vscode_01_localizar_repositorio.png" alt="vscode_01_localizar_repositorio" style="max-width:50%;" />
+   </div>
+
+<ol>
+<li>Elegimos la pestaña <code>Repositorios</code> y después el repositorio en cuestión:</li>
+</ol>
+<div style="text-align:center;">
+    <img src="../../img/ud00/vscode_02_localizar_repositorio.png" alt="vscode_02_localizar_repositorio" style="max-width:50%;" />
+</div>
+
+<h3 id="abrir-vscode-integrado">Abrir <code>VSCode</code> integrado</h3>
+<p>Github cuenta con un editor online muy potente basado en <code>VSCode</code>.</p>
+<p>Una vez visualizamos el código del repositorio en cuestión:</p>
+<div style="text-align:center;">
+    <img src="../../img/ud00/vscode_03_codigo.png" alt="vscode_03_codigo" style="max-width:50%;" />
+</div>
+
+<p>para abrir el editor solo debemos pulsar la tecla "<strong>.</strong>" (<em>punto</em>) de nuestro teclado. Visualizaremos la estructura de carpetas y archivos en un editor <code>VSCode</code> integrado en el navegador Web:</p>
+<div style="text-align:center;">
+    <img src="../../img/ud00/vscode_05_vscode1.png" alt="vscode_05_vscode1" style="max-width:50%;" />
+</div>
+
+<h3 id="modificar-un-archivo">Modificar un archivo</h3>
+<p>Una vez detectada la errata dentro del código <a href="https://markdown.es/">markdown</a> que es muy fácil de interpretar (a poco que le dediquéis unos minutos) podemos modificar el archivo en cuestión, y a su lado aparecerá una <strong>M</strong> porque el archivo está modificado.</p>
+<div style="text-align:center;">
+    <img src="../../img/ud00/vscode_06_vscode2.png" alt="vscode_06_vscode2" style="max-width:50%;" />
+</div>
+
+<h3 id="git-integrado">Git integrado</h3>
+<p>VSCode lleva integrado un gestor de GIT, el tercer icono de la barra lateral: <img alt="Screenshot_20220106_172635" src="assets/vscode_07_git.png" /></p>
+<ol>
+<li>
+<p><strong>Verificamos</strong> los archivos cambiados:
+   <img src="assets/vscode_07_git1.png" alt="Verificar cambios" style="zoom: 80%;" /></p>
+</li>
+<li>
+<p>Los pasamos a "<strong>staged area</strong>" con el símbolo "<strong>+</strong>":
+   <img src="assets/vscode_07_git2.png" alt="pasar a staged" style="zoom:80%;" /></p>
+</li>
+<li>
+<p>Añadimos el <strong>comentario</strong> del commit:
+   <img src="assets/vscode_07_git3.png" alt="comentario commit" style="zoom:80%;" /></p>
+</li>
+<li>
+<p>Realizamos el <strong>commit</strong>:
+   <img src="assets/vscode_07_git4.png" alt="Screenshot_20220106_173720" style="zoom:80%;" /></p>
+</li>
+</ol>
+<blockquote>
+<p>Si el repositorio no es nuestro mostrará este mensaje:</p>
+<p><img src="assets/vscode_07_git5.png" alt="Screenshot_20220106_173836" style="zoom:70%;" /></p>
+</blockquote>
+<p>En realidad podemos hacer el fork antes o después, aquí tienes un pequeño <a href="https://www.youtube.com/watch?v=zyT0sl3-kxE">vídeo</a> que explica qué es un fork.</p>
+<p>A continuación nos pide el nombre de la rama que se creará y que luego podremos solicitar se incluya en el proyecto original:</p>
+<p><img src="assets/vscode_07_git6.png" alt="branch" style="zoom:80%;" /></p>
+<p>Ahora nos pregunta si ya que hemos creado un fork, queremos cambiar el repositorio, y trabajar sobre nuestro fork en lugar de sobre el proyecto original, pulsamos sobre [Switch to Fork]:</p>
+<p><img src="assets/vscode_07_git7.png" alt="cambiar al fork" style="zoom:70%;" /></p>
+<p>Ahora ya podemos salir del editor VSCode pulsando sobre el botón de las tres lineas horizontales y elegir la opción "Go to Repository":</p>
+<p><img src="assets/vscode_07_git8.png" alt="Volver al repositorio" style="zoom:80%;" /></p>
+<h3 id="pull-request">Pull request</h3>
+<p>Una vez volvemos a nuestro repositorio (nuestro fork), detectará que hay cambios respecto al repositorio original y nos propone que realicemos un pull request (una petición al usuario propietario del repositorio original para que incluya nuestra modificación).</p>
+<p><img src="assets/vscode_08_pullrequest.png" alt="Screenshot_20220106_175237" style="zoom:80%;" /></p>
+<p>Una vez pulsado el botón [Compare &amp; pull request] nos aparece la siguiente pantalla:</p>
+<p><img alt="Screenshot_20220106_175639" src="assets/vscode_09_pullrequest2.png" /></p>
+<p>Debemos asegurarnos de que la modificación se puede agregar al repositorio original "<em>Able to merge</em>", y que indicamos en los comentarios nuestro nombre completo para que el <em>profesor</em> nos identifique. Fíjate que el nombre del pull request es el nombre del commit que hicimos desde VSCode.</p>
+<p>Ahora debemos pulsar el botón [Create pull request].</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ud0001/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 0.1 Markdown">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                0.1 Markdown
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ud00ac/" class="md-footer__link md-footer__link--next" aria-label="Next: Actividades">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Actividades
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    <!--Made with-->
+    IES
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "navigation.footer", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
