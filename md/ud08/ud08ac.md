@@ -426,15 +426,15 @@ Incluye otras propiedades según sea necesario a la hora de implementar las inte
 
 b) Clase `Cereales` : Define el producto caja de cereales (este producto no tiene descuentos).
 
-Las propiedades del producto serán `marca`, `precio` y `tipo` de cereal (String).
+Las propiedades del producto serán `marca`, `precio` y `tipo de cereal` (String).
 
 - Programa un *constructor* que reciba como parámetros las tres propiedades anteriores. 
 - Programa los métodos *set* y *get* para dichas propiedades. 
 - Implementa los métodos de las interfaces implementadas (si es necesario añade más propiedades a la clase).
 
 !!!note "A tener en cuenta"
-    Las calorías serán las siguientes:<br>
-        - 5 si el cereal es espelta, <br>
+    Para el cálculo del método `getCalorias()` las calorías serán las siguientes:<br>
+	- 5 si el cereal es espelta, <br>
     - 8 si es maíz, <br>
     - 12 si es trigo, y <br>
     - 15 en los demás casos.
@@ -449,9 +449,9 @@ El producto tendrá como propiedades la marca, el tipo de vino, los grados de al
 - Programa también los métodos set, get, toString y los métodos de las interfaces. Añada nuevas propiedades si es necesario. 
 
 !!!note "A tener en cuenta"
-    Las calorías se calcularán multiplicando por 10 la graduación alcohólica.
+    Para el cálculo del método `getCalorias()` las calorías se calcularán multiplicando por 10 la graduación alcohólica.
 
-d ) Programa de `TestSupermercado` : Realiza un programa de prueba donde crees varios productos de cada clase. Haz un ejemplo de polimorfismo creando un *ArrayList* de productos alimenticios y calculando la suma de sus calorías.
+d ) Programa de `TestSupermercado`: Realiza un programa de prueba donde crees varios productos de cada clase. Haz un ejemplo de polimorfismo creando un *ArrayList* de productos alimenticios y calculando la suma total de sus calorías.
 
 <hr>
 
@@ -522,8 +522,10 @@ Define una jerarquía de clases que permita almacenar datos sobre los planetas y
 
 Algunos atributos que necesitaremos almacenar son: 
 
+- *Nombre*.
+
 - *Masa del cuerpo*.
-- Diámetro medio.
+- *Diámetro medio*.
 - *Período de rotación* sobre su propio eje.
 - *Período de traslación* alrededor del cuerpo que orbitan.
 - *Distancia media* a ese cuerpo.
@@ -539,7 +541,7 @@ Define un método, que dado un objeto del sistema solar (planeta o satélite), i
 
 El diagrama UML sería:
 
-<img src="../../img/ud08/ud08_ej14.png" alt="ud08_ej14" style="zoom:60%;" />
+<img src="../../img/ud08/ud08_ej14.png" alt="ud08_ej14" style="zoom:70%;" />
 
 !!!note "Posible solución"
 	Una posible solución sería crear una lista de objetos, insertar los planetas y satélites (directamente mediante código o solicitándolos por pantalla) y luego mostrar un pequeño menú que permita al usuario imprimir la información del astro que elija.
