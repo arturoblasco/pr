@@ -18,8 +18,9 @@ nav:
   - UD 0 Conocimientos previos:
       - 0.1 Introducción: ud00/ud0001.md
       - 0.2 Markdown: ud00/ud0002.md
-      - 0.3 Git y Github: ud00/ud0003.md
-      - 0.4 VS Code: ud00/ud0004.md
+      - 0.3 Git: ud00/ud0003.md
+      - 0.3 Github: ud00/ud0004.md
+      - 0.5 VS Code: ud00/ud0005.md
       - Actividades: ud00/ud00ac.md
       - Fuentes de información: ud00/ud00re.md
   - UD 1 Elemenos de un programa informático:
