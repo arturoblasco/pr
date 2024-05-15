@@ -134,8 +134,19 @@ nav:
       - Actividades: ud09/ud09ac.md
       - Píldoras informáticas: ud09/ud09pi.md
       - Fuentes de información: ud09/ud09re.md
-  - UD 10 Interfaz gráfica: default.md
-
+  - UD 10 Interfaz gráfica:
+      - 10.1 Introducciónr: ud10/ud1001.md
+      - 10.2 Gráfico de escena: ud10/ud1002.md
+      - 10.3 Controles de la interfa de usuario: ud10/ud1003.md
+      - 10.4 Diseño: ud10/ud1004.md
+      - 10.5 Estructura de la aplicación: ud10/ud1005.md
+      - 10.6 Mejoras prácticas: ud10/ud1006.md
+      - 10.7 JavaFX en IntelliJ: ud10/ud1007.md
+      - 10.8 SceneBuilder en IntelliJ: ud10/ud1008.md
+      - 10.9 Calculadora en JavaFX: ud10/ud1009.md
+      - Actividades: ud10/ud10ac.md
+      - Píldoras informáticas: ud10/ud10pi.md
+      - Fuentes de información: ud10/ud10re.md
 # Extensions
 markdown_extensions:
   - admonition
