@@ -2997,7 +2997,7 @@
         
   
   <span class="md-ellipsis">
-    10.1 Introducciónr
+    10.1 Introducción
   </span>
   
 
@@ -4224,7 +4224,7 @@
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Esta imagen muestra la maqueta desglosada por contenedor. El padre <code>VBox</code>es el rectángulo azul más externo. Los HBoxes son los rectángulos interiores (rojo y verde).</p>
-<div style="text-align:center;"> <img src="../../img/ud10/vboxandhboxapp_brokendown.png" alt="vboxandhboxapp_brokendown" style="max-width:100%;" /> </div>
+<div style="text-align:center;"> <img src="../../img/ud10/vboxandhboxapp_brokendown.png" alt="vboxandhboxapp_brokendown" style="max-width: 90%;" /> </div>
 
 <h3 id="alineacion-y-hgrow">Alineación y Hgrow</h3>
 <p>Actualizar <code>Button</code>está alineado a la izquierda mientras que Cerrar sesión <code>Hyperlink</code>está alineado a la derecha. Esto se logra usando dos HBoxes. topControls es un <code>HBox</code>que contiene Actualizar <code>Button</code>y también contiene un <code>HBox</code>con Cerrar sesión <code>Hyperlink</code>. A medida que la pantalla se hace más ancha, Cerrar sesión <code>Hyperlink</code>se desplazará hacia la derecha, mientras que Actualizar <code>Button</code>mantendrá su alineación izquierda.</p>
@@ -4260,7 +4260,7 @@
 <div style="text-align:center;"> <img src="../../img/ud10/vboxandhboxapp_screenshot.png" alt="vboxandhboxapp_screenshot" style="max-width:95%;" /> </div>
 
 <p>Esta imagen muestra la aplicación redimensionada a un alto y ancho más pequeños.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/vboxandhboxapp_screenshot_sm.png" alt="vboxandhboxapp_screenshot_sm" style="max-width:95%;" /> </div>
+<div style="text-align:center;"> <img src="../../img/ud10/vboxandhboxapp_screenshot_sm.png" alt="vboxandhboxapp_screenshot_sm" style="max-width:75%;" /> </div>
 
 <h3 id="seleccione-los-contenedores-correctos">Seleccione los contenedores correctos</h3>
 <p>La filosofía del diseño de JavaFX es la misma que la filosofía de Swing. Seleccione el contenedor adecuado para la tarea en cuestión. Este artículo presentó los dos contenedores más versátiles: <code>VBox</code>y HBox. Al establecer propiedades como alineación, hgrow y vgrow, puede crear diseños increíblemente complejos mediante el anidamiento. Estos son los contenedores que más uso y, a menudo, son los únicos contenedores que necesito.</p>
@@ -4463,7 +4463,7 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="stackpane">StackPane</h2>
 <p><code>StackPane</code> coloca a sus hijos uno encima de otro. El último agregado <code>Node</code>es el más alto. Por defecto <code>StackPane</code>alineará los hijos usando <code>Pos.CENTER</code>, como se puede ver en la siguiente imagen, donde están los 3 hijos (en orden de suma): <code>Rectangle</code>, <code>Circle</code>y <code>Button</code>.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/stackpane_center.png" alt="centro de apilamiento" style="max-width:70%;" /></div>
+<div style="text-align:center;"> <img src="../../img/ud10/stackpane_center.png" alt="centro de apilamiento" style="max-width: 50%;" /></div>
 
 <p>Esta imagen fue producida por el siguiente fragmento:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
@@ -4501,21 +4501,19 @@
 <a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Podemos cambiar la alineación predeterminada agregando <code>pane.setAlignment(Pos.CENTER_LEFT);</code>para producir el siguiente efecto:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div style=&quot;text-align:center;&quot;&gt; &lt;img src=&quot;../../img/ud10/stackpane_left.png&quot; alt=&quot;apilado a la izquierda&quot; style=&quot;max-width:95%;&quot; /&gt; &lt;/div&gt;
-    Figura 23. StackPane alineado a la izquierda
-</code></pre></div></td></tr></table></div>
+<div style="text-align:center;"> <img src="../../img/ud10/stackpane_left.png" alt="apilado a la izquierda" style="max-width:50%;" /><br/><i>Figura 23. StackPane alineado a la izquierda</i></div>
+
 <h2 id="posicionamiento-absoluto-con-panel">Posicionamiento absoluto con panel</h2>
 <p>Contenedores como <code>VBox</code>o <code>BorderPane</code>alinear y distribuir a sus hijos. La superclase <code>Pane</code>también es un contenedor, pero no impone un orden a sus hijos. Los hijos se posicionan a sí mismos a través de propiedades como x, centerX y layoutX. Esto se llama posicionamiento absoluto y es una técnica para colocar un <code>Shape</code>o un <code>Node</code>en un lugar determinado de la pantalla.</p>
 <p>Esta captura de pantalla muestra una vista Acerca de. La vista Acerca de contiene <code>Hyperlink</code>en el medio de la pantalla "Acerca de esta aplicación". La vista Acerca de utiliza varias formas JavaFX para formar un diseño que se recorta para que parezca una tarjeta de presentación.      </p>
-<div style="text-align:center;"> <img src="../../img/ud10/paneapp_about_view.png" alt="paneapp sobre la vista" style="max-width:95%;" /><br />Figura 24. Captura de pantalla de la vista Acerca de en PaneApp</div>
+<div style="text-align:center;"> <img src="../../img/ud10/paneapp_about_view.png" alt="paneapp sobre la vista" style="max-width:65%;" /><br /><i>Figura 24. Captura de pantalla de la vista Acerca de en PaneApp</i></div>
 
 <h3 id="tamano-del-panel">Tamaño del panel</h3>
 <p>A diferencia de la mayoría de los contenedores, <code>Pane</code>cambia de tamaño para adaptarse a su contenido y no al revés. Esta imagen es una captura de pantalla de Scenic View tomada antes de agregar el Arco inferior derecho. El <code>Pane</code>es el área resaltada en amarillo. Tenga en cuenta que no ocupa la totalidad <code>Stage</code>.           </p>
-<div style="text-align:center;"> <img src="../../img/ud10/paneapp_pane_size_scenicview.png" alt="paneapp tamaño del panel vista panorámica" style="max-width:95%;" /><br />Figura 25. Vista escénica resaltando la pantalla parcialmente construida </div>
+<div style="text-align:center;"> <img src="../../img/ud10/paneapp_pane_size_scenicview.png" alt="paneapp tamaño del panel vista panorámica" style="max-width:95%;" /><br /><i>Figura 25. Vista escénica resaltando la pantalla parcialmente construida</i></div>
 
 <p>Esta es una captura de pantalla tomada después de agregar la esquina inferior derecha <code>Arc</code>. Esto <code>Arc</code>se colocó más cerca del borde inferior derecho del archivo <code>Stage</code>. Esto obliga al Panel a estirarse para acomodar los contenidos expandidos.        </p>
-<div style="text-align:center;"> <img src="../../img/ud10/paneapp_scenicview_full_stage.png" alt="Paneapp ScenicView etapa completa" style="max-width:95%;" /><br />Figura 26. Vista escénica resaltando el panel expandido</div>
+<div style="text-align:center;"> <img src="../../img/ud10/paneapp_scenicview_full_stage.png" alt="Paneapp ScenicView etapa completa" style="max-width:95%;" /><br /><i>Figura 26. Vista escénica resaltando el panel expandido</i></div>
 
 <h3 id="el-panel">El panel</h3>
 <p>El contenedor más externo de la vista Acerca de es un <code>VBox</code>cuyo único contenido es el archivo <code>Pane</code>. El <code>VBox</code>se utiliza para encajar en el conjunto <code>Stage</code>y proporciona un fondo.</p>
@@ -4746,7 +4744,7 @@
 <p>Entonces, para usarlo correctamente <code>Pane</code>como superficie de dibujo para <code>Shapes</code>, necesitamos recortar manualmente su contenido. Esto es algo complejo, especialmente cuando se trata de un borde visible. Escribí una pequeña aplicación de demostración para ilustrar el comportamiento predeterminado y varios pasos para solucionarlo. Puede descargarlo como <a href="https://translate.google.com/website?sl=en&amp;tl=es&amp;hl=ca&amp;client=webapp&amp;u=http://kynosarges.org/misc/PaneDemo.zip" target="_blank">PaneDemo.zip</a> que contiene un proyecto para NetBeans 8.2 y Java SE 8u112. Las siguientes secciones explican cada paso con capturas de pantalla y fragmentos de código pertinentes.</p>
 <h3 id="comportamiento-por-defecto">Comportamiento por defecto</h3>
 <p>Al comenzar, PaneDemo muestra lo que sucede cuando coloca una <code>Ellipse</code>forma en un espacio <code>Pane</code>que es demasiado pequeño para contenerla por completo. <code>Pane</code> tiene un bonito borde grueso y redondeado para visualizar su área . La ventana de la aplicación es redimensionable, con el <code>Pane</code>tamaño siguiendo el tamaño de la ventana. Los tres botones de la izquierda se utilizan para cambiar a los otros pasos de la demostración; haga clic en Predeterminado (Alt+D) para volver a la salida predeterminada de un paso posterior.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/clipping_extends.png" alt="el recorte se extiende" style="max-width:50%;" /><br />Figura 28. Niño que se extiende fuera de los límites del panel</div>
+<div style="text-align:center;"> <img src="../../img/ud10/clipping_extends.png" alt="el recorte se extiende" style="max-width:45%;" /><br /><i>Figura 28. Niño que se extiende fuera de los límites del panel</i></div>
 
 <p>Como puede ver, el <code>Ellipse</code>sobrescribe el de su padre <code>Border</code>y sobresale mucho más allá. El siguiente código se utiliza para generar la vista predeterminada. Se divide en varios métodos más pequeños y una constante para el <code>Border</code>radio de la esquina, ya que se hará referencia a ellos en los siguientes pasos.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
@@ -4864,7 +4862,7 @@
 <a id="__codelineno-15-33" name="__codelineno-15-33"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Elige Recortado (Alt+C) en PaneDemo para representar la salida correspondiente. Así es como se ve:     </p>
-<div style="text-align:center;"> <img src="../../img/ud10/clipping_clipped.png" alt="recorte recortado" style="max-width:50%;" /><br />Figura 29. Panel con clip aplicado </div>
+<div style="text-align:center;"> <img src="../../img/ud10/clipping_clipped.png" alt="recorte recortado" style="max-width: 45%;" /><br /><i>Figura 29. Panel con clip aplicado</i></div>
 
 <p>Eso es mejor. El <code>Ellipse</code>ya no sobresale más allá del <code>Pane</code>– pero todavía sobrescribe su Borde. También tenga en cuenta que tuvimos que especificar manualmente un redondeo de esquina estimado para el recorte <code>Rectangle</code>para reflejar las <code>Border</code>esquinas redondeadas. Esta estimación es 3 * BORDER_RADIUS porque el radio de esquina especificado en <code>Border</code>realmente define su radio interior, y el radio exterior (que necesitamos aquí) será mayor dependiendo del <code>Border</code>grosor. (Podría calcular el radio exterior exactamente si realmente quisiera, pero lo omití para la aplicación de demostración).</p>
 <h4 id="443-paneles-anidados">4.4.3. Paneles anidados</h4>
@@ -4894,7 +4892,7 @@
 <p>Elige Anidado (Alt+N) en PaneDemo para representar la salida correspondiente. Ahora todo se ve como debería:</p>
 <div style="text-align:center;"> <img src="../../img/ud10/clipping_nested.png" alt="clipping_nested" style="max-width:50%;" /> </div>
 
-<p>Como beneficio adicional, ya no necesitamos estimar un radio de esquina correcto para el recorte <code>Rectangle</code>. Ahora recortamos la circunferencia interior en lugar de la exterior de nuestro visible <code>Border</code>, para que podamos reutilizar directamente su radio de esquina interior. Si especifica múltiples radios de esquina diferentes o uno más complejo <code>Border</code>, tendrá que definir un recorte correspondientemente más complejo <code>Shape</code>.</p>
+<p>Como beneficio adicional, ya no necesitamos estimar un radio de esquina correcto para el recorte <code>Rectangle</code>. Ahora recortamos la circunferencia interior en lugar de la exterior de nuestro visible <code>Border</code>, para que podamos reutilizar directamente su radio de esquina interior. Si especifica múltiples radios de esquina diferentes o uno mágrandes que una sola s complejo <code>Border</code>, tendrá que definir un recorte correspondientemente más complejo <code>Shape</code>.</p>
 <p>Hay una pequeña advertencia. La esquina superior izquierda del dibujo <code>Pane</code>con respecto a todas las coordenadas secundarias ahora comienza <em>dentro</em> del visible <code>Border</code>. Si cambia retroactivamente uno <code>Pane</code>con paneles visibles <code>Border</code>a anidados como se muestra aquí, todos los niños exhibirán un ligero cambio de posición correspondiente al <code>Border</code>grosor.</p>
 <h2 id="gridpane">GridPane</h2>
 <p>Los formularios en las aplicaciones comerciales a menudo usan un diseño que imita un registro de base de datos. Para cada columna de una tabla, se agrega un encabezado en el lado izquierdo que coincide con un valor de fila en el lado derecho. JavaFX tiene un control de propósito especial llamado <code>GridPane</code>para este tipo de diseño que mantiene los contenidos alineados por fila y columna. <code>GridPane</code>también admite expansión para diseños más complejos.</p>
@@ -5102,10 +5100,10 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="gridpane-spanning">GridPane Spanning</h2>
 <p>Para formularios más complejos implementados con <code>GridPane</code>, se admite la expansión. La expansión permite que un control reclame el espacio de columnas vecinas (colspan) y filas vecinas (rowspan). Esta captura de pantalla muestra un formulario que amplía el ejemplo de la sección anterior. El diseño de dos columnas de la versión anterior se reemplazó por un diseño de varias columnas. Los campos como Problema y Descripción conservan la estructura original. Pero se agregaron controles a las filas que anteriormente contenían solo Correo electrónico y Prioridad.       </p>
-<div style="text-align:center;"> <img src="../../img/ud10/complexgridpaneapp.png" alt="complexgridpaneapp" style="max-width:95%;" /><br />Figura 33. Columnas de expansión</div>
+<div style="text-align:center;"> <img src="../../img/ud10/complexgridpaneapp.png" alt="complexgridpaneapp" style="max-width:95%;" /><br /><i>Figura 33. Columnas de expansión</i></div>
 
 <p>Al activar las líneas de la cuadrícula, observe que la cuadrícula anterior de dos columnas se reemplaza con una cuadrícula de seis columnas. La tercera fila que contiene seis elementos (3 pares de nombre de campo/valor) dicta la estructura. El resto del formulario utilizará la expansión para completar el espacio en blanco.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/complexgridpaneapp_lines.png" alt="líneas complejas de gridpaneapp" style="max-width:95%;" /><br />Figura 34. Líneas que resaltan la extensión</div>
+<div style="text-align:center;"> <img src="../../img/ud10/complexgridpaneapp_lines.png" alt="líneas complejas de gridpaneapp" style="max-width:95%;" /><br /><i>Figura 34. Líneas que resaltan la extensión</i></div>
 
 <p>A continuación se muestran los objetos contenedor <code>VBox</code>y <code>GridPane</code>utilizados en esta actualización. Hay un poco más de Vgap para ayudar al usuario a seleccionar los <code>ComboBox</code>controles.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
@@ -5410,7 +5408,7 @@
 <h2 id="restricciones-de-fila-y-columna-de-gridpane">Restricciones de fila y columna de GridPane</h2>
 <p>Los artículos anteriores sobre <code>GridPane</code>cómo crear un diseño de dos columnas con nombres de campo en el lado izquierdo y valores de campo en el lado derecho. Ese ejemplo se amplió para agregar más controles a una fila determinada y para usar espacios en el contenido del controlador de expansión. Este artículo presenta un par de clases JavaFX <code>ColumnConstraints</code>y <code>RowConstraints</code>. Estas clases dan especificaciones adicionales a una fila o columna. En este ejemplo, una fila que contiene un <code>TextArea</code>tendrá todo el espacio adicional cuando se cambie el tamaño de la ventana. Las dos columnas se establecerán en anchos iguales.</p>
 <p>Esta captura de pantalla muestra un ejemplo modificado de artículos anteriores. El programa de demostración de este artículo tiene una sensación rotativa en la que los nombres de los campos se emparejan con los valores de campo verticalmente (sobre los valores) en lugar de horizontalmente. La expansión de filas y columnas se usa para alinear elementos que son más grandes que una sola celda.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_1_annotated.png" alt="restriccionesgridpaneapp 1 anotado" style="max-width:95%;" /><br /></div>
+<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_1_annotated.png" alt="restriccionesgridpaneapp 1 anotado" style="max-width: 60%;" /><br /></div>
 
 <p>Los rectángulos rojos y el texto no forman parte de la interfaz de usuario. Están identificando secciones de la pantalla que se abordarán más adelante con ColumnConstraints y RowConstaints.</p>
 <p>Este código es la creación de la <code>Scene</code>raíz y los <code>GridPane</code>objetos.</p>
@@ -5509,7 +5507,7 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="restricciones-de-fila">Restricciones de fila</h3>
 <p>En este punto, el código refleja la captura de pantalla de la interfaz de usuario que se presenta en <a href="https://fxdocs-github-io.translate.goog/docs/html5/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=ca&amp;_x_tr_pto=wapp#initial_image" target="_blank">Ejemplo de aplicación que usa filas y columnas</a>. Para reasignar el espacio adicional en la base del formulario, use un objeto RowConstraints para establecer Priority.ALWAYS en la fila del <code>TextArea</code>. Esto dará como resultado el <code>TextArea</code>crecimiento para llenar el espacio disponible con algo utilizable. </p>
-<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_description.png" alt="restriccionesgridpaneapp descripción" style="max-width:95%;" /><br />Figura 36. TextArea crece para llenar espacio adicional</div>
+<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_description.png" alt="restriccionesgridpaneapp descripción" style="max-width:60%;" /><br /><i>Figura 36. TextArea crece para llenar espacio adicional</i></div>
 
 <p>Este código es un <code>RowConstraints</code>objeto para el <code>GridPane</code>para el <code>TextArea</code>. Antes del colocador, <code>RowConstraints</code>se asignan objetos para todas las demás filas. El método set de <code>getRowConstraints()</code>arrojará una excepción de índice cuando especifique la fila 12 sin asignar primero un objeto.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
@@ -5542,7 +5540,7 @@
 <p>Este código identifica el <code>Node</code>at (0,12) que es el <code>TextArea</code>. El <code>TextArea</code>abarcará 2 columnas pero solo 1 fila. Los HPos y Vpos están configurados en la PARTE SUPERIOR IZQUIERDA. Finalmente, el <code>Priority</code>de hgrow es A VECES y el de vgrow es SIEMPRE. Dado que <code>TextArea</code>es la única fila con "SIEMPRE", obtendrá el espacio adicional. Si hubiera otras configuraciones SIEMPRE, el espacio se compartiría entre varias filas.</p>
 <h3 id="restricciones-de-columna">Restricciones de columna</h3>
 <p>Para asignar correctamente el espacio que rodea los controles de Severidad y Categoría, se especificarán ColumnConstraints. El comportamiento predeterminado asigna menos espacio a la primera columna debido a los botones de opción de prioridad más pequeños. La siguiente estructura alámbrica muestra el diseño deseado que tiene columnas iguales separadas por un margen de 4 píxeles (Hgap).           </p>
-<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_wireframe.png" alt="restriccionesgridpaneapp estructura alámbrica" style="max-width:95%;" /><br />Figura 37. Wireframe de la aplicación de demostración</div>
+<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_wireframe.png" alt="restriccionesgridpaneapp estructura alámbrica" style="max-width:60%;" /><br /><i>Figura 37. Wireframe de la aplicación de demostración</i></div>
 
 <p>Para que los anchos de las columnas sean iguales, defina dos <code>ColumnConstraint</code>objetos y use un especificador de porcentaje.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
@@ -5555,8 +5553,8 @@
 <a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="n">col2</span><span class="p">.</span><span class="na">setPercentWidth</span><span class="p">(</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">);</span>
 <a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="n">gp</span><span class="p">.</span><span class="na">getColumnConstraints</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<p>Esta es una captura de pantalla del ejemplo terminado.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_finished.png" alt="restriccionesgridpaneapp terminado" style="max-width:95%;" /><br ></div>
+<p>Esta es una captura de pantalla del ejemplo terminado:</p>
+<div style="text-align:center;"> <img src="../../img/ud10/constraintsgridpaneapp_finished.png" alt="restriccionesgridpaneapp terminado" style="max-width:60%;" /><br ></div>
 
 <p><code>GridPane</code>es un control importante en el desarrollo de aplicaciones empresariales JavaFX. Cuando trabaje en un requisito que involucre pares de nombre/valor y una sola vista de registro, use <code>GridPane</code>. Si bien <code>GridPane</code>es más fácil de usar que el <code>GridBagLayout</code>de Swing, todavía encuentro que la API es un poco inconveniente (asignación de índices propios, restricciones disociadas). Afortunadamente, existe Scene Builder que simplifica enormemente la construcción de este formulario.</p>
 <h3 id="codigo-completado_3">Código completado</h3>
@@ -5789,10 +5787,10 @@
 <h2 id="anchorpane">AnchorPane</h2>
 <p><code>AnchorPane</code>es un control contenedor que define su diseño en términos de bordes. Cuando se coloca en un contenedor, <code>AnchorPane</code>se estira para llenar el espacio disponible. Los hijos de <code>AnchorPane</code>expresan sus posiciones y tamaños como distancias desde los bordes: Arriba, Izquierda, Abajo, Derecha. Si se colocan una o dos configuraciones de anclaje en un <code>AnchorPane</code>niño, el niño se fijará a esa esquina de la ventana. Si se utilizan más de dos configuraciones de anclaje, el niño se estirará  para llenar el espacio horizontal y vertical disponible.</p>
 <p>Esta maqueta muestra un <code>TextArea</code>rodeado por un conjunto de controles: un <code>Hyperlink</code>y dos indicadores de estado. Dado <code>TextArea</code>que contendrá todo el contenido, debería ocupar la mayor parte del espacio inicialmente y debería adquirir cualquier espacio adicional de un cambio de tamaño. En la periferia, hay una <code>Hyperlink</code>en la parte superior derecha, una conexión <code>Label</code>y <code>Circle</code>en la parte inferior derecha y un estado <code>Label</code>en la parte inferior izquierda.           </p>
-<div style="text-align:center;"> <img src="../../img/ud10/anchorpaneapp_mockup.png" alt="maqueta de la aplicación Anchorpane" style="max-width:95%;" /><br />Figura 39. AnchorPane con TextArea</div>
+<div style="text-align:center;"> <img src="../../img/ud10/anchorpaneapp_mockup.png" alt="maqueta de la aplicación Anchorpane" style="max-width:95%;" /><br /><i>Figura 39. AnchorPane con TextArea</i></div>
 
 <h3 id="anclas">Anclas</h3>
-<p>Para comenzar el diseño, cree un <code>AnchorPane</code>objeto y agréguelo al archivo <code>Scene</code>.</p>
+<p>Para comenzar el diseño, cree un <code>AnchorPane</code> objeto y agréguelo al archivo <code>Scene</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
 <span class="normal"><a href="#__codelineno-35-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">AnchorPane</span><span class="w"> </span><span class="n">ap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AnchorPane</span><span class="p">();</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">ap</span><span class="p">);</span>
@@ -5855,13 +5853,13 @@
 <a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="n">AnchorPane</span><span class="p">.</span><span class="na">setLeftAnchor</span><span class="p">(</span><span class="w"> </span><span class="n">statusLabel</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0d</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Esta es una captura de pantalla de la aplicación terminada. Las etiquetas de estado y control se encuentran en la parte inferior de la pantalla, fijadas a los bordes izquierdo y derecho respectivamente. está anclado en la <code>Hyperlink</code>parte superior derecha.      </p>
-<div style="text-align:center;"> <img src="../../img/ud10/anchorpaneapp_default.png" alt="predeterminado de la aplicación Anchorpane" style="max-width:95%;" /></div>
+<div style="text-align:center;"> <img src="../../img/ud10/anchorpaneapp_default.png" alt="predeterminado de la aplicación Anchorpane" style="max-width:60%;" /></div>
 
 <h3 id="cambiar-el-tamano">Cambiar el tamaño</h3>
 <p>Los controles en la periferia pueden variar en tamaño. Por ejemplo, un mensaje de estado o un mensaje de conexión puede ser más largo. Sin embargo, la longitud adicional se puede acomodar en este diseño extendiendo el estado de la parte inferior izquierda <code>Label</code>hacia la derecha y extendiendo el estado de conexión de la parte inferior derecha <code>Label</code>hacia la izquierda. Cambiar el tamaño con este diseño moverá estos controles en términos absolutos, pero se adherirán a sus respectivos bordes más el desplazamiento.</p>
 <p>Ese no es el caso con el <code>TextArea</code>. Debido a que <code>TextArea</code>puede contener una gran cantidad de contenido, debe recibir cualquier espacio adicional que el usuario le dé a la ventana. Este control estará anclado a las cuatro esquinas del <code>AnchorPane</code>. Esto hará <code>TextArea</code>que cambie el tamaño cuando la ventana cambie de tamaño. se fija en la <code>TextArea</code>parte superior izquierda y, a medida que el usuario arrastra los controladores de la ventana hacia la parte inferior derecha, la esquina inferior derecha de los <code>TextArea</code>movimientos también.</p>
 <p>Esta imagen muestra el resultado de dos operaciones de cambio de tamaño. La captura de pantalla superior es un cambio de tamaño vertical al arrastrar el borde inferior de la ventana hacia abajo. La captura de pantalla inferior es un cambio de tamaño horizontal al arrastrar el borde derecho de la ventana hacia la derecha.      </p>
-<div style="text-align:center;"><img src="../../img/ud10/anchorpaneapp_resize.png" alt="cambiar el tamaño de la aplicación AnchorPane" style="max-width:95%;" /><br />Figura 41. "Aplicación AnchorPane redimensionada</div>
+<div style="text-align:center;"><img src="../../img/ud10/anchorpaneapp_resize.png" alt="cambiar el tamaño de la aplicación AnchorPane" style="max-width:95%;" /><br /><i>Figura 41. "Aplicación AnchorPane redimensionada</i></div>
 
 <p>Los cuadros resaltados muestran que los controles que bordean <code>TextArea</code>conservan sus posiciones relativas a los bordes. El <code>TextArea</code>mismo se redimensiona en función del redimensionamiento de la ventana. Las compensaciones superior e inferior de la <code>TextArea</code>cuenta para los otros controles para que no se oculten.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
@@ -6380,10 +6378,10 @@
 <p>A <code>TitledPane</code>es un <code>Node</code>contenedor emparejado con a <code>Label</code>y un control opcional para mostrar y ocultar el contenido del contenedor. Dado que <code>TitledPane</code>está limitado a un solo <code>Node</code>, a menudo se combina con un contenedor que admite varios elementos secundarios como <code>VBox</code>. Funcionalmente, puede ocultar detalles no esenciales de un formulario o controles relacionados con grupos.</p>
 <p>Este ejemplo es una aplicación de búsqueda web que acepta un conjunto de palabras clave en un archivo <code>TextField</code>. El usuario presiona el botón Buscar para ejecutar una búsqueda. El Avanzado <code>TitlePane</code>se expande para proporcionar argumentos de búsqueda adicionales.</p>
 <p>Esta captura de pantalla muestra el estado no expandido que es la vista para un usuario que ejecuta una búsqueda simple de palabras clave.     </p>
-<div style="text-align:center;"> <img src="../../img/ud10/titledpaneapp_unexpanded.png" alt="titlepaneapp sin expandir" style="max-width:95%;" /><br />Figura 47. TitledPane sin expandir</div>
+<div style="text-align:center;"> <img src="../../img/ud10/titledpaneapp_unexpanded.png" alt="titlepaneapp sin expandir" style="max-width:70%;" /><br /><i>Figura 47. TitledPane sin expandir</i></div>
 
 <p>La siguiente captura de pantalla muestra la vista para un usuario que requiere parámetros de búsqueda avanzada. El Advanced TitledPane se expandió presionando la flecha en el <code>TitledPane</code>encabezado.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/titledpaneapp_expanded.png" alt="titlepaneapp expandido" style="max-width:95%;" /></div>
+<div style="text-align:center;"> <img src="../../img/ud10/titledpaneapp_expanded.png" alt="titlepaneapp expandido" style="max-width:70%;" /></div>
 
 <p>Para crear un <code>TitledPane</code>, use el constructor para pasar un título de cadena y un solo <code>Node</code>hijo. También se puede usar el constructor predeterminado y el título y <code>Node</code>establecer usando setters. Este código usa el constructor parametrizado. A <code>VBox</code>es el único hijo de <code>TitledPane</code>. Sin embargo, el <code>VBox</code>mismo contiene varios controles.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>TitledPaneApp.java
@@ -6423,7 +6421,7 @@
 <p>De forma predeterminada, <code>TitledPane</code>se expandirá. Esto no se ajusta al caso de uso de ocultar información no esencial, por lo que la propiedad expandida se establece después de que se crea el objeto.</p>
 <h3 id="plegable">Plegable</h3>
 <p>Otra propiedad de <code>TitledPane</code>es plegable. De forma predeterminada, la <code>TitledPane</code>propiedad contraíble se establece en verdadero. Sin embargo, se puede proporcionar una agrupación rápida a los controles que no son plegables. La siguiente captura de pantalla muestra este caso de uso.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/titledpaneapp_noncollapsible.png" alt="titlepaneapp no colapsable" style="max-width:95%;" /><br />Figura 49. Conjunto contraíble en falso </div>
+<div style="text-align:center;"> <img src="../../img/ud10/titledpaneapp_noncollapsible.png" alt="titlepaneapp no colapsable" style="max-width:70%;" /><br /><i>Figura 49. Conjunto contraíble en falso</i></div>
 
 <p>Este código establece la bandera contraíble después de llamar al constructor.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
@@ -6617,10 +6615,11 @@
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

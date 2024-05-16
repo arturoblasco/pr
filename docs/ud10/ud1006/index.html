@@ -2997,7 +2997,7 @@
         
   
   <span class="md-ellipsis">
-    10.1 Introducciónr
+    10.1 Introducción
   </span>
   
 
@@ -3720,13 +3720,13 @@
 <h3 id="demostracion">Demostración</h3>
 <p>Las siguientes capturas de pantalla muestran el funcionamiento de una aplicación de recuperación de HTML.</p>
 <p>Ingresar una URL y presionar "Ir" iniciará una tarea JavaFX. Al ejecutarse, la tarea hará visible un <code>HBox</code> que contiene una barra de progreso y una etiqueta. <code>ProgressBar</code> y <code>Label</code> se actualizan a lo largo de la operación.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/tasks_pb.png" alt="tareas pb" style="max-width:100%;" /> </div>
+<div style="text-align:center;"> <img src="../../img/ud10/tasks_pb.png" alt="tareas pb" style="max-width:90%;" /> </div>
 
 <p>Cuando finaliza la recuperación, se invoca al metodo <code>succeeded()</code> y se actualiza la interfaz de usuario. Tenga en cuenta que la llamada a <code>succeeded()</code> se lleva a cabo en el subproceso FX, por lo que es seguro manipular los controles.      </p>
-<div style="text-align:center;"> <img src="../../img/ud10/tasks_contents.png" alt="contenido de las tareas" style="max-width:100%;" /> </div>
+<div style="text-align:center;"> <img src="../../img/ud10/tasks_contents.png" alt="contenido de las tareas" style="max-width:90%;" /> </div>
 
 <p>Si hubo un error al recuperar el HTML, se invoca a <code>failed()</code> y se muestra una alerta de error. <code>failed()</code> también tiene lugar en el subproceso FX. Esta captura de pantalla muestra una entrada no válida. Se usa una "h" en la URL en lugar de "http".  </p>
-<div style="text-align:center;"> <img src="../../img/ud10/tasks_error.png" alt="error de tareas" style="max-width:100%;" /> </div>
+<div style="text-align:center;"> <img src="../../img/ud10/tasks_error.png" alt="error de tareas" style="max-width:90%;" /> </div>
 
 <h3 id="codigo">Código</h3>
 <p>Se coloca un controlador de eventos en el botón Obtener HTML que crea la tarea. El punto de entrada de la Tarea es el método call() que comienza llamando a updateMessage() y updateProgress(). Estos métodos se ejecutan en el subproceso FX y generarán actualizaciones en cualquier propiedad enlazada.</p>
@@ -4100,7 +4100,7 @@
 <p>El valor nulo es un problema cuando <code>ComboBox</code>impulsa otra lógica como una transformación a mayúsculas o la búsqueda de un registro de base de datos. Si bien generalmente se usa una verificación nula para evitar este tipo de error, se prefiere un objeto vacío para simplificar el código. Los cuadros combinados a menudo aparecen en grupos y la técnica de objetos vacíos reduce las comprobaciones nulas en la interacción de los cuadros combinados relacionados y en las operaciones de guardar y cargar.</p>
 <p>Este artículo presenta un par de ComboBoxes relacionados. Una selección de país en uno <code>ComboBox</code>modifica la lista de elementos de ciudad disponibles en un segundo <code>ComboBox</code>. No se requiere ninguna selección. El usuario puede presionar Guardar <code>Button</code>en cualquier momento y, si no se realiza ninguna selección <code>ComboBox</code>, se devolverá un objeto vacío, en este caso una Cadena vacía.</p>
 <p>Esta es una captura de pantalla de la aplicación. Si selecciona "Suiza" de un valor inicial vacío, la ciudad se llenará <code>ComboBox</code>de ciudades suizas. Seleccionando la ciudad "Zurich" y presionando Guardar recuperará esos valores.</p>
-<div style="text-align:center;"> <img src="../../img/ud10/nonullcombo_screenshot.png" alt="captura de pantalla de combo no nulo" style="max-width:100%;" /><br />Figura 64. Cuadros combinados relacionados </div>
+<div style="text-align:center;"> <img src="../../img/ud10/nonullcombo_screenshot.png" alt="captura de pantalla de combo no nulo" style="max-width: 40%;" /><br /><i>Figura 64. Cuadros combinados relacionados</i></div>
 
 <h3 id="estructura-de-datos">Estructura de datos</h3>
 <p>Las estructuras de datos que soportan la aplicación son una Lista de países y un Mapa de ciudades. El Mapa de ciudades utiliza el país como clave.</p>
@@ -4545,10 +4545,11 @@
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

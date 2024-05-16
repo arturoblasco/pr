@@ -13,7 +13,7 @@ Implementa las aplicaciones gráficas siguiendo las especificaciones de diseño 
 ### Ejercicio 01
 Crea con JavaFX la siguiente pantalla.
 
-<div style="text-align:center;"><img src="../../img/ud10/ej1_javafx.png" alt="ej1_javafx" style="max-width:100%;" /></div>
+<div style="text-align:center;"><img src="../../img/ud10/ej1_javafx.png" alt="ej1_javafx" style="max-width:85%;" /></div>
 
 Cuando el usuario escriba números (controlarlo con excepciones) y pulse en sumar, debe mostrar en el `txtResultado` el resultado final.
 
@@ -22,7 +22,7 @@ Cuando el usuario escriba números (controlarlo con excepciones) y pulse en suma
 ### Ejercicio 02
 Crea con `JavaFX` la siguiente pantalla.
 
-<div style="text-align:center;"><img src="../../img/ud10/ej2_javafx.png" alt="ej2_javafx" style="max-width:100%;" /></div>
+<div style="text-align:center;"><img src="../../img/ud10/ej2_javafx.png" alt="ej2_javafx" style="max-width:85%;" /></div>
 
 Cuando el usuario escriba números (controlarlo con excepciones) y según que operación elija, deberá hacer la operación y mostrarlo en el txtResultado. Tener en cuenta que la división, debemos controlar que el segundo operando no debe ser 0. El proyecto debe seguir el modelo MVC.
 
@@ -31,7 +31,7 @@ Cuando el usuario escriba números (controlarlo con excepciones) y según que op
 ### Ejercicio 03
 Crea la siguiente pantalla con `JavaFX`.
 
-<div style="text-align:center;"><img src="../../img/ud10/ej3_javafx.png" alt="ej3_javafx" style="max-width:100%;" /></div>
+<div style="text-align:center;"><img src="../../img/ud10/ej3_javafx.png" alt="ej3_javafx" style="max-width:85%;" /></div>
 
 Al pulsar en el botón de agregar persona, creara un objeto `Persona` y lo insertara en la tabla.
 
@@ -40,7 +40,7 @@ Al pulsar en el botón de agregar persona, creara un objeto `Persona` y lo inser
 ### Ejercicio 04
 Dado el ejercicio anterior, agrega lo siguiente.
 
-<div style="text-align:center;"><img src="../../img/ud10/ej4_javafx.png" alt="ej4_javafx" style="max-width:100%;" /></div>
+<div style="text-align:center;"><img src="../../img/ud10/ej4_javafx.png" alt="ej4_javafx" style="max-width:85%;" /></div>
 
 Al seleccionar en un registro, mostrara los datos en los txt.
 
@@ -53,11 +53,11 @@ Al pulsar el botón Eliminar, el registro seleccionado se eliminara de la tabla.
 ### Ejercicio 05
 Dado el ejercicio anterior, modifica la ventana.
 
-<div style="text-align:center;"><img src="../../img/ud10/ej5_2_javafx.png" alt="ej5_2_javafx" style="max-width:100%;" /></div>
+<div style="text-align:center;"><img src="../../img/ud10/ej5_2_javafx.png" alt="ej5_2_javafx" style="max-width:85%;" /></div>
 
 Al pulsar el botón de agregar Persona, se mostrara la siguiente ventana.
 
-<div style="text-align:center;"><img src="../../img/ud10/ej5_1_javafx.png" alt="ej5_1_javafx" style="max-width:100%;" /></div>
+<div style="text-align:center;"><img src="../../img/ud10/ej5_1_javafx.png" alt="ej5_1_javafx" style="max-width:85%;" /></div>
 
 Cuando rellenamos los datos, cerrara la ventana y añadirá la persona a la tabla.
 
