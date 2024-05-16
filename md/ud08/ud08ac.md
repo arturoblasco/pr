@@ -295,8 +295,6 @@ Albañil a = new Albañil();
 System.out.println(a.toString());
 ```
 
-
-
 <hr>
 
 ### Ejercicio08
@@ -541,7 +539,7 @@ Define un método, que dado un objeto del sistema solar (planeta o satélite), i
 
 El diagrama UML sería:
 
-<img src="../../img/ud08/ud08_ej14.png" alt="ud08_ej14" style="zoom:70%;" />
+<div style="text-align:center;"><img src="../../img/ud08/ud08_ej14.png" alt="ud08_ej14" style="zoom:80%;" /></div>
 
 !!!note "Posible solución"
 	Una posible solución sería crear una lista de objetos, insertar los planetas y satélites (directamente mediante código o solicitándolos por pantalla) y luego mostrar un pequeño menú que permita al usuario imprimir la información del astro que elija.
@@ -571,7 +569,7 @@ Implementa las demás clases necesarias para usar la clase `Inventario`.
 
 El diagrama UML sería:
 
-<img src="../../img/ud08/ud08_ej15.png" alt="ud08_ej15" style="zoom:60%;" />
+<div style="text-align:center;"><img src="../../img/ud08/ud08_ej15.png" alt="ud08_ej15" style="zoom: 80%;" /></div>
 
 <hr>
 
@@ -605,7 +603,7 @@ Implementa una clase principal con función main para probar el funcionamiento d
 
 El diagrama UML sería:
 
-<img src="../../img/ud08/ud08_ej16.png" alt="ud08_ej14" style="zoom:60%;" />
+<div style="text-align:center;"><img src="../../img/ud08/ud08_ej16.png" alt="ud08_ej14" style="zoom: 80%;" /></div>
 
 <hr>
 
