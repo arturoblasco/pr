@@ -3865,7 +3865,31 @@
 <p>Veamos un ejemplo en el que se lee por teclado hasta pulsar la tecla de retorno, en ese momento el programa acabará imprimiendo por la salida estándar la cadena leída.<br /><br />
 Para ir construyendo la cadena con los caracteres leídos podríamos usar la clase <code>StringBuffer</code> o la <code>StringBuilder</code>. La clase <code>StringBuffer</code> permite almacenar cadenas que cambiarán en la ejecución del programa. <code>StringBuilder</code> es similar, pero no es síncrona. De este modo, para la mayoría de las aplicaciones, donde se ejecuta un solo hilo, supone una mejora de rendimiento sobre <code>StringBuffer</code>.
 El proceso de lectura ha de estar en un bloque <code>try..catch</code>.
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+```java
+package UD06.P1_Flujos;</p>
+</details>
+<p>~~~java
+import java.io.IOException;</p>
+<p>public class P1_1_FlujoEstandarEntrada {</p>
+<p>public static void main(String[] args) {
+    // Cadena donde iremos almacenando los caracteres que se escriban
+    StringBuilder str = new StringBuilder();
+    char c;
+    // Por si ocurre una excepción ponemos el bloque try-cath
+    try {
+       // Mientras la entrada de terclado no sea Intro
+       while ((c = (char) System.in.read()) != '\n') {
+          // Añadir el character leído a la cadena str
+          str.append(c);
+       }
+    } catch (IOException ex) {
+       System.out.println("ERROR: " + ex.getMessage());
+    }
+    // Escribir la cadena que se ha ido tecleando
+    System.out.println("Cadena introducida: " + str);
+  }
+}
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -3888,87 +3912,50 @@ El proceso de lectura ha de estar en un bloque <code>try..catch</code>.
 <span class="normal"><a href="#__codelineno-1-21">21</a></span>
 <span class="normal"><a href="#__codelineno-1-22">22</a></span>
 <span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">UD06.P1_Flujos</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">P1_1_FlujoEstandarEntrada</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="c1">// Cadena donde iremos almacenando los caracteres que se escriban</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="c1">// Por si ocurre una excepción ponemos el bloque try-cath</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">       </span><span class="c1">// Mientras la entrada de terclado no sea Intro</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">.</span><span class="na">read</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">          </span><span class="c1">// Añadir el character leído a la cadena str</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">          </span><span class="n">str</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">       </span><span class="p">}</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ERROR: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="c1">// Escribir la cadena que se ha ido tecleando</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Cadena introducida: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">);</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-</details>
-<details class="example" open="open">
-<summary>Ejemplo: estándar de salida</summary>
-<p>En el siguiente ejemplo se pide introducir texto hasta que se introduzca una línea con el texto "salir". Dicho texto se almacenará en un fichero <code>salida.txt</code>.<br /><br />
-El proceso debe de estar en un bloque <code>try..catch</code>.
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">UD06.P1_Flujos</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">P1_2_FlujoEstandarSalida</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">      </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;salida.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">));</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">      </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">                                </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">));</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">()).</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;salir&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">         </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">      </span><span class="n">out</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-</details>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>~~~
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>???+example &quot;Ejemplo: estándar de salida&quot;
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    En el siguiente ejemplo se pide introducir texto hasta que se introduzca una línea con el texto &quot;salir&quot;. Dicho texto se almacenará en un fichero `salida.txt`.&lt;br /&gt;&lt;br /&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    El proceso debe de estar en un bloque `try..catch`.
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    ```java
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    package UD06.P1_Flujos;
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>~~~java
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>import java.io.BufferedReader;
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>import java.io.FileWriter;
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>import java.io.IOException;
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>import java.io.InputStreamReader;
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>import java.io.PrintWriter;
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>public class P1_2_FlujoEstandarSalida {
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>  public static void main(String[] args) {
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>    try {
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>      PrintWriter out = new PrintWriter(new FileWriter(&quot;salida.txt&quot;, true));
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>      BufferedReader br = new BufferedReader(
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>                                new InputStreamReader(System.in));
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>      String s;
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>      while (!(s = br.readLine()).equals(&quot;salir&quot;)) {
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>         out.println(s);
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>      }
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>      out.close();
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>    } catch (IOException ex) {
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>      System.out.println(&quot;Error: &quot; + ex.getMessage());
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>    }
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>  }
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>}
+</code></pre></div></td></tr></table></div>
+~~~</p>
+<div class="admonition note">
+<p class="admonition-title">Un poquito de ...</p>
+<p><div style="text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/etQN4EfYN7k?si=15cIVNlAcvzucM0h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></p>
+</div>
 
 
 
@@ -4044,11 +4031,10 @@ El proceso debe de estar en un bloque <code>try..catch</code>.
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>
