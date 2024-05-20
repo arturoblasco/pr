@@ -3480,13 +3480,13 @@
 </ul>
 <h2 id="instalacion-controlador-mysql">Instalación controlador MySql</h2>
 <p>1) El primer paso es descargar desde <a href="https://www.mysql.com/products/connector/" target="_blank">https://www.mysql.com/products/connector/</a> el conector apropiado.</p>
-<div style="text-align: center;"><img src="../../img/ud09/jdbc_1_download.png" alt="jdbc download" style="max-width: 65%;"/></div>
+<div style="text-align: center;"><img src="../../img/ud09/jdbc_1_download.png" alt="jdbc download" style="max-width: 100%;"/></div>
 
 <p>2) Elegir Sistema Operativo y versión:</p>
-<div style="text-align: center;"><img src="../../img/ud09/jdbc_2_version.png" alt="jdbc version" style="max-width: 80%;" /></div>
+<div style="text-align: center;"><img src="../../img/ud09/jdbc_2_version.png" alt="jdbc version" style="max-width: 100%;" /></div>
 
 <p>3) Haz clic en <strong>Donwload</strong> y selecciona la opción: <strong>No thanks, just start download</strong></p>
-<div style="text-align: center;"><img src="../../img/ud09/jdbc_2_accept.png" alt="aceptar jdbc" style="max-width: 70%;" /></div>
+<div style="text-align: center;"><img src="../../img/ud09/jdbc_2_accept.png" alt="aceptar jdbc" style="max-width: 100%;" /></div>
 
 <p>4) Ejecuta el fichero <em>deb</em> (en el caso de <em>Ubuntu</em>) descargado:</p>
 <div style="text-align: center;"><img src="../../img/ud09/jdbc_3_deb.png" alt="fichero debian" style="max-width: 70%;" /></div>
@@ -3544,7 +3544,7 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="c1">// Dependiendo de a qué tipo de SGBD queramos conectar cargaremos un controlador u otro</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="c1">// Paso 1: Cargar el controlador JDBC de MySQL</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.jdbc.Driver&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">);</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Cargado: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="c1">//Definir la url de conexión y los parámetros de usuario y contraseña</span>
@@ -3729,14 +3729,15 @@
 <a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>En el caso de <strong>BlueJ</strong>, se añaden las librerías desde <em>Herramientas -&gt; Preferencias -&gt; Librerías</em></p>
+<p>Para probar el patrón Singleton creamos, en la aplicación <strong>BlueJ</strong>, el siguiente ejemplo:</p>
+<p>( 1 ) Se añaden las librerías desde <em>Herramientas -&gt; Preferencias -&gt; Librerías</em></p>
 <div style="text-align: center;"><img src="../../img/ud09/bluej00.png" alt="bluej 0" style="max-width:70%;" /></div>
 
-<p>Creamos una nueva clase <code>DatabaseConnection</code> en <em>BlueJ</em>:</p>
+<p>( 2 ) Creamos una nueva clase <code>DatabaseConnection</code> (añadir el código anterior) en <em>BlueJ</em>:</p>
 <div style="text-align: center;"><img src="../../img/ud09/bluej01.png" alt="bluej 1" style="max-width:70%;" /></div>
 
-<p>Vamos a crear una nueva clase <code>Test</code> para probar la conexión:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<p>( 3 ) Vamos a crear una nueva clase <code>Test</code> para probar la conexión:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
@@ -3750,8 +3751,11 @@
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+  ( 4 ) Unir la clase Test con la clase DatabaseConnection.
+  ( 5 ) Compilar ambas clases:</p>
 <div style="text-align: center;"><img src="../../img/ud09/bluej02.png" alt="bluej 2" style="max-width:65%;" /></div>
 
+<p>( 5 ) Lanzar varios test (para comprobar la única conexión a establecida):</p>
 <div style="text-align: center;"><img src="../../img/ud09/bluej03.png" alt="bluej 3" style="max-width:65%;" /></div>
 
 <div style="text-align: center;"><img src="../../img/ud09/bluej04.png" alt="bluej 4" style="max-width:85%;" /></div>

@@ -1,3 +1,27 @@
+
+/*
+ * tabla proveedores
+ */
+
+CREATE TABLE Proveedores (
+  id int(11) AUTO_INCREMENT PRIMARY KEY,
+  nombre varchar(100) NOT NULL,
+  fecha_ingreso date,
+  salario decimal(10,2)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO Proveedores (id, nombre, fecha_ingreso, salario) VALUES
+(1, 'Juan Pérez', '2023-01-15', '3500.00'),
+(2, 'María García', '2022-03-22', '4200.50'),
+(3, 'Carlos López', '2021-07-10', '3100.75'),
+(4, 'Ana Martínez', '2020-11-05', '2800.00'),
+(5, 'Luis Rodríguez', '2022-05-18', '4500.00'),
+(6, 'Marta Sánchez', '2023-04-27', '3300.60'),
+(7, 'Pedro Fernández', '2021-12-30', '3700.40'),
+(8, 'Laura Gómez', '2022-09-14', '2900.20'),
+(9, 'Jorge Díaz', NULL, NULL),
+(10, 'Isabel Morales', NULL, NULL);
+
 /*
  * tabla empleados
  */
@@ -6,7 +30,7 @@ CREATE TABLE empleados (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     salario DECIMAL(10, 2)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO empleados (nombre, salario) VALUES
     ('Juan Perez', 2500.00),
@@ -34,7 +58,7 @@ CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     precio DECIMAL(10, 2)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 INSERT INTO productos (nombre, precio) VALUES
@@ -67,7 +91,7 @@ CREATE TABLE alumnos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     edad INT
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 INSERT INTO alumnos (nombre, edad) VALUES
@@ -92,7 +116,7 @@ CREATE TABLE libros (
     titulo VARCHAR(100),
     autor VARCHAR(100),
     anio_publicacion INT
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO libros (titulo, autor, anio_publicacion) VALUES
     ('El señor de los anillos', 'J.R.R. Tolkien', 1954),
@@ -120,7 +144,7 @@ CREATE TABLE ventas (
     producto VARCHAR(100),
     cantidad INT,
     total DECIMAL(10, 2)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO ventas (producto, cantidad, total) VALUES
     ('Camisa', 3, 45.00),
@@ -155,7 +179,7 @@ CREATE TABLE pedidos (
     producto VARCHAR(100),
     cantidad INT,
     fecha DATE
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO pedidos (cliente, producto, cantidad, fecha) VALUES
     ('Juan Pérez', 'Camisa', 3, '2024-04-01'),
@@ -183,7 +207,7 @@ CREATE TABLE estudiantes (
     nombre VARCHAR(100),
     edad INT,
     promedio DECIMAL(5, 2)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO estudiantes (nombre, edad, promedio) VALUES
     ('Juan', 20, 8.5),
@@ -208,7 +232,7 @@ CREATE TABLE vendedores (
     nombre VARCHAR(100),
     fecha_ingreso DATE,
     salario DECIMAL(10, 2)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO vendedores (nombre, fecha_ingreso, salario) VALUES
     ('Juan Pérez', '2023-05-15', 2500.00),
@@ -254,7 +278,7 @@ INSERT INTO vendedores (nombre, fecha_ingreso, salario) VALUES
     nombre VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     contraseña VARCHAR(100)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 CREATE TABLE posts (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -263,7 +287,7 @@ CREATE TABLE posts (
     contenido TEXT,
     fecha_publicacion DATE,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 CREATE TABLE comentarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -273,7 +297,7 @@ CREATE TABLE comentarios (
     fecha_comentario DATE,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
     FOREIGN KEY (post_id) REFERENCES posts(id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 
