@@ -1,12 +1,12 @@
 !!!note "A tener en cuenta"
 	Para la realización de los siguientes ejercicios utilizaremos:
-	<br />	- la base de datos `ejercicios`, 
-	<br />	- usuario `dwes` y 
+	<br />	- la base de datos `pr_tuNombre`, 
+	<br />	- usuario `pr_tuNombre` y 
 	<br />	- contraseña `1234`
 
 ## Ejercicio 1: paquete `gestionEmpleados`
 
-Tenemos una base de datos `ejercicios` que almacena información sobre empleados. La tabla `empleados` tiene las siguientes columnas:
+Tenemos una base de datos `pr_tuNombre` que almacena información sobre empleados. La tabla `empleados` tiene las siguientes columnas:
 
 - `id`: Identificador único del empleado (entero).
 - `nombre`: Nombre del empleado (cadena de texto).
