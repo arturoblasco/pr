@@ -3,7 +3,7 @@
  * tabla proveedores
  */
 
-CREATE TABLE Proveedores (
+CREATE TABLE proveedores (
   id int(11) AUTO_INCREMENT PRIMARY KEY,
   nombre varchar(100) NOT NULL,
   fecha_ingreso date,

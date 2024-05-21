@@ -2810,18 +2810,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-no-devuelven-datos" class="md-nav__link">
+  <a href="#sentencias-que-no-devuelven-datos-executeupdate" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que no devuelven datos
+      Sentencias que no devuelven datos. executeUpdate
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-devuelven-datos" class="md-nav__link">
+  <a href="#sentencias-que-devuelven-datos-executequery" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que devuelven datos
+      Sentencias que devuelven datos. executeQuery
     </span>
   </a>
   
@@ -3387,18 +3387,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-no-devuelven-datos" class="md-nav__link">
+  <a href="#sentencias-que-no-devuelven-datos-executeupdate" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que no devuelven datos
+      Sentencias que no devuelven datos. executeUpdate
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-devuelven-datos" class="md-nav__link">
+  <a href="#sentencias-que-devuelven-datos-executequery" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que devuelven datos
+      Sentencias que devuelven datos. executeQuery
     </span>
   </a>
   
@@ -3459,24 +3459,24 @@
 </ul>
 <details class="example" open="open">
 <summary>Ejemplo <code>absolute(n)</code></summary>
-<p><code>absolute(7)</code> desplazará el cursor al séptimo registro. Si  valor es negativo se posiciona en el número de registro indicado pero empezando a contar desde el final (el último es el -1). Por ejemplo si tiene 10 registros y llamamos absolute(-2) se desplazará al registro n.º 9.</p>
+<p><code>absolute(7)</code> desplazará el cursor al séptimo registro. Si  valor es negativo se posiciona en el número de registro indicado pero empezando a contar desde el final (el último es el -1). Por ejemplo si tiene 10 registros y llamamos <code>absolute(-2)</code> se desplazará al registro número 9.</p>
 </details>
 <ul>
 <li><strong><code>boolean relative(int registros)</code></strong>: desplaza el cursor un número relativo de registros, que puede ser positivo o negativo. </li>
 </ul>
 <details class="example" open="open">
 <summary>Ejemplo <code>relative(n)</code></summary>
-<p>Si el cursor esrá en el registro 5 y llamamos a <code>relative(10)</code> se desplazará al registro 15. Si luego llamamos a <code>relative(-4)</code> se desplazará al registro 11.</p>
+<p>Si el cursor está en el registro 5 y llamamos a <code>relative(10)</code> se desplazará al registro número 15. Si luego llamamos a <code>relative(-4)</code> se desplazará al registro 11.</p>
 </details>
 <p>Los métodos que devuelven un tipo boolean devolverán <em>true</em> si ha sido posible mover el cursor a un registro válido, y <em>false</em> en caso contrario, por ejemplo si no tiene ningún registro o hemos saltado a un número de registro que no existe.</p>
 <p>Todos estos métodos pueden producir una excepción de tipo <em>SQLException</em>.</p>
 <p>También existen otros métodos relacionados con la posición del cursor.</p>
 <ul>
 <li><strong><code>int getRow()</code></strong>: devuelve el número de registro actual. Cero si no hay registro actual.</li>
-<li><strong><code>boolean isBeforeFirst()</code></strong>: devuelve ‘true’ si el cursor está antes del primer registro.</li>
-<li><strong><code>boolean isFirst()</code></strong>: devuelve ‘true’ si el cursor está en el primer registro.</li>
-<li><strong><code>boolean isLast()</code></strong>: devuelve ‘true’ si el cursor está en el último registro.</li>
-<li><strong><code>boolean isAfterLast()</code></strong>: devuelve ‘true’ si el cursor está después del último registro.</li>
+<li><strong><code>boolean isBeforeFirst()</code></strong>: devuelve <em>true</em> si el cursor está antes del primer registro.</li>
+<li><strong><code>boolean isFirst()</code></strong>: devuelve <em>true</em> si el cursor está en el primer registro.</li>
+<li><strong><code>boolean isLast()</code></strong>: devuelve <em>true</em> si el cursor está en el último registro.</li>
+<li><strong><code>boolean isAfterLast()</code></strong>: devuelve <em>true</em> si el cursor está después del último registro.</li>
 </ul>
 <h2 id="obteniendo-datos-del-resultset">Obteniendo datos del <code>ResultSet</code></h2>
 <p>Los métodos <em>getXXX()</em> ofrecen los medios para recuperar los valores de las columnas (campos) de la fila (registro) actual del <em>ResultSet</em>. No es necesario que las columnas sean obtenidas utilizando un orden determinado.</p>
@@ -3488,32 +3488,14 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;titulo&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<p>Es importante tener en cuenta que las columnas se numeran de izquierda a derecha y que la primera es la número 1, no la cero. También que las columnas no son case sensitive, es decir, no distinguen entre mayúsculas y minúsculas.</p>
+<div class="admonition warning">
+<p class="admonition-title"> </p>
+<p>Es importante tener en cuenta que las columnas se numeran de izquierda a derecha y que la primera es la número 1, no la cero.<br />También que las columnas no son case sensitive, es decir, no distinguen entre mayúsculas y minúsculas.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">A tener en cuenta</p>
-<p>La información referente a las columnas de un ResultSet se puede obtener llamando al <strong>método getMetaData()</strong> que devolverá un objeto <em>ResultSetMetaData</em> que contendrá el número, tipo y propiedades de las columnas del <em>ResultSet</em>.</p>
-</div>
-<p>Si conocemos el nombre de una columna, pero no su índice, el método <em>findColumn()</em> puede ser utilizado para obtener el número de columna, pasándole como argumento un objeto <em>String</em> que sea el nombre de la columna correspondiente, este método nos devolverá un entero que será el índice correspondiente a la columna.</p>
-<h2 id="tipos-de-datos-y-conversiones">Tipos de datos y conversiones</h2>
-<p>Cuando se lanza un método <em>getXXX()</em> determinado sobre un objeto ResultSet para obtener el valor de un campo del registro actual, el driver JDBC convierte el dato que se quiere recuperar al tipo Java especificado y entonces devuelve un valor Java adecuado. Por ejemplo si utilizamos el método <em>getString()</em> y el tipo del dato en la base de datos es <em>VARCHAR</em>, el driver JDBC convertirá el dato VARCHAR de tipo SQL a un objeto <em>String</em> de Java.</p>
-<p>Algo parecido sucede con otros tipos de datos SQL como por ejemplo <em>DATE</em>. Podremos acceder a él tanto con <em>getDate()</em> como con <em>getString()</em>. La diferencia es que el primero devolverá un objeto Java de tipo <em>Date</em> y el segundo devolverá un <em>String</em>.</p>
-<p>Siempre que sea posible el driver JDBC convertirá el tipo de dato almacenado en la base de datos al tipo solicitado por el método <em>getXXX()</em>, pero hay conversiones que no se pueden realizar y lanzarán una excepción, como por ejemplo si intentamos hacer un <em>getInt()</em> sobre un campo que no contiene un valor numérico.</p>
-<h2 id="sentencias-que-no-devuelven-datos">Sentencias que no devuelven datos</h2>
-<p>Las ejecutamos con el método <code>executeUpdate</code>. Serán todas las sentencias SQL <strong>excepto el SELECT</strong>, que es la de consulta. Es decir, nos servirá para las siguientes sentencias:</p>
-<ul>
-<li>Sentencias que cambian las estructuras internas de la BD donde se guardan los datos (instrucciones conocidas con las siglas <strong>DDL</strong>, del inglés <strong>Data Definition Language</strong>), como por ejemplo <code>CREATE TABLE</code>, <code>CREATE VIEW</code>, <code>ALTER TABLE</code>, <code>DROP TABLE</code>, …,</li>
-<li>Sentencias para otorgar permisos a los usuarios existentes o crear otros nuevos (subgrupo de instrucciones conocidas como <strong>DCL</strong> o <strong>Data Control Language</strong>), como por ejemplo <code>GRANT</code>.</li>
-<li>Y también las sentencias para modificar los datos guardados utilizando las instrucciones <code>INSERT</code>, <code>UPDATE</code> y <code>DELETE</code>.</li>
-</ul>
-<p>Aunque se trata de sentencias muy dispares, desde el punto de vista de la comunicación con el SGBD se comportan de manera muy similar, siguiendo el siguiente patrón:</p>
-<ol>
-<li>Instanciación del <code>Statement</code> a partir de una conexión activa.</li>
-<li>Ejecución de una sentencia SQL pasada por parámetro al método <code>executeUpdate</code>.</li>
-<li>Cierre del objeto <code>Statement</code> instanciado.</li>
-</ol>
-<p>Miremos este ejemplo, en el que vamos a crear una tabla muy sencilla en la Base de Datos MySql/network.</p>
-<details class="note">
-<summary>Aquí tenéis la clase DatabaseConnection</summary>
+<p>La información referente a las columnas de un ResultSet se puede obtener llamando al <strong>método getMetaData()</strong> que devolverá un objeto <em>ResultSetMetaData</em> que contendrá el número, tipo y propiedades de las columnas del <em>ResultSet</em>.
+EJEMPLO:
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -3559,62 +3541,75 @@
 <span class="normal"><a href="#__codelineno-1-43">43</a></span>
 <span class="normal"><a href="#__codelineno-1-44">44</a></span>
 <span class="normal"><a href="#__codelineno-1-45">45</a></span>
-<span class="normal"><a href="#__codelineno-1-46">46</a></span>
-<span class="normal"><a href="#__codelineno-1-47">47</a></span>
-<span class="normal"><a href="#__codelineno-1-48">48</a></span>
-<span class="normal"><a href="#__codelineno-1-49">49</a></span>
-<span class="normal"><a href="#__codelineno-1-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cm">/**</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm"> &lt;br /&gt;* Write a description of class DatabaseConnection here.</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm"> &lt;br /&gt;*</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cm"> &lt;br /&gt;* @author (Victor Ponz)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="cm"> &lt;br /&gt;* @see &lt;a href=&quot;https://stackoverflow.com/questions/6567839/if-i-use-a-singleton-class-for-a-database-connection-can-one-user-close-the-con&quot;&gt;Stackoverflow Singleton&lt;/a&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="cm"> &lt;br /&gt;* Patron Singleton</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="cm"> &lt;br /&gt;* ================</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="cm"> &lt;br /&gt;* Este patrón de diseño está diseñado para restringir la creación de objetos pertenecientes a una clase. Su intención consiste en garantizar que</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="cm"> &lt;br /&gt;* una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella.</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="cm"> &lt;br /&gt;* El patrón Singleton se implementa creando en nuestra clase un método que crea una instancia del objeto sólo si todavía no existe alguna.</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="cm"> &lt;br /&gt;* Para asegurar que la clase no puede ser instanciada nuevamente se regula el alcance del constructor haciéndolo privado.</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="cm"> &lt;br /&gt;* Las situaciones más habituales de aplicación de este patrón son aquellas en las que dicha clase ofrece un conjunto de utilidades comunes</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="cm"> &lt;br /&gt;* para todas las capas (como puede ser el sistema de log, conexión a la base de datos, ...)</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="cm"> &lt;br /&gt;* o cuando cierto tipo de datos debe estar disponible para todos los demás objetos de la aplicación.</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="cm"> &lt;br /&gt;* El patrón Singleton provee una única instancia global gracias a que:</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="cm"> &lt;br /&gt;* - La propia clase es responsable de crear la única instancia.</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="cm"> &lt;br /&gt;* - Permite el acceso global a dicha instancia mediante un método de clase.</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="cm"> &lt;br /&gt;* - Declara el constructor de clase como privado para que no sea instanciable directamente.</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="cm"> &lt;br /&gt;*/</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DatabaseConnection</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="n">dbInstance</span><span class="p">;</span><span class="w"> </span><span class="c1">//Variable para almacenar la unica instancia de la clase</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">DatabaseConnection</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">        </span><span class="c1">// El Constructor es privado!!</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="nf">getInstance</span><span class="p">(){</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">        </span><span class="c1">//Si no hay ninguna instancia...</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dbInstance</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">            </span><span class="n">dbInstance</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">();</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dbInstance</span><span class="p">;</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="nf">getConnection</span><span class="p">(){</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">con</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/nombre-de-la-base-de-datos&quot;</span><span class="p">;</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;root&quot;</span><span class="p">;</span>
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sa&quot;</span><span class="p">;</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">                </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="w"> </span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Conexión realizada&quot;</span><span class="p">);</span>
-<a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se ha producido un error al conectar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</details>
+<span class="normal"><a href="#__codelineno-1-46">46</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ResultSetMetaDataExample</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">JDBC_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/pr_tuNombre&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">USUARIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pr_tuNombre&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">PASSWD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1234&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">JDBC_URL</span><span class="p">,</span><span class="w"> </span><span class="n">USUARIO</span><span class="p">,</span><span class="w"> </span><span class="n">PASSWD</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">             </span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">             </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT id, nombre, fecha_ingreso, precio FROM proveedores&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">            </span><span class="c1">// Obtener metadata del ResulSet</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">            </span><span class="n">ResultSetMetaData</span><span class="w"> </span><span class="n">rsmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getMetaData</span><span class="p">();</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">            </span><span class="c1">// Obtener el número de columnas</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">columnCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rsmd</span><span class="p">.</span><span class="na">getColumnCount</span><span class="p">();</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Número de columnas: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnCount</span><span class="p">);</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">            </span><span class="c1">// Listar las columnas de detalles</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">columnCount</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">columnName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rsmd</span><span class="p">.</span><span class="na">getColumnName</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">columnType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rsmd</span><span class="p">.</span><span class="na">getColumnTypeName</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">columnDisplaySize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rsmd</span><span class="p">.</span><span class="na">getColumnDisplaySize</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">                </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isNullable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rsmd</span><span class="p">.</span><span class="na">isNullable</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ResultSetMetaData</span><span class="p">.</span><span class="na">columnNullable</span><span class="p">;</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Columna &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Nombre: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnName</span><span class="p">);</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Ticpo: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnType</span><span class="p">);</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Tamaño display: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnDisplaySize</span><span class="p">);</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Nullable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">isNullable</span><span class="p">);</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">            </span><span class="c1">// Iterar sobre el conjunto de resultados</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">columnCount</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error de SQL: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="p">}</span><span class="w">   </span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<p>Si conocemos el nombre de una columna, pero no su índice, el método <strong><code>findColumn()</code></strong> puede ser utilizado para obtener el número de columna, pasándole como argumento un objeto <em>String</em> que sea el nombre de la columna correspondiente, este método nos devolverá un entero que será el índice correspondiente a la columna.</p>
+<h2 id="tipos-de-datos-y-conversiones">Tipos de datos y conversiones</h2>
+<p>Cuando se lanza un método <em>getXXX()</em> determinado sobre un objeto ResultSet para obtener el valor de un campo del registro actual, el driver JDBC convierte el dato que se quiere recuperar al tipo Java especificado y entonces devuelve un valor Java adecuado. Por ejemplo si utilizamos el método <em>getString()</em> y el tipo del dato en la base de datos es <em>VARCHAR</em>, el driver JDBC convertirá el dato VARCHAR de tipo SQL a un objeto <em>String</em> de Java.</p>
+<p>Algo parecido sucede con otros tipos de datos SQL como por ejemplo <em>DATE</em>. Podremos acceder a él tanto con <em>getDate()</em> como con <em>getString()</em>. La diferencia es que el primero devolverá un objeto Java de tipo <em>Date</em> y el segundo devolverá un <em>String</em>.</p>
+<p>Siempre que sea posible el driver JDBC convertirá el tipo de dato almacenado en la base de datos al tipo solicitado por el método <em>getXXX()</em>, pero hay conversiones que no se pueden realizar y lanzarán una excepción, como por ejemplo si intentamos hacer un <em>getInt()</em> sobre un campo que no contiene un valor numérico.</p>
+<h2 id="sentencias-que-no-devuelven-datos-executeupdate">Sentencias que no devuelven datos. <code>executeUpdate</code></h2>
+<p>Las ejecutamos con el método <code>executeUpdate</code>. Serán todas las sentencias SQL <strong>excepto el SELECT</strong>, que es la de consulta. Es decir, nos servirá para las siguientes sentencias:</p>
+<ul>
+<li>Sentencias que cambian las estructuras internas de la BD donde se guardan los datos (instrucciones conocidas con las siglas <strong>DDL</strong>, del inglés <strong>Data Definition Language</strong>), como por ejemplo <code>CREATE TABLE</code>, <code>CREATE VIEW</code>, <code>ALTER TABLE</code>, <code>DROP TABLE</code>, …,</li>
+<li>Sentencias para otorgar permisos a los usuarios existentes o crear otros nuevos (subgrupo de instrucciones conocidas como <strong>DCL</strong> o <strong>Data Control Language</strong>), como por ejemplo <code>GRANT</code>.</li>
+<li>Y también las sentencias para modificar los datos guardados utilizando las instrucciones <code>INSERT</code>, <code>UPDATE</code> y <code>DELETE</code>.</li>
+</ul>
+<p>Aunque se trata de sentencias muy dispares, desde el punto de vista de la comunicación con el SGBD se comportan de manera muy similar, siguiendo el siguiente patrón:</p>
+<ol>
+<li>Instanciación del <code>Statement</code> a partir de una conexión activa.</li>
+<li>Ejecución de una sentencia SQL pasada por parámetro al método <code>executeUpdate</code>.</li>
+<li>Cierre del objeto <code>Statement</code> instanciado.</li>
+</ol>
+<p>Miremos este ejemplo, en el que vamos a crear una tabla muy sencilla en la Base de Datos MySql/network.</p>
+<details class="note">
+<summary>Aquí tenéis la clase DatabaseConnection</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -3632,70 +3627,144 @@
 <span class="normal"><a href="#__codelineno-2-15">15</a></span>
 <span class="normal"><a href="#__codelineno-2-16">16</a></span>
 <span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getConnection</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Test</span><span class="p">(){</span><span class="w"> </span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">      </span><span class="c1">//De momento no hace nada </span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">createTable</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">      </span><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">      </span><span class="n">st</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="s">&quot;CREATE TABLE T1 (c1 varchar(50))&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">      </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span>
+<span class="normal"><a href="#__codelineno-2-34">34</a></span>
+<span class="normal"><a href="#__codelineno-2-35">35</a></span>
+<span class="normal"><a href="#__codelineno-2-36">36</a></span>
+<span class="normal"><a href="#__codelineno-2-37">37</a></span>
+<span class="normal"><a href="#__codelineno-2-38">38</a></span>
+<span class="normal"><a href="#__codelineno-2-39">39</a></span>
+<span class="normal"><a href="#__codelineno-2-40">40</a></span>
+<span class="normal"><a href="#__codelineno-2-41">41</a></span>
+<span class="normal"><a href="#__codelineno-2-42">42</a></span>
+<span class="normal"><a href="#__codelineno-2-43">43</a></span>
+<span class="normal"><a href="#__codelineno-2-44">44</a></span>
+<span class="normal"><a href="#__codelineno-2-45">45</a></span>
+<span class="normal"><a href="#__codelineno-2-46">46</a></span>
+<span class="normal"><a href="#__codelineno-2-47">47</a></span>
+<span class="normal"><a href="#__codelineno-2-48">48</a></span>
+<span class="normal"><a href="#__codelineno-2-49">49</a></span>
+<span class="normal"><a href="#__codelineno-2-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cm">/**</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="cm"> &lt;br /&gt;* Write a description of class DatabaseConnection here.</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cm"> &lt;br /&gt;*</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="cm"> &lt;br /&gt;* @author (Victor Ponz)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="cm"> &lt;br /&gt;* @see &lt;a href=&quot;https://stackoverflow.com/questions/6567839/if-i-use-a-singleton-class-for-a-database-connection-can-one-user-close-the-con&quot;&gt;Stackoverflow Singleton&lt;/a&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="cm"> &lt;br /&gt;* Patron Singleton</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="cm"> &lt;br /&gt;* ================</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="cm"> &lt;br /&gt;* Este patrón de diseño está diseñado para restringir la creación de objetos pertenecientes a una clase. Su intención consiste en garantizar que</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="cm"> &lt;br /&gt;* una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella.</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="cm"> &lt;br /&gt;* El patrón Singleton se implementa creando en nuestra clase un método que crea una instancia del objeto sólo si todavía no existe alguna.</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="cm"> &lt;br /&gt;* Para asegurar que la clase no puede ser instanciada nuevamente se regula el alcance del constructor haciéndolo privado.</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="cm"> &lt;br /&gt;* Las situaciones más habituales de aplicación de este patrón son aquellas en las que dicha clase ofrece un conjunto de utilidades comunes</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="cm"> &lt;br /&gt;* para todas las capas (como puede ser el sistema de log, conexión a la base de datos, ...)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="cm"> &lt;br /&gt;* o cuando cierto tipo de datos debe estar disponible para todos los demás objetos de la aplicación.</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="cm"> &lt;br /&gt;* El patrón Singleton provee una única instancia global gracias a que:</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="cm"> &lt;br /&gt;* - La propia clase es responsable de crear la única instancia.</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="cm"> &lt;br /&gt;* - Permite el acceso global a dicha instancia mediante un método de clase.</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="cm"> &lt;br /&gt;* - Declara el constructor de clase como privado para que no sea instanciable directamente.</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="cm"> &lt;br /&gt;*/</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DatabaseConnection</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="n">dbInstance</span><span class="p">;</span><span class="w"> </span><span class="c1">//Variable para almacenar la unica instancia de la clase</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">DatabaseConnection</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="c1">// El Constructor es privado!!</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="nf">getInstance</span><span class="p">(){</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="c1">//Si no hay ninguna instancia...</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dbInstance</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">            </span><span class="n">dbInstance</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">();</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dbInstance</span><span class="p">;</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a>
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="nf">getConnection</span><span class="p">(){</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">con</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/nombre-de-la-base-de-datos&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;root&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sa&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">                </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="w"> </span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Conexión realizada&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se ha producido un error al conectar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="sentencias-que-devuelven-datos">Sentencias que devuelven datos</h2>
-<p>Las ejecutamos con el método <code>executeQuery</code>. Servirá para la sentencia <strong>SELECT</strong>, que es la de consulta. Los datos que nos devuelva esta sentencia las tendremos que guardar en un objeto de la clase <code>java.sql.ResultSet</code>, es decir conjunto de resultado. Por lo tanto, la ejecución de las consultas tendrá un forma similar a la siguiente:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">sentenciaSQL</span><span class="p">);</span>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.SQLException</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getConnection</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Test</span><span class="p">(){</span><span class="w"> </span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">      </span><span class="c1">//De momento no hace nada </span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">createTable</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">      </span><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">      </span><span class="n">st</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="s">&quot;CREATE TABLE T1 (c1 varchar(50))&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">      </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>El objeto <code>ResultSet</code> contiene el resultado de la consulta organizado por filas, por lo que en cada momento se puede consultar una fila. Para ir visitando todas las filas de una a una, iremos llamando el método <code>next()</code> del objeto <code>ResultSet</code>, ya que cada vez que se ejecute <code>next</code> avanzará a la siguiente fila. Inmediatamente después de una ejecución, el <code>ResultSet</code> se encuentra posicionado justo antes de la primera fila, por lo tanto para acceder a la primera fila será necesario ejecutar <code>next</code> una vez. Cuando las filas se acaban, el método <code>next</code> devolverá falso.</p>
-<p>Desde cada fila se podrá acceder al valor de sus columnas con ayuda de varios métodos <code>get</code> disponibles según el tipo de datos a devolver y pasando por parámetro el número de columna que deseamos obtener. El nombre de los métodos comienza por <code>get</code> seguido del nombre del tipo de datos. Así, si queremos recuperar la segunda columna, sabiendo que es un dato de tipo <code>String</code> habrá que ejecutar:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<h2 id="sentencias-que-devuelven-datos-executequery">Sentencias que devuelven datos. <code>executeQuery</code></h2>
+<p>Las ejecutamos con el método <code>executeQuery</code>. Servirá para la sentencia <strong>SELECT</strong> (sentencia de consulta). Los datos que nos devuelva esta sentencia las tendremos que guardar en un objeto de la clase <code>java.sql.ResultSet</code>, es decir conjunto de resultado. Por lo tanto, la ejecución de las consultas tendrá una forma similar a la siguiente:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">sentenciaSQL</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>El objeto <code>ResultSet</code> contiene el resultado de la consulta organizado por filas, por lo que en cada momento se puede consultar una fila.</li>
+<li>Para ir visitando todas las filas de una a una, iremos llamando el método <code>next()</code> del objeto <code>ResultSet</code>, ya que cada vez que se ejecute <code>next</code> avanzará a la siguiente fila. </li>
+<li>Inmediatamente después de una ejecución, el <code>ResultSet</code> se encuentra posicionado justo antes de la primera fila, por lo tanto para acceder a la primera fila será necesario ejecutar <code>next</code> una vez. </li>
+<li>Cuando las filas se acaban, el método <code>next</code> devolverá falso.</li>
+</ul>
+<p>Desde cada fila se podrá acceder al valor de sus columnas con ayuda de varios métodos <code>getXXX</code> disponibles según el tipo de datos a devolver y pasando por parámetro el número de columna que deseamos obtener. El nombre de los métodos comienza por <code>get</code> seguido del nombre del tipo de datos. Así, si queremos recuperar la segunda columna, sabiendo que es un dato de tipo <code>String</code> habrá que ejecutar:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Las columnas se empiezan a contar a partir del <strong>valor 1</strong> (no cero). La mayor parte de los SGDB soportan la posibilidad de pasar por parámetro el nombre de la columna, pero no todos, así que normalmente se opta por el parámetro numérico.</p>
 <p>Por ejemplo <em>MySql</em> sí que deja acceder por nombre, por tanto, suponiendo que el campo 1 se llama <em>id</em>, también se puede hacer:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>En este ejemplo accedemos a la tabla usuarios y mostramos todos sus registros</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStaemnt</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT FROM usuarios&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span><span class="w"> </span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="n">system</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="n">system</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w"> </span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="c1">//Siempre se debe cerrar lodo lo Muerto </span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="asegurar-la-liberacion-de-recursos">Asegurar la liberación de recursos</h2>
-<p>Las instancias de <code>Connection</code> y las de <code>Statement</code> guardan, en memoria, mucha información relacionada con las ejecuciones realizadas. Además, mientras continúan activas mantienen en el SGBD una sesión abierta, que supondrá un conjunto importante de recursos abiertos, destinados a servir de forma eficiente las peticiones de los clientes. Es importante cerrar estos objetos para liberar recursos tanto del cliente como del servidor.</p>
-<p>Si en un mismo método debemos cerrar un objeto <code>Statement</code> y el <code>Connection</code> a partir del cual la hemos creado, se deberá cerrar primero el <code>Statement</code> y después el <code>Connection</code>. Si lo hacemos al revés, cuando intentamos cerrar el <code>Statement</code> nos saltará una excepción de tipo <code>SQLException</code>, ya que el cierre de la conexión le habría dejado inaccesible.</p>
-<p>Además de respetar el orden, asegurar la liberación de los recursos situando las operaciones de cierre dentro de un bloque <code>finally</code>. De este modo, aunque se produzcan errores, no se dejarán de ejecutar las instrucciones de cierre.</p>
-<p>Hay que tener en cuenta todavía un detalle más cuando sea necesario realizar el cierre de varios objetos a la vez. En este caso, aunque las situamos una tras otra, todas las instrucciones de cierre dentro del bloque <code>finally</code>, no sería suficiente garantía para asegurar la ejecución de todos los cierres, ya que, si mientras se produce el cierre de un los objetos se lanza una excepción, los objetos invocados en una posición posterior a la del que se ha producido el error no se cerrarán.</p>
-<p>La solución de este problema pasa por evitar el lanzamiento de cualquier excepción durante el proceso de cierre. Una posible forma es encapsular cada cierre entre sentencias <code>try-catch</code> dentro del <code>finally</code>.</p>
-<details class="example" open="open">
-<summary>Aquí tenéis un ejemplo</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -3707,62 +3776,94 @@
 <span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-7-10">10</a></span>
 <span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span>
-<span class="normal"><a href="#__codelineno-7-24">24</a></span>
-<span class="normal"><a href="#__codelineno-7-25">25</a></span>
-<span class="normal"><a href="#__codelineno-7-26">26</a></span>
-<span class="normal"><a href="#__codelineno-7-27">27</a></span>
-<span class="normal"><a href="#__codelineno-7-28">28</a></span>
-<span class="normal"><a href="#__codelineno-7-29">29</a></span>
-<span class="normal"><a href="#__codelineno-7-30">30</a></span>
-<span class="normal"><a href="#__codelineno-7-31">31</a></span>
-<span class="normal"><a href="#__codelineno-7-32">32</a></span>
-<span class="normal"><a href="#__codelineno-7-33">33</a></span>
-<span class="normal"><a href="#__codelineno-7-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM usuarios&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span><span class="w"> </span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">            </span><span class="n">system</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w"> </span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"> </span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="w"> </span><span class="s">&quot;Se ha producido un error al leer los usuarios. Mensaje: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">                </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;Se ha producido un error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
-<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto </span>
-<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="w">                </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
-<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;Se ha producido un error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
-<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT FROM usuarios&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span><span class="w"> </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="n">system</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="n">system</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w"> </span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="c1">//Siempre se debe cerrar</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="asegurar-la-liberacion-de-recursos">Asegurar la liberación de recursos</h2>
+<p>Las instancias de <code>Connection</code> y las de <code>Statement</code> guardan, en memoria, mucha información relacionada con las ejecuciones realizadas. Además, mientras continúan activas mantienen en el SGBD una sesión abierta, que supondrá un conjunto importante de recursos abiertos, destinados a servir de forma eficiente las peticiones de los clientes. Es importante cerrar estos objetos para liberar recursos tanto del cliente como del servidor.</p>
+<p>Si en un mismo método debemos cerrar un objeto <code>Statement</code> y el <code>Connection</code> a partir del cual la hemos creado, se deberá cerrar primero el <code>Statement</code> y después el <code>Connection</code>. Si lo hacemos al revés, cuando intentamos cerrar el <code>Statement</code> nos saltará una excepción de tipo <code>SQLException</code>, ya que el cierre de la conexión le habría dejado inaccesible.</p>
+<p>Además de respetar el orden, asegurar la liberación de los recursos situando las operaciones de cierre dentro de un bloque <code>finally</code>. De este modo, aunque se produzcan errores, no se dejarán de ejecutar las instrucciones de cierre.</p>
+<p>Hay que tener en cuenta todavía un detalle más cuando sea necesario realizar el cierre de varios objetos a la vez. En este caso, aunque las situamos una tras otra, todas las instrucciones de cierre dentro del bloque <code>finally</code>, no sería suficiente garantía para asegurar la ejecución de todos los cierres, ya que, si mientras se produce el cierre de uno de los objetos se lanza una excepción, los objetos invocados en una posición posterior a la del que se ha producido el error no se cerrarán.</p>
+<p>La solución de este problema pasa por evitar el lanzamiento de cualquier excepción durante el proceso de cierre. Una posible forma es encapsular cada cierre entre sentencias <code>try-catch</code> dentro del <code>finally</code>.</p>
+<details class="example" open="open">
+<summary>Aquí tenéis un ejemplo</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM usuarios&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span><span class="w"> </span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">            </span><span class="n">system</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w"> </span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"> </span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="w"> </span><span class="s">&quot;Se ha producido un error al leer los usuarios. Mensaje: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">                </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;Se ha producido un error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto </span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">                </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;Se ha producido un error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 
@@ -3840,11 +3941,10 @@
       <div class="md-copyright">
   
   
-    <!--Made with-->
-    IES
+<!--     Made with -->IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-    <!-- Material for MkDocs -->
-    Mestre Ramon Esteve
+      <!--Material for MkDocs-->
+      Mestre Ramon Esteve
     </a>
   
 </div>
