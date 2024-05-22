@@ -1,8 +1,7 @@
-!!!note "A tener en cuenta"
-	Para la realización de los siguientes ejercicios utilizaremos:
-	<br />	- la base de datos `pr_tuNombre`, 
-	<br />	- usuario `pr_tuNombre` y 
-	<br />	- contraseña `1234`
+!!!note " "
+	Para realizar los siguientes ejercicios se van a utilizar las tablas importadas (anteriormente) del siguiente fichero sql [**tablas.sql**](./tablas.sql){:target="_blank"}.
+
+
 
 ## Ejercicio 1: paquete `gestionEmpleados`
 

@@ -135,6 +135,7 @@ nav:
       - Píldoras informáticas: ud09/ud09pi.md
       - Fuentes de información: ud09/ud09re.md
   - UD 10 Interfaz gráfica:
+      - 10.0 JavaFX en VSCode: ud10/ud1000.md
       - 10.1 Introducción: ud10/ud1001.md
       - 10.2 Gráfico de escena: ud10/ud1002.md
       - 10.3 Controles de la interfa de usuario: ud10/ud1003.md
@@ -144,6 +145,7 @@ nav:
       - 10.7 JavaFX en IntelliJ: ud10/ud1007.md
       - 10.8 SceneBuilder en IntelliJ: ud10/ud1008.md
       - 10.9 Calculadora en JavaFX: ud10/ud1009.md
+      - 10.10 SceneBuilder: ud10/ud1010.md
       - Actividades: ud10/ud10ac.md
       - Píldoras informáticas: ud10/ud10pi.md
       - Fuentes de información: ud10/ud10re.md
