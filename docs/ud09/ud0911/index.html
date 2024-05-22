@@ -3486,18 +3486,20 @@
 
 <div class="admonition note">
 <p class="admonition-title">Descarga</p>
-<p>Descarga la base de datos desde <a href="https://victorponz.github.io/programacion-java/assets/network">aquí</a>.</p>
+<p>Descarga la base de datos desde <a href="https://victorponz.github.io/programacion-java/assets/network" target="_blank">aquí</a>.</p>
 </div>
 <p>En este apartado vamos a aprender a añadir a un proyecto orientado a objetos la persistencia en base de datos, sin usar ninguna tecnología como Hibernate.</p>
 <p>Partimos de una aplicación en la que los usuarios pueden escribir Posts y comentar Posts hechos por otros usuarios. Por lo que existen tres entidades: Users, Posts y Comments. En la siguiente imagen se muestran estas entidades representadas en una base de datos:</p>
 <div style="text-align: center;"><img src="../../img/ud09/er.png" alt="1558290448718" style="zoom:100%;" /></div>
 
-<p>En programación existen una serie de estándares denominados <a href="https://refactoring.guru/design-patterns">Patrones de Diseño</a> que debes conocer para poder programar según estos patrones y no reinventar la rueda.</p>
+<p>En programación existen una serie de estándares denominados <a href="https://refactoring.guru/es/design-patterns" target="_blank">Patrones de Diseño</a> que debes conocer para poder programar según estos patrones y no reinventar la rueda.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Nosotros vamos a implementar “<strong>Repository Pattern</strong>” porque también os va a servir para cualquier aplicación tanto web, móvil o de escritorio.</p>
-<p>Según la documentación de <a href="https://developer.android.com/codelabs/basic-android-kotlin-training-repository-pattern?hl=es-419#0">Android</a>.</p>
+<p>Según la documentación de <a href="https://developer.android.com/codelabs/basic-android-kotlin-training-repository-pattern?hl=es-419#0" target="_blank">Android</a>:</p>
+<blockquote>
 <p><em>The repository pattern is </em><em>a design pattern that isolates the data layer from the rest of the app</em><em>. The data layer refers to the part of your app, separate from the UI, that handles the app’s data and business logic, exposing consistent APIs for the rest of your app to access this data.</em></p>
+</blockquote>
 </div>
 <h2 id="database-connection">Database Connection</h2>
 <p>Esta es la misma clase del apartado anterior:</p>
@@ -3621,14 +3623,14 @@
 </code></pre></div></td></tr></table></div>
 <p>Fijaos en la notación <code>&lt;T&gt;</code>. Esto indica que vamos a usar tipos genéricos. Puede ser cualquier clase de java.</p>
 <ul>
-<li><strong><code>findAll()</code></strong> va a recuperar datos de la base de datos y va a crear una lista de objetos <code>T</code>, donde <code>T</code>será usuario, post o comentario.</li>
+<li><strong><code>findAll()</code></strong> va a recuperar datos de la base de datos y va a crear una lista de objetos <code>T</code>, donde en este ejemplo <code>T</code>será <em>usuario</em>, <em>post</em> o <em>comentario</em>.</li>
 <li><strong><code>findById(int id)</code></strong> va a recuperar el objeto <code>T</code> con dicho <code>id</code></li>
 <li><strong><code>save(T entity)</code></strong> va a guardar el objeto <code>T</code> en la base de datos</li>
 <li><strong><code>deleteById(User user)</code></strong> va a borrar el objeto <code>user</code> en la base de datos</li>
 <li><strong><code>bdToEntity(Resulset s)</code></strong> va a encargarse de convertir un registro de la base de datos en una clase de tipo <code>T</code>, por ejemplo un usuario, un post o un comentario.</li>
 </ul>
 <h2 id="socialnetworkservice">SocialNetworkService</h2>
-<p>Un servicio es un tipo de clase que gestiona recursos que se usan en cualquier parte de la aplicación. Es este caso estamos definiendo el recurso <code>java.sql.Connection</code>:</p>
+<p>Un servicio es un tipo de clase que gestiona recursos que se usan en cualquier parte de la aplicación. En este caso estamos definiendo el recurso <code>java.sql.Connection</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -4199,59 +4201,58 @@
 <p>Crea las clases necesarias para poder trabajar con la entidad <code>Post</code>. Como ayuda, ten en cuenta que esta entidad tiene un objeto de la clase <code>User</code> que deberás recuperar mediante <code>new UserRepositoryImpl().findById(rs.getInt("userId"))</code></p>
 <p>Lo más complicado será la parte <code>1</code> en <code>User</code> ya que debe tener un método que fije los <code>Post</code> de dicho usuario.</p>
 <p>En principio sería tan fácil como hacer en el método <code>bdToEntity</code> de <code>UserRepositoryImpl</code></p>
-<blockquote>
-<p><code>java
-PostRepositoryImpl repository = new PostRepositoryImpl();
-user.setPosts(repository.findByUser(user));</code>
-</p>
-</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">PostRepositoryImpl</span><span class="w"> </span><span class="n">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PostRepositoryImpl</span><span class="p">();</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">user</span><span class="p">.</span><span class="na">setPosts</span><span class="p">(</span><span class="n">repository</span><span class="p">.</span><span class="na">findByUser</span><span class="p">(</span><span class="n">user</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
 <p>Pero esto provoca un error en tiempo de ejecución <code>StackOverflow</code> debido a que entra en un bucle infinito ya que el método <code>bdToEntity</code> llama a <code>findByUser</code> que a su vez llama a <code>bdToEntity</code> y así hasta el infinito.</p>
 <p>La solución es guardar los elementos en caché: cada vez que convierto una entidad a objeto la guardo en esta caché. Cuando debo mapear algún registro primero miro en caché y devuelvo la entidad o mapeo si no existe la entidad.</p>
 <p>Creamos una variable de instancia en cada Repositorio. Por ejemplo para UserRepositoryImpl</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">usersCached</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">usersCached</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>Creamos un método para comprobar si está en caché:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span>
-<span class="normal"><a href="#__codelineno-12-5">5</a></span>
-<span class="normal"><a href="#__codelineno-12-6">6</a></span>
-<span class="normal"><a href="#__codelineno-12-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">getUserCached</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">usersCached</span><span class="p">){</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">getUserCached</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">usersCached</span><span class="p">){</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Que usamos en <code>bdToEntity</code></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">bdToEntity</span><span class="p">(</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getUserCached</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">));</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;lastName&quot;</span><span class="p">));</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="n">usersCached</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="n">PostRepositoryImpl</span><span class="w"> </span><span class="n">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PostRepositoryImpl</span><span class="p">();</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">setPosts</span><span class="p">(</span><span class="n">repository</span><span class="p">.</span><span class="na">findByUser</span><span class="p">(</span><span class="n">user</span><span class="p">));</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">bdToEntity</span><span class="p">(</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getUserCached</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">));</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">user</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">        </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;lastName&quot;</span><span class="p">));</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="n">usersCached</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="n">PostRepositoryImpl</span><span class="w"> </span><span class="n">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PostRepositoryImpl</span><span class="p">();</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="n">user</span><span class="p">.</span><span class="na">setPosts</span><span class="p">(</span><span class="n">repository</span><span class="p">.</span><span class="na">findByUser</span><span class="p">(</span><span class="n">user</span><span class="p">));</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">user</span><span class="p">;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">Nota:</p>
-<p>No creáis que en la práctica es tan complicado. Para eso están los frameworks ORM (Object Relational Mapping) que nos facilitan mucho la vida y ellos mismos ya tratan todo el tema de cachés, repositorios, CRUD, etc. Este apartado es simplemente para que creéis desde cero un mini framework.</p>
-<p>Seguramente en la empresa utilizaréis Hibernate, Spring Boot, Doctrine, …</p>
+<p>No creáis que en la práctica es tan complicado. Para eso están los frameworks ORM (Object Relational Mapping) que nos facilitan mucho la vida y ellos mismos ya tratan todo el tema de cachés, repositorios, CRUD, etc. Este apartado es simplemente para que creéis desde cero un mini framework.<br />
+Seguramente en la empresa utilizaréis Hibernate, Spring Boot, Doctrine, …<br />
+En el siguiente curso, por ejemplo, utilizaréis <a href="https://laravel.com/docs/11.x/eloquent" target="_blank">Laravel Eloquent</a>  para programar en php.</p>
 </div>
-<div class="admonition note">
+<div class="admonition question">
 <p class="admonition-title">Comments</p>
 <p>Ahora ya puedes implementar la gestión del los comentarios.</p>
 </div>
@@ -4330,10 +4331,11 @@ user.setPosts(repository.findByUser(user));</code>
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

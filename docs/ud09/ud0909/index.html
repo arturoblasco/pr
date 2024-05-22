@@ -3286,11 +3286,11 @@
 <p>De cualquier modo, <code>PreparedStatement</code> presenta ventajas sobre su antecesor <code>Statement</code> cuando nos toque trabajar con sentencias que se hayan de ejecutar varias veces. La razón es que cualquier sentencia <em>SQL</em>, cuando se envía al <em>SGBD</em> será compilada antes de ser ejecutada.</p>
 <ul>
 <li>Utilizando un objeto <code>Statement</code>, cada vez que hacemos una ejecución de una sentencia, ya sea vía <code>executeUpdate</code> o bien vía <code>executeQuery</code>, el <em>SGBD</em> la compilará, ya que le llegará en forma de cadena de caracteres.</li>
-<li>En cambio, al <code>PreparedStament</code> la sentencia nunca varía y por lo tanto se puede compilar y guardar dentro del mismo objeto, por lo que las siguientes veces que se ejecute no habrá que compilarse. Esto reducirá sensiblemente el tiempo de ejecución.</li>
+<li>En cambio, en <code>PreparedStament</code> la sentencia nunca varía y por lo tanto se puede compilar y guardar dentro del mismo objeto, por lo que las siguientes veces que se ejecute no habrá que compilarse. Esto reducirá sensiblemente el tiempo de ejecución.</li>
 </ul>
 <p>En algunos sistemas gestores, además, usar <code>PreparedStatements</code> puede llegar a suponer más ventajas, ya que utilizan la secuencia de bytes de la sentencia para detectar si se trata de una sentencia nueva o ya se ha servido con anterioridad. De esta manera se propicia que el sistema guarde las respuestas en la memoria caché, de manera que se puedan entregar de forma más rápida.</p>
 <p>La principal diferencia de los objetos <code>PreparedStatement</code> en relación a los <code>Statement</code>, es que en los primeros se les pasa la sentencia <em>SQL</em> predefinida en el momento de crearlo. Como la sentencia queda predefinida, ni los métodos <code>executeUpdate</code> ni <code>executeQuery</code> requerirán ningún parámetro. Es decir, justo al revés que en el <code>Statement</code>.</p>
-<p>Los parámetros de la sentencia se marcarán con el símbolo de interrogación (<em>?</em>) Y se identificarán por la posición que ocupan en la sentencia, empezando a contar desde la izquierda a partir del número 1. El valor de los parámetros se asignará utilizando el método específico, de acuerdo con el tipo de datos a asignar. El nombre empezará por <code>set</code> y continuará con el nombre del tipo de datos (ejemplos: <code>setString</code>, <code>setInt</code>, <code>setLong</code>, <code>setBoolean</code> …). Todos estos métodos siguen la misma sintaxis:</p>
+<p>Los parámetros de la sentencia se marcarán con el símbolo de interrogación (<strong><code>?</code></strong>). Se identificarán por la posición que ocupan en la sentencia, empezando a contar desde la izquierda a partir del número 1. El valor de los parámetros se asignará utilizando el método específico, de acuerdo con el tipo de datos a asignar. El nombre empezará por <code>set</code> y continuará con el nombre del tipo de datos (ejemplos: <code>setString</code>, <code>setInt</code>, <code>setLong</code>, <code>setBoolean</code> …). Todos estos métodos siguen la misma sintaxis:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">setXXXX</span><span class="p">(</span><span class="o">&lt;</span><span class="n">posiciónEnLaSentenciaSQL</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Este es el mismo método para insertar un usuario pero usando <code>PreparedStatement</code>:</p>
@@ -3317,14 +3317,14 @@
 <span class="normal"><a href="#__codelineno-1-21">21</a></span>
 <span class="normal"><a href="#__codelineno-1-22">22</a></span>
 <span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">insertUserPrepared</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">apellidos</span><span class="p">){</span><span class="w"> </span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">insertUserPrepared</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">contraseña</span><span class="p">){</span><span class="w"> </span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO usuarios (nombre, apellidos) VALUES (?, ?)&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO usuarios (nombre, contraseña) VALUES (?, ?)&quot;</span><span class="p">;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">preparedStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="n">st</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="n">st</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">apellidos</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="n">st</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="n">st</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">contraseña</span><span class="p">);</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="n">st</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
@@ -3342,7 +3342,7 @@
 <a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Fijaos que ahora, además, la sentencia sql es mucho más fácil de escribir.</p>
+<p>Podemos observar que, ahora, además, la sentencia sql es mucho más fácil de escribir.</p>
 
 
 
@@ -3418,10 +3418,11 @@
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

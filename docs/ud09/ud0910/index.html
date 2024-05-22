@@ -3458,28 +3458,36 @@
 <p>Lo primero es instalar <em>SQLite</em>, en Ubuntu:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sqlite3
 </code></pre></div></td></tr></table></div>
-<p>Si queréis hacerlo en <em>Windows</em>, podéis seguir las instrucciones en http://www.sqlitetutorial.net/download-install-sqlite/.</p>
-<p>Para poder trabajar en <em>Java</em>, hemos de descargar el conector, desde http://www.sqlitetutorial.net/sqlite-java/sqlite-jdbc-driver/.</p>
+<p>Si queréis hacerlo en <em>Windows</em>, podéis seguir las instrucciones en <a href="http://www.sqlitetutorial.net/download-install-sqlite/" target="_blank">http://www.sqlitetutorial.net/download-install-sqlite/</a>.</p>
+<p>Para poder trabajar en <em>Java</em>, hemos de descargar el conector, desde <a href="https://github.com/xerial/sqlite-jdbc/releases" target="_blank">https://github.com/xerial/sqlite-jdbc/releases</a>.</p>
 <p>Lo primero que hemos de hacer es crear una base de datos, desde la línea de comandos. Para ello nos situamos en el directorio del proyecto y la creamos en el directorio <code>bd</code> mediante el siguiente comando:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>directorio-del-proyecto
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1"># directorio-del-proyecto: src/sources</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>mkdir<span class="w"> </span>bd
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nb">cd</span><span class="w"> </span>bd
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>sqlite<span class="w"> </span>network.bd
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>directorio-del-proyecto
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1"># directorio-del-proyecto: EjerciciosJava</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>mkdir<span class="w"> </span>bd
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nb">cd</span><span class="w"> </span>bd
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>sqlite<span class="w"> </span>network.bd
 </code></pre></div></td></tr></table></div>
 <h2 id="instalar-sqlitestudio">Instalar SQLiteStudio</h2>
-<p>Desde estos enlaces:</p>
-<p>​   https://sqlitestudio.pl/ (Ubuntu) y</p>
-<p>​   https://github.com/pawelsalawa/sqlitestudio/releases (otras plataformas),</p>
-<p>podemos instalar una aplicación gráfica para trabajar (más fácilmente) con SQLite.</p>
+<p>Podemos instalar una aplicación gráfica como <strong>SQLiteStudio</strong> para trabajar (más fácilmente) con SQLite desde estos enlaces:</p>
+<ul>
+<li>
+<p><a href="https://sqlitestudio.pl/" target="_blank">https://sqlitestudio.pl/</a> (Ubuntu) y</p>
+</li>
+<li>
+<p><a href="https://github.com/pawelsalawa/sqlitestudio/releases" target="_blank">https://github.com/pawelsalawa/sqlitestudio/releases</a> (otras plataformas),</p>
+</li>
+</ul>
 <div style="text-align: center;"><img src="../../img/ud09/sqlitestudio1.png" alt="bluej 0" style="zoom:70%;" /></div>
 
 <p>Mediante estos comandos creamos una base de datos en disco llamada <strong>prudb.bd</strong>.</p>
-<p>Ahora podemos crear las tablas mediante <em>VSCode</em>, añadiendo una nueva <code>DataBaseConnection</code>, al igual que hicimos con <em>MySql</em> (previamente hemos de crear el <code>Driver Definition</code>).</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -3532,9 +3540,8 @@
 <a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_post</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">posts</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<p>Y vamos a añadir el .jar que hemos descargado al Build path.</p>
-<p>Así que elegimos el jar desde <em>Build Path -&gt; Libraries -&gt; Add External JARs</em>.</p>
-<div style="text-align: center;"><img src="../../img/ud09/1558285819653.png" alt="1558285819653" style="zoom:67%;" /></div>
+<p>Ahora deberemos añadir la librería <em>JDBC</em> (fichero <em>.jar) a nuestro proyecto. Para ello copia el archivo <code>mysql-connector-java-x.x.x.jar</code> (en Ubuntu se encuentra en la ruta  <code>/usr/share/java</code>) en </em>JAVA PROJECTS -&gt; Referenced Libraries<em> de </em>VS Code*:</p>
+<div style="text-align: center;"><img src="../../img/ud09/jdbc_5_anyadirjdbaVSC.png" alt="agregar libreria jdbc" style="max-width: 100%;" /></div>
 
 <p>Y ahora modificamos <code>DatabaseConnection</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -4171,10 +4178,11 @@
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

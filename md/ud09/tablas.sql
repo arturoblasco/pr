@@ -10,7 +10,7 @@ CREATE TABLE proveedores (
   salario decimal(10,2)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
-INSERT INTO Proveedores (id, nombre, fecha_ingreso, salario) VALUES
+INSERT INTO proveedores (id, nombre, fecha_ingreso, salario) VALUES
 (1, 'Juan Pérez', '2023-01-15', '3500.00'),
 (2, 'María García', '2022-03-22', '4200.50'),
 (3, 'Carlos López', '2021-07-10', '3100.75'),

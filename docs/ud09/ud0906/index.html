@@ -3302,28 +3302,41 @@
 <li>Llamamos a todos los métodos <strong>updateXXX(...)</strong> que necesitemos.</li>
 <li>Llamamos a <strong><code>updateRow()</code></strong> para que los cambios se apliquen a la base de datos.</li>
 </ol>
-<p>Es importante entender que <strong>hay que llamar a updateRow() antes de desplazar el cursor</strong>. Si desplazamos el cursor antes de llamar a <em>updateRow()</em>, se perderán los cambios.</p>
-<p>Si queremos <strong>cancelar las modificaciones</strong> <strong>de un registro del ResultSet</strong> podemos llamar a <strong><code>cancelRowUpdates()</code></strong>, que cancela todas las modificaciones realizadas sobre el registro actual.</p>
-<p>Si ya hemos llamado a <em>updateRow()</em> el método <em>cancelRowUpdates()</em> no tendrá ningún efecto.</p>
-<p>El siguiente código de ejemplo muestra cómo modificar el campo ‘dirección’ del último registro de un <em>ResultSet</em> que contiene el resultado de una <em>SELECT</em> sobre la tabla de clientes. Supondremos que <em>conn</em> es un objeto <em>Connection</em> previamente creado:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span>
-<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Creamos un Statement scrollable y modificable</span>
+<div class="admonition warning">
+<p class="admonition-title"> </p>
+<p>Es importante entender que <strong>hay que llamar a updateRow() antes de desplazar el cursor</strong>.<br/>Si desplazamos el cursor antes de llamar a <em>updateRow()</em>, se perderán los cambios.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p>Si queremos <strong>cancelar las modificaciones</strong> <strong>de un registro del ResultSet</strong> podemos llamar a <strong><code>cancelRowUpdates()</code></strong>, que cancela todas las modificaciones realizadas sobre el registro actual.<br />
+Si ya hemos llamado a <em>updateRow()</em> el método <em>cancelRowUpdates()</em> no tendrá ningún efecto.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title"> </p>
+<p>El siguiente código de ejemplo muestra cómo modificar el campo <em>direccion</em> del último registro de un <em>ResultSet</em> que contiene el resultado de una <em>SELECT</em> sobre la tabla de clientes. Supondremos que <em>conn</em> es un objeto <em>Connection</em> previamente creado:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Creamos un Statement scrollable y modificable</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">createStatement</span><span class="p">(</span><span class="n">ResultSet</span><span class="p">.</span><span class="na">TYPE_SCROLL_SENSITIVE</span><span class="p">,</span><span class="w"> </span><span class="n">ResultSet</span><span class="p">.</span><span class="na">CONCUR_UPDATABLE</span><span class="p">);</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// Ejecutamos un SELECT y obtenemos la tabla clientes en un ResultSet</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM clientes&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">// Vamos al último registro, lo modificamos y actualizamos la base de datos</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">rs</span><span class="p">.</span><span class="na">last</span><span class="p">();</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">rs</span><span class="p">.</span><span class="na">updateString</span><span class="p">(</span><span class="s">&quot;direccion&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C/ Pepe Ciges, 3&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">rs</span><span class="p">.</span><span class="na">updateRow</span><span class="p">();</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">// Ejecutamos un SELECT y obtenemos la tabla clientes en un ResultSet</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM clientes&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1">// Vamos al último registro, lo modificamos y actualizamos la base de datos</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">rs</span><span class="p">.</span><span class="na">last</span><span class="p">();</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">rs</span><span class="p">.</span><span class="na">updateString</span><span class="p">(</span><span class="s">&quot;direccion&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C/ Pepe Ciges, 3&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">rs</span><span class="p">.</span><span class="na">updateRow</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
+</div>
 
 
 
@@ -3399,10 +3412,11 @@
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

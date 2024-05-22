@@ -2810,18 +2810,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-no-devuelven-datos-executeupdate" class="md-nav__link">
+  <a href="#sentencias-que-no-devuelven-datos" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que no devuelven datos. executeUpdate
+      Sentencias que no devuelven datos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-devuelven-datos-executequery" class="md-nav__link">
+  <a href="#sentencias-que-devuelven-datos" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que devuelven datos. executeQuery
+      Sentencias que devuelven datos
     </span>
   </a>
   
@@ -3387,18 +3387,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-no-devuelven-datos-executeupdate" class="md-nav__link">
+  <a href="#sentencias-que-no-devuelven-datos" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que no devuelven datos. executeUpdate
+      Sentencias que no devuelven datos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sentencias-que-devuelven-datos-executequery" class="md-nav__link">
+  <a href="#sentencias-que-devuelven-datos" class="md-nav__link">
     <span class="md-ellipsis">
-      Sentencias que devuelven datos. executeQuery
+      Sentencias que devuelven datos
     </span>
   </a>
   
@@ -3543,15 +3543,15 @@ EJEMPLO:
 <span class="normal"><a href="#__codelineno-1-45">45</a></span>
 <span class="normal"><a href="#__codelineno-1-46">46</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ResultSetMetaDataExample</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">JDBC_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/pr_tuNombre&quot;</span><span class="p">;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">USUARIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pr_tuNombre&quot;</span><span class="p">;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">PASSWD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1234&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploResultSetMetaData</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">JDBC_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/pr_tuNombre&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">USUARIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pr_tuNombre&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">PASSWD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1234&quot;</span><span class="p">;</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">JDBC_URL</span><span class="p">,</span><span class="w"> </span><span class="n">USUARIO</span><span class="p">,</span><span class="w"> </span><span class="n">PASSWD</span><span class="p">);</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">             </span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">             </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT id, nombre, fecha_ingreso, precio FROM proveedores&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">             </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT id, nombre, fecha_ingreso, salario FROM proveedores&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a>
 <a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">            </span><span class="c1">// Obtener metadata del ResulSet</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">            </span><span class="n">ResultSetMetaData</span><span class="w"> </span><span class="n">rsmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getMetaData</span><span class="p">();</span>
@@ -3594,7 +3594,7 @@ EJEMPLO:
 <p>Cuando se lanza un método <em>getXXX()</em> determinado sobre un objeto ResultSet para obtener el valor de un campo del registro actual, el driver JDBC convierte el dato que se quiere recuperar al tipo Java especificado y entonces devuelve un valor Java adecuado. Por ejemplo si utilizamos el método <em>getString()</em> y el tipo del dato en la base de datos es <em>VARCHAR</em>, el driver JDBC convertirá el dato VARCHAR de tipo SQL a un objeto <em>String</em> de Java.</p>
 <p>Algo parecido sucede con otros tipos de datos SQL como por ejemplo <em>DATE</em>. Podremos acceder a él tanto con <em>getDate()</em> como con <em>getString()</em>. La diferencia es que el primero devolverá un objeto Java de tipo <em>Date</em> y el segundo devolverá un <em>String</em>.</p>
 <p>Siempre que sea posible el driver JDBC convertirá el tipo de dato almacenado en la base de datos al tipo solicitado por el método <em>getXXX()</em>, pero hay conversiones que no se pueden realizar y lanzarán una excepción, como por ejemplo si intentamos hacer un <em>getInt()</em> sobre un campo que no contiene un valor numérico.</p>
-<h2 id="sentencias-que-no-devuelven-datos-executeupdate">Sentencias que no devuelven datos. <code>executeUpdate</code></h2>
+<h2 id="sentencias-que-no-devuelven-datos">Sentencias que no devuelven datos</h2>
 <p>Las ejecutamos con el método <code>executeUpdate</code>. Serán todas las sentencias SQL <strong>excepto el SELECT</strong>, que es la de consulta. Es decir, nos servirá para las siguientes sentencias:</p>
 <ul>
 <li>Sentencias que cambian las estructuras internas de la BD donde se guardan los datos (instrucciones conocidas con las siglas <strong>DDL</strong>, del inglés <strong>Data Definition Language</strong>), como por ejemplo <code>CREATE TABLE</code>, <code>CREATE VIEW</code>, <code>ALTER TABLE</code>, <code>DROP TABLE</code>, …,</li>
@@ -3747,7 +3747,7 @@ EJEMPLO:
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="sentencias-que-devuelven-datos-executequery">Sentencias que devuelven datos. <code>executeQuery</code></h2>
+<h2 id="sentencias-que-devuelven-datos">Sentencias que devuelven datos</h2>
 <p>Las ejecutamos con el método <code>executeQuery</code>. Servirá para la sentencia <strong>SELECT</strong> (sentencia de consulta). Los datos que nos devuelva esta sentencia las tendremos que guardar en un objeto de la clase <code>java.sql.ResultSet</code>, es decir conjunto de resultado. Por lo tanto, la ejecución de las consultas tendrá una forma similar a la siguiente:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="n">sentenciaSQL</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
@@ -3941,10 +3941,11 @@ EJEMPLO:
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>
