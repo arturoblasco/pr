@@ -3611,7 +3611,7 @@ EJEMPLO:
 <a id="__codelineno-1-26" name="__codelineno-1-26"></a>
 <a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Columna &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="p">);</span>
 <a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Nombre: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnName</span><span class="p">);</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Ticpo: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnType</span><span class="p">);</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Tipo: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnType</span><span class="p">);</span>
 <a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Tamaño display: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnDisplaySize</span><span class="p">);</span>
 <a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  Nullable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">isNullable</span><span class="p">);</span>
 <a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">            </span><span class="p">}</span>
@@ -3651,7 +3651,7 @@ EJEMPLO:
 </ol>
 <p>Miremos este ejemplo, en el que vamos a crear una tabla muy sencilla en la Base de Datos MySql/network.</p>
 <details class="note">
-<summary>Aquí tenéis la clase DatabaseConnection</summary>
+<summary>Aquí tienes la clase DatabaseConnection</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -3701,7 +3701,8 @@ EJEMPLO:
 <span class="normal"><a href="#__codelineno-2-47">47</a></span>
 <span class="normal"><a href="#__codelineno-2-48">48</a></span>
 <span class="normal"><a href="#__codelineno-2-49">49</a></span>
-<span class="normal"><a href="#__codelineno-2-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cm">/**</span>
+<span class="normal"><a href="#__codelineno-2-50">50</a></span>
+<span class="normal"><a href="#__codelineno-2-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cm">/**</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="cm"> &lt;br /&gt;* Write a description of class DatabaseConnection here.</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cm"> &lt;br /&gt;*</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="cm"> &lt;br /&gt;* @author (Victor Ponz)</span>
@@ -3724,33 +3725,34 @@ EJEMPLO:
 <a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="n">dbInstance</span><span class="p">;</span><span class="w"> </span><span class="c1">//Variable para almacenar la unica instancia de la clase</span>
 <a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
 <a id="__codelineno-2-23" name="__codelineno-2-23"></a>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">DatabaseConnection</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="c1">// El Constructor es privado!!</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="nf">getInstance</span><span class="p">(){</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="c1">//Si no hay ninguna instancia...</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dbInstance</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">            </span><span class="n">dbInstance</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">();</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dbInstance</span><span class="p">;</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="nf">getConnection</span><span class="p">(){</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">con</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/nombre-de-la-base-de-datos&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;root&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sa&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">                </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="w"> </span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Conexión realizada&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se ha producido un error al conectar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="p">}</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">DatabaseConnection</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="c1">// El Constructor es privado!!</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="nf">getInstance</span><span class="p">(){</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="c1">//Si no hay ninguna instancia...</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dbInstance</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">            </span><span class="n">dbInstance</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">();</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dbInstance</span><span class="p">;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a>
+<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Connection</span><span class="w"> </span><span class="nf">getConnection</span><span class="p">(){</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">con</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/nombre-de-la-base-de-datos&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;root&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sa&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">                </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="w"> </span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Conexión realizada&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Se ha producido un error al conectar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">con</span><span class="p">;</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -3838,7 +3840,7 @@ EJEMPLO:
 <p>Hay que tener en cuenta todavía un detalle más cuando sea necesario realizar el cierre de varios objetos a la vez. En este caso, aunque las situamos una tras otra, todas las instrucciones de cierre dentro del bloque <code>finally</code>, no sería suficiente garantía para asegurar la ejecución de todos los cierres, ya que, si mientras se produce el cierre de uno de los objetos se lanza una excepción, los objetos invocados en una posición posterior a la del que se ha producido el error no se cerrarán.</p>
 <p>La solución de este problema pasa por evitar el lanzamiento de cualquier excepción durante el proceso de cierre. Una posible forma es encapsular cada cierre entre sentencias <code>try-catch</code> dentro del <code>finally</code>.</p>
 <details class="example" open="open">
-<summary>Aquí tenéis un ejemplo</summary>
+<summary>Aquí tienes un ejemplo</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -3872,7 +3874,10 @@ EJEMPLO:
 <span class="normal"><a href="#__codelineno-8-31">31</a></span>
 <span class="normal"><a href="#__codelineno-8-32">32</a></span>
 <span class="normal"><a href="#__codelineno-8-33">33</a></span>
-<span class="normal"><a href="#__codelineno-8-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">Statement</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>
@@ -3885,27 +3890,30 @@ EJEMPLO:
 <a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">            </span><span class="n">system</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w"> </span>
 <a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"> </span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="w"> </span><span class="s">&quot;Se ha producido un error al leer los usuarios. Mensaje: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">                </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
-<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;Se ha producido un error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
-<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto </span>
-<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">                </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
-<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;Se ha producido un error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
-<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"> </span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="w"> </span><span class="s">&quot;ERROR: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">                </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="o">+</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;ERROR: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">        </span><span class="k">try</span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">            </span><span class="c1">//Siempre se debe cerrar todo lo abierto </span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">                </span><span class="n">st</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span><span class="w"> </span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printIn</span><span class="p">(</span><span class="s">&quot;ERROR: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w"> </span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 
@@ -3983,10 +3991,11 @@ EJEMPLO:
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>

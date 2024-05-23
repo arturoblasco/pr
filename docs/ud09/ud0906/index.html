@@ -3330,23 +3330,23 @@
 <li>La columna que deseamos actualizar (por su nombre o por su número de columna).</li>
 <li>El valor que queremos almacenar en dicha columna (del tipo que sea).</li>
 </ul>
-<p>Por ejemplo para modificar el campo ‘edad’ almacenando el entero 28 habría que llamar al siguiente método, suponiendo que rs es un objeto <em>ResultSet</em>:</p>
+<p>Por ejemplo para modificar el campo <em>edad</em> almacenando el entero 28 habría que llamar al siguiente método, suponiendo que rs es un objeto <em>ResultSet</em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">updateInt</span><span class="p">(</span><span class="s">&quot;edad&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>También podría hacerse de la siguiente manera, suponiendo que la columna <em>edad</em> es la segunda:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">rs</span><span class="p">.</span><span class="na">updateInt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Los métodos <em>updateXXX()</em> no devuelven ningún valor (son de tipo void). Si se produce algún error se lanzará una <em>SQLException</em>.</p>
-<p>Posteriormente hay que <strong>llamar a updateRow() para que los cambios realizados se apliquen sobre la base de datos</strong>. El <em>Driver JDBC</em> se encargará de ejecutar las sentencias SQL necesarias. Esta es una característica muy potente ya que nos facilita enormemente la tarea de modificar los datos de una base de datos. Este método devuelve <em>void</em>.</p>
+<p>Posteriormente hay que <strong>llamar al método <code>updateRow()</code> para que los cambios realizados se apliquen sobre la base de datos</strong>. El <em>Driver JDBC</em> se encargará de ejecutar las sentencias SQL necesarias. Esta es una característica muy potente ya que nos facilita enormemente la tarea de modificar los datos de una base de datos. Este método devuelve <em>void</em>.</p>
 <p>En resumen, el proceso para realizar la modificación de una fila de un <em>ResultSet</em> es el siguiente:</p>
 <ol>
 <li><strong>Desplazamos el cursor</strong> al registro que queremos modificar.</li>
-<li>Llamamos a todos los métodos <strong>updateXXX(...)</strong> que necesitemos.</li>
+<li>Llamamos a todos los métodos <strong>updateXXX(<em>columna</em>, <em>valor a modificar</em>)</strong> que necesitemos.</li>
 <li>Llamamos a <strong><code>updateRow()</code></strong> para que los cambios se apliquen a la base de datos.</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title"> </p>
-<p>Es importante entender que <strong>hay que llamar a updateRow() antes de desplazar el cursor</strong>.<br/>Si desplazamos el cursor antes de llamar a <em>updateRow()</em>, se perderán los cambios.</p>
+<p>Es importante entender que <strong>hay que llamar a <code>updateRow()</code> antes de desplazar el cursor</strong>.<br/>Si desplazamos el cursor antes de llamar a <em>updateRow()</em>, se perderán los cambios.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title"> </p>
@@ -3454,10 +3454,11 @@ Si ya hemos llamado a <em>updateRow()</em> el método <em>cancelRowUpdates()</em
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>
