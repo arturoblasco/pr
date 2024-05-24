@@ -3533,13 +3533,13 @@
   <h1>10.2 Gráfico de escena</h1>
 
 <h2 id="descripcion-general">Descripción general</h2>
-<p>Un gráfico de escena es una estructura de datos de árbol que organiza (y agrupa) objetos gráficos para una representación lógica más sencilla. También permite que el motor de gráficos represente los objetos de la manera más eficiente al omitir total o parcialmente los objetos que no se verán en la imagen final. La siguiente figura muestra un ejemplo de la arquitectura del gráfico de escena JavaFX.</p>
+<p>Un gráfico de escena es una estructura de datos de árbol que organiza (y agrupa) objetos gráficos para una representación lógica más sencilla. También permite que el motor de gráficos represente los objetos de la manera más eficiente al omitir total o parcialmente los objetos que no se verán en la imagen final. La siguiente figura muestra un ejemplo de la arquitectura del gráfico de escena <em>JavaFX</em>.</p>
 <div style="text-align:center;">
     <img src="../../img/ud10/scene_graph.jpg" alt="scene_graph" style="max-width:50%;" />
 </div>
 
-<p>En la parte superior de la arquitectura hay un <code>Stage</code>. Una etapa es una representación JavaFX de una ventana de sistema operativo nativo. En un momento dado, un escenario puede tener un solo <code>Scene</code>adjunto. Una escena es un contenedor para el gráfico de escena JavaFX.</p>
-<p>Todos los elementos en el gráfico de escena JavaFX se representan como <code>Node</code>objetos. Hay tres tipos de nudos: raíz, rama y hoja. El nodo raíz es el único nodo que no tiene un padre y está contenido directamente en una escena, que se puede ver en la figura anterior. La diferencia entre una rama y una hoja es que un nodo hoja no tiene hijos.</p>
+<p>En la parte superior de la arquitectura hay un <code>Stage</code>. Una etapa es una representación <em>JavaFX</em> de una ventana de sistema operativo nativo. En un momento dado, un escenario puede tener un solo <code>Scene</code>adjunto. Una escena es un contenedor para el gráfico de escena <em>JavaFX</em>.</p>
+<p>Todos los elementos en el gráfico de escena <em>JavaFX</em> se representan como <code>Node</code>objetos. Hay tres tipos de nudos: raíz, rama y hoja. El nodo raíz es el único nodo que no tiene un padre y está contenido directamente en una escena, que se puede ver en la figura anterior. La diferencia entre una rama y una hoja es que un nodo hoja no tiene hijos.</p>
 <p>En el gráfico de escena, los nodos secundarios comparten muchas propiedades de un nodo principal. Por ejemplo, una transformación o un evento aplicado a un nodo padre también se aplicará recursivamente a sus hijos. Como tal, una jerarquía compleja de nodos se puede ver como un solo nodo para simplificar el modelo de programación. Exploraremos transformaciones y eventos en secciones posteriores.</p>
 <p>En la siguiente figura se puede ver un ejemplo de un gráfico de escena "Hola Mundo".</p>
 <div style="text-align:center;">
@@ -3601,7 +3601,14 @@
 <p>Notas importantes:</p>
 <ul>
 <li>Un nodo puede tener un máximo de 1 padre.</li>
-<li>Un nodo en el gráfico de escena "activo" (adjunto a una escena actualmente visible) solo se puede modificar desde el subproceso de la aplicación JavaFX.</li>
+<li>Un nodo en el gráfico de escena "activo" (adjunto a una escena actualmente visible) solo se puede modificar desde el subproceso de la aplicación <em>JavaFX</em>.</li>
+<li>Aquí se define la clase <code>HolaMundo</code>, que extiende de <code>Application</code>. Esto es necesario para crear una aplicación <em>JavaFX</em>.</li>
+<li><code>createContent()</code> es un método privado que devuelve un nodo <code>Parent</code>. En este caso, crea un <code>StackPane</code> que contiene un nodo <code>Text</code> con el texto "Hola Mundo".</li>
+<li>El método <code>start()</code> es el punto de entrada principal para una aplicación <em>JavaFX</em>. En este método:</li>
+<li>Se crea una nueva instancia de <code>Scene</code> utilizando el método <code>createContent()</code> como contenido de la escena.</li>
+<li>Se establece la escena en el <code>Stage</code> (<code>stage</code>) con un tamaño de 400x400 píxeles.</li>
+<li>Se muestra el <code>Stage</code>.</li>
+<li><code>main()</code> es el método principal de la aplicación. Aquí se llama al método <code>launch()</code> de la clase <code>Application</code>, que inicia la aplicación <em>JavaFX</em>.</li>
 </ul>
 <h2 id="transformaciones">Transformaciones</h2>
 <p>Usaremos la siguiente aplicación como ejemplo para demostrar las 3 transformaciones más comunes:  <strong><code>E02_TransformApp.java</code></strong></p>
@@ -3643,9 +3650,7 @@
 <span class="normal"><a href="#__codelineno-1-36">36</a></span>
 <span class="normal"><a href="#__codelineno-1-37">37</a></span>
 <span class="normal"><a href="#__codelineno-1-38">38</a></span>
-<span class="normal"><a href="#__codelineno-1-39">39</a></span>
-<span class="normal"><a href="#__codelineno-1-40">40</a></span>
-<span class="normal"><a href="#__codelineno-1-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.application.Application</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.application.Application</span><span class="p">;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Parent</span><span class="p">;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Scene</span><span class="p">;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.layout.Pane</span><span class="p">;</span>
@@ -3662,30 +3667,28 @@
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a>
 <a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">transform</span><span class="p">(</span><span class="n">Rectangle</span><span class="w"> </span><span class="n">box</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="c1">// we will apply transformations here:</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="c1">//Uncomment for translate</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setTranslateX</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setTranslateY</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">        </span><span class="c1">//uncomment for scale</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setScaleX</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setScaleY</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="c1">//uncomment for rotate</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setRotate</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">createContent</span><span class="p">(),</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">GRAY</span><span class="p">));</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a>
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">        </span><span class="n">launch</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="c1">// 1.Translación</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setTranslateX</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setTranslateY</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="c1">// 2. Escala</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setScaleX</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setScaleY</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="c1">// 3. Rotación</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">        </span><span class="n">box</span><span class="p">.</span><span class="na">setRotate</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">createContent</span><span class="p">(),</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">GRAY</span><span class="p">));</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">        </span><span class="n">launch</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Ejecutar la aplicación dará como resultado la siguiente imagen:</p>
 <div style="text-align:center;">
@@ -3694,7 +3697,7 @@
 
 <p>En JavaFX, puede ocurrir una transformación simple en uno de los 3 ejes:  X, Y o Z. La aplicación de ejemplo está en 2D, por lo que solo consideraremos los ejes X e Y.</p>
 <h3 id="translacion">Translación</h3>
-<p>En JavaFX y gráficos por computadora, <code>translate</code> significa moverse. </p>
+<p>En <em>JavaFX</em> y gráficos por computadora, <code>translate</code> significa moverse. </p>
 <p>Un ejemplo de esto es que podemos trasladar nuestra caja en 100 píxeles en el eje X y 200 píxeles en el eje Y:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
@@ -3704,6 +3707,10 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">box</span><span class="p">.</span><span class="na">setTranslateY</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<div style="text-align:center;">
+    <img src="../../img/ud10/bluebox_b.png" alt="bluebox" style="max-width:50%;" />
+</div>
+
 <h3 id="escala">Escala</h3>
 <p>Puede aplicar la escala para hacer un nodo más grande o más pequeño. El valor de escala es una relación. Por defecto, un nodo tiene un valor de escala de 1 (100%) en cada eje. </p>
 <p>Un ejemplo de esto es que podemos agrandar nuestra caja aplicando una escala de 1.5 en los ejes X e Y:</p>
@@ -3715,6 +3722,10 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">box</span><span class="p">.</span><span class="na">setScaleY</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<div style="text-align:center;">
+    <img src="../../img/ud10/bluebox_c.png" alt="bluebox" style="max-width:50%;" />
+</div>
+
 <h3 id="rotacion">Rotación</h3>
 <p>La rotación de un nodo determina el ángulo en el que se representa el nodo. En 2D el único eje de rotación sensible es el eje Z. </p>
 <p>Un ejemplo de esto es que podemos girar la caja 30 grados:</p>
@@ -3724,6 +3735,10 @@
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">box</span><span class="p">.</span><span class="na">setRotate</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<div style="text-align:center;">
+    <img src="../../img/ud10/bluebox_d.png" alt="bluebox" style="max-width:50%;" />
+</div>
+
 <h2 id="manejo-de-eventos">Manejo de eventos</h2>
 <p>Un evento notifica que ha ocurrido algo importante. Los eventos suelen ser lo "primitivo" de un sistema de eventos (también conocido como bus de eventos). Generalmente, un sistema de eventos tiene las siguientes 3 responsabilidades:</p>
 <ul>
@@ -3731,7 +3746,7 @@
 <li>notificar <code>listeners</code> (a las partes interesadas) sobre el evento y</li>
 <li><code>handle</code> (procesar) el evento.</li>
 </ul>
-<p>El mecanismo de notificación de eventos lo realiza la plataforma JavaFX automáticamente. Por lo tanto, solo consideraremos cómo disparar eventos, escuchar eventos y cómo manejarlos.</p>
+<p>El mecanismo de notificación de eventos lo realiza la plataforma <em>JavaFX</em> automáticamente. Por lo tanto, solo consideraremos cómo disparar eventos, escuchar eventos y cómo manejarlos.</p>
 <p>Primero, vamos a crear un evento personalizado:  <strong><code>E03_EventoUsuario.java</code></strong></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
@@ -3792,7 +3807,7 @@
 </code></pre></div></td></tr></table></div>
 <p>Por ejemplo, <code>LOGIN_SUCCEEDED</code>o <code>LOGIN_FAILED</code> podría activarse cuando un usuario intenta iniciar sesión en una aplicación. Según el resultado del inicio de sesión, podemos permitir que el usuario acceda a la aplicación o bloquearlo. Si bien se puede lograr la misma funcionalidad con una <code>if</code> declaración simple, hay una ventaja significativa de un sistema de eventos. Los sistemas de eventos se diseñaron para permitir la comunicación entre varios módulos (subsistemas) en una aplicación sin acoplarlos estrechamente. Como tal,  un sistema de audio puede reproducir un sonido cuando el usuario inicia sesión. Por lo tanto, mantiene todo el código relacionado con el audio en su propio módulo. Sin embargo, no profundizaremos en los estilos arquitectónicos.</p>
 <h3 id="eventos-de-entrada">Eventos de entrada</h3>
-<p>Los eventos de teclado y ratón son los tipos de eventos más comunes utilizados en JavaFX. Cada <code>Node</code> proporciona los llamados "métodos de conveniencia" para manejar estos eventos. Por ejemplo, podemos ejecutar algún código cuando se presiona un botón:</p>
+<p>Los eventos de teclado y ratón son los tipos de eventos más comunes utilizados en <em>JavaFX</em>. Cada <code>Node</code> proporciona los llamados "métodos de conveniencia" para manejar estos eventos. Por ejemplo, podemos ejecutar algún código cuando se presiona un botón:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
@@ -3821,7 +3836,7 @@
 </code></pre></div></td></tr></table></div>
 <p>El objeto <code>e</code>aquí es de tipo <code>KeyEvent</code> y lleva información sobre el código de la tecla, que luego se puede asignar a una tecla física real en el teclado.</p>
 <h2 id="sincronizacion">Sincronización</h2>
-<p>Es importante comprender la diferencia de tiempo entre la creación de controles de interfaz de usuario de JavaFX y la visualización de los controles. Al crear los controles de la interfaz de usuario, ya sea a través de la creación directa de objetos API o mediante FXML, es posible que te falten ciertos valores de geometría de pantalla, como las dimensiones de una ventana. Eso está disponible más tarde, en el instante en que se muestra la pantalla al usuario. Ese evento de visualización, llamado OnShown, es el momento en que se ha asignado una ventana y se completan los cálculos de diseño final.</p>
+<p>Es importante comprender la diferencia de tiempo entre la creación de controles de interfaz de usuario de <em>JavaFX</em> y la visualización de los controles. Al crear los controles de la interfaz de usuario, ya sea a través de la creación directa de objetos API o mediante FXML, es posible que te falten ciertos valores de geometría de pantalla, como las dimensiones de una ventana. Eso está disponible más tarde, en el instante en que se muestra la pantalla al usuario. Ese evento de visualización, llamado OnShown, es el momento en que se ha asignado una ventana y se completan los cálculos de diseño final.</p>
 <p>Para demostrar esto, considere el siguiente programa que muestra las dimensiones de la pantalla mientras se crean los controles de la interfaz de usuario y las dimensiones de la pantalla cuando se muestra la pantalla. La siguiente captura de pantalla muestra la ejecución del programa. Cuando se crean los controles de la interfaz de usuario (<code>new VBox()</code>, <code>new Scene()</code>, <code>primaryStage.setScene()</code>), no hay valores reales de alto y ancho de ventana disponibles como lo demuestran los valores "NaN"  indefinidos.</p>
 <div style="text-align:center;">
     <img src="../../img/ud10/strartvsshow.png" alt="strartvsshow" style="max-width:70%;" />
@@ -3943,7 +3958,7 @@
 <a id="__codelineno-12-56" name="__codelineno-12-56"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-57" name="__codelineno-12-57"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>A veces, conocerá las dimensiones de la pantalla de antemano y puede usar esos valores en cualquier punto del programa JavaFX. Esto incluye antes del evento <code>OnShown</code>. Sin embargo, si su secuencia de inicialización contiene lógica que necesita estos valores, deberá trabajar con el evento <code>OnShown</code>. Un caso de uso podría ser trabajar con las últimas dimensiones guardadas o dimensiones basadas en la entrada del programa.</p>
+<p>A veces, conocerá las dimensiones de la pantalla de antemano y puede usar esos valores en cualquier punto del programa <em>JavaFX</em>. Esto incluye antes del evento <code>OnShown</code>. Sin embargo, si su secuencia de inicialización contiene lógica que necesita estos valores, deberá trabajar con el evento <code>OnShown</code>. Un caso de uso podría ser trabajar con las últimas dimensiones guardadas o dimensiones basadas en la entrada del programa.</p>
 
 
 
