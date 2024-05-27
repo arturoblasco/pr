@@ -3698,23 +3698,30 @@
 <ol>
 <li><strong><code>listarEmpleados (Connection conn)</code></strong>: Mostrar en la consola todos los empleados y sus salarios.</li>
 <li><strong><code>actualizarSalarios (Connection conn)</code></strong>: Incrementar el salario de todos los empleados en un 10%.</li>
-<li><strong><code>eliminarEmpleados (Connection conn)</code></strong>: Eliminar todos los empleados cuyo salario sea menor que $2000.</li>
+<li><strong><code>eliminarEmpleados (Connection conn)</code></strong>: Eliminar todos los empleados cuyo salario sea menor que 3000€.</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Consejo</p>
+<p>En el main ejecuta por este orden: 
+1) <code>listarEmpleados</code>
+2) <code>actualizarEmpleados</code>
+3) <code>listarEmpleados</code>
+4) <code>eliminarEmpleados</code>
+5) <code>listarEmpleados</code></p>
+</div>
 <div class="admonition question">
 <p class="admonition-title">Para probar ...</p>
-<p>Puedes implementar cada operación utilizando un tipo de resultado y opción de concurrencia diferente para familiarizarte con su uso. No olvides manejar las excepciones <code>SQLException</code> adecuadamente.<br /><br />
+<p>Puedes implementar cada operación utilizando un tipo de resultado y opción de concurrencia diferente para familiarizarte con su uso.<br />
+No olvides manejar las excepciones <code>SQLException</code> adecuadamente.<br /><br />
 Por ejemplo, podrías probarlas siguientes operaciones:<br />
  1. Lista todos los empleados junto con sus salarios utilizando un <code>ResultSet</code> de tipo <code>TYPE_SCROLL_SENSITIVE</code> y opción de concurrencia <code>CONCUR_READ_ONLY</code>.<br />
 2. Actualiza los salarios de todos los empleados incrementándolos en un 10% utilizando un <code>ResultSet</code> de tipo <code>TYPE_FORWARD_ONLY</code> y opción de concurrencia <code>CONCUR_UPDATABLE</code>.<br />
-3. Elimina todos los empleados cuyo salario sea menor a $2000 utilizando un <code>Statement</code> estándar sin necesidad de un <code>ResultSet</code>.</p>
+3. Elimina todos los empleados cuyo salario sea menor a 3000€ utilizando un <code>Statement</code> estándar sin necesidad de un <code>ResultSet</code>.</p>
 </div>
 <div class="admonition nota">
-<p class="admonition-title">No olvides ...</p>
-<p>... manejar las excepciones <code>SQLException</code> adecuadamente.</p>
-</div>
-<div class="admonition nota">
-<p class="admonition-title">Recuerda ...</p>
-<p>... ajustar la cadena de conexión a tu base de datos y reemplazar "usuario" y "contraseña" con las credenciales adecuadas. Además, asegúrate de manejar adecuadamente las excepciones.</p>
+<p class="admonition-title">No olvides:</p>
+<p>1) Manejar las excepciones <code>SQLException</code> adecuadamente.
+2) Ajustar la cadena de conexión a tu base de datos y reemplazar "usuario" y "contraseña" con las credenciales adecuadas.</p>
 </div>
 <hr />
 <h2 id="ejercicio-2-_02_gestionproductos">Ejercicio 2: <code>_02_gestionProductos</code></h2>

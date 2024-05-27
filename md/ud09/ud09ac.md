@@ -63,20 +63,27 @@ Es escribir un programa Java `GestionEmpleados` que realice las siguientes opera
 
 1. **`listarEmpleados (Connection conn)`**: Mostrar en la consola todos los empleados y sus salarios.
 2. **`actualizarSalarios (Connection conn)`**: Incrementar el salario de todos los empleados en un 10%.
-3. **`eliminarEmpleados (Connection conn)`**: Eliminar todos los empleados cuyo salario sea menor que $2000.
+3. **`eliminarEmpleados (Connection conn)`**: Eliminar todos los empleados cuyo salario sea menor que 3000€.
+
+!!!note "Consejo"
+	En el main ejecuta por este orden: 
+	1) `listarEmpleados`
+	2) `actualizarEmpleados`
+	3) `listarEmpleados`
+	4) `eliminarEmpleados`
+	5) `listarEmpleados`
 
 !!! question "Para probar ..."
-	Puedes implementar cada operación utilizando un tipo de resultado y opción de concurrencia diferente para familiarizarte con su uso. No olvides manejar las excepciones `SQLException` adecuadamente.<br /><br />
+	Puedes implementar cada operación utilizando un tipo de resultado y opción de concurrencia diferente para familiarizarte con su uso.<br />
+	No olvides manejar las excepciones `SQLException` adecuadamente.<br /><br />
 	Por ejemplo, podrías probarlas siguientes operaciones:<br />
 	 1. Lista todos los empleados junto con sus salarios utilizando un `ResultSet` de tipo `TYPE_SCROLL_SENSITIVE` y opción de concurrencia `CONCUR_READ_ONLY`.<br />
 	2. Actualiza los salarios de todos los empleados incrementándolos en un 10% utilizando un `ResultSet` de tipo `TYPE_FORWARD_ONLY` y opción de concurrencia `CONCUR_UPDATABLE`.<br />
-	3. Elimina todos los empleados cuyo salario sea menor a $2000 utilizando un `Statement` estándar sin necesidad de un `ResultSet`.
+	3. Elimina todos los empleados cuyo salario sea menor a 3000€ utilizando un `Statement` estándar sin necesidad de un `ResultSet`.
 
-!!! nota "No olvides ..."
-	... manejar las excepciones `SQLException` adecuadamente.
-
-!!! nota "Recuerda ..."
-	... ajustar la cadena de conexión a tu base de datos y reemplazar "usuario" y "contraseña" con las credenciales adecuadas. Además, asegúrate de manejar adecuadamente las excepciones.
+!!! nota "No olvides:"
+	1) Manejar las excepciones `SQLException` adecuadamente.
+	2) Ajustar la cadena de conexión a tu base de datos y reemplazar "usuario" y "contraseña" con las credenciales adecuadas.
 
 __________________________
 
