@@ -51,7 +51,7 @@
 
 <hr>
 
-## Ejercicio 1: paquete `_01_gestionEmpleados`
+## Ejercicio 1: `_01_gestionEmpleados`
 
 Tenemos nuestra base de datos `pr_tuNombre` que almacena información sobre *empleados*. La tabla `empleados` tiene las siguientes columnas:
 
@@ -80,7 +80,7 @@ Es escribir un programa Java `GestionEmpleados` que realice las siguientes opera
 
 __________________________
 
-## Ejercicio 2: paquete `_02_gestionProductos`
+## Ejercicio 2: `_02_gestionProductos`
 
 Supongamos que tienes una base de datos que almacena información sobre productos. La tabla `productos` tiene las siguientes columnas:
 
@@ -95,7 +95,7 @@ Tu tarea es escribir un programa Java `GestionProductos` que realice las siguien
 
 __________________________
 
-## Ejercicio 3: paquete `_03_gestionAlumnos`
+## Ejercicio 3: `_03_gestionAlumnos`
 
 Supongamos que tienes una base de datos que almacena información sobre alumnos. La tabla `alumnos` tiene las siguientes columnas:
 
@@ -110,7 +110,7 @@ Tu tarea es escribir un programa Java `GestionAlumnos` que realice las siguiente
 
 __________________________
 
-## Ejercicio 4: paquete `_04_gestionLibros`
+## Ejercicio 4: `_04_gestionLibros`
 
 Supongamos que tienes una base de datos que almacena información sobre libros. La tabla `libros` tiene las siguientes columnas:
 
@@ -126,7 +126,7 @@ Tu tarea es escribir un programa Java `GestionLibros` que realice las siguientes
 
 __________________________
 
-## Ejercicio 5: paquete `_05_gestionVentas`
+## Ejercicio 5: `_05_gestionVentas`
 
 Supongamos que tienes una base de datos que almacena información sobre ventas. La tabla `ventas` tiene las siguientes columnas:
 
@@ -142,7 +142,7 @@ Tu tarea es escribir un programa Java `GestionVentas` que realice las siguientes
 
 __________________________
 
-## Ejercicio 6: paquete `_06_gestionPedidos`
+## Ejercicio 6: `_06_gestionPedidos`
 
 Supongamos que tienes una base de datos que almacena información sobre pedidos. La tabla `pedidos` tiene las siguientes columnas:
 
@@ -159,7 +159,7 @@ Tu tarea es escribir un programa Java `GestionPedidos` que realice las siguiente
 
 __________________________
 
-## Ejercicio 7: paquete `_07_gestionEmpleados` (continuación)
+## Ejercicio 7: `_07_gestionEmpleados` (continuación)
 
 Continuando con el ejercicio de gestión de empleados, copia el programa `GestionEmpleados` y agrega algunas funcionalidades adicionales:
 
@@ -168,7 +168,7 @@ Continuando con el ejercicio de gestión de empleados, copia el programa `Gestio
 
 __________________________
 
-## Ejercicio 8: paquete `_08_gestionEstudiantes`
+## Ejercicio 8: `_08_gestionEstudiantes`
 
 Supongamos que tienes una base de datos que almacena información sobre estudiantes. La tabla `estudiantes` tiene las siguientes columnas:
 
@@ -184,7 +184,7 @@ Tu tarea es escribir un programa Java `GestionEstudiantes` que realice las sigui
 
 __________________________
 
-## Ejercicio 9: paquete `_09_gestionProductos` (continuación)
+## Ejercicio 9: `_09_gestionProductos` (continuación)
 
 Continuando con el ejercicio de gestión de productos del segundo ejercicio, copia el programa `GestionProductos` y agrega algunas funcionalidades adicionales:
 
@@ -193,7 +193,7 @@ Continuando con el ejercicio de gestión de productos del segundo ejercicio, cop
 
 __________________________
 
-## Ejercicio 10: paquete `_10_gestionEmpleados` (continuación)
+## Ejercicio 10: `_10_gestionEmpleados` (continuación)
 
 Continuando con el ejercicio de gestión de empleados del séptimo ejercicio, copia el programa `GestionEmpleados` y agrega algunas funcionalidades adicionales:
 
@@ -202,7 +202,7 @@ Continuando con el ejercicio de gestión de empleados del séptimo ejercicio, co
 
 __________________________
 
-## Ejercicio 11: paquete `gestionClientes`
+## Ejercicio 11: `gestionClientes`
 
 Imagina que tienes una base de datos que almacena información sobre clientes. La tabla `clientes` tiene las siguientes columnas:
 
