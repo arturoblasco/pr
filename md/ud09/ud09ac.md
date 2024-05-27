@@ -42,10 +42,34 @@
       conn.close();
     
     } catch (SQLException e) {
-        e.printStackTrace();
+        System.out.println("ERROR: " + e.getMessage());
     
     } catch (Exception e) {
-        e.printStackTrace();
+        System.out.println("ERROR: " + e.getMessage());
+    } finally {
+    	try{
+    		if (rs != null){
+    			rs.close();
+    		}
+    	} catch (){
+    		System.out.println("ERROR: " + e.getMessage());
+    	}
+    } finally {
+    	try{
+    		if (st != null){
+    			rs.close();
+    		}
+    	} catch (){
+    		System.out.println("ERROR: " + e.getMessage());
+    	}	
+    } finally {
+    	try{
+    		if (conn != null){
+    			rs.close();
+    		}
+    	} catch (){
+    		System.out.println("ERROR: " + e.getMessage());
+    	}	
     }
     ```
 
