@@ -265,3 +265,6 @@ Tu tarea es escribir un programa Java `_11_GestionClientes` que realice las sigu
 Crea una aplicación que nos permita gestionar la base de datos [**redes.sql**](./redes.sql){:target="_blank"}. 
 
 Debe tener un menú desde el que se puedan gestionar (*Create*, *Read*, *Update*, *Delete*) usuarios, posts y comentarios.
+
+!!!note "Usuario implementado"
+	En el **punto 9.11 DAO** de esta unidad ya tenemos implementado el DAO para `usuarios` y la clase `Main.java`.
