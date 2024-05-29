@@ -75,7 +75,7 @@
 
 <hr>
 
-## Ejercicio 1: `_01_gestionEmpleados`
+## `_01_GestionEmpleados`
 
 Tenemos nuestra base de datos `pr_tuNombre` que almacena información sobre *empleados*. La tabla `empleados` tiene las siguientes columnas:
 
@@ -90,16 +90,16 @@ Es escribir un programa Java `_01_GestionEmpleados` que realice las siguientes o
 3. **`eliminarEmpleados (Connection conn)`**: Eliminar todos los empleados cuyo salario sea menor que 3000€.
 
 !!!note "Consejo"
-	En el main ejecuta por este orden: 
-	1) `listarEmpleados`
-	2) `actualizarEmpleados`
-	3) `listarEmpleados`
-	4) `eliminarEmpleados`
-	5) `listarEmpleados`
+	En el main ejecuta por este orden: <br />
+	1º `listarEmpleados`<br />
+	2º `actualizarEmpleados`<br />
+	3º `listarEmpleados`<br />
+	4º `eliminarEmpleados`<br />
+	5º `listarEmpleados`<br />
 
 !!! question "Para probar ..."
-	Puedes implementar cada operación utilizando un tipo de resultado y opción de concurrencia diferente para familiarizarte con su uso.<br />
-	No olvides manejar las excepciones `SQLException` adecuadamente.<br /><br />
+	- Puedes implementar cada operación utilizando un tipo de resultado y opción de concurrencia diferente para familiarizarte con su uso.<br />
+	- No olvides manejar las excepciones `SQLException` adecuadamente.<br /><br />
 	Por ejemplo, podrías probarlas siguientes operaciones:<br />
 	 1. Lista todos los empleados junto con sus salarios utilizando un `ResultSet` de tipo `TYPE_SCROLL_SENSITIVE` y opción de concurrencia `CONCUR_READ_ONLY`.<br />
 	2. Actualiza los salarios de todos los empleados incrementándolos en un 10% utilizando un `ResultSet` de tipo `TYPE_FORWARD_ONLY` y opción de concurrencia `CONCUR_UPDATABLE`.<br />
@@ -111,7 +111,7 @@ Es escribir un programa Java `_01_GestionEmpleados` que realice las siguientes o
 
 __________________________
 
-## Ejercicio 2: `_02_gestionProductos`
+## `_02_GestionProductos`
 
 Supongamos que tienes una base de datos que almacena información sobre productos. La tabla `productos` tiene las siguientes columnas:
 
@@ -126,7 +126,7 @@ Tu tarea es escribir un programa Java `_02_GestionProductos` que realice las sig
 
 __________________________
 
-## Ejercicio 3: `_03_gestionAlumnos`
+## `_03_GestionAlumnos`
 
 Supongamos que tienes una base de datos que almacena información sobre alumnos. La tabla `alumnos` tiene las siguientes columnas:
 
@@ -141,7 +141,7 @@ Tu tarea es escribir un programa Java `_03_GestionAlumnos` que realice las sigui
 
 __________________________
 
-## Ejercicio 4: `_04_gestionLibros`
+## `_04_GestionLibros`
 
 Supongamos que tienes una base de datos que almacena información sobre libros. La tabla `libros` tiene las siguientes columnas:
 
@@ -152,12 +152,23 @@ Supongamos que tienes una base de datos que almacena información sobre libros. 
 
 Tu tarea es escribir un programa Java `_04_GestionLibros` que realice las siguientes operaciones utilizando los métodos proporcionados:
 
-1. **Mostrar libros por década**: Permite al usuario ingresar una década y mostrar todos los libros publicados en esa década. Utiliza el método `afterLast()` y `previous()` para mover el cursor al final y luego retroceder, así puedes comenzar desde la última fila.
-2. **Buscar un libro por autor**: Permite al usuario ingresar el nombre de un autor y muestra todos los libros escritos por ese autor. Utiliza el método `relative(int registros)` para desplazarte a través de los registros según las coincidencias del autor.
+- **`mostrarLibrosPorDecada(Connection con, int decada)`**: Permite al usuario ingresar una década y mostrar todos los libros publicados en esa década. 
+
+!!!note "Sugerencia en este método:"
+	Puedes realizar el método `mostrarLibrosPorDecada()` de dos formas:<br />
+	A) Utiliza el método `createStatemnt()` para crear el *Resulset* con el atributo `ResultSet.TYPE_SCROLL_INSENSITIVE`. Utiliza dentro los métodos `afterLast()` y `previous()` para mover el cursor al final y luego retroceder, así puedes comenzar desde la última fila.<br />
+	B) Utiliza el método `preparedStatement(sql)` con una consulta en la que se listen los libros comprendidos en una década y ordenados de forma descendente por el `anio_publiacion`.
+
+- **`buscarLibroPorAutor(Connection con, String autor)`**: Permite al usuario ingresar el nombre de un autor y muestra todos los libros escritos por ese autor.
+
+!!!note "Sugerencia en este método:"
+	Puedes realizar el método `buscarLibroPorAutor()` de dos formas:<br />
+	A) Utiliza el método `createStatemnt()` para crear el *Resulset* con el atributo `ResultSet.TYPE_SCROLL_INSENSITIVE`. Utiliza dentro el método relative(int registros) para desplazarte a través de los registros según las coincidencias del autor.<br />
+	B) Utiliza el método `preparedStatement(sql)` con una consulta en la que se listen los libros que contengan la cadena `autor` dentro del campo `autor`.
 
 __________________________
 
-## Ejercicio 5: `_05_gestionVentas`
+## `_05_GestionVentas`
 
 Supongamos que tienes una base de datos que almacena información sobre ventas. La tabla `ventas` tiene las siguientes columnas:
 
@@ -173,7 +184,7 @@ Tu tarea es escribir un programa Java `_05_GestionVentas` que realice las siguie
 
 __________________________
 
-## Ejercicio 6: `_06_gestionPedidos`
+## `_06_GestionPedidos`
 
 Supongamos que tienes una base de datos que almacena información sobre pedidos. La tabla `pedidos` tiene las siguientes columnas:
 
@@ -190,7 +201,7 @@ Tu tarea es escribir un programa Java `_06_GestionPedidos` que realice las sigui
 
 __________________________
 
-## Ejercicio 7: `_07_gestionEmpleados` (continuación)
+## `_07_GestionEmpleados` (continuación)
 
 Continuando con el ejercicio de gestión de empleados, copia el programa `GestionEmpleados`, cambia el nombre a `_07_gestionEmpleados` y agrega algunas funcionalidades adicionales:
 
@@ -199,7 +210,7 @@ Continuando con el ejercicio de gestión de empleados, copia el programa `Gestio
 
 __________________________
 
-## Ejercicio 8: `_08_gestionEstudiantes`
+##  `_08_GestionEstudiantes`
 
 Supongamos que tienes una base de datos que almacena información sobre estudiantes. La tabla `estudiantes` tiene las siguientes columnas:
 
@@ -215,7 +226,7 @@ Tu tarea es escribir un programa Java `_08_GestionEstudiantes` que realice las s
 
 __________________________
 
-## Ejercicio 9: `_09_gestionProductos` (continuación)
+## `_09_GestionProductos` (continuación)
 
 Continuando con el ejercicio de gestión de productos del segundo ejercicio, copia el programa `GestionProductos`, cambia el nombre a `_09_gestionProductos` y y agrega algunas funcionalidades adicionales:
 
@@ -224,7 +235,7 @@ Continuando con el ejercicio de gestión de productos del segundo ejercicio, cop
 
 __________________________
 
-## Ejercicio 10: `_10_gestionEmpleados` (continuación)
+## `_10_GestionEmpleados` (continuación)
 
 Continuando con el ejercicio de gestión de empleados del séptimo ejercicio, copia el programa `_10_GestionEmpleados` y agrega algunas funcionalidades adicionales:
 
@@ -233,7 +244,7 @@ Continuando con el ejercicio de gestión de empleados del séptimo ejercicio, co
 
 __________________________
 
-## Ejercicio 11: `gestionClientes`
+##  `_11_GestionClientes`
 
 Imagina que tienes una base de datos que almacena información sobre clientes. La tabla `clientes` tiene las siguientes columnas:
 
