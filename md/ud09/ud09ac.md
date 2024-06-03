@@ -264,6 +264,8 @@ Tu tarea es escribir un programa Java `_11_GestionClientes` que realice las sigu
 
 Crea una aplicación que nos permita gestionar la base de datos [**redes.sql**](./redes.sql){:target="_blank"}. 
 
+<div style="text-align: center;"><img src="../../img/ud09/er.png" alt="1558290448718" style="zoom:100%;" /></div>
+
 Debe tener un menú desde el que se puedan gestionar (*Create*, *Read*, *Update*, *Delete*) usuarios, posts y comentarios.
 
 !!!note "Usuario implementado"

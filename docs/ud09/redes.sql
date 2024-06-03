@@ -7,20 +7,20 @@
 -- Tabla: users
 CREATE TABLE IF NOT EXISTS users (
  id INT PRIMARY KEY AUTO_INCREMENT,
- name VARCHAR(50) NOT NULL,
- lastName VARCHAR(255) NOT NULL
+ nombre VARCHAR(50) NOT NULL,
+ apellido VARCHAR(255) NOT NULL
  );
-INSERT INTO users (id, name, lastName) VALUES (3, 'Andrés', 'García');
-INSERT INTO users (id, name, lastName) VALUES (4, 'Janet', 'Espinosa');
-INSERT INTO users (id, name, lastName) VALUES (5, 'Pepe', 'Ponz');
-INSERT INTO users (id, name, lastName) VALUES (6, 'Maria', 'Gallardo');
-INSERT INTO users (id, name, lastName) VALUES (7, 'Maria', 'Gallardo');
-INSERT INTO users (id, name, lastName) VALUES (8, 'Alberto', 'Gracia');
-INSERT INTO users (id, name, lastName) VALUES (12, 'Juan', 'María');
-INSERT INTO users (id, name, lastName) VALUES (13, 'Juan', 'Marqués');
-INSERT INTO users (id, name, lastName) VALUES (14, 'Juan', 'Imedio');
-INSERT INTO users (id, name, lastName) VALUES (18, 'Pedro', 'Martínez');
-INSERT INTO users (id, name, lastName) VALUES (23, 'Juan Pedro', 'Pascal');
+INSERT INTO users (id, nombre, apellido) VALUES (3, 'Andrés', 'García');
+INSERT INTO users (id, nombre, apellido) VALUES (4, 'Janet', 'Espinosa');
+INSERT INTO users (id, nombre, apellido) VALUES (5, 'Pepe', 'Ponz');
+INSERT INTO users (id, nombre, apellido) VALUES (6, 'Maria', 'Gallardo');
+INSERT INTO users (id, nombre, apellido) VALUES (7, 'Maria', 'Gallardo');
+INSERT INTO users (id, nombre, apellido) VALUES (8, 'Alberto', 'Gracia');
+INSERT INTO users (id, nombre, apellido) VALUES (12, 'Juan', 'María');
+INSERT INTO users (id, nombre, apellido) VALUES (13, 'Juan', 'Marqués');
+INSERT INTO users (id, nombre, apellido) VALUES (14, 'Juan', 'Imedio');
+INSERT INTO users (id, nombre, apellido) VALUES (18, 'Pedro', 'Martínez');
+INSERT INTO users (id, nombre, apellido) VALUES (23, 'Juan Pedro', 'Pascal');
 
 
 -- Tabla: posts
