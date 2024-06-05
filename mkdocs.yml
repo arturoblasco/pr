@@ -15,7 +15,7 @@ dev_addr: localhost:4000
 #   - Títol: Document.md
 nav:
   - Inicio: index.md
-  - UD 0 Conocimientos previos:
+  - UT 0 Conocimientos previos:
       - 0.1 Introducción: ud00/ud0001.md
       - 0.2 Markdown: ud00/ud0002.md
       - 0.3 Git: ud00/ud0003.md
@@ -23,7 +23,7 @@ nav:
       - 0.5 VS Code: ud00/ud0005.md
       - Actividades: ud00/ud00ac.md
       - Fuentes de información: ud00/ud00re.md
-  - UD 1 Elemenos de un programa informático:
+  - UT 1 Elemenos de un programa informático:
       - 1.1 Piensa como un programador: ud01/ud0101.md
       - 1.2 Problemas, algoritmos y programas: ud01/ud0102.md
       - 1.3 Java: ud01/ud0103.md
@@ -42,7 +42,7 @@ nav:
       - Actividades: ud01/ud01ac.md
       - Píldoras informáticas: ud01/ud01pi.md
       - Fuentes de información: ud01/ud01re.md
-  - UD 2 Utilización de objetos y clases:
+  - UT 2 Utilización de objetos y clases:
       - 2.1 Introducción a la POO: ud02/ud0201.md
       - 2.2 Características de la POO: ud02/ud0202.md
       - 2.3 Objetos y Clases: ud02/ud0203.md
@@ -54,7 +54,7 @@ nav:
       - Actividades: ud02/ud02ac.md
       - Píldoras informáticas: ud02/ud02pi.md
       - Fuentes de información: ud02/ud02re.md
-  - UD 3 Estructuras de control y excepciones:
+  - UT 3 Estructuras de control y excepciones:
       - 3.1 Introducción: ud03/ud0301.md
       - 3.2 Sentencias y bloques: ud03/ud0302.md
       - 3.3 Sentencias de selección: ud03/ud0303.md
@@ -64,7 +64,7 @@ nav:
       - Actividades: ud03/ud03ac.md
       - Píldoras informáticas: ud03/ud03pi.md
       - Fuentes de información: ud03/ud03re.md
-  - UD 4 Estructuras de datos Arrays y matrices. Recursividad:
+  - UT 4 Estructuras de datos Arrays y matrices. Recursividad:
       - 4.1 Introducción: ud04/ud0401.md
       - 4.2 Arrays: ud04/ud0402.md
       - 4.3 Problemas de recorrido, búsqueda y ordenación: ud04/ud0403.md
@@ -75,7 +75,7 @@ nav:
       - Actividades: ud04/ud04ac.md
       - Píldoras informáticas: ud04/ud04pi.md
       - Fuentes de información: ud04/ud04re.md
-  - UD 5 Desarrollo de clases:
+  - UT 5 Desarrollo de clases:
       - 5.1 Introducción: ud05/ud0501.md
       - 5.2 Estructura y miembros de una clase: ud05/ud0502.md
       - 5.3 Atributos: ud05/ud0503.md
@@ -89,7 +89,7 @@ nav:
       - Actividades: ud05/ud05ac.md
       - Píldoras informáticas: ud05/ud05pi.md
       - Fuentes de información: ud05/ud05re.md
-  - UD 6 Lectura y escritura de información:
+  - UT 6 Lectura y escritura de información:
       - 6.1 Streams (flujos): ud06/ud0601.md
       - 6.2 Ficheros: ud06/ud0602.md
       - 6.3 Serialización: ud06/ud0603.md
@@ -99,7 +99,7 @@ nav:
       - Actividades: ud06/ud06ac.md
       - Píldoras informáticas: ud06/ud06pi.md
       - Fuentes de información: ud06/ud06re.md
-  - UD 7 Colecciones:
+  - UT 7 Colecciones:
       - 7.1 Introducción: ud07/ud0701.md
       - 7.2 Colecciones: ud07/ud0702.md
       - 7.3 Iteradores: ud07/ud0703.md
@@ -109,7 +109,7 @@ nav:
       - Actividades: ud07/ud07ac.md
       - Píldoras informáticas: ud07/ud07pi.md
       - Fuentes de información: ud07/ud07re.md
-  - UD 8 Composición, Herencia y Polimorfismo:
+  - UT 8 Composición, Herencia y Polimorfismo:
       - 8.1 Relaciones entre clases: ud08/ud0801.md
       - 8.2 Composición: ud08/ud0802.md
       - 8.3 Herencia: ud08/ud0803.md
@@ -119,7 +119,7 @@ nav:
       - Actividades: ud08/ud08ac.md
       - Píldoras informáticas: ud08/ud08pi.md
       - Fuentes de información: ud08/ud08re.md
-  - UD 9 Acceso a bases de datos:
+  - UT 9 Acceso a bases de datos:
       - 9.1 Introducción: ud09/ud0901.md
       - 9.2 JDBC: ud09/ud0902.md
       - 9.3 Acceso a BBDD: ud09/ud0903.md
@@ -135,7 +135,7 @@ nav:
       - Actividades: ud09/ud09ac.md
       - Píldoras informáticas: ud09/ud09pi.md
       - Fuentes de información: ud09/ud09re.md
-  - UD 10 Interfaz gráfica:
+  - UT 10 Interfaz gráfica:
       - 10.0 JavaFX en VSCode: ud10/ud1000.md
       - 10.1 Introducción: ud10/ud1001.md
       - 10.2 Gráfico de escena: ud10/ud1002.md
