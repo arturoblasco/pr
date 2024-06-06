@@ -3533,13 +3533,13 @@
   <h1>10.2 Gráfico de escena</h1>
 
 <h2 id="descripcion-general">Descripción general</h2>
-<p>Un gráfico de escena es una estructura de datos de árbol que organiza (y agrupa) objetos gráficos para una representación lógica más sencilla. También permite que el motor de gráficos represente los objetos de la manera más eficiente al omitir total o parcialmente los objetos que no se verán en la imagen final. La siguiente figura muestra un ejemplo de la arquitectura del gráfico de escena <em>JavaFX</em>.</p>
+<p>Un <strong>gráfico de escena</strong> es una estructura de datos de árbol que organiza (y agrupa) objetos gráficos para una representación lógica más sencilla. También permite que el motor de gráficos represente los objetos de la manera más eficiente al omitir total o parcialmente los objetos que no se verán en la imagen final. La siguiente figura muestra un ejemplo de la arquitectura del gráfico de escena <em>JavaFX</em>.</p>
 <div style="text-align:center;">
     <img src="../../img/ud10/scene_graph.jpg" alt="scene_graph" style="max-width:50%;" />
 </div>
 
 <p>En la parte superior de la arquitectura hay un <code>Stage</code>. Una etapa es una representación <em>JavaFX</em> de una ventana de sistema operativo nativo. En un momento dado, un escenario puede tener un solo <code>Scene</code>adjunto. Una escena es un contenedor para el gráfico de escena <em>JavaFX</em>.</p>
-<p>Todos los elementos en el gráfico de escena <em>JavaFX</em> se representan como <code>Node</code>objetos. Hay tres tipos de nudos: raíz, rama y hoja. El nodo raíz es el único nodo que no tiene un padre y está contenido directamente en una escena, que se puede ver en la figura anterior. La diferencia entre una rama y una hoja es que un nodo hoja no tiene hijos.</p>
+<p>Todos los elementos en el gráfico de escena <em>JavaFX</em> (como pueden ser botones, etiquetas, paneles, etc) se representan como <code>Node</code>objetos. Hay tres tipos de nudos: raíz, rama y hoja. El nodo raíz es el único nodo que no tiene un padre y está contenido directamente en una escena, que se puede ver en la figura anterior. La diferencia entre una rama y una hoja es que un nodo hoja no tiene hijos.</p>
 <p>En el gráfico de escena, los nodos secundarios comparten muchas propiedades de un nodo principal. Por ejemplo, una transformación o un evento aplicado a un nodo padre también se aplicará recursivamente a sus hijos. Como tal, una jerarquía compleja de nodos se puede ver como un solo nodo para simplificar el modelo de programación. Exploraremos transformaciones y eventos en secciones posteriores.</p>
 <p>En la siguiente figura se puede ver un ejemplo de un gráfico de escena "Hola Mundo".</p>
 <div style="text-align:center;">
@@ -3604,10 +3604,12 @@
 <li>Un nodo en el gráfico de escena "activo" (adjunto a una escena actualmente visible) solo se puede modificar desde el subproceso de la aplicación <em>JavaFX</em>.</li>
 <li>Aquí se define la clase <code>HolaMundo</code>, que extiende de <code>Application</code>. Esto es necesario para crear una aplicación <em>JavaFX</em>.</li>
 <li><code>createContent()</code> es un método privado que devuelve un nodo <code>Parent</code>. En este caso, crea un <code>StackPane</code> que contiene un nodo <code>Text</code> con el texto "Hola Mundo".</li>
-<li>El método <code>start()</code> es el punto de entrada principal para una aplicación <em>JavaFX</em>. En este método:</li>
+<li>El método <code>start()</code> es el punto de entrada principal para una aplicación <em>JavaFX</em>. En este método:<ul>
 <li>Se crea una nueva instancia de <code>Scene</code> utilizando el método <code>createContent()</code> como contenido de la escena.</li>
 <li>Se establece la escena en el <code>Stage</code> (<code>stage</code>) con un tamaño de 400x400 píxeles.</li>
 <li>Se muestra el <code>Stage</code>.</li>
+</ul>
+</li>
 <li><code>main()</code> es el método principal de la aplicación. Aquí se llama al método <code>launch()</code> de la clase <code>Application</code>, que inicia la aplicación <em>JavaFX</em>.</li>
 </ul>
 <h2 id="transformaciones">Transformaciones</h2>
