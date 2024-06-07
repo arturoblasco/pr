@@ -20,7 +20,7 @@
     
     
       
-        <title>10.0 JavaFX en VSCode - Programació</title>
+        <title>10.0 Introducción - Programació</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion" class="md-skip">
+        <a href="#contenidos-del-proyecto-de-documentacion-de-javafx" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10.0 JavaFX en VSCode
+              10.0 Introducción
             
           </span>
         </div>
@@ -3004,7 +3004,7 @@
           
   
   <span class="md-ellipsis">
-    10.0 JavaFX en VSCode
+    10.0 Introducción
   </span>
   
 
@@ -3015,7 +3015,7 @@
         
   
   <span class="md-ellipsis">
-    10.0 JavaFX en VSCode
+    10.0 Introducción
   </span>
   
 
@@ -3035,53 +3035,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#contenidos-del-proyecto-de-documentacion-de-javafx" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      Contenidos del Proyecto de Documentación de JavaFX:
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proyectos-javafx-con-el-visual-studio-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Proyectos JavaFX con el Visual Studio Code
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Proyectos JavaFX con el Visual Studio Code">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crea-un-proyecto-de-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crea un proyecto de Java
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-la-primera-clase" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear la primera clase
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejecutar-la-aplicacion-javafx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejecutar la aplicación JavaFX
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3105,7 +3063,7 @@
         
   
   <span class="md-ellipsis">
-    10.1 Introducción
+    10.1 JavaFX en VSCode
   </span>
   
 
@@ -3399,53 +3357,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#contenidos-del-proyecto-de-documentacion-de-javafx" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      Contenidos del Proyecto de Documentación de JavaFX:
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proyectos-javafx-con-el-visual-studio-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Proyectos JavaFX con el Visual Studio Code
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Proyectos JavaFX con el Visual Studio Code">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crea-un-proyecto-de-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crea un proyecto de Java
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-la-primera-clase" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear la primera clase
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejecutar-la-aplicacion-javafx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejecutar la aplicación JavaFX
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3464,102 +3380,21 @@
                   
 
 
-  <h1>10.0 JavaFX en VSCode</h1>
+  <h1>10.0 Introducción</h1>
 
-<h2 id="introduccion">Introducción</h2>
-<p>Vamos a ver cómo crear una aplicación <code>JavaFX</code> en Visual Studio Code. Necesitamos:</p>
-<ul>
-<li>Visual Studio Code.</li>
-<li>OpenJDK 17 (seguramente funcionará con una posterior).</li>
-<li>Extensiones de VS Code:</li>
-<li>JavaFX Support</li>
-<li>SceneBuilder extension for Visual Studio Code</li>
-</ul>
-<h2 id="proyectos-javafx-con-el-visual-studio-code">Proyectos JavaFX con el Visual Studio Code</h2>
-<p>Sigue estos pasos para crear un proyecto <code>JavaFX</code> utilizando las herramientas IDE para compilarlo y ejecutarlo (<a href="https://code.visualstudio.com/docs/java/java-gui" target="_blank">enlace en la web oficial Visual Studio Code</a>).</p>
-<h3 id="crea-un-proyecto-de-java">Crea un proyecto de Java</h3>
-<p>Puedes crear una nueva aplicación JavaFX con solo unos pocos pasos en VS Code:</p>
-<ul>
-<li>paso 1: instala el <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack" target="_blank">paquete de extensión para Java</a> (<em>Extension Pack for Java</em>, que ya debemos tenerlo instalado).</li>
-<li>paso 2: instala las extensiones <strong>JavaFX suppor</strong>t y <strong>SceneBuilder extension for Visual Studio Code</strong>.</li>
-<li>paso 3: en Visual Studio Code, abre la paleta de comandos ( <em>Ctrl</em> + <em>Shift</em> + <em>P</em> ) y luego selecciona el comando <strong>Java: Create Java Project...</strong> .</li>
-<li>paso 4: selecciona la opción <strong>JavaFX</strong> en la lista, sigue el asistente, que te ayudará a crear un nuevo proyecto JavaFX a través de <em>Maven Archetype</em>.</li>
-</ul>
 <div style="text-align:center;">
-    <img src="../../img/ud10/09_vs02.png" alt="proyecto JavaFX" style="max-width:80%;" />
+    <img src="../../img/ud10/cover10.png" alt="portada" style="max-width:80%;" />
 </div>
-<h3 id="crear-la-primera-clase">Crear la primera clase</h3>
-<p>Pon tus clases en la carpeta correspondiente. La ruta deberá ser, para el ejemplo:</p>
-<p><code>demo\src\main\java\exercicisjavafx</code></p>
-<h3 id="ejecutar-la-aplicacion-javafx">Ejecutar la aplicación JavaFX</h3>
-<div class="admonition warning">
-<p class="admonition-title"> </p>
-<p>la siguiente guía solo funciona para proyectos administrados por <em>Maven</em>. El proyecto generado requiere al menos <em>JDK 11</em> para ejecutarlo. Asegúrate de tener <em>JDK 11</em> instalado localmente y establecer la ruta de instalación en la configuración <a href="https://github.com/redhat-developer/vscode-java#project-jdks" target="_blank"><code>java.configuration.runtimes</code></a>.</p>
-</div>
-<details class="example" open="open">
-<summary>Hola Mundo</summary>
-<p>Por ejemplo, vamos comenzar:</p>
-<ol>
-<li>heredando la clase principal de la clase <code>Application</code>.</li>
-<li>tendremos que importar las clases de la librería.</li>
-<li>implementar el método abstracto, añadir el <code>launch()</code> al <code>main()</code> y añadir los imports necesarios.</li>
-</ol>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">exercicisjavafx</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.application.Application</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Parent</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Scene</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.layout.StackPane</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.text.Text</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.stage.Stage</span><span class="p">;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaMundo</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Parent</span><span class="w"> </span><span class="nf">createContent</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StackPane</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hola Mundo&quot;</span><span class="p">));</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Hola Mundo&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">createContent</span><span class="p">(),</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">));</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="n">launch</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-Prueba final de la aplicación
-Si hemos seguido todos los pasos correctamente, podremos ejecutar nuestra aplicación y ver la ventana titulada "Hola Mundo": </p>
-<p><div style="text-align:center;"> <img src="../../img/ud10/NB11.png" alt="Hola Mundo" style="max-width:70%;" /> </div></p>
-</details>
+
+<p>El proyecto de documentación de JavaFX tiene como objetivo recopilar información útil para los desarrolladores de JavaFX de toda la web. El proyecto es <a href="https://translate.google.com/website?sl=en&amp;tl=es&amp;hl=ca&amp;client=webapp&amp;u=http://www.github.com/FXDocs/docs" target="_blank">de código abierto</a> y fomenta la participación de la comunidad para garantizar que la documentación sea lo más pulida y útil posible.</p>
+<h3 id="contenidos-del-proyecto-de-documentacion-de-javafx">Contenidos del Proyecto de Documentación de JavaFX:</h3>
+<ul>
+<li><strong>Guías de Inicio Rápido</strong>: Introducciones básicas para empezar a trabajar con JavaFX rápidamente.</li>
+<li><strong>Manual de Referencia</strong>: Documentación detallada sobre todas las clases y métodos disponibles en JavaFX.</li>
+<li><strong>Tutoriales Paso a Paso</strong>: Instrucciones detalladas para construir aplicaciones específicas utilizando JavaFX.</li>
+<li><strong>Ejemplos de Código</strong>: Ejemplos prácticos que demuestran cómo utilizar las diferentes características de JavaFX.</li>
+<li><strong>Recursos Visuales</strong>: Diagramas, capturas de pantalla y videos explicativos que ayudan a comprender mejor los conceptos y la implementación de JavaFX.</li>
+</ul>
 
 
 
@@ -3612,13 +3447,13 @@ Si hemos seguido todos los pasos correctamente, podremos ejecutar nuestra aplica
         
         
           
-          <a href="../ud1001/" class="md-footer__link md-footer__link--next" aria-label="Next: 10.1 Introducción">
+          <a href="../ud1001/" class="md-footer__link md-footer__link--next" aria-label="Next: 10.1 JavaFX en VSCode">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                10.1 Introducción
+                10.1 JavaFX en VSCode
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3635,10 +3470,11 @@ Si hemos seguido todos los pasos correctamente, podremos ejecutar nuestra aplica
       <div class="md-copyright">
   
   
-<!--     Made with -->IES
+    <!--Made with-->
+    IES
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      <!--Material for MkDocs-->
-      Mestre Ramon Esteve
+    <!-- Material for MkDocs -->
+    Mestre Ramon Esteve
     </a>
   
 </div>
