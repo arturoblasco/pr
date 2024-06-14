@@ -1,6 +1,9 @@
-## Áreas de un repositorio GIT
+!!!note "Entrega de actividades"
+	Para las actividades a realizar en esta unidad deberás subir a la plataforma **AULES** un documento PDF de nombre **ut00ApellidoNombre** con las capturas de pantalla y explicaciones pertinentes.
 
-En esta actividad deberás buscar información y explicar las 3 áreas de un proyecto Git:
+## 01. Áreas de un repositorio GIT
+
+En esta primera actividad deberás buscar información y explicar las 3 áreas de un proyecto Git:
 
 - **Directorio de trabajo (*Working director*y)**
 - **Área de preparación (*Staging area*)**
@@ -11,10 +14,12 @@ En esta actividad deberás buscar información y explicar las 3 áreas de un pro
 </div>
 
 
-## Configurar nuestro git
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea01tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.
+<hr />
+
+
+
+## 02. Configurar nuestro git
 
 Antes de comenzar a utilizar git, debemos configurarlo con los valores que tendrá a partir de ahora (*nombre, correo electrónico, ...*).
 
@@ -22,45 +27,47 @@ Para ello, establecemos:
 
 - el **nombre** de usuario:
 
-   ````
+   ````sh
    git config --global user.name "tu_nombre_completo"
    ````
 
 - el **correo** de usuario:
 
-   ````
+   ````sh
    git config --global user.email "tu_direccion_de_correo_electronico"
    ````
 
-- el **coloreado** de la salida:
+- OPCIONAL: el **coloreado** de la salida:
 
-   ````
+   ````sh
    git config --global colori.ui auto
    ````
 
-- el **estado original en los conflictos**:
+- OPCIONAL: el **estado original en los conflictos**:
 
-   ````
+   ````sh
    git config --global merge.conflictstyle diff3
    ````
 
 Para mostrar la configuración, que ya hemos establecido:
 
-````
+````sh
 git config --list
 ````
 
-## Inicializar repositorio local
+<hr />
+
+
+
+## 03. Inicializar repositorio local
 
 En la actividad siguiente, vamos a crear un repositorio local, es decir en nuestro PC personal. 
-Luego añadiremos y modificaremos algunos archivos y registraremos los cambios. Trabajaremos desde el terminal de texto.
 
-!!!note " "
-	Debes recopilar la información y capturas necesarias para generar el documento final.
+Luego añadiremos y modificaremos algunos archivos y registraremos los cambios. Trabajaremos desde la terminal de texto.
 
 Seguiremos el siguiente proceso:
 
-### Creamos una carpeta para alojar el proyecto. 
+### Crear una carpeta para alojar el proyecto. 
 
 Por ejemplo, podemos poner nuestro nombre:
 
@@ -74,13 +81,13 @@ Y, acto seguido, entrar en dicha carpeta:
 cd pruebas-arturo
 ~~~
 
-## Comprobamos que tenemos la carpeta vacía
+Comprobamos que tenemos la carpeta vacía
 
 ```sh
 ls -la
 ```
 
-### Inicializamos el repositorio
+### Incializar el repositorio
 
 Para inicializar el repositorio se debe ejecutar la siguiente orden **dentro de la carpeta**:
 
@@ -94,7 +101,7 @@ Puedes observar por el texto <code>Initializade empty Git repository in ...</cod
     <img src="../../img/ud00/git-init.png" alt="git-init" style="max-width:95%;" />
 </div>
 
-### Comprobamos que se ha creado una carpeta  `.git`.
+### Comprobar que se ha creado una carpeta  `.git`.
 
 Esta es la carpeta donde se registrarán todos los cambios que vayamos realizando.
 
@@ -104,7 +111,13 @@ ls -la
 
 Comprueba el contenido de esta nueva carpeta, ¿por qué **.git** tiene un punto delante?
 
-### Creamos/editamos un archivo `README.md`
+<hr />
+
+
+
+## 04. Crear primer cambio en el repositorio
+
+### Crear/editar un archivo `README.md`
 
 Creamos un fichero (con el editor **nano**, por ejemplo):
 
@@ -128,33 +141,35 @@ Guardar con el mismo nombre (pulsa **INTRO**):
     <img src="../../img/ud00/nano-guardar2.png" alt="nano-guardar2" style="max-width:95%;" />
 </div>
 
-### Registramos cambios en el repositorio
+### Registrar cambios en el repositorio
 
 Para ello deberemos realizar 2 pasos: 
 
-Paso 1. Añadimos al área de preparación con la orden <code>git add ...</code>:   
+​	Paso 1. Añadimos al área de preparación con la orden <code>git add nombreFichero</code>:   
 
 ```sh
 git add README.md
 ```
 
-!!!note " "
-	Si existen varios ficheros que queremos pasar preparación podemos ejecutar la orden <code>git add .</code>:
+!!!note "Pasar varios ficheros a la Staging Area"
+	Si existen varios ficheros que queremos pasar preparación podemos ejecutar la orden:
+	```sh
+	git add .
+	```
 
-Paso 2. Añadimos al repositorio local con la orden <code>git commit -m "mensage"</code>: 
+​	Paso 2. Añadimos al repositorio local con la orden <code>git commit -m "descripción del commit"</code>: 
 
 ```sh
-git commit -m "primer cambio Arturo"
+git commit -m "inicializar repositorio con README.md"
 ```
+???+question "Repetir los puntos 4.5, 4.6 y 4.7 otras dos veces"
+	La primera vez añadimos una segunda línea con la *fecha actual* y luego volvemos a hacer  `git add ...`   y   `git commit ...` correspondientes.
+	
 
-### Realizar los puntos 3.5, 3.6 y 3.7 otras dos veces
-
-La primera vez añadimos una segunda línea con la *fecha actual* y luego volvemos a hacer  `git add ...`   y   `git commit ...` correspondientes.
-
-La segunda vez añadimos una tercera línea con el *nombre del IES* y luego volvemos a hacer  `git add ...`   y   `git commit ...` correspondientes.
+	La segunda vez añadimos una tercera línea con el *nombre del IES* y luego volvemos a hacer  `git add ...`   y   `git commit ...` correspondientes.
 
 
-### Por último vemos cambios realizados
+### Por último ver cambios realizados
 
 Para ver los commit realizados ejecutamos:
 
@@ -170,15 +185,18 @@ git  log  --oneline
 Deberían aparecer 3 commits.
 
 !!!warning " "
-	No borrar el repositorio local. Lo volveremos a utilizar en la siguiente actividad.*
+	No borrar el repositorio local. Lo volveremos a utilizar en la siguiente actividad.
+
+<hr />
 
 
-## Revisar commits realizados
+
+## 05. Revisar commits realizados
 
 !!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea02tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.
+	En esta actividad, haremos uso del comando `git checkout` para movernos por los distintos commits.
 
-En esta actividad, haremos uso del comando `git checkout` para movernos por los distintos commits.
+
 
 Antes de nada comprueba que tienes al menos 3 commits realizados. Para ello ejecuta:
 
@@ -186,25 +204,24 @@ Antes de nada comprueba que tienes al menos 3 commits realizados. Para ello ejec
 git  log  --oneline --all
 ```
 
-La opción `--oneline`, nos muestra la información de cada commit en una línea.
+- La opción `--oneline`, nos muestra la información de cada commit en una línea.
 
-La opción `--all`,  nos muestra todos los commits.
+- La opción `--all`,  nos muestra todos los commits.
 
 Debería aparecerte algo semejante a la siguiente imagen:
 
 <div style="text-align:center;">
     <img src="../../img/ud00/git-log.png" alt="git-log" style="max-width:80%;" />
 </div>
+- La primera columna es un **hash**, un identificador.
 
-La primera columna es un **hash**, un identificador.
+​	Los números no están ordenados. En este ejemplo, el primer commit tiene un hash `5e178c8`. El último commit es el `38428b1`. **Tú deberías tener otros hash distintos**. No te preocupes, es así.
 
-Los números no están ordenados. En mi caso, el primer commit tiene un hash `5e178c8`. El último commit es el `38428b1`. **Tú deberías tener otros hash distintos**. No te preocupes, es así.
+- La segunda columna es el **mensaje** que pusimos cuando se hizo el commit.
 
-La segunda columna es el **mensaje** que pusimos cuando se hizo el commit.
+- Fíjate también que en el último commit, en el caso de ejemplo `38428b1`, existe un **identificador *HEAD***. Esta es una referencia que apunta al commit en el que estamos situados en el momento actual. Además aparece otro **identificador *master***, que indica en la rama en la que estamos. Por defecto, siempre es master.
 
-Fíjate también que en el último commit, en mi caso `38428b1`, existe un **identificador *HEAD***. Ésta es una referencia que apunta al commit en el que estamos situados en el momento actual. Además aparece otro **identificador *master***, que indica en la rama en la que estamos. Por defecto, siempre es master.
-
-**El identificador *master* siempre apunta al último commit de la rama**. Sin embargo el identificador *HEAD* podemos moverlo y desplazarmos entre distintos commit y ver cómo estaban los archivos en cada momento. 
+​	**El identificador *master* siempre apunta al último commit de la rama**. Sin embargo el identificador *HEAD* podemos moverlo y desplazarmos entre distintos commit y ver cómo estaban los archivos en cada momento. 
 
 Para mover el identificador HEAD utilizamos el comando <code>git checkout *numero_hash*</code>.
 
@@ -222,7 +239,7 @@ cat  README.md
 Deben aparecer 3 líneas de texto: *tu nombre, la fecha* y *el IES*.
 
 
-### Vamos a movernos al primer commit
+### Moverse al primer commit
 
 Para ello hacemos:
 
@@ -264,7 +281,7 @@ Fíjate dónde apunta la referencia HEAD en este momento.
 	**NO REALIZAREMOS** ningún cambio a los archivos, sólo vamos a echar un vistazo.
 
 
-### Movernos al segundo commit
+### Moverse al segundo commit
 
 Para ello hacemos:
 
@@ -286,7 +303,7 @@ y haz una captura de pantalla.
 Deberían aparecer 2 líneas: *tu nombre* y *la fecha*.
 
 
-### Vuelve a hacer
+### Volver a mostrar los logs
 
 ```sh
 git  log  --oneline --all
@@ -314,11 +331,11 @@ Haz una captura de pantalla.
 !!!warning " "
 	No borrar el repositorio local. Lo volveremos a utilizar en la siguiente actividad.*
 
+<hr />
 
-## Etiquetar commits y ver diferencias
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea03tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+
+## 06. Etiquetar commits y ver diferencias
 
 En esta actividad vamos a ver 3 comandos:
 
@@ -339,7 +356,7 @@ De todas formas tanto `git show` como `git diff` tienen tantas opciones que aqu�
 
 Empecemos.
 
-### Etiquetamos el commit primero y el tercero.
+### Etiquetar el primer y tercer commits
 
 El primer commit será la versión 1 de nuestro proyecto. La etiqueta será `v1`.
 
@@ -364,9 +381,9 @@ git tag  -a v1  -m "Versión 1"  5e17
 git tag  -a v2  -m "Versión 2"  3842
 ```
 
-La opción `-a` significa annotate.
+- La opción `-a` significa annotate.
 
-La opción `-m` nos permite poner un mensaje.
+- La opción `-m` nos permite poner un mensaje.
 
 Finalmente debemos poner el commit al que deseamos aplicar la etiqueta.
 
@@ -382,7 +399,7 @@ Por ejemplo, en el caso anterior nos hemos equivocado en el mensaje de v2, así 
     <img src="../../img/ud00/git-tag2.png" alt="git-tag2" style="max-width:80%;" />
 </div>
 
-### Usando etiquetas para movernos
+### Usar etiquetas para moverse
 
 Las etiquetas nos permiten referenciar commits de una forma más cómoda que usando el identificador de hash.
 
@@ -497,14 +514,15 @@ Ejecuta dicho comando y haz una captura de pantalla. Explica brevemente la difer
 !!!warning " "
 	No borrar el repositorio local. Lo volveremos a utilizar en la siguiente actividad.*
 
-## Crear repositorio remoto y subir commits locales
+<hr />
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea04tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+
+
+## 07. Crear repositorio remoto y subir commits locales
 
 En esta actividad crearemos un repositorio vacío en GitHub y subiremos el contenido de nuestro repositorio local.
 
-### Creamos un repositorio totalmente vacío en GitHub
+### Crear un repositorio totalmente vacío en GitHub
 
 Accedemos a nuestra cuenta de GitHub. 
 
@@ -542,7 +560,8 @@ Ahí podemos ver la URL del repositorio remoto. Hay 2 formas de acceso:
 - **mediante SSH**
 
 !!!note " "
-	**Usaremos SSH ya que es más seguro y nos permite utilizar cifrado público-privado** debido a que recientemente github ha deshabilitado el acceso mediante usuario y contraseña. En el punto `2.1 Configuración con clave pública/privada` del archivo `UD00_anexo_ES.pdf` tienes detallada la configuración y pasos a seguir, si todavia no has configurado tu PC de este modo... **debes hacerlo antes de seguir**.
+	**Usaremos SSH ya que es más seguro y nos permite utilizar cifrado público-privado** debido a que recientemente github ha deshabilitado el acceso mediante usuario y contraseña.<br />
+	En el punto **[0.3 Github: Configuración con clave pública/privada](../ud0004/#configuracion-con-clave-publicaprivada){:target="_blank"}** del temario tienes detallada la configuración y pasos a seguir, si todavia no has configurado tu PC de este modo... **debes hacerlo antes de seguir**.
 
 Más abajo se indican los comandos a ejecutar en nuestro repositorio local. Lo vemos en el siguiente punto. 
 
@@ -633,15 +652,15 @@ Así que ejecutaremos dicho comando desde nuestro repositorio local. Refrescarem
 !!!warning " "
 	No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
 
+<hr />
 
-## Deshacer cambios en repositorio local
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea05tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+
+## 08. Deshacer cambios en repositorio local
 
 En esta actividad, veremos qué podemos hacer cuando cometemos errores.
 
-Si realizamos algún cambio y hemos "metido la pata", podemos deshacer el "entuerto".
+Si realizamos algún cambio y hemos "*metido la pata*", podemos deshacer el "entuerto".
 
 Vamos a verlo de forma práctica haciendo uso del comando  `git reset --hard`
 
@@ -755,15 +774,15 @@ git reset --hard HEAD~1
 !!!note " "
 	Usar `git reset --hard` de esta última forma es peligroso, porque perdemos el último o últimos commits. Así que hay que asegurarse muy bien de que es eso lo que queremos**. 
 
-
 !!!warning " "
-	No borrar los repositorio local ni el remoto. Los volveremos a utilizar en la siguiente actividad.*
+	No borrar los repositorio local ni el remoto. Los volveremos a utilizar en la siguiente actividad.
+
+<hr />
 
 
-## Archivo `.gitignore`
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea06tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+
+## 09. Archivo `.gitignore`
 
 En esta actividad empezaremos a trabajar con algo más real. Por ejemplo, una sencilla aplicación de Java. Esta actividad también es práctica.
 
@@ -777,7 +796,7 @@ git log  --oneline --all
     <img src="../../img/ud00/git-log3.png" alt="git-log3" style="max-width:80%;" />
 </div>
 
-###  Creamos una aplicación HolaMundo en Java con nuestro IDE
+###  Crear una aplicación HolaMundo en Java con nuestro IDE
 
 Para ello abriremos nuestro IDE favorito (en mi caso Visual Studo Code) crearemos un nuevo proyecto (en mi caso *PruebasGit*) basado en la misma carpeta en la que tenemos nuestro repositorio local de GIT. Creamos la clase principal, y la modificamos para que pueda imprimir el típico "Hola mundo.".
 
@@ -787,7 +806,7 @@ Nuestra estructura de carpetas debería ser algo similar a esto:
     <img src="../../img/ud00/vscode_abc03.png" alt="vscode_abc03" style="max-width:75%;" />
 </div>
 
-### Añadiendo archivos al repositorio local
+### Añadir archivos al repositorio local
 
 Como vimos en la actividad anterior, si ahora ejecutamos **`git diff HEAD`**, esperariamos ver los cambios de nuestro directorio de trabajo respecto al último commit.
 
@@ -901,10 +920,11 @@ Haz otra captura de los archivos y carpetas de código subidas a GitHub. No debe
 !!!warning " "
 	No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
 
-## Usando un par de claves SSH
+<hr />
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea07tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+
+
+## 10. Usar un par de claves SSH
 
 
 !!!note " "
@@ -918,7 +938,7 @@ Este método evita que nuestro usuario y contraseña de GitHub se guarde en un a
 
 Vamos a seguir los siguientes pasos:
 
-### Generamos un par de claves SSH
+### Generar un par de claves SSH
 
 Es muy sencillo. Como usuario normal (sin ser root) ejecutamos el comando
 
@@ -949,7 +969,7 @@ Debe copiarse  *ssh-rsa  ....  jose@lenovo*
 
 En vuestro caso, en lugar de jose@lenovo aparecerá otro usuario y pc.
 
-### Añadimos clave ssh pública a github.
+### Añadir clave ssh pública a github.
 
 Iniciamos sesión de GitHub y en el menú general (esquina superior derecha) seleccionamos la opción **Settings**.
 
@@ -977,7 +997,7 @@ Luego ponemos un nombre a la clave, por ejemplo pc-casa. Y copiamos el contenido
 
 La clave anterior puede usarse para cualquiera de nuestros repositorios. Para hacer uso de ella, lo único que necesitamos es la URL en formato SSH de cada repositorio.
 
-### Comprobamos que se ha creado bien
+### Comprobarque se ha creado bien
 
 Si, por cualquier motivo, alguien accediera a nuestro PC y cogiera la clave privada, bastaría con eliminar esta clave pública de GitHub y al ladrón no le serviría de nada nuestra clave privada.
 
@@ -985,7 +1005,7 @@ Si, por cualquier motivo, alguien accediera a nuestro PC y cogiera la clave priv
     <img src="../../img/ud00/github-list-ssh-keys.png" alt="github-list-ssh-keys" style="max-width:85%;" />
 </div>
 
-### Obteniendo URL SSH del repositorio
+### Obtener URL SSH del repositorio
 
 Botón **Clone or download**, **Use SSH**
 
@@ -995,7 +1015,7 @@ Copiamos URL en formato SSH. Su formato es relativamente fácil de memorizar. Si
     <img src="../../img/ud00/github-use-ssh.png" alt="github-use-ssh" style="max-width:85%;" />
 </div>
 
-### Asociando nuestro repositorio local mediante SSH
+### Asociar nuestro repositorio local mediante SSH
 
 Nuestro repositorio local estaba asociado a origin mediante HTTPS. Debemos dar de baja dicho enlace y crear uno nuevo que haga uso del protocolo SSH.
 
@@ -1010,7 +1030,7 @@ git  remote  add  origin   git@github.com:tu_usuario/tu_repositorio
     <img src="../../img/ud00/git-remote-remove-add.png" alt="git-remote-remove-add" style="max-width:85%;" />
 </div>
 
-### Creamos un commit y subimos a GitHub
+### Crear un commit y subimos a GitHub
 
 Para comprobar que no nos pide usuario y contraseña cuando hagamos git push, vamos a modificar el archivo README.md , crear un commit y subir a GitHub.
 
@@ -1039,12 +1059,11 @@ Al ejecutar el último comando, se realizará una conexión SSH con GitHub.
 Cuando se realiza una conexión SSH con una nueva clave, la primera vez se pide confirmación y deberás escribir **yes**. Después de ello, quedará registrado el host remoto en el archivo **.ssh/known_hosts**. Las siguientes veces ya no se pide confirmación, siempre que el archivo `.ssh/known_hosts` contenga dichos registros.
 
 !!!warning " "
-	No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
+	No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.
 
-## Resolviendo conflictos
+<hr />
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea08tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+## 11. Resolviendo conflictos
 
 En esta actividad veremos qué se entiende por conflicto, cuándo se produce y cómo resolverlo.
 
@@ -1054,7 +1073,7 @@ Siempre que realicemos cambios (es decir commits) en el mismo archivo en las mis
 
 Para ver esto, vamos a hacer un commit en nuestro repositorio en GitHub, y luego haremos un commit en nuestro repositorio local. Trabajaremos con el archivo `README.md` únicamente.
 
-### Modificamos archivo README.md remoto
+### Modificar archivo README.md remoto
 
 En GitHub vamos a modificar el archivo `README.md` y registrar el cambio (commit).
 
@@ -1082,7 +1101,7 @@ Si lo deseamos, podemos poner un mensaje al commit y un descripción, aunque no 
     <img src="../../img/ud00/github-commit-changes.png" alt="github-commit-changes" style="max-width:75%;" />
 </div>
 
-### Modificamos archivo README.md local
+### Modificar archivo README.md local
 
 En nuestro repositorio local, también vamos a modificar el archivo README.md.
 
@@ -1107,7 +1126,7 @@ git commit -m "Actualización de README.md"
     <img src="../../img/ud00/readme-commit.png" alt="readme-commit" style="max-width:80%;" />
 </div>
 
-### Intentamos subir el commit local
+### Intentar subir el commit local
 
 Al intentar subir nuestro commit local al repositorio remoto,  se rechazará.
 
@@ -1141,7 +1160,7 @@ Así que se realiza la fusión, pero nos avisa que hay conflicto en dicho archiv
     <img src="../../img/ud00/git-pull-conflicto.png" alt="git-pull-conflicto" style="max-width:75%;" />
 </div>
 
-### Arreglamos conflicto
+### Arreglar conflicto
 
 Para arreglar el conflicto, abrimos el archivo en cuestión y en la línea o líneas donde se ha producido el conflicto veremos unas marcas como las siguientes:
 
@@ -1195,10 +1214,9 @@ git push origin master
 !!!warning " "
 	No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
 
-## Creación de ramas
+<hr />
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea09tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+## 12. Creación de ramas
 
 En esta actividad vamos a empezar a trabajar con ramas. En concreto veremos cómo **crear nuevas ramas**.
 
@@ -1416,10 +1434,9 @@ En **GitHub**, dentro del repositorio correspondiente, podemos ver un gráfico d
 !!!warning " "
 	No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
 
-## Fusión y eliminación de ramas
+<hr />
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea10tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+## 13. Fusión y eliminación de ramas
 
 Esta actividad es una continuación de la anterior. En ella veremos cómo realizar **fusión de ramas** (**merge**) y como eliminar apuntadores a ramas antiguas.
 
@@ -1433,7 +1450,7 @@ Para realizar fusión (merge) de ramas se utiliza el comando:
 
 **`git merge ...`**
 
-### Eliminando una rama local
+### Eliminar una rama local
 
 Para eliminar una rama local se usa el comando:
 
@@ -1461,7 +1478,7 @@ De esta manera perdemos todas las modificaciones que hubiésemos realizado en di
     <img src="../../img/ud00/borrar-rama2-local.png" alt="borrar-rama2-local" style="max-width:80%;" />
 </div>
 
-### Fusionando ramas locales 
+### Fusionar ramas locales 
 
 Vamos a integrar en la rama `master` los cambios realizados en `rama1`, `licencia` y `autor`.
 
@@ -1472,7 +1489,7 @@ Procederemos de la siguiente forma:
 3. Fusionamos rama `autor`
 4. Fusionamos rama `rama1`
 
-#### Cambiamos a rama `master`
+#### Cambiar a rama `master`
 
 Es **MUY IMPORTANTE** cambiar a la rama `master`. Si no hacemos el cambio, todas las fusiones se realizarían sobre la rama `autor` (la rama en la que actualmente estamos).
 
@@ -1482,7 +1499,7 @@ Debemos hacer
 git  checkout master
 ```
 
-#### Fusionamos rama `licencia`
+#### Fusionar rama `licencia`
 
 Antes, fijémonos en la estructura de las ramas. Hacemos 
 
@@ -1517,7 +1534,7 @@ Observa como queda tras la fusión. Únicamente se han movido los apuntadores `H
 !!!note " "
 	No te preocupes ahora mismo por los apuntadores remotos (los que aparecen en color rojo). Más adelante los sincronizaremos con el repositorio remoto.
 
-#### Fusionamos rama autor
+#### Fusionar rama autor
 
 Si en lugar de fusionar una rama que está adelantada respecto a `master`,  lo que hacemos es fusionar una rama que está en paralelo con la rama `master`,  entonces realizaremos una **fusión de 3 vías** (**3-way merge**)
 
@@ -1547,7 +1564,7 @@ Esto siempre sucede en la fusión de 3 vías.
     <img src="../../img/ud00/git-log-graph9.png" alt="git-log-graph9" style="max-width:80%;" />
 </div>
 
-#### Fusionamos rama rama1
+#### Fusionar rama rama1
 
 Por último, integraremos en master los cambios realizados en la `rama1`. 
 
@@ -1567,7 +1584,7 @@ Cuando aparezca el editor con el mensaje asociado, aceptaremos el mensaje o lo e
     <img src="../../img/ud00/3-way-rama1.png" alt="3-way-rama1" style="max-width:80%;" />
 </div>
 
-### Subiendo cambios a repositorio remoto
+### Subir cambios a repositorio remoto
 
 Para subir al repositorio remoto todos los cambios realizados en nuestro repositorio local, ejecutamos
 
@@ -1579,7 +1596,7 @@ git push origin --all
     <img src="../../img/ud00/git-push-all2.png" alt="git-push-all2" style="max-width:80%;" />
 </div>
 
-### Eliminando apuntadores a ramas locales
+### Eliminar apuntadores a ramas locales
 
 Para eliminar los apuntadores locales:
 
@@ -1593,7 +1610,7 @@ Los apuntadores a `licencia` y `autor` no los eliminaremos, por si en el futuro 
     <img src="../../img/ud00/borrar-rama1-local.png" alt="borrar-rama1-local" style="max-width:80%;" />
 </div>
 
-### Eliminando apuntadores a ramas remotas
+### Eliminar apuntadores a ramas remotas
 
 Para eliminar los apuntadores en el repositorio remoto:
 
@@ -1615,7 +1632,7 @@ Observa como las ramas están actualizadas y sincronizadas con el repositorio re
     <img src="../../img/ud00/git-log-graph10.png" alt="git-log-graph10" style="max-width:80%;" />
 </div>
 
-### Comprobando cambios en repositorio remoto
+### Comprobar cambios en repositorio remoto
 
 Para ver un gráfico de las ramas en el repositorio remoto pulsamos en **Insights**, **Network**.
 
@@ -1636,10 +1653,9 @@ Para ver un gráfico de las ramas en el repositorio remoto pulsamos en **Insight
 !!!warning " "
 	No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
 
-## Pull-request
+<hr />
 
-!!!note " "
-	Subir a la plataforma *<u>AULES</u>* un documento PDF de nombre <u>*tarea13tunombre*</u> con las capturas de pantalla y explicaciones pertinentes.**
+## 14. Pull-request
 
 ###  pull-request
 
@@ -1662,156 +1678,134 @@ Siguiendo los pasos de la práctica anterior:
 
 Debes adjuntar a la tarea los pasos a seguir una vez recibido el *pull-request* para aceptarlo y que se integre en nuestro repositorio, y mostrar además donde aparece el nombre del usuario que ha colaborado con nostros en el repositorio.
 
-## Repositorio Local + VsCode + Repositorio remoto
+## 15. Repositorio Local + VsCode + Repositorio remoto
 
 En la siguiente práctica guiada vamos a configurar el espació de trabajo en el que trabajaremos a lo largo de este curso/módulo de Programación.
 
-La idea va a consistir en:
+Los pasos a seguir van a ser:
 
-- En local:
-   1. en VS Code crear un proyecto Java, 
-   2. en el que crearemos un repositorio local.
+* En **local**, en VS Code crear un proyecto Java, en el que crearemos un repositorio local.
 
-- En remoto: 
-   3. crearemos un repositorio remoto en GitHub (será privado y daremos acceso al profesor/a).
+* En **remoto**, crear un repositorio remoto en GitHub (será privado y daremos acceso al profesor/a).
 
-4. enlazaremos nuestro Git local con nuestro Git remoto (en GitHub); así, podremos ir subiendo todos nuestros programas.
-5. poner a nuestr@ profesor@ del módulo como colaborador@ de nuestro repositorio remoto.
+* Enlazar nuestro Git local con nuestro Git remoto (en GitHub); así, podremos ir subiendo todos nuestros programas.
+
+* Poner a nuestr@ profesor@ del módulo como colaborador@ de nuestro repositorio remoto.
 
 Empecemos:
 
 1. Abrimos *VS Code*. Accedemos a la pestaña de *JAVA PROJECTS*, pulsamos el icono de `+` y elegimos la primera opción `No build tools`.
 
 <div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_01.png" alt="vscode_tarea3_01" style="max-width:70%;" />
+    <img src="../../img/ud00/vscode_tarea3_01.png" alt="vscode_tarea3_01" style="max-width: 90%;" />
 </div>
+
 
    Se abre otra ventana flotante en la que elegimos el lugar donde va a estar alojado nuestro proyecto; para ello, crearemos en nuestra raíz `~` la carpeta `pr` y pulsamos botón  `Select the project location`.
 
 <div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_02.png" alt="vscode_tarea3_02" style="max-width:50%;" />
+    <img src="../../img/ud00/vscode_tarea3_02.png" alt="vscode_tarea3_02" style="max-width:70%;" />
 </div>
+
 
    Escribimos el nombre del proyecto `exercicisJava`.
 
 <div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_03.png" alt="vscode_tarea3_03" style="max-width:67%;" />
+    <img src="../../img/ud00/vscode_tarea3_03.png" alt="vscode_tarea3_03" style="max-width:80%;" />
 </div>
 
-!!!question " "
-	Podemos observar la estructura de nuestro primer proyecto Java con su primer programa (sabes cuál puede ser?? sí, es nuestro querido *Hola Mundo* :smile: ). 
-	Observamos en primer lugar la carpeta `src` que será la que contenga todos nuestros ficheros fuente `.java`. A la derecha podemos observar el contenido del fichero `App.java`. 
-	La carpeta `bin` contendrá los ficheros ejecutables `.class` que se generen de la compilación de nuestros ficheros `.java`. 
-	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_04.png" alt="vscode_tarea3_04" style="max-width:65%;" /> </div>
-
-2. Des de un terminal, accedemos dentro de la carpeta de nuestro recién creado proyecto `~\pr\exercicisJava`. 
-
-   ```sh
-   cd ~\pr\exercicisJava
-   ```
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_05a.png" alt="vscode_tarea3_05a" style="max-width:67%;" />
-</div>
-
-   Inicializamos ahí dentro, con la orden `git init`, nuestro repositorio local Git.
-
-   ```sh
-   git init
-   ```
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_05b.png" alt="vscode_tarea3_05b" style="max-width:67%;" />
-</div>
-
-   Si observamos la estructura de la carpeta del proyecto vemos una carpeta oculta `.git`.
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_05c.png" alt="vscode_tarea3_05c" style="max-width:67%;" />
-</div>
-
-   Si realizamos un `git status` se observa que todavía no hemos introducido las carpetas contenidas en el proyecto en nuestro repositorio. 
-
-   ```sh
-   git status
-   ```
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_06.png" alt="vscode_tarea3_06" style="max-width:67%;" />
-</div>
-
-   Para ello: `git add .` y a continuación `git commit -m "1) cargar proyecto inicial"`.
-
-   ```sh
-   git add .
-   ```
-
-   ```sh
-   git commit -m "1) carga proyecto inicial"
-   ```
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_07.png" alt="vscode_tarea3_07" style="max-width:67%;" />
-</div>
-
-   Se puede comprobar con `git status` que, en este momento, no existe ninguna modificación en el área de trabajo que no se encuentre en el repositorio.
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_08.png" alt="vscode_tarea3_08" style="max-width:67%;" />
-</div>
-
-   Se puede observar este primer commit con `git log`.
-
-   ```sh
-   git log
-   ```
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_09.png" alt="vscode_tarea3_09" style="max-width:67%;" />
-</div>
-
-3. Es hora de crear nuestro repositorio remoto en GitHub:
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_10.png" alt="vscode_tarea3_10" style="max-width:50%;" />
-</div>
-   El nombre de nuestro repositorio `exercicisJava`; descripción `1º CFGS DAW - Programación - Ejercicios de Java`, por ejemplo, acceso `Private` y, por el momento, NO crearemos el fichero *README* y .*gitignore* ni elegimos ningún tipo de licencia.
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_11.png" alt="vscode_tarea3_11" style="max-width:75%;" />
-</div>
-   ​		Después de crear el anterior repositorio, entre otras opciones de terminar, encontramos:	
-
-   <div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_12.png" alt="vscode_tarea3_12" style="max-width:67%;" /> </div>
-
-   ​		Vamos a terminar ejecutando esta orden en nuestro terminal (DENTRO de nuestra carpeta de proyecto Java / repositorio local Git) en la que copiamos el repositorio remoto en local:
-
-   ```sh
-   git remote add origin git@github.com:arturoblasco/exercicisJava.git
-   ```
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_13.png" alt="vscode_tarea3_13" style="max-width:95%;" />
-</div>
-
-4. Para terminar, enlazamos el repositorio local de Git con el repositorio remoto en GitHub para "subir" nuestro proyecto local al repositorio remoto:
-
-   ```sh
-   git push origin master
-   ```
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_14.png" alt="vscode_tarea3_14" style="max-width:75%;" />
-</div>
-
-​	Si vemos en nuestro repositorio de GitHub la sincronización ha sido realizada:
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_15.png" alt="vscode_tarea3_15" style="max-width:75%;" />
-</div>
-
-5. Para terminar, ponemos al profesor/a del módulo de Programación como colaborador de nuestro repositorio:
-
-<div style="text-align:center;">
-    <img src="../../img/ud00/vscode_tarea3_16.png" alt="vscode_tarea3_16" style="max-width:75%;" />
-</div>
+!!!question "Creación de un primer proyecto, crear un repositorio local y un repositorio remoto Github"
+	Podemos observar la estructura de nuestro primer proyecto Java con su primer programa, ¿*sabes cuál puede ser*?? sí, es nuestro querido *Hola Mundo*. <br />
+	**(1)**  Las carpetas a tener en cuenta:
+	
+	- En primer lugar la carpeta `src` que será la que contenga todos nuestros ficheros fuente `.java`. A la derecha podemos observar el contenido del fichero `App.java`. 
+	- La carpeta `bin` contendrá los ficheros ejecutables `.class` que se generen de la compilación de nuestros ficheros `.java`. 
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_04.png" alt="vscode_tarea3_04" style="max-width:85%;" /> /div>
+	
+	**(2)**  Desde un terminal, accedemos dentro de la carpeta de nuestro recién creado proyecto `~\pr\exercicisJava`. 
+	
+	```sh
+	cd ~\pr\exercicisJava
+	```
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_05a.png" alt="vscode_tarea3_05a" style="max-width:80%;" /> </div>
+	
+	**(3)**  Inicializamos ahí dentro, con la orden `git init`, nuestro repositorio local Git.
+	
+	```sh
+	git init
+	```
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_05b.png" alt="vscode_tarea3_05b" style="max-width:80%;" /> </div>
+	
+	Si observamos la estructura de la carpeta del proyecto vemos una carpeta oculta `.git`.
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_05c.png" alt="vscode_tarea3_05c" style="max-width:80%;" /> </div>
+	
+	Si realizamos un `git status` se observa que todavía no hemos introducido las carpetas contenidas en el proyecto en nuestro repositorio. 
+	
+	```sh
+	git status
+	```
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_06.png" alt="vscode_tarea3_06" style="max-width:80%;" /> </div>
+	
+	**(4)**  Para introducir las carpetas y ficheros del proyecto en el repositorio se generará el primit *commit*: `git add .` y a continuación `git commit -m "1) cargar proyecto inicial"`.
+	
+	```sh
+	git add .
+	```
+	
+	```sh
+	git commit -m "1) carga proyecto inicial"
+	```
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_07.png" alt="vscode_tarea3_07" style="max-width:80%;" /> </div>
+	
+	Se puede comprobar con `git status` que, en este momento, no existe ninguna modificación en el área de trabajo que no se encuentre en el repositorio.
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_08.png" alt="vscode_tarea3_08" style="max-width:80%;" /> </div>
+	
+	También se puede observar este primer *commit* con `git log`.
+	
+	```sh
+	git log
+	```
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_09.png" alt="vscode_tarea3_09" style="max-width:80%;" /> </div>
+	
+	**(5)**  Es hora de crear nuestro repositorio remoto en GitHub:
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_10.png" alt="vscode_tarea3_10" style="max-width:70%;" /> </div>
+	
+	El nombre de nuestro repositorio `exercicisJava`; descripción `1º CFGS DAW - Programación - Ejercicios de Java`, por ejemplo, acceso `Private` y, por el momento, NO crearemos el fichero *README* y .*gitignore* ni elegimos ningún tipo de licencia.
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_11.png" alt="vscode_tarea3_11" style="max-width:85%;" /> </div>
+	
+	Después de crear el anterior repositorio, entre otras opciones de terminar, encontramos:	
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_12.png" alt="vscode_tarea3_12" style="max-width:75%;" /> </div>
+	
+	**(6)**  Vamos a terminar ejecutando esta orden en nuestro terminal (DENTRO de nuestra carpeta de proyecto Java / repositorio local Git) en la que copiamos el repositorio remoto en local:
+	
+	```sh
+	git remote add origin git@github.com:arturoblasco/exercicisJava.git
+	```
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_13.png" alt="vscode_tarea3_13" style="max-width:95%;" /> </div>
+	**(7)**  Para terminar, enlazamos el repositorio local de Git con el repositorio remoto en GitHub para "subir" nuestro proyecto local al repositorio remoto:
+	
+	```sh
+	git push origin master
+	```
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_14.png" alt="vscode_tarea3_14" style="max-width:85%;" /> </div>
+	
+	Si vemos en nuestro repositorio de GitHub la sincronización ha sido realizada:
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_15.png" alt="vscode_tarea3_15" style="max-width:80%;" /> </div>
+	
+	**(8)**  Para terminar, ponemos al profesor/a del módulo de Programación como colaborador de nuestro repositorio:
+	
+	<div style="text-align:center;"> <img src="../../img/ud00/vscode_tarea3_16.png" alt="vscode_tarea3_16" style="max-width:80%;" /> </div>
